@@ -11,7 +11,7 @@ import java.util.HashSet;
 /**
  * Created by echavez on 5/20/16.
  */
-public class Scrapper {
+public final class Scrapper {
 
     private String url;
     private Article article;
@@ -40,7 +40,7 @@ public class Scrapper {
 
     }
 
-    private PagesList.pages whichPage(){
+    private final PagesList.pages whichPage(){
 
 
         if(this.url.matches(".*tiempo.*")){
