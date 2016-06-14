@@ -10,17 +10,19 @@ public class PagesList {
 
 
     public enum pages {
-        TIEMPO, OPCION, OTHER
+        TIEMPO, OPCION, SEGUNDOASEGUNDO, CRONICA, OTHER
     }
 
-    private HashMap<pages, String> rootUrls = new HashMap<pages, String>();
+    public static HashMap getRootUrls(){
 
-    public HashMap getRootUrls(){
+        HashMap<pages, String> rootUrls = new HashMap<pages, String>();
 
         rootUrls.put(pages.TIEMPO, "http://tiempo.com.mx");
         rootUrls.put(pages.OPCION, "http://laopcion.com.mx/");
+        rootUrls.put(pages.SEGUNDOASEGUNDO, "http://www.segundoasegundo.com/");
+        rootUrls.put(pages.CRONICA, "http://www.cronicadechihuahua.com/");
 
-        return this.rootUrls;
+        return rootUrls;
     }
 
 

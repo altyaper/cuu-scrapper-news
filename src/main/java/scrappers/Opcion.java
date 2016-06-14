@@ -9,7 +9,7 @@ import org.jsoup.select.Elements;
  */
 public class Opcion extends Article {
 
-
+    // Builder Design Pattern
     public Opcion(String url){
         super(url);
         setHTML();
@@ -31,7 +31,7 @@ public class Opcion extends Article {
         }
     }
 
-
+    @Override
     public void setThumbnail() {
         Elements aux = this.html.select(".gimg img");
 

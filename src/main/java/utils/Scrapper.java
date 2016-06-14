@@ -4,6 +4,7 @@ import enums.PagesList;
 import models.Article;
 import models.Video;
 import scrappers.Opcion;
+import scrappers.Segundoasegundo;
 import scrappers.Tiempo;
 
 import java.util.HashSet;
@@ -20,6 +21,7 @@ public final class Scrapper {
         return this.article;
     }
 
+    //Factory Design Pattern
     public Scrapper(String url){
         this.url = url;
 
@@ -31,6 +33,10 @@ public final class Scrapper {
 
             case OPCION:
                 this.article = new Opcion(url);
+                break;
+
+            case SEGUNDOASEGUNDO:
+                this.article = new Segundoasegundo(url);
                 break;
 
             default:
@@ -50,6 +56,10 @@ public final class Scrapper {
         }else if(this.url.matches(".*http://laopcion.com.mx.*")){
 
             return PagesList.pages.OPCION;
+
+        }else if(this.url.matches(".*http://www.segundoasegundo.com/.*")){
+
+            return PagesList.pages.SEGUNDOASEGUNDO;
 
         }
 
