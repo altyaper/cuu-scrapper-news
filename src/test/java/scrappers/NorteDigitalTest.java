@@ -31,7 +31,7 @@ public class NorteDigitalTest {
     @Test
     public void itShouldSetTheThumbnailOfTheArticle(){
 
-        List<String> hash = new ArrayList<String>();
+        Set<String> hash = new HashSet<String>();
         hash.add("http://nortedigital.mx/wp-content/uploads/2016/06/senecu.jpg");
 
         assertEquals(hash, norte.getThumbnail());

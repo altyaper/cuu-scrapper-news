@@ -74,7 +74,7 @@ public class ScrapperTest {
 
     @Test
     public void itShouldScrapTheThumbnailOfTheArticle(){
-        List<String> hash = new ArrayList<String>();
+        Set<String> hash = new HashSet<String>();
         hash.add("http://assets.tiempo.com.mx/uploads/imagen/imagen/44236/image.jpeg");
         assertEquals(hash, scrapper.getArticle().getThumbnail());
     }

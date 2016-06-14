@@ -27,26 +27,29 @@ public final class Scrapper {
     //Factory Design Pattern
     private Article getObjectArticle(String url){
 
-        if(url.matches(".*tiempo.*")){
+        if(url.matches(".*tiempo.com.mx.*")){
 
             return new Tiempo(url);
 
-        }else if(url.matches(".*http://laopcion.com.mx.*")){
+        }else if(url.matches(".*laopcion.com.mx.*")){
 
             return new Opcion(url);
 
-        }else if(url.matches(".*http://www.segundoasegundo.com/.*")){
+        }else if(url.matches(".*segundoasegundo.com.*")){
 
             return new Segundoasegundo(url);
 
-        }else if(url.matches(".*http://www.cronicadechihuahua.com/.*")){
+        }else if(url.matches(".*cronicadechihuahua.com.*")){
 
             return new Cronica(url);
 
-        }else if(url.matches(".*http://nortedigital.mx/.*")){
+        }else if(url.matches(".*nortedigital.mx.*")){
 
             return new NorteDigital(url);
 
+        }else if(url.matches(".*chihuahuanoticias.com.*")){
+
+            return new Chihuahuanoticias(url);
         }
 
         return null;

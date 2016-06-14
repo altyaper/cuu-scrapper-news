@@ -49,10 +49,9 @@ public class OpcionTest {
 
     @Test
     public void itShouldSetTheThumbnailOfTheArticle(){
-        List<String> hash = new ArrayList<String>();
 
+        Set<String> hash = new HashSet<String>();
         hash.add("http://laopcion.com.mx/assets/2016/may/23/fqJ3GvLG13eM.jpeg");
-
         assertEquals(hash, opcion.getThumbnail());
 
     }

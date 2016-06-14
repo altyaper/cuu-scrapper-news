@@ -16,8 +16,7 @@ public class Main {
 
 
         Scrapper s = new Scrapper("http://nortedigital.mx/hallan-cuerpo-acequia-campestre/");
-
-        System.out.println(s.getArticle().getThumbnail());
+        Article a = (Opcion) s.getArticle();
 
     }
 

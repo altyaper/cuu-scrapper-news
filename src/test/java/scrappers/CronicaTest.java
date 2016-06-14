@@ -32,7 +32,7 @@ public class CronicaTest {
     @Test
     public void itShouldSetTheThumbnailOfTheArticle(){
 
-        List<String> hash = new ArrayList<String>();
+        Set<String> hash = new HashSet<String>();
         hash.add("http://www.cronicadechihuahua.com/local/cache-gd2/74/dab0339cf11938f122e420b48af09f.jpg?1465850747");
 
         assertEquals(hash, cronica.getThumbnail());

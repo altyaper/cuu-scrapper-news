@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by echavez on 5/20/16.
@@ -16,7 +17,7 @@ public abstract class Article{
     public String title;
     public String content;
     private String category;
-    public ArrayList<String> thumbnail = new ArrayList<String>();;
+    public Set<String> thumbnail = new HashSet<String>();;
 
     public String author;
     protected String pageUrl;
@@ -53,7 +54,7 @@ public abstract class Article{
 
     public void setTags(){}
 
-    public ArrayList<String> getThumbnail() {
+    public Set<String> getThumbnail() {
         return thumbnail;
     }
 
