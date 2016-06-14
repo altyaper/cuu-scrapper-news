@@ -18,7 +18,6 @@ public class Tiempo extends Article{
     // Builder Design Pattern
     public Tiempo(String url){
         super(url);
-        setHTML();
         setTitle();
         setContent();
         setThumbnail();

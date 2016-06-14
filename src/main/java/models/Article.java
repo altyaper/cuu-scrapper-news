@@ -29,6 +29,7 @@ public abstract class Article{
     public Article(String pageUrl) {
 
         this.pageUrl = pageUrl;
+        this.setHTML();
 
     }
 

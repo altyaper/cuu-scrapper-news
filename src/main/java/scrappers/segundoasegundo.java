@@ -11,8 +11,6 @@ public class Segundoasegundo extends Article {
     // Builder Design Pattern
     public Segundoasegundo(String pageUrl) {
         super(pageUrl);
-        setHTML();
-//        setTags();
         setThumbnail();
         setContent();
         setTitle();

@@ -12,7 +12,6 @@ public class Cronica extends Article{
     // Builder Design Pattern
     public Cronica(String url) {
         super(url);
-        setHTML();
         setTitle();
         setContent();
         setThumbnail();

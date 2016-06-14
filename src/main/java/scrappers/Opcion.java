@@ -12,7 +12,6 @@ public class Opcion extends Article {
     // Builder Design Pattern
     public Opcion(String url){
         super(url);
-        setHTML();
         setTitle();
         setContent();
         setThumbnail();
@@ -49,8 +48,8 @@ public class Opcion extends Article {
     }
 
     public void setContent() {
-        Elements auxtitle = this.html.select(".notainner .nnota");
-        this.content = auxtitle.text().trim();
+        Elements aux = this.html.select(".notainner .nnota");
+        this.content = aux.text().trim();
     }
 
     @Override
