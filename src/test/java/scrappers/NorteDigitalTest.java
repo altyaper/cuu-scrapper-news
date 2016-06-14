@@ -3,7 +3,9 @@ package scrappers;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
@@ -29,7 +31,7 @@ public class NorteDigitalTest {
     @Test
     public void itShouldSetTheThumbnailOfTheArticle(){
 
-        Set<String> hash = new HashSet<String>();
+        List<String> hash = new ArrayList<String>();
         hash.add("http://nortedigital.mx/wp-content/uploads/2016/06/senecu.jpg");
 
         assertEquals(hash, norte.getThumbnail());

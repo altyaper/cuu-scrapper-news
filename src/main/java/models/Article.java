@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 
@@ -15,7 +16,7 @@ public abstract class Article{
     public String title;
     public String content;
     private String category;
-    public HashSet<String> thumbnail = new HashSet<String>();;
+    public ArrayList<String> thumbnail = new ArrayList<String>();;
 
     public String author;
     protected String pageUrl;
@@ -50,11 +51,9 @@ public abstract class Article{
         return this.tags;
     }
 
-    public void setTags(){
+    public void setTags(){}
 
-    }
-
-    public HashSet<String> getThumbnail() {
+    public ArrayList<String> getThumbnail() {
         return thumbnail;
     }
 

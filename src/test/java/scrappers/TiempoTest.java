@@ -3,7 +3,10 @@ package scrappers;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 import static org.junit.Assert.assertEquals;
@@ -43,7 +46,7 @@ public class TiempoTest {
     @Test
     public void itShouldGiveMeTheThumbnailAsTheOriginalArticle(){
 
-        HashSet<String> hash = new HashSet<String>();
+        List<String> hash = new ArrayList<String>();
         hash.add("http://assets.tiempo.com.mx/uploads/imagen/imagen/43903/image.jpeg");
         assertEquals(hash,this.tiempo.getThumbnail());
 
@@ -52,7 +55,7 @@ public class TiempoTest {
     @Test
     public void itShouldGiveMeTheTagsAsTheOriginalArticle(){
 
-        HashSet<String> hash = new HashSet<String>();
+        Set<String> hash = new HashSet<String>();
 
         hash.add("Sucesión 2016");
         hash.add("Política");

@@ -3,10 +3,9 @@ package utils;
 import enums.PagesList;
 import models.Article;
 import models.Video;
-import scrappers.Opcion;
-import scrappers.Segundoasegundo;
-import scrappers.Tiempo;
+import scrappers.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 /**
@@ -18,84 +17,39 @@ public final class Scrapper {
     private Article article;
 
     public Article getArticle() {
-        return this.article;
+        return article;
+    }
+
+    public Scrapper(String url){
+        article = getObjectArticle(url);
     }
 
     //Factory Design Pattern
-    public Scrapper(String url){
-        this.url = url;
+    private Article getObjectArticle(String url){
 
-        switch (whichPage()){
+        if(url.matches(".*tiempo.*")){
 
-            case TIEMPO:
-                this.article = new Tiempo(url);
-                break;
+            return new Tiempo(url);
 
-            case OPCION:
-                this.article = new Opcion(url);
-                break;
+        }else if(url.matches(".*http://laopcion.com.mx.*")){
 
-            case SEGUNDOASEGUNDO:
-                this.article = new Segundoasegundo(url);
-                break;
+            return new Opcion(url);
 
-            default:
+        }else if(url.matches(".*http://www.segundoasegundo.com/.*")){
 
-                break;
-        }
+            return new Segundoasegundo(url);
 
-    }
+        }else if(url.matches(".*http://www.cronicadechihuahua.com/.*")){
 
-    private final PagesList.pages whichPage(){
+            return new Cronica(url);
 
+        }else if(url.matches(".*http://nortedigital.mx/.*")){
 
-        if(this.url.matches(".*tiempo.*")){
-
-            return PagesList.pages.TIEMPO;
-
-        }else if(this.url.matches(".*http://laopcion.com.mx.*")){
-
-            return PagesList.pages.OPCION;
-
-        }else if(this.url.matches(".*http://www.segundoasegundo.com/.*")){
-
-            return PagesList.pages.SEGUNDOASEGUNDO;
+            return new NorteDigital(url);
 
         }
 
-        return PagesList.pages.OTHER;
-    }
-
-    public Video scrapVideo(){
-        return article.getVideo();
-    }
-    public String scrapTitle(){
-        return article.getTitle();
-    }
-
-    public String scrapContent(){
-        return article.getContent();
-    }
-
-    public HashSet<String> scrapThumbnail(){
-        return article.getThumbnail();
-    }
-
-    public HashSet<String> scrapTags(){
-        return article.getTags();
-    }
-
-    public String scrapCategory(){
-        return "";
-    }
-
-    public String scrapAuthor(){
-        return article.getAuthor();
-    }
-
-    public String scrapHTML(){
         return null;
     }
-
 
 }

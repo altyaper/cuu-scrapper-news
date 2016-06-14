@@ -5,7 +5,9 @@ import models.Video;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
@@ -47,7 +49,7 @@ public class OpcionTest {
 
     @Test
     public void itShouldSetTheThumbnailOfTheArticle(){
-        Set<String> hash = new HashSet<String>();
+        List<String> hash = new ArrayList<String>();
 
         hash.add("http://laopcion.com.mx/assets/2016/may/23/fqJ3GvLG13eM.jpeg");
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="1" name="scrappers.CronicaTest" time="1.663" errors="0" skipped="0">
+<testsuite tests="3" failures="1" name="scrappers.CronicaTest" time="2.176" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib"/>
@@ -62,7 +62,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="scrappers.CronicaTest" name="itShouldSetTheContentOfTheArticle" time="0.644">
+  <testcase classname="scrappers.CronicaTest" name="itShouldSetTheContentOfTheArticle" time="1.199">
     <failure message="expected:&lt;...e Estados Unidos. **[De acuerdo con el reporte de la Policía, intercambió disparos con 14 funcionarios y luego fue abatido, pero su ataque dejó 50 muertos y alrededor de 53 heridos. **El gobernador de Jalisco, Aristóteles Sandoval Díaz, comentó que no hay lugar ni tolerancia dentro de su administración para personas que se expresan de esa manera].&gt; but was:&lt;...e Estados Unidos. **[El gobernador de Jalisco, Aristóteles Sandoval Díaz, comentó que no hay lugar ni tolerancia dentro de su administración para personas que se expresan de esa manera. **De acuerdo con el reporte de la Policía, intercambió disparos con 14 funcionarios y luego fue abatido, pero su ataque dejó 50 muertos y alrededor de 53 heridos].&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;...e Estados Unidos. **[De acuerdo con el reporte de la Policía, intercambió disparos con 14 funcionarios y luego fue abatido, pero su ataque dejó 50 muertos y alrededor de 53 heridos. **El gobernador de Jalisco, Aristóteles Sandoval Díaz, comentó que no hay lugar ni tolerancia dentro de su administración para personas que se expresan de esa manera].&gt; but was:&lt;...e Estados Unidos. **[El gobernador de Jalisco, Aristóteles Sandoval Díaz, comentó que no hay lugar ni tolerancia dentro de su administración para personas que se expresan de esa manera. **De acuerdo con el reporte de la Policía, intercambió disparos con 14 funcionarios y luego fue abatido, pero su ataque dejó 50 muertos y alrededor de 53 heridos].&gt;
 	at org.junit.Assert.assertEquals(Assert.java:115)
 	at org.junit.Assert.assertEquals(Assert.java:144)
@@ -99,6 +99,6 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
   </testcase>
-  <testcase classname="scrappers.CronicaTest" name="itShouldSetTheThumbnailOfTheArticle" time="0.555"/>
-  <testcase classname="scrappers.CronicaTest" name="itShouldSetTheTitleOfTheArticle" time="0.464"/>
+  <testcase classname="scrappers.CronicaTest" name="itShouldSetTheThumbnailOfTheArticle" time="0.468"/>
+  <testcase classname="scrappers.CronicaTest" name="itShouldSetTheTitleOfTheArticle" time="0.509"/>
 </testsuite>

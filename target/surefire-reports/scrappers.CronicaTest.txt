@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: scrappers.CronicaTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.695 sec <<< FAILURE!
-itShouldSetTheContentOfTheArticle(scrappers.CronicaTest)  Time elapsed: 0.644 sec  <<< FAILURE!
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.211 sec <<< FAILURE!
+itShouldSetTheContentOfTheArticle(scrappers.CronicaTest)  Time elapsed: 1.199 sec  <<< FAILURE!
 org.junit.ComparisonFailure: expected:<...e Estados Unidos. **[De acuerdo con el reporte de la Policía, intercambió disparos con 14 funcionarios y luego fue abatido, pero su ataque dejó 50 muertos y alrededor de 53 heridos. **El gobernador de Jalisco, Aristóteles Sandoval Díaz, comentó que no hay lugar ni tolerancia dentro de su administración para personas que se expresan de esa manera].> but was:<...e Estados Unidos. **[El gobernador de Jalisco, Aristóteles Sandoval Díaz, comentó que no hay lugar ni tolerancia dentro de su administración para personas que se expresan de esa manera. **De acuerdo con el reporte de la Policía, intercambió disparos con 14 funcionarios y luego fue abatido, pero su ataque dejó 50 muertos y alrededor de 53 heridos].>
 	at org.junit.Assert.assertEquals(Assert.java:115)
 	at org.junit.Assert.assertEquals(Assert.java:144)

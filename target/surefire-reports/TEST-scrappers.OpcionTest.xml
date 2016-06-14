@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="scrappers.OpcionTest" time="4.647" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="scrappers.OpcionTest" time="3.275" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib"/>
@@ -62,9 +62,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheContentOfTheArticle" time="1.018"/>
-  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheAuthorOfTheArticle" time="0.6"/>
-  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheThumbnailOfTheArticle" time="0.558"/>
-  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheTitleOfTheArticle" time="0.593"/>
-  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheVideoOfTheArticle" time="1.878"/>
+  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheContentOfTheArticle" time="0.585"/>
+  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheAuthorOfTheArticle" time="0.905"/>
+  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheThumbnailOfTheArticle" time="0.588"/>
+  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheTitleOfTheArticle" time="0.605"/>
+  <testcase classname="scrappers.OpcionTest" name="itShouldSetTheVideoOfTheArticle" time="0.592"/>
 </testsuite>

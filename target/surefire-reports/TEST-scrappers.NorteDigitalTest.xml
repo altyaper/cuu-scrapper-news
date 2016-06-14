@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="scrappers.NorteDigitalTest" time="0.713" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="scrappers.NorteDigitalTest" time="1.833" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib"/>
@@ -62,8 +62,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="scrappers.NorteDigitalTest" name="itShouldSetTheContentOfTheArticle" time="0.26"/>
-  <testcase classname="scrappers.NorteDigitalTest" name="itShouldSetTheAuthorNameOfTheArticle" time="0.151"/>
-  <testcase classname="scrappers.NorteDigitalTest" name="itShouldSetTheThumbnailOfTheArticle" time="0.151"/>
-  <testcase classname="scrappers.NorteDigitalTest" name="itShouldSetTheTitleOfTheArticle" time="0.151"/>
+  <testcase classname="scrappers.NorteDigitalTest" name="itShouldSetTheContentOfTheArticle" time="0.71"/>
+  <testcase classname="scrappers.NorteDigitalTest" name="itShouldSetTheAuthorNameOfTheArticle" time="0.149"/>
+  <testcase classname="scrappers.NorteDigitalTest" name="itShouldSetTheThumbnailOfTheArticle" time="0.825"/>
+  <testcase classname="scrappers.NorteDigitalTest" name="itShouldSetTheTitleOfTheArticle" time="0.149"/>
 </testsuite>
