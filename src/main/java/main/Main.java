@@ -15,8 +15,9 @@ public class Main {
     public static void main(String... strings){
 
 
-        Scrapper s = new Scrapper("http://nortedigital.mx/hallan-cuerpo-acequia-campestre/");
-        Article a = (Opcion) s.getArticle();
+        Scrapper s = new Scrapper("http://chihuahuanoticias.com/?p=126306");
+
+
 
     }
 

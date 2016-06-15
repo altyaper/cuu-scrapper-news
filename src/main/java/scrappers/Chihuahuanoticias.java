@@ -16,13 +16,12 @@ public class Chihuahuanoticias extends Article {
         super(url);
         setTitle();
         setThumbnail();
+        setContent();
     }
 
     public void setThumbnail() {
-        Set<String> thumbnails = new HashSet<String>();
         Elements aux = this.html.select(".entry p img");
-        thumbnails.add(aux.get(0).attr("src"));
-//        this.setThumbnail(thumbnails);
+        this.thumbnail.add(aux.get(0).attr("src"));
     }
 
     public void setTitle() {
@@ -31,6 +30,7 @@ public class Chihuahuanoticias extends Article {
     }
 
     public void setContent() {
-
+        Elements aux = this.html.select(".entry > p");
+        this.content = aux.text().replace("  Comentarios","").trim();
     }
 }

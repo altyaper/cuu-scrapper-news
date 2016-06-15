@@ -1,14 +1,14 @@
 -------------------------------------------------------------------------------
-Test set: scrappers.TiempoTest
+Test set: scrappers.ChihuahuanoticiasTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.78 sec <<< FAILURE!
-itShouldGiveMeTheThumbnailAsTheOriginalArticle(scrappers.TiempoTest)  Time elapsed: 0.71 sec  <<< FAILURE!
-java.lang.AssertionError: expected: java.util.ArrayList<[http://assets.tiempo.com.mx/uploads/imagen/imagen/43903/image.jpeg]> but was: java.util.HashSet<[http://assets.tiempo.com.mx/uploads/imagen/imagen/43903/image.jpeg]>
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.809 sec <<< FAILURE!
+itShouldSetThumbnail(scrappers.ChihuahuanoticiasTest)  Time elapsed: 0.66 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<[http://chihuahuanoticias.com/wp-content/uploads/2016/06/dfasdfs1.jpg]> but was:<[]>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
 	at org.junit.Assert.assertEquals(Assert.java:118)
 	at org.junit.Assert.assertEquals(Assert.java:144)
-	at scrappers.TiempoTest.itShouldGiveMeTheThumbnailAsTheOriginalArticle(TiempoTest.java:51)
+	at scrappers.ChihuahuanoticiasTest.itShouldSetThumbnail(ChihuahuanoticiasTest.java:29)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

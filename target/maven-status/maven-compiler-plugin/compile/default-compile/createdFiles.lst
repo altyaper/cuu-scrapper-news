@@ -1,0 +1,15 @@
+scrappers/Opcion.class
+scrappers/Chihuahuanoticias.class
+scrappers/Cronica.class
+main/Main.class
+scrappers/Tiempo.class
+models/Page.class
+utils/Scrapper.class
+enums/VideoProvidersList.class
+models/Article.class
+enums/PagesList.class
+models/Video.class
+enums/VideoProvidersList$providers.class
+enums/PagesList$pages.class
+scrappers/NorteDigital.class
+scrappers/Segundoasegundo.class
