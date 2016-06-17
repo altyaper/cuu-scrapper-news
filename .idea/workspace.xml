@@ -2,76 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19d82dd7-35be-4a1c-b025-3c612b93739a" name="Default" comment="Add ChihuahuaNoticias Scrapper">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_9_4_1207.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/db/ConnectionManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/utils/ScrapCover.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scrapper-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-scrappers.ChihuahuanoticiasTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-scrappers.CronicaTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-scrappers.NorteDigitalTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-scrappers.OpcionTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-scrappers.ScrapperTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-scrappers.TiempoTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-scrappers.VideoTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/scrappers.ChihuahuanoticiasTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/scrappers.CronicaTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/scrappers.NorteDigitalTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/scrappers.OpcionTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/scrappers.ScrapperTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/scrappers.TiempoTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/scrappers.VideoTest.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enums/PagesList$pages.class" afterPath="$PROJECT_DIR$/target/classes/enums/PagesList$pages.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enums/PagesList.class" afterPath="$PROJECT_DIR$/target/classes/enums/PagesList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enums/VideoProvidersList$providers.class" afterPath="$PROJECT_DIR$/target/classes/enums/VideoProvidersList$providers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enums/VideoProvidersList.class" afterPath="$PROJECT_DIR$/target/classes/enums/VideoProvidersList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/main/Main.class" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/models/Article.class" afterPath="$PROJECT_DIR$/target/classes/models/Article.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/models/Page.class" afterPath="$PROJECT_DIR$/target/classes/models/Page.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/models/Video.class" afterPath="$PROJECT_DIR$/target/classes/models/Video.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/ChihuahuanoticiasCover.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/ChihuahuanoticiasCover.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/CoverPage.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/CoverPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/CronicaCover.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/CronicaCover.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/NorteDigitalCover.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/NorteDigitalCover.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/OmniaCover.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/OmniaCover.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/OpcionCover.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/OpcionCover.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/SegundoasegundoCover.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/SegundoasegundoCover.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/TiempoCover.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperCover/TiempoCover.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Chihuahuanoticias.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Chihuahuanoticias.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Cronica.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Cronica.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/NorteDigital.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/NorteDigital.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Omnia.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Omnia.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Opcion.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Opcion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Segundoasegundo.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Segundoasegundo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Tiempo.class" afterPath="$PROJECT_DIR$/target/classes/scrappers/scrapperPage/Tiempo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utils/Scrapper.class" afterPath="$PROJECT_DIR$/target/classes/utils/Scrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/scrappers/ChihuahuanoticiasTest.class" afterPath="$PROJECT_DIR$/target/test-classes/scrappers/ChihuahuanoticiasTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/scrappers/CronicaTest.class" afterPath="$PROJECT_DIR$/target/test-classes/scrappers/CronicaTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/scrappers/NorteDigitalTest.class" afterPath="$PROJECT_DIR$/target/test-classes/scrappers/NorteDigitalTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/scrappers/OmniaTest.class" afterPath="$PROJECT_DIR$/target/test-classes/scrappers/OmniaTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/scrappers/OpcionTest.class" afterPath="$PROJECT_DIR$/target/test-classes/scrappers/OpcionTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/scrappers/ScrapperTest.class" afterPath="$PROJECT_DIR$/target/test-classes/scrappers/ScrapperTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/scrappers/TiempoTest.class" afterPath="$PROJECT_DIR$/target/test-classes/scrappers/TiempoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/scrappers/VideoTest.class" afterPath="$PROJECT_DIR$/target/test-classes/scrappers/VideoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapper.iml" afterPath="$PROJECT_DIR$/scrapper.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/models/Article.java" afterPath="$PROJECT_DIR$/src/main/java/models/Article.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/ChihuahuanoticiasCover.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/ChihuahuanoticiasCover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CoverPage.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CoverPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CronicaCover.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CronicaCover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/NorteDigitalCover.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/NorteDigitalCover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/OmniaCover.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/OmniaCover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/OpcionCover.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/OpcionCover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/SegundoasegundoCover.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/SegundoasegundoCover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/TiempoCover.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/TiempoCover.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Scrapper.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Scrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="scrapper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -107,6 +39,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -228,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/test/java/scrappers/OpcionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/scrappers/Chihuahuanoticias.java" />
         <option value="$PROJECT_DIR$/src/test/java/scrappers/ChihuahuanoticiasTest.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/test/java/scrappers/OmniaTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/scrappers/Omnia.java" />
         <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Tiempo.java" />
@@ -249,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/Scrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ScrapCover.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -950,8 +892,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2841584" sideWeight="0.5255591" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52771086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5108434" sideWeight="0.47870076" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4313253" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5108434" sideWeight="0.47870076" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4313253" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
@@ -1135,13 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1463,6 +1398,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
