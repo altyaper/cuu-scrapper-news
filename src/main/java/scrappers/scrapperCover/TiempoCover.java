@@ -17,8 +17,7 @@ import java.util.regex.Matcher;import java.util.regex.Pattern;
  */
 public class TiempoCover extends CoverPage{
 
-    private Set<Scrapper> articles = new HashSet<Scrapper>();
-    private final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.TIEMPO);
+    protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.TIEMPO);
     private final String regex = new String("\\/\\w+\\/\\d+-\\w+\\/\\d");
 
     public TiempoCover() {

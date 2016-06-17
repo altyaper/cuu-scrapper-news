@@ -4,7 +4,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,7 +11,7 @@ import java.util.Set;
 /**
  * Created by echavez on 5/20/16.
  */
-public abstract class Article{
+public abstract class Article {
 
     public String title;
     public String content;

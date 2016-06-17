@@ -19,6 +19,7 @@ public final class Scrapper {
         article = getObjectArticle(url);
     }
 
+
     //Factory Design Pattern
     private Article getObjectArticle(String url){
 

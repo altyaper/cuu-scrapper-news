@@ -40,7 +40,7 @@ public abstract class CoverPage {
         return auxlinks;
     }
 
-    public boolean setHTML(){
+    private boolean setHTML(){
 
         Document doc = null;
         try {

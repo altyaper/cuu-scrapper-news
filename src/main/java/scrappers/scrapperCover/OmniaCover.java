@@ -13,7 +13,6 @@ import java.util.Set;
  */
 public class OmniaCover extends CoverPage {
 
-    private Set<String> links = new HashSet<String>();
     protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.OMNIA);
     private final String regex = new String("\\/noticia\\/[a-zA-Z-]+\\/");
 
