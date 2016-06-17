@@ -8,6 +8,7 @@ import scrappers.scrapperPage.Opcion;
 import scrappers.scrapperPage.Tiempo;
 import utils.Scrapper;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,7 +24,7 @@ public class ScrapperTest {
     Scrapper scrapper;
 
     @Before
-    public void setup(){
+    public void setup() throws IOException {
         scrapper = new Scrapper("http://tiempo.com.mx/noticia/34564-robo_de_agua_en_la_ciudad_deja/1");
     }
 
@@ -34,19 +35,19 @@ public class ScrapperTest {
     }
 
     @Test
-    public void itShouldGetAnArticleOfOpcion(){
+    public void itShouldGetAnArticleOfOpcion() throws IOException {
         Scrapper scrapperopcion = new Scrapper("http://laopcion.com.mx/noticia/140178");
         assertTrue(scrapperopcion.getArticle() instanceof Opcion);
     }
 
     @Test
-    public void itShouldGetAnArticleOfNorteDigital(){
+    public void itShouldGetAnArticleOfNorteDigital() throws IOException {
         Scrapper scrappernorte = new Scrapper("http://nortedigital.mx/hallan-cuerpo-acequia-campestre/");
         assertTrue(scrappernorte.getArticle() instanceof NorteDigital);
     }
 
     @Test
-    public void itShouldGetAnArticleOfCronica(){
+    public void itShouldGetAnArticleOfCronica() throws IOException {
         Scrapper scrappercronica = new Scrapper("http://www.cronicadechihuahua.com/Estrenan-tres-Bachilleratos,44555.html");
         assertTrue(scrappercronica.getArticle() instanceof Cronica);
     }

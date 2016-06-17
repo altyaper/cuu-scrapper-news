@@ -14,7 +14,7 @@ import java.util.Set;
 public class OpcionCover extends CoverPage {
 
     protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.OPCION);
-    private final String regex = new String("http:\\/\\/\\w+.com.mx\\/noticia\\/\\d+\\/[0-9a-z-]+");
+    public final String regex = new String("http:\\/\\/\\w+.com.mx\\/noticia\\/\\d+(\\/[0-9a-z-]+)?");
 
     public OpcionCover() {
         super(page);

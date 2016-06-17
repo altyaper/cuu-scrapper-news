@@ -2,13 +2,17 @@ package scrappers.scrapperPage;
 
 import models.Article;
 import org.jsoup.select.Elements;
+import services.HtmlProcess;
+
+import java.io.IOException;
 
 /**
  * Created by echavez on 6/13/16.
  */
 public class NorteDigital extends Article {
-    public NorteDigital(String pageUrl) {
-        super(pageUrl);
+
+    public NorteDigital(String url, HtmlProcess htmlProcess) throws IOException {
+        super(url , htmlProcess);
         setTitle();
         setContent();
         setThumbnail();

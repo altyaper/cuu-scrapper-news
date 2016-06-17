@@ -18,7 +18,8 @@ import java.util.regex.Matcher;import java.util.regex.Pattern;
 public class TiempoCover extends CoverPage{
 
     protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.TIEMPO);
-    private final String regex = new String("\\/\\w+\\/\\d+-\\w+\\/\\d");
+
+    public final String regex = new String("\\/\\w+\\/\\d+-\\w+\\/\\d");
 
     public TiempoCover() {
         super(page);
@@ -32,16 +33,19 @@ public class TiempoCover extends CoverPage{
     public HashSet<String> getArticlesLinks(){
         HashSet<String> auxlinks = new HashSet<String>();
 
-        Elements elements = this.getHtml().select("a");
+        if(this.getHtml() != null){
+            Elements elements = this.getHtml().select("a");
 
-        for(Element link: elements){
-            String stringLink = link.attr("href");
-            if(this.isLink(stringLink)){
+            for(Element link: elements){
+                String stringLink = link.attr("href");
+                if(this.isLink(stringLink)){
 
-                auxlinks.add(page+stringLink);
+                    auxlinks.add(page+stringLink);
 
+                }
             }
         }
+
         return auxlinks;
     }
 }

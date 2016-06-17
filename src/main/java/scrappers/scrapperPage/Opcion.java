@@ -3,6 +3,9 @@ package scrappers.scrapperPage;
 import models.Article;
 import models.Video;
 import org.jsoup.select.Elements;
+import services.HtmlProcess;
+
+import java.io.IOException;
 
 /**
  * Created by echavez on 5/23/16.
@@ -10,17 +13,12 @@ import org.jsoup.select.Elements;
 public class Opcion extends Article {
 
     // Builder Design Pattern
-    public Opcion(String url){
-        super(url);
-        setTitle();
-        setContent();
-        setThumbnail();
+    public Opcion(String url, HtmlProcess htmlProcess) throws IOException {
+        super(url, htmlProcess);
         setTags();
         setAuthor();
         setVideo();
     }
-
-    public void setTags() {}
 
     @Override
     public void setVideo(){
@@ -42,11 +40,13 @@ public class Opcion extends Article {
         }
     }
 
+    @Override
     public void setTitle() {
         Elements aux = this.html.select("h1.ntitulo");
         this.title = aux.text().trim();
     }
 
+    @Override
     public void setContent() {
         Elements aux = this.html.select(".notainner .nnota");
         this.content = aux.text().trim();

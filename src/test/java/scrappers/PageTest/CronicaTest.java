@@ -1,12 +1,20 @@
-package scrappers;
+package scrappers.PageTest;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
 import scrappers.scrapperPage.Cronica;
+import services.HtmlProcess;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.replay;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -14,11 +22,20 @@ import static org.junit.Assert.assertEquals;
  */
 public class CronicaTest {
 
-    Cronica cronica;
+    public String url = "http://www.cronicadechihuahua.com/Hoy-el-vigesimo-segundo-ejecutado,44533.html";
+    public Cronica cronica;
 
     @Before
-    public void setup(){
-        cronica = new Cronica("http://www.cronicadechihuahua.com/Hoy-el-vigesimo-segundo-ejecutado,44533.html");
+    public void setup() throws IOException {
+
+        HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
+        String dir = getClass().getResource("/stubCronica.html").toString().replace("file:","");
+        File file = new File(dir);
+        Document document = Jsoup.parse(file, "UTF-8",this.url);
+        expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
+        replay(htmlProcessStub);
+
+        cronica = new Cronica(this.url, htmlProcessStub);
     }
 
     @Test

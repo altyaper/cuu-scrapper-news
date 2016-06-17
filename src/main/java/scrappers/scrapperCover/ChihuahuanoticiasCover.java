@@ -12,7 +12,7 @@ import java.util.Set;
 public class ChihuahuanoticiasCover extends CoverPage {
 
     protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.CHIHUAHUANOTICIAS);
-    private final String regex = new String("http:\\/\\/chihuahuanoticias.com\\/\\?p=\\d+");
+    public final String regex = new String("http:\\/\\/chihuahuanoticias.com\\/\\?p=\\d+");
 
     public ChihuahuanoticiasCover() {
         super(page);

@@ -14,7 +14,7 @@ import java.util.Set;
 public class OmniaCover extends CoverPage {
 
     protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.OMNIA);
-    private final String regex = new String("\\/noticia\\/[a-zA-Z-]+\\/");
+    public final String regex = new String("\\/noticia\\/[a-zA-Z-]+\\/?");
 
     public OmniaCover() {
         super(page);

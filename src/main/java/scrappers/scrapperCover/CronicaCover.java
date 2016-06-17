@@ -13,7 +13,7 @@ import java.util.Set;
 public class CronicaCover extends CoverPage {
 
     protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.CRONICA);
-    private final String regex = new String("[0-9a-zA-Z-]+,\\d+.html");
+    public final String regex = new String("[0-9a-zA-Z-]+,\\d+.html");
 
     public CronicaCover() {
         super(page);

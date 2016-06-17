@@ -2,6 +2,9 @@ package scrappers.scrapperPage;
 
 import models.Article;
 import org.jsoup.select.Elements;
+import services.HtmlProcess;
+
+import java.io.IOException;
 
 /**
  * Created by echavez on 6/13/16.
@@ -9,11 +12,8 @@ import org.jsoup.select.Elements;
 public class Segundoasegundo extends Article {
 
     // Builder Design Pattern
-    public Segundoasegundo(String pageUrl) {
-        super(pageUrl);
-        setThumbnail();
-        setContent();
-        setTitle();
+    public Segundoasegundo(String pageUrl, HtmlProcess htmlProcess) throws IOException {
+        super(pageUrl, htmlProcess);
     }
 
     public void setThumbnail() {

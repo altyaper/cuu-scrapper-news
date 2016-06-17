@@ -48,7 +48,7 @@ public abstract class CoverPage {
             return true;
         } catch (IOException e) {
             System.out.println(e.getMessage());
-            e.printStackTrace();
+//            e.printStackTrace();
             return false;
         }
 

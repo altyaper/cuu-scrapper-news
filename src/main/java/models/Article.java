@@ -1,7 +1,7 @@
 package models;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import services.HtmlProcess;
 
 import java.io.IOException;
 import java.util.Date;
@@ -27,24 +27,12 @@ public abstract class Article {
 
     public HashSet<String> tags = new HashSet<String>();
 
-    public Article(String pageUrl) {
+    public Article(String pageUrl, HtmlProcess htmlProcess) throws IOException {
 
-        this.pageUrl = pageUrl;
-        this.setHTML();
-
-    }
-
-    public boolean setHTML(){
-
-        Document doc = null;
-        try {
-            this.html = Jsoup.connect(this.pageUrl).get();
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
-
+        this.html = htmlProcess.getHtml(pageUrl);
+        setTitle();
+        setContent();
+        setThumbnail();
     }
 
     public HashSet<String> getTags(){

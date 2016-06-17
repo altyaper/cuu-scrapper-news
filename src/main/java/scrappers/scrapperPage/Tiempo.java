@@ -1,14 +1,10 @@
 package scrappers.scrapperPage;
 
 import models.Article;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import services.HtmlProcess;
 
 import java.io.IOException;
-
-import static jdk.nashorn.internal.objects.NativeString.trim;
 
 /**
  * Created by echavez on 5/20/16.
@@ -16,25 +12,25 @@ import static jdk.nashorn.internal.objects.NativeString.trim;
 public class Tiempo extends Article{
 
     // Builder Design Pattern
-    public Tiempo(String url){
-        super(url);
-        setTitle();
-        setContent();
-        setThumbnail();
+    public Tiempo(String url, HtmlProcess htmlProcess) throws IOException {
+        super(url, htmlProcess);
         setTags();
     }
 
-
+    @Override
     public void setTitle() {
         Elements auxtitle = this.html.select("header h1");
         this.title = auxtitle.text().trim();
     }
 
+    @Override
     public void setContent(){
         Elements aux = this.html.select("#article-post div h1");
         this.content = aux.text().trim();
     }
 
+
+    @Override
     public void setThumbnail(){
         Elements aux = this.html.select(".complemento-item .complemento-img");
         this.thumbnail.add(aux.attr("src"));

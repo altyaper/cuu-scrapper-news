@@ -2,6 +2,7 @@ package utils;
 
 import scrappers.scrapperCover.*;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -42,10 +43,14 @@ public class ScrapCover {
         for (final String link : allnews) {
 
             Runnable task = () -> {
-                Scrapper s = new Scrapper(link);
+                Scrapper s = null;
+                try {
+                    s = new Scrapper(link);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 System.out.println(s.getArticle().getTitle());
                 System.out.println(s.getArticle().getThumbnail());
-                System.out.println(s.getArticle().getPageUrl());
                 System.out.println();
             };
 

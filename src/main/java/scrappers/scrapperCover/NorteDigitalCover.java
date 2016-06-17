@@ -11,7 +11,7 @@ import java.util.Set;
 public class NorteDigitalCover extends CoverPage {
 
     protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.NORTEDIGITAL);
-    private final String regex = new String("http:\\/\\/nortedigital.mx\\/\\w+[-][a-zA-Z0-9-]+\\/");
+    public final String regex = new String("http:\\/\\/nortedigital.mx\\/\\w+[-][a-zA-Z0-9-]+\\/");
 
     public NorteDigitalCover() {
         super(page);

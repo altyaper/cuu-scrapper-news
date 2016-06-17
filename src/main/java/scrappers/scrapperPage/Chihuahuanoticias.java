@@ -1,19 +1,18 @@
 package scrappers.scrapperPage;
 
 import models.Article;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import services.HtmlProcess;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.io.IOException;
 
 /**
  * Created by echavez on 6/14/16.
  */
 public class Chihuahuanoticias extends Article {
 
-    public Chihuahuanoticias(String url) {
-        super(url);
+    public Chihuahuanoticias(String url, HtmlProcess htmlProcess) throws IOException {
+        super(url, htmlProcess);
         setTitle();
         setThumbnail();
         setContent();

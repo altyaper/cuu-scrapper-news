@@ -1,15 +1,17 @@
 package scrappers.scrapperPage;
 
-import enums.PagesList;
 import models.Article;
 import org.jsoup.select.Elements;
+import services.HtmlProcess;
+
+import java.io.IOException;
 
 /**
  * Created by echavez on 6/15/16.
  */
 public class Omnia extends Article{
-    public Omnia(String pageUrl) {
-        super(pageUrl);
+    public Omnia(String pageUrl, HtmlProcess htmlProcess) throws IOException {
+        super(pageUrl, htmlProcess);
         setTitle();
         setContent();
         setThumbnail();
@@ -28,6 +30,7 @@ public class Omnia extends Article{
     }
 
     public void setContent() {
-
+        Elements aux = this.html.select("#txt_nota_interna p");
+        this.content = aux.text().trim().replaceAll(".+- ","");
     }
 }

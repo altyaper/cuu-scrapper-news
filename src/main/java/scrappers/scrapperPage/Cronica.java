@@ -3,6 +3,9 @@ package scrappers.scrapperPage;
 import enums.PagesList;
 import models.Article;
 import org.jsoup.select.Elements;
+import services.HtmlProcess;
+
+import java.io.IOException;
 
 /**
  * Created by echavez on 6/13/16.
@@ -10,8 +13,8 @@ import org.jsoup.select.Elements;
 public class Cronica extends Article{
 
     // Builder Design Pattern
-    public Cronica(String url) {
-        super(url);
+    public Cronica(String url, HtmlProcess htmlProcess) throws IOException {
+        super(url, htmlProcess);
         setTitle();
         setContent();
         setThumbnail();
