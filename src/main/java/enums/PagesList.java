@@ -7,10 +7,8 @@ import java.util.HashMap;
  */
 public class PagesList {
 
-
-
     public enum pages {
-        TIEMPO, OPCION, SEGUNDOASEGUNDO, CRONICA,NORTEDIGITAL, CHIHUAHUANOTICIAS, OTHER
+        TIEMPO, OPCION, SEGUNDOASEGUNDO, CRONICA,NORTEDIGITAL, CHIHUAHUANOTICIAS, OMNIA, OTHER
     }
 
     public static HashMap getRootUrls(){
@@ -23,6 +21,7 @@ public class PagesList {
         rootUrls.put(pages.CRONICA, "http://www.cronicadechihuahua.com/");
         rootUrls.put(pages.NORTEDIGITAL, "http://nortedigital.mx/");
         rootUrls.put(pages.CHIHUAHUANOTICIAS, "http://chihuahuanoticias.com/");
+        rootUrls.put(pages.OMNIA, "http://www.omnia.com.mx/");
 
         return rootUrls;
     }

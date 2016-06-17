@@ -2,6 +2,7 @@ package scrappers;
 
 import org.junit.Before;
 import org.junit.Test;
+import scrappers.scrapperPage.Chihuahuanoticias;
 
 import java.util.HashSet;
 import java.util.Set;

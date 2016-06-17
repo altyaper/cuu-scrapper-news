@@ -2,11 +2,13 @@ package scrappers;
 
 import org.junit.Before;
 import org.junit.Test;
+import scrappers.scrapperPage.Cronica;
+import scrappers.scrapperPage.NorteDigital;
+import scrappers.scrapperPage.Opcion;
+import scrappers.scrapperPage.Tiempo;
 import utils.Scrapper;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import static org.junit.Assert.assertEquals;

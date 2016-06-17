@@ -1,4 +1,4 @@
-package scrappers;
+package scrappers.scrapperPage;
 
 import models.Article;
 import org.jsoup.Jsoup;

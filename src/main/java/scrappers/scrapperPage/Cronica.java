@@ -1,4 +1,4 @@
-package scrappers;
+package scrappers.scrapperPage;
 
 import enums.PagesList;
 import models.Article;

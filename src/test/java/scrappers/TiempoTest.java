@@ -2,6 +2,7 @@ package scrappers;
 
 import org.junit.Before;
 import org.junit.Test;
+import scrappers.scrapperPage.Tiempo;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -1,12 +1,7 @@
 package utils;
 
-import enums.PagesList;
 import models.Article;
-import models.Video;
-import scrappers.*;
-
-import java.util.ArrayList;
-import java.util.HashSet;
+import scrappers.scrapperPage.*;
 
 /**
  * Created by echavez on 5/20/16.

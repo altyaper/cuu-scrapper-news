@@ -3,6 +3,7 @@ package scrappers;
 import models.Video;
 import org.junit.Before;
 import org.junit.Test;
+import scrappers.scrapperPage.Opcion;
 
 import java.util.HashSet;
 import java.util.Set;
