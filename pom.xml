@@ -34,11 +34,13 @@
             <version>3.4</version>
         </dependency>
 
+        <!-- http://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.4.1207</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.2</version>
         </dependency>
+
 
     </dependencies>
 

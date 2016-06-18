@@ -1,9 +1,13 @@
 package utils;
 
+import db.ConnectionManager;
+import db.QueryManager;
 import scrappers.scrapperCover.*;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -22,7 +26,13 @@ public class ScrapCover {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
-    public static void scrappAllCovers() throws IOException {
+    public static void scrappAllCovers() throws IOException, SQLException {
+
+        Connection conn = null;
+        ConnectionManager connection = new ConnectionManager();
+        conn = connection.getConnection();
+        QueryManager query = new QueryManager(conn);
+        query.setTables();
 
         HashSet<String> allnews = new HashSet<String>();
         CoverPage single = new CronicaCover(new HtmlProcess());
@@ -52,6 +62,14 @@ public class ScrapCover {
                 }
                 System.out.println(s.getArticle().getTitle());
                 System.out.println(s.getArticle().getThumbnail());
+                try {
+                    if(query.saveArticle(s.getArticle()) == 1){
+                        System.out.println("SAVED!");
+                    }
+                } catch (SQLException e) {
+                    System.out.println("ERROR: "+e.getMessage());
+//                    e.printStackTrace();
+                }
                 System.out.println();
             };
 

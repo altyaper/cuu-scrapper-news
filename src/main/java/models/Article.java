@@ -13,23 +13,24 @@ import java.util.Set;
  */
 public abstract class Article {
 
-    public String title;
-    public String content;
-    private String category;
-    public Set<String> thumbnail = new HashSet<String>();;
-
-    public String author;
+    protected String title;
+    protected Set<String> thumbnail = new HashSet<String>();;
+    protected String content;
+    protected String author;
     protected String pageUrl;
-    public Video video;
-    private Date date;
-    private Enum page;
-    public Document html;
 
-    public HashSet<String> tags = new HashSet<String>();
+    protected String category;
+    protected Video video;
+    protected Date date;
+    protected Enum page;
+    protected Document html;
+
+    protected HashSet<String> tags = new HashSet<String>();
 
     public Article(String pageUrl, HtmlProcess htmlProcess) throws IOException {
 
         this.html = htmlProcess.getHtml(pageUrl);
+        this.pageUrl = pageUrl;
         setTitle();
         setContent();
         setThumbnail();
