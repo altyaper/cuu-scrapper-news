@@ -4,7 +4,9 @@ import enums.PagesList;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import scrappers.scrapperPage.Opcion;
+import services.HtmlProcess;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,11 +15,11 @@ import java.util.Set;
  */
 public class OpcionCover extends CoverPage {
 
-    protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.OPCION);
+    public final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.OPCION);
     public final String regex = new String("http:\\/\\/\\w+.com.mx\\/noticia\\/\\d+(\\/[0-9a-z-]+)?");
 
-    public OpcionCover() {
-        super(page);
+    public OpcionCover(HtmlProcess htmlProcess) throws IOException {
+        super(page,htmlProcess);
     }
 
     public boolean isLink(String href) {

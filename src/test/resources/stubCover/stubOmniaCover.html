@@ -1,0 +1,2895 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OMNIA</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/media/images/favicon.ico" type="image/x-icon" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen">
+
+    <script src="/js/lightbox.js"></script>
+    <link href="/css/lightbox.css" rel="stylesheet" />
+
+    <script>
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('clocktics').innerHTML=h+":"+m+":"+s;
+t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+
+    <script type="text/javascript">
+function miinit(){
+    publicidad();
+    startTime();
+}
+</script>
+
+    <script language="JavaScript" type="text/javascript">
+
+var images = new Array(1);
+var fl = new Array (1);
+var ur = new Array (1 );
+var count = -1;
+
+images[0] = 'banners/UACHradio16Jun16.gif';
+fl[0] = 'False';
+ur[0] = 'http://www.uach.mx/';
+
+function publicidad(){
+
+if (count < 1 -1 ){
+  count ++;
+ }
+else{
+count = 0;
+}
+
+if (fl[count] == 'True'){
+var a = '<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"';
+a = a + 'codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"';
+a = a + 'WIDTH="870" HEIGHT="90" id="Movie"><PARAM NAME=movie VALUE="http://www.omnia.com.mx/media/';
+a = a + images[count] ;
+a = a + '"><PARAM NAME=quality VALUE=high><PARAM NAME=bgcolor VALUE=#FFFFFF><EMBED src="http://www.omnia.com.mx/media/';
+a = a + images[count] ;
+a = a + '" quality=high bgcolor=#FFFFFF WIDTH="870" HEIGHT="90"';
+a = a + 'NAME="Movie" ALIGN="" TYPE="application/x-shockwave-flash"';
+a = a + 'PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED></OBJECT>';
+}
+else{
+a = '<a href="';
+a = a + ur[count];
+a = a + '"><img src="http://www.omnia.com.mx/media/';
+a = a + images[count];
+a = a + '" width="870" height="90"><a/>';
+}
+
+
+document.getElementById("publicidad").innerHTML = a;
+  setTimeout("publicidad()", 10000)
+}
+</script>
+
+
+
+
+</head>
+<body onload="miinit();">
+
+
+<div id="container" class="container">
+    <div id="margen">
+
+        <div id="header" class="span12"> <!-- Header -->
+            <div class="row">
+                <div id="clima" class="span4 oxy">
+                    <div id="clima_in" class="row span4 clima_row">
+                    </div>
+                    <div class="row span4 font11 clima_txt2">
+                        <p>Viernes 17 de Junio 2016 <span id="clocktics"></span></p>
+                    </div>
+                </div>
+
+                <div class="span4 txt_c">
+                    <p><a href="/"><img id="logo_omnia" src="img/logo.PNG" style="width:394px; height:100px;"/></a></p>
+                    <!-- <p><a href="/"><img id="logo_omnia" src="img/OmniaLogoNavidad2015.png" style="width:394px; height:100px;"/></a></p> -->
+                </div>
+
+                <div id="header3" class="span4">
+                    <div class="row fr mar10">
+                        <!--
+                                                           <a href="#" class="btn btn_miomnia oxy">Registrate</a>
+                                                           <a href="#" class="btn btn_miomnia oxy">Mi Omnia</a>	-->
+                    </div>
+
+                    <div  class="row">
+                        <div id="buscador" class="fr mar10"><!--
+	   							<img class="fl" src="img/lupa.PNG"/>
+	   							<div class="fr">
+	   								<input class="buscar_txt fl oxy" type="text" placeholder="Buscar en Omnia">
+	   								<button class="btn btn_buscar fr oxy_b">BUSCAR</button>
+	   							</div>
+-->
+                            <!--
+                            <a href="http://folklore.mx/telcel/02/"><img src="/media/banners/Gif-Amigo-02.gif" height="60" width="220" border="0"></a>-->
+
+                            <a href=http://folklore.mx/telcel/Ventaespecialpapa/ ><img src="/media/banners/telcel-papa.gif" height="60" width="220" border="0"></a>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div id="top_bar" class="span12">
+                    <div class="row top_row">
+                        <ul>
+                            <li><a href="/seccion/locales/" class="link">LOCALES</a></li>
+                            <li><a href="/seccion/policiaca/" class="link">POLICIACA</a></li>
+                            <li><a href="/seccion/cultura/" class="link">CULTURA</a></li>
+                            <li><a href="/seccion/deportes/" class="link">DEPORTES</a></li>
+                            <li><a href="/seccion/farandula/" class="link">FARÁNDULA</a></li>
+                            <li><a href="/seccion/columna/" class="link">LA COLUMNA</a></li>
+                            <li><a href="/seccion/nacional/" class="link">NACIONAL</a></li>
+                            <li><a href="/seccion/internacional/" class="link">INTERNACIONAL</a></li>
+                            <li><a href="http://tv.omnia.com.mx/" class="link">Omnia TV</a></li>
+                            <li class="fr heme">
+                                <a href="/hemeroteca/" class="fl oxy heme_txt white">HEMEROTECA</a>
+                                <img class="fr carpeta" src="img/carpeta.PNG"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="http://twitter.com/OMNIANOTICIAS/"><img class="" src="img/twitter.PNG"/></a>
+                                <a href="http://youtube.com/noticieroomnia/"><img class="" src="img/youtube.PNG"/></a>
+                                <a href="http://facebook.com/omnia.noticias/"><img class="" src="img/facebook.PNG"/></a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="row">
+
+                        <!--div class="di fl">
+                            <ul class="temas">
+                                <li class="link">TEMAS ACTUALES</li>
+                            </ul>
+                        </div>
+
+
+                        <div class="temas_links di fl">
+                            <ul>
+                                <li><a href="#" class="link2 di">Cesar Duarte</a></li>
+                                <li>|</li>
+                                <li><a href="#" class="link2 di">Tromba</a></li>
+                                <li>|</li>
+                                <li><a href="#" class="link2 di">Temblor en Chihuahua</a></li>
+                                <li>|</li>
+                                <li><a href="#" class="link2 di">Manuel e Ingrid</a></li>
+                                <li>|</li>
+                                <li><a href="#" class="link2 di">Elecciones en Coyame</a></li>
+                            </ul>
+                        </div -->
+
+                        <!--div id="social">
+                            <a href="#"><img class="s_icn" src="img/twitter.PNG"/></a>
+                            <a href="#"><img class="s_icn" src="img/youtube.PNG"/></a>
+                            <a href="#"><img class="s_icn" src="img/facebook.PNG"/></a>
+                        </div-->
+                    </div>
+                </div>
+            </div>
+        </div><!-- END header-->
+
+
+        <div class="row">  <!-- ROW-1-->
+            <div class="span6"> <!-- Columna Principal-->
+
+                <!-- COMIENZA SLIDER -->
+                <div id="slider">
+                    <div id="cuadro_blanco">
+                    </div>
+
+                    <div id="main_slider" class="flexslider">
+
+                        <ul class="slides">
+
+                            <li>
+                                <div class="encabezado">
+                                    <a><p class="noto">Responde IEE vs PRI, “no hay exceso de boletas”</p></a>
+                                </div>
+                                <a href="/noticia/responde-iee-vs-pri-no-hay-exceso-de-boletas"><img src="/media/fotos/20160617_hy6rfg.jpg" class="img_slider"/></a>
+                                <a href="#" class="fshare2"></a>
+                                <div class="texto_noticia oxy">
+                                    <p>El Consejo General del IEE encabezados por el presidente, Arturo Meraz, frente a las acusaciones que ha hecho el PRI en contra de la institución electoral, sostuvo que cumplió con la certeza jurídica de la elección, al contar con cada ...</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="encabezado">
+                                    <a><p class="noto">Atropella tráiler a motociclista en la vialidad Ch-P</p></a>
+                                </div>
+                                <a href="/noticia/atropella-trailer-a-motociclista-en-la-vialidad-ch-p"><img src="/media/fotos/20160617_indicebb.jpg" class="img_slider"/></a>
+                                <a href="#" class="fshare2"></a>
+                                <div class="texto_noticia oxy">
+                                    <p>Chihuahua.- Un motociclista resultó gravemente herido en la intersección de la vialidad Ch-P y calle 92 al ser embestido por detrás por un tráiler de la empresa Bafar. trailer a moto Ambos se conductores se encontraban en el semáforo de ...</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="encabezado">
+                                    <a><p class="noto">Anticipa PRI anular elección con Juárez, 8 diputados y gobernador</p></a>
+                                </div>
+                                <a href="/noticia/anticipa-pri-anular-eleccion-impugna-juarez-8-diputados-y-gobernador"><img src="/media/fotos/20160617_8yth.jpg" class="img_slider"/></a>
+                                <a href="#" class="fshare2"></a>
+                                <div class="texto_noticia oxy">
+                                    <p>El presidente del PRI, Guillermo Dowell confirmó que el día de ayer que se venció el plazo para interponer recursos legales a los resultados electorales, se promovieron impugnaciones en contra de 8 diputaciones y la alcaldía de Ciudad Juárez con ...</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="encabezado">
+                                    <a><p class="noto">Termina JMAS reparaciones en conducción de El Sauz</p></a>
+                                </div>
+                                <a href="/noticia/termina-jmas-reparaciones-en-la-conduccion-de-el-sauz"><img src="/media/fotos/20160617_jmas.jpg" class="img_slider"/></a>
+                                <a href="#" class="fshare2"></a>
+                                <div class="texto_noticia oxy">
+                                    <p>El personal de la Junta Municipal de Agua y Saneamiento (JMAS) terminó con las reparaciones en la línea de conducción de 36 pulgadas de diámetro, de la batería de pozos de El Sauz, la cual había resultado dañada por una ...</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="encabezado">
+                                    <a><p class="noto">Inauguran Pasaje Victoria con exposiciones y arte </p></a>
+                                </div>
+                                <a href="/noticia/inauguran-pasaje-victoria-con-exposiciones-culturales-y-arte-contemporaneo"><img src="/media/fotos/20160617_pasaje-victoria.jpg" class="img_slider"/></a>
+                                <a href="#" class="fshare2"></a>
+                                <div class="texto_noticia oxy">
+                                    <p>Chihuahua, Chih.- El Instituto de Cultura del Municipio, en punto de las 10:00 horas de esta mañana, presentó el circuito Pasaje Victoria donde se exhiben obras de arte contemporáneo.</p>
+                                </div>
+                            </li>
+
+
+                        </ul>
+
+                        <div id="navslider">
+                        </div>
+                        <a href="#"><img src="img/facebookshare.png" class="fshare2"></img></a>
+                    </div>
+                </div> <!-- END slider -->
+
+                <div class="scc locales txt_c">
+                    <p class="seccion2 di">LOCALES</p>
+                    <a href="/seccion/locales/" class="plus di" title=" ">
+                    </a>
+                </div>
+
+                <div id="notas_locales">
+
+                    <div class="nota_local">
+
+                        <div class="local_img">
+                            <a href="/noticia/funge-imss-como-mediador-en-situacion-laboral-de-la-guarderia-towi"><img class="di" src="/media/thumb-fotos/20160617_img_0090.JPG" /></a>
+                        </div>
+                        <div class="di local_txt">
+                            <a href="/noticia/funge-imss-como-mediador-en-situacion-laboral-de-la-guarderia-towi">
+                                <!--p class="oxy red di">17:45 p.m.  |  </p-->
+                                <p class="nota_head di">Funge Imss como mediador en situación laboral de la guardería Towi </p>
+                                <p class="nota_sub">- La suspensión del servicio este viernes fue momentánea - Se garantiza la continuidad de la atención a los menores Cuauhtémoc, Chih.- La Delegación Estatal del Instituto Mexicano del Seguro ...</p></a>
+                        </div>
+                    </div>
+
+                    <div class="nota_local">
+
+                        <div class="local_img">
+                            <a href="/noticia/despide-colegio-de-bachilleres-a-255-alumnos-de-delicias-y-saucillo"><img class="di" src="/media/thumb-fotos/20160617_1.jpg" /></a>
+                        </div>
+                        <div class="di local_txt">
+                            <a href="/noticia/despide-colegio-de-bachilleres-a-255-alumnos-de-delicias-y-saucillo">
+                                <!--p class="oxy red di">16:34 p.m.  |  </p-->
+                                <p class="nota_head di">Despide Colegio de Bachilleres a 255 alumnos de Delicias y Saucillo </p>
+                                <p class="nota_sub">Hoy el Colegio de Bachilleres del Estado de Chihuahua, despidió a 255 alumnos de los Planteles de Delicias y Saucillo quienes terminan su educación media superior de la generación 2013-2016.</p></a>
+                        </div>
+                    </div>
+
+                    <div class="nota_local">
+
+                        <div class="local_img">
+                            <a href="/noticia/no-procede-nulidad-del-pri-cortina-de-humo-a-los-6-mil-mdp-ac"><img class="di" src="/media/thumb-fotos/20160617_0101_.jpg" /></a>
+                        </div>
+                        <div class="di local_txt">
+                            <a href="/noticia/no-procede-nulidad-del-pri-cortina-de-humo-a-los-6-mil-mdp-ac">
+                                <!--p class="oxy red di">12:01 p.m.  |  </p-->
+                                <p class="nota_head di">No procede nulidad del PRI; &quot;cortina de humo&quot;: AC </p>
+                                <p class="nota_sub">La Alianza Ciudadana se declaró en sesión permanente en defensa de la victoria de Javier Corral y Blanca Gámez, contra la impugnación del PRI a la elección de gobernador, 8 ...</p></a>
+                        </div>
+                    </div>
+
+                    <div class="nota_local">
+
+                        <div class="local_img">
+                            <a href="/noticia/capturan-a-presunto-pollero-en-eeuu-lo-vinculan-a-proceso-aqui"><img class="di" src="/media/thumb-fotos/20160617_0101.jpg" /></a>
+                        </div>
+                        <div class="di local_txt">
+                            <a href="/noticia/capturan-a-presunto-pollero-en-eeuu-lo-vinculan-a-proceso-aqui">
+                                <!--p class="oxy red di">11:47 a.m.  |  </p-->
+                                <p class="nota_head di">Capturan a presunto pollero en EEUU; lo vinculan a proceso aquí  </p>
+                                <p class="nota_sub">Un presunto &quot;pollero&quot; o traficante de personas, fue deportado por la patrulla fronteriza de EU, y entregado a la agregaduria de la PGR, en El Paso, Texas, para ser llevado ...</p></a>
+                        </div>
+                    </div>
+
+                    <div class="nota_local">
+
+                        <div class="local_img">
+                            <a href="/noticia/inicio-revision-la-comision-de-hacienda-de-cabildo"><img class="di" src="/media/thumb-fotos/20160617_cabildo.jpg" /></a>
+                        </div>
+                        <div class="di local_txt">
+                            <a href="/noticia/inicio-revision-la-comision-de-hacienda-de-cabildo">
+                                <!--p class="oxy red di">11:44 a.m.  |  </p-->
+                                <p class="nota_head di">Inició revisión la Comisión de Hacienda de Cabildo  </p>
+                                <p class="nota_sub">La Comisión de Hacienda del Ayuntamiento chihuahuense, inició este mediodía la reunión de revisión por la Sindicatura en el mal uso de recursos públicos en el Instituto municipal del Deporte ...</p></a>
+                        </div>
+                    </div>
+
+                    <div class="nota_local">
+
+                        <div class="local_img">
+                            <a href="/noticia/antorcha-se-ha-convertido-en-herramienta-de-acercamiento-de-la-pena"><img class="di" src="/media/thumb-fotos/20160617_antorcha-ciudadana.jpg" /></a>
+                        </div>
+                        <div class="di local_txt">
+                            <a href="/noticia/antorcha-se-ha-convertido-en-herramienta-de-acercamiento-de-la-pena">
+                                <!--p class="oxy red di">11:23 a.m.  |  </p-->
+                                <p class="nota_head di">Antorcha se ha convertido en herramienta de acercamiento: De la Peña </p>
+                                <p class="nota_sub">Ya terminadas las campañas y procesos electorales, el Ayuntamiento ha retomado las acciones de apoyo que da a la ciudadanía a través de organizaciones sociales, como lo es Antorcha Campesina ...</p></a>
+                        </div>
+                    </div>
+
+                    <div class="nota_local">
+
+                        <div class="local_img">
+                            <a href="/noticia/viene-jurgen-klaric-a-chihuahua-con-conferencia-de-neuromarketing"><img class="di" src="/media/thumb-fotos/20160617_20160617_110645.jpg" /></a>
+                        </div>
+                        <div class="di local_txt">
+                            <a href="/noticia/viene-jurgen-klaric-a-chihuahua-con-conferencia-de-neuromarketing">
+                                <!--p class="oxy red di">11:09 a.m.  |  </p-->
+                                <p class="nota_head di">Viene Jurgen Klaric a Chihuahua con conferencia de neuromarketing </p>
+                                <p class="nota_sub">Jurgen Klaric, conocido en el mundo del mercadeo por sus estudios en neuromarketing, presentará en Chihuahua su conferencia Estamos Ciegos, el 30 de junio en el centro de convenciones.</p></a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <a href="/seccion/locales/" class="vermasnotas oxy vmn_blue">
+                    <p>Ver más notas</p>
+                </a>
+            </div>
+
+
+            <!--
+                                       <div class="scc locales txt_c">
+                                           <p class="seccion2 di">LOCALES</p>
+                                        <a href="#" class="plus di" title=" ">
+                                        </a>
+                                       </div>
+
+                                       <div id="notas_locales">
+                                        <div class="nota_local">
+                                            <div class="local_img">
+                                                <img class="di" src="img/locales1.JPG" />
+                                                <a href="#" class="btn_vermas vmred">Ver Más</a>
+                                            </div>
+                                            <div class="di local_txt">
+                                                <p class="oxy red di">17:53 p.m. |  </p>
+                                                   <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed commodo mi, vel sagittis quam mollis. </p>
+                                                   <p class="nota_sub">Hendrerit quam nisl eget tellus. Quisque in posuere dui, at venenatis lectus. Proin tincidunt diam lorem, nec...</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="nota_local">
+                                            <div class="local_img">
+                                                <img class="di" src="img/locales2.JPG" />
+                                                <a href="#" class="btn_vermas vmred">Ver Más</a>
+                                            </div>
+                                            <div class="di local_txt">
+                                                <p class="oxy red di">17:53 p.m. |  </p>
+                                                   <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed commodo mi, vel sagittis quam mollis. </p>
+                                                   <p class="nota_sub">Hendrerit quam nisl eget tellus. Quisque in posuere dui, at venenatis lectus. Proin tincidunt diam lorem, nec...</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="nota_local">
+                                            <div class="local_img">
+                                                <img class="di" src="img/locales3.JPG" />
+                                                <a href="#" class="btn_vermas vmred">Ver Más</a>
+                                            </div>
+                                            <div class="di local_txt">
+                                                <p class="oxy red di">17:53 p.m. |  </p>
+                                                   <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed commodo mi, vel sagittis quam mollis. </p>
+                                                   <p class="nota_sub">Hendrerit quam nisl eget tellus. Quisque in posuere dui, at venenatis lectus. Proin tincidunt diam lorem, nec...</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="nota_local">
+                                            <div class="local_img">
+                                                <img class="di" src="img/locales4.JPG" />
+                                                <a href="#" class="btn_vermas vmred">Ver Más</a>
+                                            </div>
+                                            <div class="di local_txt">
+                                                <p class="oxy red di">17:53 p.m. |  </p>
+                                                   <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed commodo mi, vel sagittis quam mollis. </p>
+                                                   <p class="nota_sub">Hendrerit quam nisl eget tellus. Quisque in posuere dui, at venenatis lectus. Proin tincidunt diam lorem, nec...</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="nota_local">
+                                            <div class="local_img">
+                                                <img class="di" src="img/locales1.JPG" />
+                                                <a href="#" class="btn_vermas vmred">Ver Más</a>
+                                            </div>
+                                            <div class="di local_txt">
+                                                <p class="oxy red di">17:53 p.m. |  </p>
+                                                   <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed commodo mi, vel sagittis quam mollis. </p>
+                                                   <p class="nota_sub">Hendrerit quam nisl eget tellus. Quisque in posuere dui, at venenatis lectus. Proin tincidunt diam lorem, nec...</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="nota_local">
+                                            <div class="local_img">
+                                                <img class="di" src="img/locales2.JPG" />
+                                                <a href="#" class="btn_vermas vmred">Ver Más</a>
+                                            </div>
+                                            <div class="di local_txt">
+                                                <p class="oxy red di">17:53 p.m. |  </p>
+                                                   <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed commodo mi, vel sagittis quam mollis. </p>
+                                                   <p class="nota_sub">Hendrerit quam nisl eget tellus. Quisque in posuere dui, at venenatis lectus. Proin tincidunt diam lorem, nec...</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="nota_local">
+                                            <div class="local_img">
+                                                <img class="di" src="img/locales3.JPG" />
+                                                <a href="#" class="btn_vermas vmred">Ver Más</a>
+                                            </div>
+                                            <div class="di local_txt">
+                                                <p class="oxy red di">17:53 p.m. |  </p>
+                                                   <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed commodo mi, vel sagittis quam mollis. </p>
+                                                   <p class="nota_sub">Hendrerit quam nisl eget tellus. Quisque in posuere dui, at venenatis lectus. Proin tincidunt diam lorem, nec...</p>
+                                            </div>
+                                        </div>
+                                       </div>
+                                        <a href="#" class="vermasnotas oxy vmn_blue">
+                                            <p>Ver más notas</p>
+                                        </a>
+                                   </div>
+             -->
+
+            <div class="span4"> <!-- Ultimas Noticias-->
+                <div class="row">
+                    <div class="ultimas_titulo">
+                        <p class="di">ÚLTIMAS </p>
+                        <p class="di red">NOTICIAS</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span2">
+                        <div class="noticia">
+                            <div class="ultimas_img">
+                                <a href="/noticia/mundo-mueren-24-personas-en-ataque-de-boko-haram-en-un-poblado-de-nigeria"><img src="/media/fotos/20160617_2016-06-17_04-06-29___2000.jpg"/></a>
+                                <a href="http://www.facebook.com/sharer.php?u=http://www.omnia.com.mx/noticias/mundo-mueren-24-personas-en-ataque-de-boko-haram-en-un-poblado-de-nigeria/&t=MUNDO: Mueren 24 personas en ataque de Boko Haram en un poblado de Nigeria " target="_blank"><img src="img/facebookshare.png" class="fshare"></img></a>
+                            </div>
+
+                            <div>
+                                <a href="/noticias/mundo-mueren-24-personas-en-ataque-de-boko-haram-en-un-poblado-de-nigeria/">
+                                    <p class="fecha oxy red">17 Jun 2016 </p>
+                                    <p class="noto ultimas_txt">MUNDO: Mueren 24 personas en ataque de Boko Haram en un poblado de Nigeria </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="noticia">
+                            <div class="ultimas_img">
+                                <a href="/noticia/deportes-vestimenta-para-delegacion-mexicana-a-rio-2016-esta-casi-lista-conade"><img src="/media/fotos/20160617_2016-06-17_02-06-29___6064.jpg"/></a>
+                                <a href="http://www.facebook.com/sharer.php?u=http://www.omnia.com.mx/noticias/deportes-vestimenta-para-delegacion-mexicana-a-rio-2016-esta-casi-lista-conade/&t=DEPORTES: Vestimenta para delegación mexicana a Río 2016 está casi lista: Conade " target="_blank"><img src="img/facebookshare.png" class="fshare"></img></a>
+                            </div>
+                            <div>
+                                <a href="/noticias/deportes-vestimenta-para-delegacion-mexicana-a-rio-2016-esta-casi-lista-conade/">
+                                    <p class="fecha oxy red">17 Jun 2016</p>
+                                    <p class="noto ultimas_txt">DEPORTES: Vestimenta para delegación mexicana a Río 2016 está casi lista: Conade </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span2">
+                        <div class="noticia">
+                            <div class="ultimas_img">
+                                <a href="/noticia/mundo-critican-a-politicos-de-eu-por-manipular-tragedia-de-orlando"><img src="/media/fotos/20160617_2016-06-17_03-06-38___1125.jpg"/></a>
+                                <a href="http://www.facebook.com/sharer.php?u=http://www.omnia.com.mx/noticias/mundo-critican-a-politicos-de-eu-por-manipular-tragedia-de-orlando/&t=MUNDO: Critican a políticos de EU por manipular tragedia de Orlando " target="_blank"><img src="img/facebookshare.png" class="fshare"></img></a>
+                            </div>
+                            <div>
+                                <a href="/noticias/mundo-critican-a-politicos-de-eu-por-manipular-tragedia-de-orlando/">
+                                    <p class="fecha oxy red">17 Jun 2016</p>
+                                    <p class="noto ultimas_txt">MUNDO: Critican a políticos de EU por manipular tragedia de Orlando </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span2">
+                        <div class="noticia">
+                            <div class="ultimas_img">
+                                <a href="/noticia/academia-ingeniero-mexicano-lleva-tecnologia-de-realidad-virtual-a-la-medicina"><img src="/media/fotos/20160617_2016-06-17_01-06-06___5808.jpg"/></a>
+                                <a href="http://www.facebook.com/sharer.php?u=http://www.omnia.com.mx/noticias/academia-ingeniero-mexicano-lleva-tecnologia-de-realidad-virtual-a-la-medicina/&t=ACADEMIA: Ingeniero mexicano lleva tecnología de realidad virtual a la medicina " target="_blank"><img src="img/facebookshare.png" class="fshare"></img></a>
+                            </div>
+                            <div>
+                                <a href="/noticias/academia-ingeniero-mexicano-lleva-tecnologia-de-realidad-virtual-a-la-medicina/">
+                                    <p class="fecha oxy red">17 Jun 2016</p>
+                                    <p class="noto ultimas_txt">ACADEMIA: Ingeniero mexicano lleva tecnología de realidad virtual a la medicina </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span4 ultimas_row">
+                    </div>
+
+                </div>
+
+                <!--
+                                       <div class="span4"> -->  <!-- Ultimas Noticias-->
+
+                <!--
+                                           <div class="row">
+                                               <div class="ultimas_titulo">
+                                                   <p class="di">ÚLTIMAS </p>
+                                                   <p class="di red">NOTICIAS</p>
+                                               </div>
+                                           </div>
+
+                                           <div class="row">
+                                               <div class="span2">
+                                                   <div class="noticia">
+                                                       <div class="ultimas_img">
+                                                           <a href="#"><img src="img/nota1.JPG"/></a>
+                                                           <a href="#"><img src="img/facebookshare.png" class="fshare"></img></a>
+                                                       </div>
+
+                                                       <div>
+                                                           <p class="fecha oxy red">08 Oct 2013 | CHIHUAHUA</p>
+                                                           <p class="noto ultimas_txt">Nullam non risus hendrerit, fermentum nisi at, molestie lacus. In egestas urna...</p>
+                                                       </div>
+                                                   </div>
+                                               </div>
+
+                                               <div class="span2">
+                                                   <div class="noticia">
+                                                       <div class="ultimas_img">
+                                                           <a href="#"><img src="img/nota2.JPG"/></a>
+                                                           <a href="#"><img src="img/facebookshare.png" class="fshare"></img></a>
+                                                       </div>
+                                                       <div>
+                                                           <p class="fecha oxy red">08 Oct 2013 | CHIHUAHUA</p>
+                                                           <p class="noto ultimas_txt">Nullam non risus hendrerit, fermentum nisi at, molestie lacus. In egestas urna...</p>
+                                                       </div>
+                                                   </div>
+                                               </div>
+                                           </div>
+
+                                           <div class="row">
+                                               <div class="span2">
+                                                   <div class="noticia">
+                                                       <div class="ultimas_img">
+                                                           <a href="#"><img src="img/nota3.JPG"/></a>
+                                                           <a href="#"><img src="img/facebookshare.png" class="fshare"></img></a>
+                                                       </div>
+                                                       <div>
+                                                           <p class="fecha oxy red">08 Oct 2013 | CHIHUAHUA</p>
+                                                           <p class="noto ultimas_txt">Nullam non risus hendrerit, fermentum nisi at, molestie lacus. In egestas urna...</p>
+                                                       </div>
+                                                   </div>
+                                               </div>
+
+                                               <div class="span2">
+                                                   <div class="noticia">
+                                                       <div class="ultimas_img">
+                                                           <a href="#"><img src="img/nota4.JPG"/></a>
+                                                           <a href="#"><img src="img/facebookshare.png" class="fshare"></img></a>
+                                                       </div>
+                                                       <div>
+                                                           <p class="fecha oxy red">08 Oct 2013 | CHIHUAHUA</p>
+                                                           <p class="noto ultimas_txt">Nullam non risus hendrerit, fermentum nisi at, molestie lacus. In egestas urna...</p>
+                                                       </div>
+                                                   </div>
+                                               </div>
+
+                                               <div class="span4 ultimas_row">
+                                               </div>
+
+                                           </div>
+                                       -->
+                <div class="row">
+                    <div class="span4">
+                        <div class="publi">
+                            <center>
+
+                                <a href="http://www.municipiochihuahua.gob.mx/"><img style="width:370px;height:90px;" src="/media/banners/BANNER VIA RECREATIVA 29MAY 12JUN 370x90px.gif" border="0"></a>
+
+
+                                <p>
+                                    <br>
+                            </center>
+
+                        </div>
+
+                        <div class="publi">
+                            <center>
+
+                                <a href="http://www.logroschihuahua2010-2016.com/"><img style="width:370px;height:90px;" src="/media/banners/hagamos-cuentas.jpg" border="0"></a>
+
+
+                                <p>
+                                    <br>
+                            </center>
+
+                        </div>
+
+                        <div class="publi">
+                            <center>
+
+
+                                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="370" height="90" id="movie_name" align="middle">
+                                    <param name="movie" value="/media/banners/COESVI22Ene16.swf"/>
+                                    <!--[if !IE]>-->
+                                    <object type="application/x-shockwave-flash" data="/media/banners/COESVI22Ene16.swf" width="370" height="90">
+                                        <param name="movie" value="/media/banners/COESVI22Ene16.swf"/>
+                                        <!--<![endif]-->
+                                        <a href="http://www.adobe.com/go/getflash">
+
+                                        </a>
+                                        <!--[if !IE]>-->
+                                    </object>
+                                    <!--<![endif]-->
+                                </object>
+
+
+                                <p>
+                                    <br>
+                            </center>
+
+                        </div>
+
+                        <div class="pasoapaso scc txt_c">
+                            <p class="seccion2 di">PASO A PASO</p>
+                            <a href="#" class="plus di" title=" ">
+                            </a>
+                        </div>
+
+
+                        <div id="notas">
+
+
+                            <div class="nota">
+
+                                <a href="/noticia/fatal-volcadura-muere-paisano-en-carretera-janos/">
+                                    <p class="red di oxy">18:30 p.m. | </p>
+                                    <p class="di">Chihuahua.- Un aparatoso accidente carretero dejó como saldo un hombre sin vida en la vía Janos-Aguaprieta esta tarde. </p>
+                                </a>
+                            </div>
+
+
+                            <div class="nota nota_g">
+
+                                <a href="/noticia/michelle-bachelet-veta-parcialmente-reforma-laboral/">
+                                    <p class="red di oxy">18:03 p.m. | </p>
+                                    <p class="di">La presidenta de Chile, Michelle Bachelet, vetó hoy parcialmente la reforma laboral tras no lograr el apoyo de la oposición ... </p>
+                                </a>
+                            </div>
+
+
+                            <div class="nota">
+
+                                <a href="/noticia/fmi-habra-impacto-negativo-si-reino-unido-sale-de-ue/">
+                                    <p class="red di oxy">17:58 p.m. | </p>
+                                    <p class="di">El Fondo Monetario Internacional (FMI) advirtió hoy que la eventual salida de Reino Unido de la Unión Europea (UE), el ... </p>
+                                </a>
+                            </div>
+
+
+                            <div class="nota nota_g">
+
+                                <a href="/noticia/pospone-senado-debate-sobre-uso-de-la-mariguana/">
+                                    <p class="red di oxy">17:56 p.m. | </p>
+                                    <p class="di">Por falta de consensos, las comisiones en el Senado cancelaron la posibilidad de aprobar para este extraordinario el dictamen sobre ... </p>
+                                </a>
+                            </div>
+
+
+                            <div class="nota">
+
+                                <a href="/noticia/se-reune-pena-con-su-gabinete/">
+                                    <p class="red di oxy">17:54 p.m. | </p>
+                                    <p class="di">El presidente Enrique Peña Nieto instruyó a su gabinete a trabajar con los nuevos gobernadores sin distingo partidista, a hacer ... </p>
+                                </a>
+                            </div>
+
+
+                            <div class="nota nota_g">
+
+                                <a href="/noticia/cierra-dolar-en-1910-en-bancos-de-la-ciudad-de-mexico/">
+                                    <p class="red di oxy">17:53 p.m. | </p>
+                                    <p class="di">El dólar libre cerró hasta en 19.10 pesos a la venta, 12 centavos menos respecto con el término de la ... </p>
+                                </a>
+                            </div>
+
+
+                            <div class="nota">
+
+                                <a href="/noticia/funge-imss-como-mediador-en-situacion-laboral-de-la-guarderia-towi/">
+                                    <p class="red di oxy">17:45 p.m. | </p>
+                                    <p class="di">- La suspensión del servicio este viernes fue momentánea - Se garantiza la continuidad de la atención a los menores ... </p>
+                                </a>
+                            </div>
+
+
+                            <div class="nota nota_g">
+
+                                <a href="/noticia/gran-final-del-torneo-estatal-de-futbol-por-mejores-mexicanos-de-fgb/">
+                                    <p class="red di oxy">16:36 p.m. | </p>
+                                    <p class="di">Con una serie de cardiacas finales, se llevó a cabo la gran clausura del 5to. Torneo Estatal de futbol soccer ... </p>
+                                </a>
+                            </div>
+
+
+
+                            <a href="/hemeroteca/" class="vermasnotas oxy vmn_green">
+                                <p>Ver más notas</p>
+                            </a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div> <!-- END ultimas noticias-->
+
+            <div class="row"> <!-- ULTIMA COLUMNA DERECHA-->
+
+                <div class="row span2">
+
+
+
+                    <div id="tipocambio">
+                        <img src="img/tipocambionp.png"/>
+                        <div id="txt_c_fijo">
+
+                        </div>
+                        <div id="tcambio">
+                            <!--div id="preciodolar-mx1"></div><script type="text/javascript" src="http://www.preciodolar.com/js/get_preciodolar_mx1.js"></script-->
+                            <table>
+                                <tr>
+                                    <td style="font-family: Verdana, sans-serif; font-size:11"> <strong>Compra:</strong> </td>
+                                    <td style="font-family: Verdana, sans-serif; font-size:11"> 18.47</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-family: Verdana, sans-serif; font-size:11"> <strong>Venta:</strong> </td>
+                                    <td style="font-family: Verdana, sans-serif; font-size:11"> 19.22 </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <!--
+                <div id="lacolumna">
+                    <a href="/noticias/realizan-arturo-medina-cierre-de-campana-en-cinco-comunidades-de-balleza">
+                        <div id="lacol_top">
+                            <img src="img/lacolumna.png" />
+                        </div>
+
+                        <p class="txt_col txt_c">LA COLUMNA</p>
+                        <p class="lacol_txt autor_col oxy">Por: Antonio Payán</p>
+                        <img class="img_lacolumna" src="/media/thumb-fotos/20160601_img-20160601-wa003.jpg" />
+                        <div class="lacol_txt noto">
+
+                            Balleza.- Realizan cierres de campaña priista en 5 comunidades ...
+
+                        </div>
+                    </a>
+
+                </div>
+                -->
+                    <div class="editorial">
+                        <a href="/seccion/tipsencascada/"><img src="/img/TipsEnCascadaBanner.jpg"/></a>
+                    </div>
+                    <div class="editorial">
+                        <a href="/seccion/desdelaoficinapastoral/"><img src="/img/OficinaPastoral.jpg"/></a>
+                    </div>
+                    <!--a href="/seccion/francisco_en_mexico/"><img src="/img/papa.png" width="170"/></a-->
+                    <!--a href="/seccion/almomento/"><img src="img/almomento.jpg"/></a>
+<p -->
+                    <!--div class="editorial">
+                        <a href="/seccion/libretazos/"><img src="img/libretazos.png"/></a>
+                    </div-->
+
+                    <!-- div class="editorial">
+                           <a href="/seccion/secretos/"><img src="img/secretos.png" /></a>
+                       </div -->
+
+                    <div id="portada_cronica" class="">
+                        <a href="/media/portadacronica/20160616_1.pdf" target="_elpdf"><img src="/media/portadacronica/20160617_20160616_1.jpg" width="175" /></a>
+
+                        <!--
+                                                       <a href="#"><img src="img/cronica.png" /></a>
+                        -->
+                    </div>
+                    <div >
+                        <a href="/seccion/satelites/"><img src="img/satelites2.jpg" /></a>
+                    </div>
+
+                    <div >
+                        <a href="/seccion/decision2016/"><img src="img/decision2016.jpg" /></a>
+                    </div>
+                    <p>
+                    <div >
+                        <a href="/seccion/engranajefinanciero/"><img src="img/EngranajeFinanciero.jpg" /></a>
+                    </div>
+                    <!--
+                    <div>
+                    <iframe scrolling="no" width="190" height="70" frameborder="0" src="http://www.codigodelicias.com/codigodelicias/cd.omnia.html">
+                    </iframe>
+                    </div>
+                    -->
+
+                    <p>
+                        <div class="scc farandula">
+                    <p class="seccion di">FAR&Aacute;NDULA</p>
+                    <a href="/seccion/farandula/" class="plus di" title=" ">
+                    </a>
+                </div>
+
+
+
+                <div class="cuadro_far">
+                    <a href="/noticia/video-meat-loaf-se-desvanece-en-el-escenario-en-plena-presentacion "><img src="/media/fotos/20160617_2016-06-17_09-06-25___8379.jpg" /></a>
+                </div>
+                <div style="font-size: 12px;
+font-family: Noto Serif,serif;font-weight:bold;
+line-height: 1;"><a href="/noticia/video-meat-loaf-se-desvanece-en-el-escenario-en-plena-presentacion ">
+                    <p>VIDEO: Meat Loaf se desvanece en el escenario en plena presentación</p></a>
+                </div>
+
+
+                <div class="cuadro_far">
+                    <a href="/noticia/farandula-muere-el-actor-ruben-aguirre-el-profesor-jirafales "><img src="/media/fotos/20160617_ruben.JPG" /></a>
+                </div>
+                <div style="font-size: 12px;
+font-family: Noto Serif,serif;font-weight:bold;
+line-height: 1;"><a href="/noticia/farandula-muere-el-actor-ruben-aguirre-el-profesor-jirafales ">
+                    <p>FARÁNDULA: Muere el actor Rubén Aguirre, el Profesor Jirafales</p></a>
+                </div>
+
+
+                <div class="cuadro_far">
+                    <a href="/noticia/31-minutos-vuelve-al-metropolitan "><img src="/media/fotos/20160616_2016-06-16_08-06-57___5609.jpg" /></a>
+                </div>
+                <div style="font-size: 12px;
+font-family: Noto Serif,serif;font-weight:bold;
+line-height: 1;"><a href="/noticia/31-minutos-vuelve-al-metropolitan ">
+                    <p>“31 Minutos” vuelve al Metropólitan </p></a>
+                </div>
+
+
+                <!--
+                                           <div class="scc farandula">
+                                               <p class="seccion di">FARANDULA</p>
+                                            <a href="#" class="plus di" title=" ">
+                                            </a>
+                                           </div>
+
+
+                                               <div class="cuadro_far">
+                                                   <div class="txt_far">
+                                                       <p>Nullam non risus hendrerit, fermentum nisi at, molestie lacus. In egestas urna</p>
+                                                   </div>
+                                                   <a href="#"><img src="img/farandulafoto1.JPG" /></a>
+                                               </div>
+
+                                               <div class="cuadro_far">
+                                                   <div class="txt_far">
+                                                       <p>Nullam non risus hendrerit, fermentum nisi at, molestie lacus. In egestas urna</p>
+                                                   </div>
+                                                   <a href="#"><img src="img/farandulafoto2.JPG" /></a>
+                                               </div>
+
+                                               <div class="cuadro_far">
+                                                   <div class="txt_far">
+                                                       <p>Nullam non risus hendrerit, fermentum nisi at, molestie lacus. In egestas urna</p>
+                                                   </div>
+                                                   <a href="#"><img src="img/farandulafoto3.JPG" /></a>
+                                               </div>
+                -->
+            </div> <!-- END ultima Columna derecha-->
+
+        </div> <!-- END ROW-->
+    </div>  <!-- END ROW-1-->
+
+
+    <div class="row m20">
+
+
+        <div style="height:315px;">
+
+            <!-- Policiaca -->
+            <div class="span12">
+                <div class="scc reportajes txt_c" style="background:red;">
+                    <p class="seccion2 di">POLICIACA</p>
+                    <a href="/seccion/policiaca/" class="plus di" title=" ">
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="span3">
+                <div class="reportaje">
+                    <div class="img_repor">
+                        <a href="/noticia/fatal-volcadura-muere-paisano-en-carretera-janos"><img  class="img_repor" src="/media/fotos/20160617_whatsapp-image-20160617abqafb.jpg" /></a>
+                        <a href="/noticia/fatal-volcadura-muere-paisano-en-carretera-janos" class="btn_corner btn_repor"> </a>
+                    </div>
+                    <div class="txt_repor"><a href="/noticia/fatal-volcadura-muere-paisano-en-carretera-janos">
+                        <p class="purple di oxy">18:30 p.m. |  </p>
+                        <p class="noto di">Fatal volcadura; muere paisano en carretera Janos</p></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="span3">
+                <div class="reportaje">
+                    <div class="img_repor">
+                        <a href="/noticia/salida-de-camino-de-transporte-termina-en-incendio"><img  class="img_repor" src="/media/fotos/20160617_whatsapp-image-20160617.jpg" /></a>
+                        <a href="/noticia/salida-de-camino-de-transporte-termina-en-incendio" class="btn_corner btn_repor"> </a>
+                    </div>
+                    <div class="txt_repor"><a href="/noticia/salida-de-camino-de-transporte-termina-en-incendio">
+                        <p class="purple di oxy">16:02 p.m. |  </p>
+                        <p class="noto di">Salida de camino de transporte termina en incendio</p></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="span3">
+                <div class="reportaje">
+                    <div class="img_repor">
+                        <a href="/noticia/capturan-a-presunto-pollero-en-eeuu-lo-vinculan-a-proceso-aqui"><img  class="img_repor" src="/media/fotos/20160617_0101.jpg" /></a>
+                        <a href="/noticia/capturan-a-presunto-pollero-en-eeuu-lo-vinculan-a-proceso-aqui" class="btn_corner btn_repor"> </a>
+                    </div>
+                    <div class="txt_repor"><a href="/noticia/capturan-a-presunto-pollero-en-eeuu-lo-vinculan-a-proceso-aqui">
+                        <p class="purple di oxy">11:47 a.m. |  </p>
+                        <p class="noto di">Capturan a presunto pollero en EEUU; lo vinculan a proceso aquí </p></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="span3">
+                <div class="reportaje">
+                    <div class="img_repor">
+                        <a href="/noticia/camion-de-carga-sale-del-camino-en-carr-delicias-chih"><img  class="img_repor" src="/media/fotos/20160617_indice1.jpg" /></a>
+                        <a href="/noticia/camion-de-carga-sale-del-camino-en-carr-delicias-chih" class="btn_corner btn_repor"> </a>
+                    </div>
+                    <div class="txt_repor"><a href="/noticia/camion-de-carga-sale-del-camino-en-carr-delicias-chih">
+                        <p class="purple di oxy">8:03 a.m. |  </p>
+                        <p class="noto di">Camión de carga sale del camino en Carr. Delicias-Chih</p></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- new pol -->
+
+        <div class="span9">
+            <div class="publi">
+                <div id="publicidad">
+                </div>
+                <!--
+                                                   <img src="img/banner2.png" />
+                -->
+            </div>
+
+
+            <div class="row">
+                <div class="span5">
+                    <div id="deportes">
+
+                        <div id="deportes_top">
+
+                            <div id="img_deportes">
+                                <div class="scc deportes txt_c">
+                                    <p class="seccion di">DEPORTES</p>
+                                    <a href="/seccion/deportes/" class="plus di" title=" ">
+                                    </a>
+                                </div>
+                                <a href="/noticia/gran-final-del-torneo-estatal-de-futbol-por-mejores-mexicanos-de-fgb/"><img class="di" src="/media/fotos/20160617_fgb3.jpg" width="480" /></a>
+                            </div>
+
+                            <a href="/noticias/gran-final-del-torneo-estatal-de-futbol-por-mejores-mexicanos-de-fgb/">
+                                <div id="deportes_main">
+
+                                    <p class="blue di oxy">16:36 p.m. &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;</p>
+                                    <p class="di noto_b">Gran final del Torneo Estatal de Futbol “Por mejores mexicanos” de FGB</p>
+                                </div>
+
+                                <a>
+                                    <div>
+                                        <p class="dep_txt oxy">Con una serie de cardiacas finales, se llevó a cabo la gran clausura  del 5to. Torneo Estatal de futbol soccer “Por mejores mexicanos” que realiza Fundación Grupo Bafar en conjunto de la Fundación del Empresariado Chihuahuense a través del programa de Escuelas Socio Deportivas, el cual contó con la participación de 90 selecciones en tres diferentes categorías  y más de 1,500 niños.</p>
+                                    </div>
+
+                                    <!-- 2 imagenes -->
+                                    <div class="bloque_deportes di fl">
+                                        <div class="img2_depor ">
+                                            <a href="/noticia/federer-avanza-a-semifinales-en-abierto-de-tenis-de-halle/"><img src="/media/fotos/20160617_2016-06-17_11-06-34___1376.jpg" /></a>
+                                        </div>
+                                        <a href="/noticias/federer-avanza-a-semifinales-en-abierto-de-tenis-de-halle/">
+
+                                            <div class="">
+                                                <p class="blue di oxy">16:28 p.m. |</p> <!--oxygen-->
+                                                <p class="di noto_b">Federer avanza a semifinales en Abierto de Tenis de Halle </p><br>
+                                                <p class="di oxy">El tenista suizo Roger Federer, número tres del mundo en la Asociación de Tenistas Profesionales (ATP), se impuso por 6-1 y 7-6 ...</p>
+                                        </a>
+                                    </div>
+                        </div>
+
+                        <div class="bloque_deportes di fr">
+                            <div class="img2_depor">
+                                <a href="/noticia/republica-checa-rescata-empate-2-2-ante-croacia/"><img src="/media/fotos/20160617_2016-06-17_01-06-10___9764.jpg" /></a>
+                            </div>
+
+                            <a href="/noticias/republica-checa-rescata-empate-2-2-ante-croacia/">
+
+                                <div class="">
+                                    <p class="blue di oxy">16:26 p.m. |</p> <!--oxygen-->
+                                    <p class="di noto_b">República Checa rescata empate 2-2 ante Croacia </p><br>
+                                    <p class="di oxy">La selección nacional de República Checa rescató el empate 2-2 ante su similar de Croacia con un penal convertido por Tomás Necid ...</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="nota_deportes">
+                        <a href="/noticia/andy-murray-continua-con-defensa-de-corona-y-avanza-en-queens/">
+                            <p class="black di oxy">16:10 p.m. | </p>
+                            <p class="di noto">Andy Murray continúa con defensa de corona y avanza en Queen&#39;s </p>
+                        </a>
+                    </div>
+
+                    <div class="nota_deportes">
+                        <a href="/noticia/deportes-vestimenta-para-delegacion-mexicana-a-rio-2016-esta-casi-lista-conade/">
+                            <p class="black di oxy">15:48 p.m.| </p>
+                            <p class="di noto">DEPORTES: Vestimenta para delegación mexicana a Río 2016 está casi lista: Conade  </p>
+                        </a>
+                    </div>
+
+                    <div class="nota_deportes">
+                        <a href="/noticia/chihuahua-en-la-recta-final-de-juegos-nacionales/">
+                            <p class="black di oxy">10:14 a.m.| </p>
+                            <p class="di noto">Chihuahua en la recta final de juegos nacionales </p>
+                        </a>
+                    </div>
+
+                    <div id="deportes_bajo">
+                        <!-- 2 imagenes -->
+                        <div class="bloque_deportes di fl">
+                            <div class="img2_depor ">
+                                <a href="/noticia/con-gol-de-ultimo-minuto-italia-vence-1-0-a-suecia-en-eurocopa/"><img src="/media/fotos/20160617_2016-06-17_10-06-56___9569.jpg" /></a>
+                            </div>
+                            <a href="/noticias/con-gol-de-ultimo-minuto-italia-vence-1-0-a-suecia-en-eurocopa/">
+
+                                <div class="">
+                                    <p class="blue di oxy">9:50 a.m. |</p> <!--oxygen-->
+                                    <p class="di"> Con gol de último minuto Italia vence 1-0 a Suecia en Eurocopa</p>
+                                    <p>
+                                    <p class="di oxy">Con gol de último minuto, la selección de Italia venció 1-0 a Suecia y terminó con un duelo aburrido, correspondiente al Grupo E de la Eurocopa, disputado en el estadio Stade Municipal.</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="bloque_deportes di fr">
+                            <div class="img2_depor">
+                                <a href="/noticia/gareth-bale-corazon-valiente/"><img src="/media/fotos/20160617_2016-06-16_11-06-12___5191.jpg" /></a>
+                            </div>
+                            <a href="/noticias/gareth-bale-corazon-valiente/">
+
+                                <div class="">
+                                    <p class="blue di oxy">7:59 a.m.|</p> <!--oxygen-->
+                                    <p class="di"> Gareth Bale, Corazón Valiente</p>
+                                    <p>
+                                    <p class="di oxy">La mañana de ayer en Lille, Francia, fuimos testigos de una gesta futbolística que pudo haber terminado en tragedia para los llamados “inventores del futbol”, pues Gales, comandada por Gareth Bale, convertido en un guerrero colosal, estuvo a punto de consumar un triunfo (para ellos) ...</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div> <!-- Deportes -->
+            </div>
+
+            <div class="span4">
+
+
+                <div class="scc miomnia txt_c">
+                    <div class="miom fl">
+                        <p class="seccion di">ECONOM&Iacute;A</p>
+                        <a href="/seccion/economia/" class="plus di" title=" ">
+                        </a>
+                    </div>
+                    <!--
+                    <div id="confi" class="fr">
+                        <p class="txt_conf di oxy">Configurar</p>
+                        <a href="#" class="btn_conf"><img src="img/settings.png"/></a>
+                    </div>-->
+                </div>
+
+                <a href="/noticia/cierra-dolar-en-1910-en-bancos-de-la-ciudad-de-mexico/">
+                    <div id="mi_omnia">
+                        <img class="img_miomnia" src="/media/fotos/20160617_2016-06-17_02-06-00___9520.jpg" />
+                        <div class="nota_cuadro_azul">
+                            <p class="di oxy white">17:53 p.m.| </p>
+                            <p class="di noto white">Cierra dólar en $19.10 en bancos de la Ciudad de México </p>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="/noticia/apoyara-ruba-a-egresados-de-la-universidad-de-juarez/">
+                    <div class="nota_miomnia">
+                        <div class="txt_nota_mo fl">
+                            <p class="blue di oxy">9:07 a.m. | </p>
+                            <p class="di noto">Apoyará Ruba a egresados de la Universidad de Juárez</p>
+                        </div>
+                        <img class="img2_miomnia fr" src="/media/fotos/20160617_ruba.JPG" />
+                    </div>
+                </a>
+
+                <a href="/noticia/ley-3-de-3-un-gran-avance-para-mexico-coparmex/">
+                    <div class="nota_miomnia">
+                        <div class="txt_nota_mo fl">
+                            <p class="blue di oxy">7:45 a.m. | </p>
+                            <p class="di noto">Ley 3 de 3, un gran avance para México: Coparmex</p>
+                        </div>
+                        <img class="img2_miomnia fr" src="/media/fotos/20160617_tres.JPG" />
+                    </div>
+                </a>
+
+                <!--
+                                                       <div class="scc miomnia txt_c">
+                                                           <div class="miom fl">
+                                                               <p class="seccion di">MI OMNIA</p>
+                                                            <a href="#" class="plus di" title=" ">
+                                                            </a>
+                                                        </div>
+
+                                                        <div id="confi" class="fr">
+                                                            <p class="txt_conf di oxy">Configurar</p>
+                                                            <a href="#" class="btn_conf"><img src="img/settings.png"/></a>
+                                                        </div>
+                                                       </div>
+
+                                                       <div id="mi_omnia">
+                                                           <img class="img_miomnia" src="img/miomniafotobig.JPG" />
+                                                           <a href="#" class="btn_vermas vmblue mobtn">Ver Más</a>
+                                                           <div class="nota_cuadro_azul">
+                                                               <p class="di oxy white">17:53 p.m. | </p>
+                                                               <p class="di noto white">Mauris viverra interdum erat, quis cursur lectus placerat quis. Nam sed commodo mi, vel sagittis quam.</p>
+                                                           </div>
+                                                       </div>
+
+                                                       <div class="nota_miomnia">
+                                                           <div class="txt_nota_mo fl">
+                                                               <p class="blue di oxy">17:53 p.m. | </p>
+                                                               <p class="di noto">Mauris viverra interdum erat, quis placerat quis. Nam sed commodo mi, vel...</p>
+                                                           </div>
+                                                           <img class="img2_miomnia fr" src="img/miomniafoto1.JPG" />
+                                                           <a href="#" class="btn_vermas vmblue">Ver Más</a>
+                                                       </div>
+
+                                                       <div class="nota_miomnia">
+                                                           <div class="txt_nota_mo fl">
+                                                               <p class="blue di oxy">17:53 p.m. | </p>
+                                                               <p class="di noto">Mauris viverra interdum erat, quis placerat quis. Nam sed commodo mi, vel...</p>
+                                                           </div>
+                                                           <img class="img2_miomnia fr" src="img/miomniafoto2.JPG" />
+                                                           <a href="#" class="btn_vermas vmblue">Ver Más</a>
+                                                       </div>
+                -->
+
+                <div class="publi m20">
+                    <center>
+
+                        <a href=""><img style="width:370px;height:90px;" src="/media/banners/ofech.png" border="0"></a>
+
+
+                        <p>
+                            <br>
+                    </center>
+
+                </div>
+                <div class="publi">
+                    <center>
+
+
+                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="370" height="90" id="movie_name" align="middle">
+                            <param name="movie" value="/media/banners/ManuelNevarezBoletinJUN.swf"/>
+                            <!--[if !IE]>-->
+                            <object type="application/x-shockwave-flash" data="/media/banners/ManuelNevarezBoletinJUN.swf" width="370" height="90">
+                                <param name="movie" value="/media/banners/ManuelNevarezBoletinJUN.swf"/>
+                                <!--<![endif]-->
+                                <a href="http://www.adobe.com/go/getflash">
+
+                                </a>
+                                <!--[if !IE]>-->
+                            </object>
+                            <!--<![endif]-->
+                        </object>
+
+
+                        <p>
+                            <br>
+                    </center>
+
+                </div>
+                <div class="publi">
+                    <center>
+
+
+                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="370" height="90" id="movie_name" align="middle">
+                            <param name="movie" value="/media/banners/STJsoylegalCorr4Nov14.swf"/>
+                            <!--[if !IE]>-->
+                            <object type="application/x-shockwave-flash" data="/media/banners/STJsoylegalCorr4Nov14.swf" width="370" height="90">
+                                <param name="movie" value="/media/banners/STJsoylegalCorr4Nov14.swf"/>
+                                <!--<![endif]-->
+                                <a href="http://www.adobe.com/go/getflash">
+
+                                </a>
+                                <!--[if !IE]>-->
+                            </object>
+                            <!--<![endif]-->
+                        </object>
+
+
+                        <p>
+                            <br>
+                    </center>
+
+                </div>
+
+                <!-- internacional -->
+
+                <div class="scc internacional txt_c">
+                    <p class="seccion2 di">INTERNACIONAL</p>
+                    <a href="/seccion/internacional/" class="plus di" title=" ">
+                    </a>
+                </div>
+
+
+
+                <a href="/noticia/michelle-bachelet-veta-parcialmente-reforma-laboral/" >
+                    <div class="nota_inter">
+                        <div class="txt_inter fl">
+                            <p class="green di oxy">18:03 p.m.  | </p>
+                            <p class="di noto_b">Michelle Bachelet veta parcialmente reforma ... </p>
+                            <p class="oxy">La presidenta de Chile, Michelle Bachelet, vetó hoy ...</p>
+                        </div>
+                        <img class="img_inter fr" src="/media/thumb-fotos/20160617_2016-06-17_06-06-05___5507.jpg" />
+                        <!--a href="/noticia/michelle-bachelet-veta-parcialmente-reforma-laboral/" class="btn_corner btn_plus_box"> </a-->
+                    </div>
+                </a>
+
+
+
+                <a href="/noticia/fmi-habra-impacto-negativo-si-reino-unido-sale-de-ue/" >
+                    <div class="nota_inter">
+                        <div class="txt_inter fl">
+                            <p class="green di oxy">17:58 p.m.  | </p>
+                            <p class="di noto_b">FMI: Habrá impacto negativo si ... </p>
+                            <p class="oxy">El Fondo Monetario Internacional (FMI) advirtió hoy que ...</p>
+                        </div>
+                        <img class="img_inter fr" src="/media/thumb-fotos/20160617_2016-06-17_06-06-01___5724.jpg" />
+                        <!--a href="/noticia/fmi-habra-impacto-negativo-si-reino-unido-sale-de-ue/" class="btn_corner btn_plus_box"> </a-->
+                    </div>
+                </a>
+
+
+
+                <a href="/noticia/mundo-mueren-24-personas-en-ataque-de-boko-haram-en-un-poblado-de-nigeria/" >
+                    <div class="nota_inter">
+                        <div class="txt_inter fl">
+                            <p class="green di oxy">15:49 p.m.  | </p>
+                            <p class="di noto_b">MUNDO: Mueren 24 personas en ... </p>
+                            <p class="oxy">Los militantes del grupo islamista armado Boko Haram ...</p>
+                        </div>
+                        <img class="img_inter fr" src="/media/thumb-fotos/20160617_2016-06-17_04-06-29___2000.jpg" />
+                        <!--a href="/noticia/mundo-mueren-24-personas-en-ataque-de-boko-haram-en-un-poblado-de-nigeria/" class="btn_corner btn_plus_box"> </a-->
+                    </div>
+                </a>
+
+
+
+                <a href="/noticia/mundo-critican-a-politicos-de-eu-por-manipular-tragedia-de-orlando/" >
+                    <div class="nota_inter">
+                        <div class="txt_inter fl">
+                            <p class="green di oxy">15:47 p.m.  | </p>
+                            <p class="di noto_b">MUNDO: Critican a políticos de ... </p>
+                            <p class="oxy">El asesor especial de la ONU para la ...</p>
+                        </div>
+                        <img class="img_inter fr" src="/media/thumb-fotos/20160617_2016-06-17_03-06-38___1125.jpg" />
+                        <!--a href="/noticia/mundo-critican-a-politicos-de-eu-por-manipular-tragedia-de-orlando/" class="btn_corner btn_plus_box"> </a-->
+                    </div>
+                </a>
+
+
+
+
+                <!--
+                                                    <div class="scc internacional txt_c">
+                                                               <p class="seccion2 di">INTERNACIONAL</p>
+                                                            <a href="#" class="plus di" title=" ">
+                                                            </a>
+                                                       </div>
+
+                                                       <div class="nota_inter">
+                                                           <div class="txt_inter fl">
+                                                               <p class="green di oxy">17:53 p.m. | </p>
+                                                               <p class="di noto_b">Mauris viverra interdum erat, quis cursus lectus placerat quis.</p>
+                                                               <p class="oxy">Proin mollis, justo quis lobortis hendrerit, lorem nisi pharetra...</p>
+                                                           </div>
+                                                           <img class="img_inter fr" src="img/internacionalfoto1.JPG" />
+                                                           <a href="#" class="btn_corner btn_plus_box"> </a>
+                                                       </div>
+
+                                                       <div class="nota_inter">
+                                                           <div class="txt_inter fl">
+                                                               <p class="green di oxy">17:53 p.m. | </p>
+                                                               <p class="di noto_b">Mauris viverra interdum erat, quis cursus lectus placerat quis.</p>
+                                                               <p class="oxy">Proin mollis, justo quis lobortis hendrerit, lorem nisi pharetra...</p>
+                                                           </div>
+                                                           <img class="img_inter fr" src="img/internacionalfoto2.JPG" />
+                                                           <a href="#" class="btn_corner btn_plus_box"> </a>
+                                                       </div>
+
+                                                       <div class="nota_inter">
+                                                           <div class="txt_inter fl">
+                                                               <p class="green di oxy">17:53 p.m. | </p>
+                                                               <p class="di noto_b">Mauris viverra interdum erat, quis cursus lectus placerat quis.</p>
+                                                               <p class="oxy">Proin mollis, justo quis lobortis hendrerit, lorem nisi pharetra...</p>
+                                                           </div>
+                                                           <img class="img_inter fr" src="img/internacionalfoto1.JPG" />
+                                                           <a href="#" class="btn_corner btn_plus_box"> </a>
+                                                       </div>
+
+                                                       <div class="nota_inter">
+                                                           <div class="txt_inter fl">
+                                                               <p class="green di oxy">17:53 p.m. | </p>
+                                                               <p class="di noto_b">Mauris viverra interdum erat, quis cursus lectus placerat quis.</p>
+                                                               <p class="oxy">Proin mollis, justo quis lobortis hendrerit, lorem nisi pharetra...</p>
+                                                           </div>
+                                                           <img class="img_inter fr" src="img/internacionalfoto3.JPG" />
+                                                           <a href="#" class="btn_corner btn_plus_box"> </a>
+                                                       </div>
+
+                -->
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="span3">
+
+        <div class="scc nacional txt_c">
+            <p class="seccion2 di">NACIONAL</p>
+            <a href="/seccion/nacional/" class="plus di" title=" ">
+            </a>
+            <div class="border_nac"> </div>
+        </div>
+
+
+        <div class="nota_nacional">
+            <div class="txt_nac"><a href="/noticia/pospone-senado-debate-sobre-uso-de-la-mariguana/">
+                <p class="oxy amarillo di">17:56 p.m.  | </p>
+                <p class="di">Pospone Senado debate sobre uso de la mariguana</p></a>
+            </div>
+            <a href="/noticia/pospone-senado-debate-sobre-uso-de-la-mariguana/"><img class="img_nac" src="/media/fotos/20160617_2016-06-17_06-06-36___5477.jpg" /></a>
+        </div>
+
+        <div class="nota_nacional">
+            <div class="txt_nac"><a href="/noticia/se-reune-pena-con-su-gabinete/">
+                <p class="oxy amarillo di">17:54 p.m.  | </p>
+                <p class="di">Se reune Peña con su gabinete </p></a>
+            </div>
+            <a href="/noticia/se-reune-pena-con-su-gabinete/"><img class="img_nac" src="/media/fotos/20160617_2016-06-17_05-06-39___8248.jpg" /></a>
+        </div>
+
+        <div class="nota_nacional">
+            <div class="txt_nac"><a href="/noticia/cndh-ha-emitido-seis-recomendaciones-en-lo-que-va-del-mes/">
+                <p class="oxy amarillo di">16:22 p.m.  | </p>
+                <p class="di">CNDH ha emitido seis recomendaciones en lo que va del mes </p></a>
+            </div>
+            <a href="/noticia/cndh-ha-emitido-seis-recomendaciones-en-lo-que-va-del-mes/"><img class="img_nac" src="/media/fotos/20160617_2016-06-17_03-06-42___2540.jpg" /></a>
+        </div>
+
+
+
+
+        <!--
+                                       <div class="scc nacional txt_c">
+                                           <p class="seccion2 di">NACIONAL</p>
+                                        <a href="#" class="plus di" title=" ">
+                                        </a>
+                                        <div class="border_nac"> </div>
+                                       </div>
+
+                                       <div class="nota_nacional">
+                                           <div class="txt_nac">
+                                               <p class="oxy amarillo di">17:53 p.m. | </p>
+                                               <p class="di">Mauris viverra interdum erat, quis cursus lectus placerat quis am sed commodo mi...</p>
+                                           </div>
+                                           <a href="#"><img class="img_nac" src="img/fotonacional.JPG" /></a>
+                                       </div>
+
+                                       <div class="nota_nacional">
+                                           <div class="txt_nac">
+                                               <p class="oxy amarillo di">17:53 p.m. | </p>
+                                               <p class="di">Mauris viverra interdum erat, quis cursus lectus placerat quis am sed commodo mi...</p>
+                                           </div>
+                                           <a href="#"><img class="img_nac" src="img/fotonacional.JPG" /></a>
+                                       </div>
+
+                                       <div class="nota_nacional">
+                                           <div class="txt_nac">
+                                               <p class="oxy amarillo di">17:53 p.m. | </p>
+                                               <p class="di">Mauris viverra interdum erat, quis cursus lectus placerat quis am sed commodo mi...</p>
+                                           </div>
+                                           <a href="#"><img class="img_nac" src="img/fotonacional.JPG" /></a>
+                                       </div>
+
+        -->	   						<!-- el trazo -->
+        <div id="eltrazo">
+            <div class="scc eltrazo txt_c">
+                <p class="seccion2 di">EL CARTÓN</p>
+            </div>
+            <a href="/seccion/carton/"><img class="img_trazo" src="http://mdx.omnia.com.mx/media/carton/ley-del-karma.JPG" width="268"  /></a>
+
+            <!--
+                                               <img class="img_trazo" src="img/eltrazofoto.JPG" />
+            -->
+        </div>
+
+        <!-- encuesta -->
+        <div id="encuesta">
+            <div class="scc encuesta txt_c">
+                <p class="seccion2 di">ENCUESTA</p>
+            </div>
+
+            <div class="cuadro_enc">
+                <p class="encuesta_titulo oxy_b"> La JMAS advirtió afectaciones en el suministro de agua en 147 colonias de la ciudad. ¿Tuvo conocimiento de esto o el problema le tomó por sorpresa?   </p>
+                <div id="pollvote" class="unhidden">
+                    <div class="oxy enc_opc">
+                        <form class="form-horizontal" action="/encuesta/d875552050d856e9768a5f3a2bf763a0/votar/" method="post" name="pollform" >
+
+
+                            <label class="radio" class="fl">
+                                <input class="fl" type="radio" name="pollchoice" id="optionsRadios1" value="d875552050d856e9768a5f3a2b94c176">
+                                <p class="check" >a) Sí supe</p>
+                            </label>
+
+
+                            <label class="radio" class="fl">
+                                <input class="fl" type="radio" name="pollchoice" id="optionsRadios1" value="d875552050d856e9768a5f3a2b73cbf2">
+                                <p class="check" >b) Me sorprendió</p>
+                            </label>
+
+
+                            <label class="radio" class="fl">
+                                <input class="fl" type="radio" name="pollchoice" id="optionsRadios1" value="d875552050d856e9768a5f3a2bd2911e">
+                                <p class="check" >c) Lo supe pero no quería creerlo</p>
+                            </label>
+
+
+                        </form>
+                    </div>
+                    <div class="div_votar">
+                        <p><a href="javascript:showresult();" class="btn_votar oxy_b">VOTAR</a></p>
+                    </div>
+                </div>
+
+                <div id="pollreslt" class="hidden">
+                    <p>
+
+                    <div id="encuestaopcion">
+                        a) Sí supe -  43% <br>
+                        <img class="nnonne" id="nnone" src="/media/images/bak_blue.png" style="width:43px;height:10px;:">
+                    </div>
+                    <p>
+
+                    <div id="encuestaopcion">
+                        b) Me sorprendió -  54% <br>
+                        <img class="nnonne" id="nnone" src="/media/images/bak_blue.png" style="width:54px;height:10px;:">
+                    </div>
+                    <p>
+
+                    <div id="encuestaopcion">
+                        c) Lo supe pero no quería creerlo -   3% <br>
+                        <img class="nnonne" id="nnone" src="/media/images/bak_blue.png" style="width: 3px;height:10px;:">
+                    </div>
+                    <p>
+
+
+                </div>
+            </div>
+            <script type="text/javascript">
+function showresult(){
+   var polvot = document.getElementById("pollvote");
+   var polr = document.getElementById("pollreslt");
+   var choiceselected = -1;
+   for(i=0;i<document.pollform.pollchoice.length;i++){
+      if(document.pollform.pollchoice[i].checked) {
+         choiceselected=i;
+      }
+   }
+   if (choiceselected > -1 ){
+       if (polr) {
+          polr.className=(polr.className=='hidden')?'unhidden':'hidden';
+       }
+       if (polvot) {
+          polvot.className=(polvot.className=='unhidden')?'hidden':'unhidden';
+       }
+
+       $.post("/encuesta/d875552050d856e9768a5f3a2bf763a0/votar/",
+       {
+          voto:document.pollform.pollchoice[choiceselected].value
+       },
+       function(data,status){
+          /*alert("Data: " + data + "\nStatus: " + status);*/
+       });
+
+
+   }
+}
+</script>
+
+
+
+            <!--
+                                                <p class="encuesta_titulo oxy_b">Si se efectura de nuevo el Festival Extremo Aero Show, ¿asistiría usted?</p>
+
+                                                <div class="oxy enc_opc">
+                                                    <form class="form-horizontal" >
+
+                                                        <label class="radio" class="fl">
+                                                              <input class="fl" type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                             <p class="check" >a) Sí,pero que exista suficiente seguridad.</p>
+                                                        </label>
+
+                                                        <label class="radio" class="fl">
+                                                              <input class="fl" type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                             <p class="check">b) No,para nada.</p>
+                                                        </label>
+
+                                                        <label class="radio" class="fl">
+                                                              <input class="fl" type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                             <p class="check">c) Nunca asistí.</p>
+                                                        </label>
+
+                                                        <label class="radio" class="fl">
+                                                              <input class="fl" type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                             <p class="check">d) Ya no quiero escuchar de este tema.</p>
+                                                        </label>
+                                                    </form>
+                                                </div>
+
+                                                <div class="div_votar">
+                                                    <p><a class="btn_votar oxy_b">VOTAR</a></p>
+                                                </div>
+            -->
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="row m20">
+
+
+
+    <!-- REPORTAJES -->
+    <div class="span12">
+        <div class="scc reportajes txt_c">
+            <p class="seccion2 di">REPORTAJES</p>
+            <a href="/seccion/reportajes/" class="plus di" title=" ">
+            </a>
+        </div>
+    </div>
+
+
+    <div class="span3">
+        <div class="reportaje">
+            <div class="img_repor">
+                <a href="/noticia/sequia-en-mexico-mas-por-actividades-agricolas-que-a-falta-de-lluvias"><img  class="img_repor" src="/media/fotos/20160617_2016-06-17_01-06-44___1487.jpg" /></a>
+                <a href="/noticia/sequia-en-mexico-mas-por-actividades-agricolas-que-a-falta-de-lluvias" class="btn_corner btn_repor"> </a>
+            </div>
+            <div class="txt_repor"><a href="/noticia/sequia-en-mexico-mas-por-actividades-agricolas-que-a-falta-de-lluvias">
+                <p class="purple di oxy">16:24 p.m. |  </p>
+                <p class="noto di">Sequía en México, más por actividades agrícolas que a falta de lluvias </p></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="span3">
+        <div class="reportaje">
+            <div class="img_repor">
+                <a href="/noticia/a-los-6-anos-en-1923-franz-llego-de-canada-a-cuauhtemoc"><img  class="img_repor" src="/media/fotos/20160616_img_0053.JPG" /></a>
+                <a href="/noticia/a-los-6-anos-en-1923-franz-llego-de-canada-a-cuauhtemoc" class="btn_corner btn_repor"> </a>
+            </div>
+            <div class="txt_repor"><a href="/noticia/a-los-6-anos-en-1923-franz-llego-de-canada-a-cuauhtemoc">
+                <p class="purple di oxy">7:53 a.m. |  </p>
+                <p class="noto di">Franz Rempel es el menonita más longevo; tiene 99 años</p></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="span3">
+        <div class="reportaje">
+            <div class="img_repor">
+                <a href="/noticia/han-muerto-10-mil-pandilleros-en-guerra-vs-narco"><img  class="img_repor" src="/media/fotos/20160614_pandill.JPG" /></a>
+                <a href="/noticia/han-muerto-10-mil-pandilleros-en-guerra-vs-narco" class="btn_corner btn_repor"> </a>
+            </div>
+            <div class="txt_repor"><a href="/noticia/han-muerto-10-mil-pandilleros-en-guerra-vs-narco">
+                <p class="purple di oxy">7:20 a.m. |  </p>
+                <p class="noto di">Han muerto 10 mil pandilleros en guerra vs narco </p></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="span3">
+        <div class="reportaje">
+            <div class="img_repor">
+                <a href="/noticia/del-mas-votado-al-mas-castigado-perdio-el-pri-mas-de-240-mil-votos-en-6-anos"><img  class="img_repor" src="/media/fotos/20160613_efe.jpg" /></a>
+                <a href="/noticia/del-mas-votado-al-mas-castigado-perdio-el-pri-mas-de-240-mil-votos-en-6-anos" class="btn_corner btn_repor"> </a>
+            </div>
+            <div class="txt_repor"><a href="/noticia/del-mas-votado-al-mas-castigado-perdio-el-pri-mas-de-240-mil-votos-en-6-anos">
+                <p class="purple di oxy">12:31 p.m. |  </p>
+                <p class="noto di">Del más votado al más castigado; perdió PRI más de 240 mil votos en 6 años </p></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- REPORTAJES -->
+    <!--
+                           <div class="span12">
+                               <div class="scc reportajes txt_c">
+                                   <p class="seccion2 di">REPORTAJES</p>
+                                <a href="#" class="plus di" title=" ">
+                                </a>
+                               </div>
+                           </div>
+
+                           <div class="span3">
+                               <div class="reportaje">
+                                   <div class="img_repor">
+                                       <img  class="img_repor" src="img/reportajesfoto1.JPG" />
+                                       <a href="#" class="btn_corner btn_repor"> </a>
+                                   </div>
+                                   <div class="txt_repor">
+                                       <p class="purple di oxy">17:53 p.m.   |  </p>
+                                       <p class="noto di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed...</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div class="span3">
+                               <div class="reportaje">
+                                   <div class="img_repor">
+                                       <img  class="img_repor" src="img/reportajesfoto2.JPG" />
+                                       <a href="#" class="btn_corner btn_repor"> </a>
+                                   </div>
+                                   <div class="txt_repor">
+                                       <p class="purple di oxy">17:53 p.m.   |  </p>
+                                       <p class="noto di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed...</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div class="span3">
+                               <div class="reportaje">
+                                   <div class="img_repor">
+                                       <img  class="img_repor" src="img/reportajesfoto3.JPG" />
+                                       <a href="#" class="btn_corner btn_repor"> </a>
+                                   </div>
+                                   <div class="txt_repor">
+                                       <p class="purple di oxy">17:53 p.m.   |  </p>
+                                       <p class="noto di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed...</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div class="span3">
+                               <div class="reportaje">
+                                   <div class="img_repor">
+                                       <img  class="img_repor" src="img/reportajesfoto4.JPG" />
+                                       <a href="#" class="btn_corner btn_repor"> </a>
+                                   </div>
+                                   <div class="txt_repor">
+                                       <p class="purple di oxy">17:53 p.m.   |  </p>
+                                       <p class="noto di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed...</p>
+                                   </div>
+                               </div>
+                           </div>
+
+
+           -->
+
+    <!-- MAGAZINE -->
+    <div class="span12">
+        <div id="magazine">
+
+            <img class="di fl" src="img/magazine.png" />
+            <div id="sociales" class="di fl">
+                <div id="soc1" class="fl">
+                    <div class="scc sociales txt_c pos_ab">
+                        <p class="seccion2 di">SOCIALES</p>
+                        <a href="/seccion/galeria/" class="plus di" title=" ">
+                        </a>
+                    </div>
+
+
+                    <a href="/seccion/galeria/"><img class="sociales_big" src="http://mdx.omnia.com.mx/media/galeria/20160614/rodolfo-serna-y-pamela-perez-2.JPG" style="width:270px;height:370px;"/></a>
+                    <div class="cuadro_txt_sociales">
+                        <p class="white oxy di">14 de Junio de 2016 a las 22:04 |  </p>
+                        <p class="white oxy di">Rodolfo Serna y Pamela Pérez realizaron una cena ...</p>
+                    </div>
+                </div>
+
+                <div id="soc2" class="fr">
+
+                    <a href="/seccion/galeria/">
+                        <div class="maga_hover maga_sm">
+                            <p class="oxy">Rodolfo Serna y Pamela Pérez</p>
+                        </div>
+                        <img class="sociales_small" src="http://mdx.omnia.com.mx/media/galeria/thumb-20160614/rodolfo-serna-y-pamela-perez-1.JPG" />
+                    </a>
+
+                    <a href="/seccion/galeria/">
+                        <div class="maga_hover maga_sm">
+                            <p class="oxy">Mercedes y Paola</p>
+                        </div>
+                        <img class="sociales_small" src="http://mdx.omnia.com.mx/media/galeria/thumb-20160614/mercedes-lopez-y-paola-perez.JPG" />
+                    </a>
+
+                    <a href="/seccion/galeria/">
+                        <div class="maga_hover maga_sm">
+                            <p class="oxy">Mercedes y Paola</p>
+                        </div>
+                        <img class="sociales_small" src="http://mdx.omnia.com.mx/media/galeria/thumb-20160614/maria-dolores-munoz-de-perez-y-jorge-perez.JPG" />
+                    </a>
+
+                    <a href="/seccion/galeria/">
+                        <div class="maga_hover maga_sm">
+                            <p class="oxy"></p>
+                        </div>
+                        <img class="sociales_small" src="http://mdx.omnia.com.mx/media/galeria/thumb-20160614/graciela-de-serna-y-rodolfo-serna.JPG" />
+                    </a>
+
+                </div>
+
+                <!--
+                                                   <div id="soc1" class="fl">
+                                                    <div class="scc sociales txt_c pos_ab">
+                                                           <p class="seccion2 di">SOCIALES</p>
+                                                        <a href="#" class="plus di" title=" ">
+                                                        </a>
+                                                       </div>
+
+
+                                                       <a href="#"><img class="sociales_big" src="img/socialesfotogrande.JPG" /></a>
+                                                       <div class="cuadro_txt_sociales">
+                                                           <p class="white oxy di">17:53 p.m.   |  </p>
+                                                           <p class="white oxy di">Mauris viverra interdum erat, quis cursus lectus placerat quis. Nam sed...</p>
+                                                       </div>
+                                                   </div>
+
+                                                   <div id="soc2" class="fr">
+
+                                                       <a href="#">
+                                                           <div class="maga_hover maga_sm">
+                                                               <p class="oxy">Mauris viverra interdum erat, quis cursus lectus placerat...</p>
+                                                           </div>
+                                                           <img class="sociales_small" src="img/socialesfoto1.JPG" />
+                                                       </a>
+
+                                                       <a href="#">
+                                                           <div class="maga_hover maga_sm">
+                                                               <p class="oxy">Mauris viverra interdum erat, quis cursus lectus placerat...</p>
+                                                           </div>
+                                                           <img class="sociales_small" src="img/socialesfoto2.JPG" />
+                                                       </a>
+
+                                                       <a href="#">
+                                                           <div class="maga_hover maga_sm">
+                                                               <p class="oxy">Mauris viverra interdum erat, quis cursus lectus placerat...</p>
+                                                           </div>
+                                                           <img class="sociales_small" src="img/socialesfoto3.JPG" />
+                                                       </a>
+
+                                                       <a href="#">
+                                                           <div class="maga_hover maga_sm">
+                                                               <p class="oxy">Mauris viverra interdum erat, quis cursus lectus placerat...</p>
+                                                           </div>
+                                                           <img class="sociales_small" src="img/socialesfoto4.JPG" />
+                                                       </a>
+
+                                                   </div>
+                -->
+            </div>
+
+            <div id="cultura" class="di fl">
+
+
+                <div id="cultura_main" class="">
+                    <a href="/noticias/cultura-encuentran-un-cuaderno-de-dibujos-ineditos-de-vincent-van-gogh/"><img src="/media/fotos/20160616_van-gogh.JPG" class="img_cultura"/></a>
+                    <div class="scc arteycultura txt_c pos_ab">
+                        <p class="seccion2 di">ARTE & CULTURA</p>
+                        <a href="/seccion/cultura/" class="plus di" title=" ">
+                        </a>
+                    </div>
+
+                    <div class="oxy txt_nota">
+                        <p class="green di">13:18 p.m.|  </p>
+                        <p class="di">CULTURA: Encuentran un cuaderno de ...</p>
+                    </div>
+
+                </div>
+
+                <div id="cultura_2" class="">
+
+                    <div class="di nota_cultura fl">
+                        <a href="/noticias/llega-para-quedarse-en-la-mediteca-la-exposicion-chihuahua-admirable/"><img src="/media/fotos/20160615_chihuahua-admirable.jpg" class="img2_cultura"/></a>
+                        <div class="oxy txt_nota">
+                            <p class="green di">12:43 p.m. |  </p>
+                            <p class="di">Llega para quedarse en la ...</p>
+                        </div>
+                    </div>
+
+                    <div class="di nota_cultura fr">
+                        <a href="/noticias/richard-ford-gana-premio-princesa-de-asturias-de-las-letras/"><img src="/media/fotos/20160615_2016-06-15_07-06-01___1306.jpg" class="img2_cultura"/></a>
+                        <div class="oxy txt_nota">
+                            <p class="green di">9:46 a.m. |  </p>
+                            <p class="di">Richard Ford gana premio Princesa ...</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--
+                                                   <div id="cultura_main" class="">
+                                                       <a href="#"><img src="img/artefotogrande.JPG" class="img_cultura"/></a>
+                                                       <div class="scc arteycultura txt_c pos_ab">
+                                                           <p class="seccion2 di">ARTE & CULTURA</p>
+                                                        <a href="#" class="plus di" title=" ">
+                                                        </a>
+                                                       </div>
+
+                                                       <div class="oxy txt_nota">
+                                                               <p class="green di">17:53 p.m.   |  </p>
+                                                               <p class="di">Mauris viverra interdum erat, quis cursus lectus placerat viverra interdum erat, quis cursus lectus placerat viverra interdum erat, quis cursus lectus...</p>
+                                                           </div>
+
+                                                   </div>
+
+                                                   <div id="cultura_2" class="">
+
+                                                       <div class="di nota_cultura fl">
+                                                           <a href="#"><img src="img/artefoto1.JPG" class="img2_cultura"/></a>
+                                                           <div class="oxy txt_nota">
+                                                               <p class="green di">17:53 p.m.   |  </p>
+                                                               <p class="di">Mauris viverra interdum erat, quis cursus lectus placerat viverra...</p>
+                                                           </div>
+                                                       </div>
+
+                                                       <div class="di nota_cultura fr">
+                                                           <a href="#"><img src="img/artefoto2.JPG" class="img2_cultura"/></a>
+                                                           <div class="oxy txt_nota">
+                                                               <p class="green di">17:53 p.m.   |  </p>
+                                                               <p class="di">Mauris viverra interdum erat, quis cursus lectus placerat viverra...</p>
+                                                           </div>
+                                                       </div>
+
+                                                   </div>
+
+                -->
+            </div>
+
+            <div id="redes" class="di fl">
+
+
+                <div class="bloque_redes">
+                    <div class="scc viral txt_c pos_ab">
+                        <p class="seccion2 di">VIRAL</p>
+                        <a href="/seccion/viral/" class="plus di" title=" ">
+                        </a>
+                    </div>
+
+                    <a href="/noticia/crean-app-para-detectar-productos-pirata/">
+                        <div class="maga_hover maga_big">
+                            <p class="oxy m20">Crean app para detectar productos pirata </p>
+                        </div>
+                        <img class="img_redes di" src="/media/thumb-fotos/20160616_2016-06-16_09-06-09___4890.jpg" />
+                    </a>
+
+                    <a href="/noticia/interes-usureros-chinos-piden-a-clientes-morosos-fotografias-desnudos-para-amagarlos/">
+                        <div class="maga_hover maga_big">
+                            <p class="oxy m20">INTERÉS: Usureros chinos piden a clientes morosos fotografías desnudos para amagarlos</p>
+                        </div>
+                        <img class="img_redes di" src="/media/thumb-fotos/20160616_2016-06-16_09-06-45___3342.jpg" />
+                    </a>
+
+                </div>
+
+                <div class="bloque_redes">
+                    <div class="scc lasredes txt_c pos_ab">
+                        <p class="seccion2 di">LAS REDES</p>
+                        <a href="#" class="plus di" title=" ">
+                        </a>
+                    </div>
+
+
+                    <a href="/noticia/google-recuerda-a-karl-landsteiner-descubridor-de-los-grupos-sanguineos/">
+                        <div class="maga_hover maga_big">
+                            <p class="oxy"> Google recuerda a Karl Landsteiner, descubridor de los grupos sanguíneos</p>
+                        </div>
+                        <img class="img_redes di" src="/media/thumb-fotos/20160614_sangfre.JPG" />
+                    </a>
+
+                    <a href="/noticia/estoy-en-el-bano-esta-viniendo-voy-a-morir/">
+                        <div class="maga_hover maga_big">
+                            <p class="oxy"> “Estoy en el baño. Está viniendo; voy a morir”</p>
+                        </div>
+                        <img class="img_redes di" src="/media/thumb-fotos/20160614_2016-06-13_11-06-51___2009.jpg" />
+                    </a>
+
+                </div>
+
+
+                <!--
+                                                   <div class="bloque_redes">
+                                                       <div class="scc viral txt_c pos_ab">
+                                                           <p class="seccion2 di">VIRAL</p>
+                                                        <a href="#" class="plus di" title=" ">
+                                                        </a>
+                                                       </div>
+
+                                                       <a href="#">
+                                                           <div class="maga_hover maga_big">
+                                                               <p class="oxy m20">Mauris viverra interdum erat, quis cursus lectus placerat...</p>
+                                                           </div>
+                                                           <img class="img_redes di" src="img/viralfoto1.JPG" />
+                                                       </a>
+
+                                                       <a href="#">
+                                                           <div class="maga_hover maga_big">
+                                                               <p class="oxy m20">Mauris viverra interdum erat, quis cursus lectus placerat...</p>
+                                                           </div>
+                                                           <img class="img_redes di" src="img/viralfoto2.JPG" />
+                                                       </a>
+
+                                                   </div>
+
+                                                   <div class="bloque_redes">
+                                                       <div class="scc lasredes txt_c pos_ab">
+                                                           <p class="seccion2 di">LAS REDES</p>
+                                                        <a href="#" class="plus di" title=" ">
+                                                        </a>
+                                                       </div>
+
+
+                                                       <a href="#">
+                                                           <div class="maga_hover maga_big">
+                                                               <p class="oxy">Mauris viverra interdum erat, quis cursus lectus placerat...</p>
+                                                           </div>
+                                                           <img class="img_redes di" src="img/lasredesfoto1.JPG" />
+                                                       </a>
+
+                                                       <a href="#">
+                                                           <div class="maga_hover maga_big">
+                                                               <p class="oxy">Mauris viverra interdum erat, quis cursus lectus placerat...</p>
+                                                           </div>
+                                                           <img class="img_redes di" src="img/lasredesfoto2.JPG" />
+                                                       </a>
+
+                                                   </div>
+                -->
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- OMNIA MULTIMEDIA -->
+<div class="row m20">
+    <script type="text/javascript" src="http://tv.omnia.com.mx/media/player/flowplayer-3.1.1.min.js"></script>
+    <div class="span8">
+
+        <div class="omniamultimedia">
+
+            <div id="omnia_multi" class="di omn_bg">
+                <div class="seccion2 omn_m">OMNIA MULTIMEDIA</div>
+            </div>
+
+            <div id="btns_multi" class="di fl">
+                <ul>
+                    <a onclick="change_multi('omniatv');" class="white"><li class="btn_multi">Omnia TV</li></a>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div id="multimedia">
+
+            <div id="omniatv"> <!-- OMNIA TV -->
+
+                <div class="fl">
+
+                    <div id="video">
+                        <a
+                                href="http://mdx.omnia.com.mx/media/videos/20160617_singer-meatloaf-collapses-on-stage-in-edmonton-canada.mp4"
+                                style="display:block;width:360px;height:290px;"
+                                id="player">
+                            <img src="/media/fotos/20160617_meat.JPG" width="360" border="0" height="290" style="height:290px;">
+                        </a>
+                        <script>
+                        flowplayer("player", "http://tv.omnia.com.mx/media/player/flowplayer-3.1.1.swf",{ play:{opacity:0} ,
+clip: {
+        baseUrl: 'http://mdx.omnia.com.mx/media/videos/',
+        autoPlay: true,
+        autoBuffering: true
+    }
+
+});
+                </script>
+
+                    </div>
+
+                    <div class="video_txt">
+                        <p class="oxy">
+                        <div id="videotext">
+                            VIDEO: Meat Loaf se desvanece en el escenario en plena presentación
+                        </div>
+                        </p>
+                        <center>
+                            <a href="http://tv.omnia.com.mx/">Mas Videos</a>
+                        </center>
+
+                    </div>
+
+                </div>
+
+                <div class="fr">
+
+                    <div class="multi_2">
+                        <div id="btns_tabla">
+                            <ul>
+                                <a><li id="btn1" class="btn_tabla btn_mact" onclick="change_btn('btn1');">Videos</li></a>
+                            </ul>
+                        </div>
+
+
+                        <div id="multi_tabla">
+
+
+                            <!-- LOCALES  -->
+                            <div id="locales">
+                                <div id="clips">
+                                    <script>
+												//el primer id
+												var base="base1";
+											</script>
+
+
+
+
+
+
+                                    <div id="base1" class="multi_nota m_act">
+                                        <a href="20160616_papa-francesco-accarezza-tigre-circensi-e-scherza.flv" label='El papa Francisco acaricia un cachorro de tigre y le da &#39;un susto de muerte&#39;' ><img class="multi_img fl" src="/media/thumb-fotos/20160616_papa-tigre_.JPG" />
+                                            <p class="m_nota_txt noto">
+                                                El papa Francisco acaricia un cachorro de tigre y le da &#39;un susto de muerte&#39;</a>
+                                        </p>
+                                    </div>
+
+
+
+                                    <div id="base1" class="multi_nota m_act">
+                                        <a href="20160615_whatsapp-video-20160615.mp4" label='Un mini tornado se forma en la carretera Cuauhtémoc - Chihuahua' ><img class="multi_img fl" src="/media/thumb-fotos/20160615_tornado-play.jpg" />
+                                            <p class="m_nota_txt noto">
+                                                Un mini tornado se forma en la carretera Cuauhtémoc - Chihuahua</a>
+                                        </p>
+                                    </div>
+
+
+
+                                    <div id="base1" class="multi_nota m_act">
+                                        <a href="20160613_orlando-shooting-video-from-inside-pulse-nightclub.flv" label='VIDEO: Víctima de la matanza de Orlando graba el momento en que comenzó el ataque' ><img class="multi_img fl" src="/media/thumb-fotos/20160613_video-play.jpg" />
+                                            <p class="m_nota_txt noto">
+                                                VIDEO: Víctima de la matanza de Orlando graba el momento en que comenzó el ataque</a>
+                                        </p>
+                                    </div>
+
+
+
+                                    <div id="base1" class="multi_nota m_act">
+                                        <a href="20160611_whatsapp-video-20160611.mp4" label='Derrapa motociclista en la prolongación Teófilo Borunda' ><img class="multi_img fl" src="/media/thumb-fotos/20160611_moto-play.jpg" />
+                                            <p class="m_nota_txt noto">
+                                                Derrapa motociclista en la prolongación Teófilo Borunda</a>
+                                        </p>
+                                    </div>
+
+
+
+                                    <div id="base1" class="multi_nota m_act">
+                                        <a href="20160610_whatsapp-video-20160610dghmwm.mp4" label='Ejecutan a dos en Granjas del Valle' ><img class="multi_img fl" src="/media/thumb-fotos/20160610_video-4.jpg" />
+                                            <p class="m_nota_txt noto">
+                                                Ejecutan a dos en Granjas del Valle</a>
+                                        </p>
+                                    </div>
+
+
+
+                                    <div id="base1" class="multi_nota m_act">
+                                        <a href="20160610_whatsapp-video-20160610-senora-burritos.mp4" label='Balean a vendedora de burritos, en Col. Deportistas ' ><img class="multi_img fl" src="/media/thumb-fotos/20160610_video-3.jpg" />
+                                            <p class="m_nota_txt noto">
+                                                Balean a vendedora de burritos, en Col. Deportistas</a>
+                                        </p>
+                                    </div>
+
+
+
+                                    <div id="base1" class="multi_nota m_act">
+                                        <a href="20160610_whatsapp-video-20160610.mp4" label='Video albergue' ><img class="multi_img fl" src="/media/thumb-fotos/20160610_video-1.jpg" />
+                                            <p class="m_nota_txt noto">
+                                                Video albergue</a>
+                                        </p>
+                                    </div>
+
+
+
+                                    <div id="base1" class="multi_nota m_act">
+                                        <a href="20160609_justin-bieber-fight.flv" label='Justin Bieber, a puñetazo limpio en Cleveland' ><img class="multi_img fl" src="/media/thumb-fotos/20160609_justin-play.jpg" />
+                                            <p class="m_nota_txt noto">
+                                                Justin Bieber, a puñetazo limpio en Cleveland</a>
+                                        </p>
+                                    </div>
+
+
+
+                                    <div id="base1" class="multi_nota m_act">
+                                        <a href="20160609_whatsapp-video-20160609.mp4" label='Choque en el periférico De la Juventud' ><img class="multi_img fl" src="/media/thumb-fotos/20160609_capturahdnd.JPG" />
+                                            <p class="m_nota_txt noto">
+                                                Choque en el periférico De la Juventud</a>
+                                        </p>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- imagenes -->
+                    <div id="bajo_notas"> <!--
+									<div class="di fl img_flag oxy_b">
+										<p>El Noticiero</p>
+									</div>
+									<img id="logo_om_m" class="di" src="img/multimedialogo.png" />
+									<div id="txt_horario" class="di fr">
+										<p class="oxy_b">TRANSMISIÓN EN VIVO</p>
+										<p class="oxy">Lunes a Viernes 7:00 p.m.</p>
+									</div> -->
+                    </div>
+                </div>
+            </div>  <!-- END Omnia TV -->
+
+            <script>
+
+
+var links = document.getElementById("clips").getElementsByTagName("a");
+
+for (var i = 0; i < links.length; i++) {
+    links[i].onclick = function() {
+        document.getElementById('videotext').innerHTML=this.getAttribute("label", 2);
+        $f().play(this.getAttribute("href", 2));
+        return false;
+    }
+}
+
+</script>
+
+
+
+
+
+        </div>  <!-- END Omnia multimedia -->
+
+
+
+        <div class="publi">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- omnia2014 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-3344652054517543"
+                 data-ad-slot="1480350378"></ins>
+            <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+            <!-- PRNewswire Headlines Widget Code Starts Here -->
+            <div class='scc reportajes txt_c'><p class='seccion2 di'>Noticias proporcionadas por PR Newswire</p></div>
+            <script type="text/javascript" src="http://widget.prnewswire.com/widget/widget.js?&l=es&preset=3&expandheight=1&width=750&height=100&showlogos=0&dir=12,24&hlen=50&widgettitle=&andorquestion=OR&numresults=5&numwords=10&hlineorbrief=hline&bold=1&bkgcolor=f4f4f7&rowcolor1=f4f4f7&rowcolor2=f4f4f7&bordercolor=dddddd&link=000000&visitedcolor=666666&getwidget=0&textcolor=000000&datecolor=888888&fontface=Noto Serif,serif&fontsize=10&bordersize=1&p=http://www.omnia.com.mx/prnews/&morelinkstyle=color%3a%20%23000000;font-family:Noto Serif,serif;font-size:13.33px;font-weight:700;&rude=1&incldate=0&inclcity=0&"></script>
+            <!-- PRNewswire Headlines Widget Code Ends Here -->
+
+            <table border="0">
+                <tr>
+                    <td>
+
+
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="span4">
+        <!--img src="/media/banners/agom.jpg" width="370" border="0" -->
+
+        <center>
+
+            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="300" height="200" id="movie_name" align="middle">
+                <param name="movie" value="/media/images/SemaforoUVrojo.swf"/>
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="/media/images/SemaforoUVrojo.swf" width="300" height="200">
+                    <param name="movie" value="/media/images/SemaforoUVrojo.swf"/>
+                    <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflash">
+                    </a>
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+
+            <p>
+                <br>
+
+
+                <div class="publi">
+                    <center>
+
+
+                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="370" height="90" id="movie_name" align="middle">
+                            <param name="movie" value="/media/banners/jcas300X100.swf"/>
+                            <!--[if !IE]>-->
+                            <object type="application/x-shockwave-flash" data="/media/banners/jcas300X100.swf" width="370" height="90">
+                                <param name="movie" value="/media/banners/jcas300X100.swf"/>
+                                <!--<![endif]-->
+                                <a href="http://www.adobe.com/go/getflash">
+
+                                </a>
+                                <!--[if !IE]>-->
+                            </object>
+                            <!--<![endif]-->
+                        </object>
+
+
+            <p>
+                <br>
+        </center>
+
+    </div>
+    <div class="publi">
+        <center>
+
+
+            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="370" height="90" id="movie_name" align="middle">
+                <param name="movie" value="/media/banners/JMAS2Marz16_.swf"/>
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="/media/banners/JMAS2Marz16_.swf" width="370" height="90">
+                    <param name="movie" value="/media/banners/JMAS2Marz16_.swf"/>
+                    <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflash">
+
+                    </a>
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+
+
+            <p>
+                <br>
+        </center>
+
+    </div>
+    <div class="publi">
+        <center>
+
+
+            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="370" height="90" id="movie_name" align="middle">
+                <param name="movie" value="/media/banners/Congreso17Feb16.swf"/>
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="/media/banners/Congreso17Feb16.swf" width="370" height="90">
+                    <param name="movie" value="/media/banners/Congreso17Feb16.swf"/>
+                    <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflash">
+
+                    </a>
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+
+
+            <p>
+                <br>
+        </center>
+
+    </div>
+    <div class="publi">
+        <center>
+
+
+            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="370" height="90" id="movie_name" align="middle">
+                <param name="movie" value="/media/banners/banner argom final.swf"/>
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="/media/banners/banner argom final.swf" width="370" height="90">
+                    <param name="movie" value="/media/banners/banner argom final.swf"/>
+                    <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflash">
+
+                    </a>
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+
+
+            <p>
+                <br>
+        </center>
+
+    </div>
+    <div class="publi">
+        <center>
+
+
+            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="370" height="90" id="movie_name" align="middle">
+                <param name="movie" value="/media/banners/Summa_banner.swf"/>
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="/media/banners/Summa_banner.swf" width="370" height="90">
+                    <param name="movie" value="/media/banners/Summa_banner.swf"/>
+                    <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflash">
+
+                    </a>
+                    <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+
+
+            <p>
+                <br>
+        </center>
+
+    </div>
+
+
+    <div class="publi">
+
+    </div>
+    <div class="publi">
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- blogs, lo mas leido, bolsa de trabajo -->
+<div class="row m20">
+
+    <!-- Blogs -->
+    <div class="span3">
+
+        <div class="scc blogs txt_c">
+            <p class="seccion2 di">SALUD</p>
+            <a href="/seccion/salud/" class="plus di" title=" ">
+            </a>
+
+            <div id="blogs">
+
+
+                <a href="/noticia/son-43-modulos-de-afiliacion-del-seguro-popular-en-el-estado-de-chihuahua/">
+                    <div class="blog_cuadro">
+                        <img class="" src="/media/fotos/20160617_modulo-1.JPG" width="150" />
+                        <div class="">
+                            <p style="font-family:Noto Serif;font-size: 12px;line-height: normal;">
+                                <b>
+                                    Son 43 módulos de afiliación del Seguro Popular ...</b>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+                <a href="/noticia/identifican-variantes-geneticas-asociadas-a-perdida-de-fertilidad/">
+                    <div class="blog_cuadro">
+                        <img class="" src="/media/fotos/20160617_fertilidad.jpg" width="150" />
+                        <div class="">
+                            <p style="font-family:Noto Serif;font-size: 12px;line-height: normal;">
+                                <b>
+                                    Identifican variantes genéticas asociadas a pérdida de fertilidad</b>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+                <a href="/noticia/cientificos-estudian-ganglios-linfaticos-para-vacuna-contra-vih/">
+                    <div class="blog_cuadro">
+                        <img class="" src="/media/fotos/20160617_2016-06-17_11-06-08___3287.jpg" width="150" />
+                        <div class="">
+                            <p style="font-family:Noto Serif;font-size: 12px;line-height: normal;">
+                                <b>
+                                    Científicos estudian ganglios linfáticos para vacuna contra VIH</b>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+            </div>
+
+        </div>
+
+        <!--
+                            <div class="scc blogs txt_c">
+                                   <p class="seccion2 di">BLOGS</p>
+                                <a href="#" class="plus di" title=" ">
+                                </a>
+
+                               <div id="blogs">
+
+                                   <a href="#">
+                                   <div class="blog_cuadro">
+                                       <img class="img_circle fl" src="img/blogfoto1.png" />
+                                       <div class="txt_blog fl">
+                                           <p class="oxy_b blog_titulo">Frozen Pond</p>
+                                           <p class="oxy_b blog_titulo">Photos of Jacob</p>
+                                           <p class="oxy blog_sub red">» lectus placerat quis</p>
+                                       </div>
+                                   </div>
+                                   </a>
+
+                                   <a href="#">
+                                   <div class="blog_cuadro bg2">
+                                       <img class="img_circle fl" src="img/blogfoto2.png" />
+                                       <div class="txt_blog fl">
+                                           <p class="oxy_b blog_titulo">Frozen Pond</p>
+                                           <p class="oxy_b blog_titulo">Photos of Jacob</p>
+                                           <p class="oxy blog_sub red">» lectus placerat quis</p>
+                                       </div>
+                                   </div>
+                                   </a>
+
+                                   <a href="#">
+                                   <div class="blog_cuadro">
+                                       <img class="img_circle fl" src="img/blogfoto3.png" />
+                                       <div class="txt_blog fl">
+                                           <p class="oxy_b blog_titulo">Frozen Pond</p>
+                                           <p class="oxy_b blog_titulo">Photos of Jacob</p>
+                                           <p class="oxy blog_sub red">» lectus placerat quis</p>
+                                       </div>
+                                   </div>
+                                   </a>
+
+                               </div>
+
+                                               </div>
+    -->
+
+    </div>
+
+
+    <!-- Lo mas leido -->
+    <div class="span5">
+
+        <div class="scc lomasleido txt_c">
+            <p class="seccion2 di">LO MÁS LEÍDO</p>
+            </a>
+        </div>
+
+
+
+        <div class="nota_lomas">
+            <div class="img_lomas fl">
+                <a href="/noticia/atacan-a-tiros-a-mujer-en-la-calle-egipto/"><img class="di" src="/media/thumb-fotos/20160616_whatsapp-image-20160616lrlrl.jpg" /></a>
+            </div>
+            <div class="txt_lomas fl">
+                <div class="">
+                    <a href="/noticia/atacan-a-tiros-a-mujer-en-la-calle-egipto/">
+                        <p class="oxy di blue">18:46 p.m. | </p>
+                        <p class="nota_head di">Sicarios se meten a domicilio; acribillan a dos personas</p>
+                    </a>
+                </div>
+
+                <div>
+
+                    <a href="/noticia/atacan-a-tiros-a-mujer-en-la-calle-egipto/">
+                        <p class="oxy sub_lomas">Chihuahua.- Un violento hecho de sangre se registró esta tarde en un domicilio de la colonia Diego Lucero.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="nota_lomas">
+            <div class="img_lomas fl">
+                <a href="/noticia/anticipa-pri-anular-eleccion-impugna-juarez-8-diputados-y-gobernador/"><img class="di" src="/media/thumb-fotos/20160617_8yth.jpg" /></a>
+            </div>
+            <div class="txt_lomas fl">
+                <div class="">
+                    <a href="/noticia/anticipa-pri-anular-eleccion-impugna-juarez-8-diputados-y-gobernador/">
+                        <p class="oxy di blue">11:34 a.m. | </p>
+                        <p class="nota_head di">Anticipa PRI anular elección con Juárez, 8 diputados y gobernador</p>
+                    </a>
+                </div>
+
+                <div>
+
+                    <a href="/noticia/anticipa-pri-anular-eleccion-impugna-juarez-8-diputados-y-gobernador/">
+                        <p class="oxy sub_lomas">El presidente del PRI, Guillermo Dowell confirmó que el día de ayer que se venció el plazo para interponer recursos ...</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="nota_lomas">
+            <div class="img_lomas fl">
+                <a href="/noticia/responde-iee-vs-pri-no-hay-exceso-de-boletas/"><img class="di" src="/media/thumb-fotos/20160617_hy6rfg.jpg" /></a>
+            </div>
+            <div class="txt_lomas fl">
+                <div class="">
+                    <a href="/noticia/responde-iee-vs-pri-no-hay-exceso-de-boletas/">
+                        <p class="oxy di blue">15:34 p.m. | </p>
+                        <p class="nota_head di">Responde IEE vs PRI, “no hay exceso de boletas”</p>
+                    </a>
+                </div>
+
+                <div>
+
+                    <a href="/noticia/responde-iee-vs-pri-no-hay-exceso-de-boletas/">
+                        <p class="oxy sub_lomas">El Consejo General del IEE encabezados por el presidente, Arturo Meraz, frente a las acusaciones que ha hecho el PRI ...</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--
+        <div class="scc lomasleido txt_c">
+               <p class="seccion2 di">LO MÁS LEIDO</p>
+            <a href="#" class="plus di" title=" ">
+            </a>
+           </div>
+
+           <div class="nota_lomas">
+               <div class="img_lomas fl">
+                    <img class="di" src="img/lomasleidofoto1.JPG" />
+                    <a href="#" class="btn_vermas vmred">Ver Más</a>
+                </div>
+                <div class="txt_lomas fl">
+                    <div class="">
+                    <p class="oxy di blue">17:53 p.m. | </p>
+                       <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis am sed commodo mi...</p>
+                    </div>
+
+                    <div>
+                        <p class="oxy sub_lomas">Cursus nunc sed eleifend porta quam euismod blandit. Phasellus ac tortor et sem interdum pretium eu et est.</p>
+                    </div>
+                </div>
+           </div>
+
+           <div class="nota_lomas">
+               <div class="img_lomas fl">
+                    <img class="di" src="img/lomasleidofoto2.JPG" />
+                    <a href="#" class="btn_vermas vmred">Ver Más</a>
+                </div>
+                <div class="txt_lomas fl">
+                    <div class="">
+                    <p class="oxy di blue">17:53 p.m. | </p>
+                       <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis am sed commodo mi...</p>
+                    </div>
+
+                    <div>
+                        <p class="oxy sub_lomas">Cursus nunc sed eleifend porta quam euismod blandit. Phasellus ac tortor et sem interdum pretium eu et est.</p>
+                    </div>
+                </div>
+           </div>
+
+           <div class="nota_lomas">
+               <div class="img_lomas fl">
+                    <img class="di" src="img/lomasleidofoto3.JPG" />
+                    <a href="#" class="btn_vermas vmred">Ver Más</a>
+                </div>
+                <div class="txt_lomas fl">
+                    <div class="">
+                    <p class="oxy di blue">17:53 p.m. | </p>
+                       <p class="nota_head di">Mauris viverra interdum erat, quis cursus lectus placerat quis am sed commodo mi...</p>
+                    </div>
+
+                    <div>
+                        <p class="oxy sub_lomas">Cursus nunc sed eleifend porta quam euismod blandit. Phasellus ac tortor et sem interdum pretium eu et est.</p>
+                    </div>
+                </div>
+           </div>
+        -->
+    </div>
+
+    <!-- bolsa de trabajo -->
+
+
+    <div class="span4">
+        <div id="bolsa">
+            <div class="scc bolsadetrabajo txt_c">
+                <p class="seccion2 di">CIENCIA Y TECNOLOGÍA</p>
+                <a href="/seccion/tecnologia/" class="plus di" title=" "></a>
+            </div>
+
+
+            <div id="cuadro_bolsa">
+
+                <div class="nota_inter">
+                    <div class="txt_inter fl"><a href="/noticia/academia-ingeniero-mexicano-lleva-tecnologia-de-realidad-virtual-a-la-medicina/" >
+                        <p class="green di oxy">15:44 p.m.  | </p>
+                        <p class="di noto_b">ACADEMIA: Ingeniero mexicano lleva tecnología ... </p>
+                        <p class="oxy">El ingeniero mexicano Sergio Aguirre Valencia ha logrado ...</p></a>
+                    </div>
+                    <a href="/noticia/academia-ingeniero-mexicano-lleva-tecnologia-de-realidad-virtual-a-la-medicina/"><img class="img_inter fr" src="/media/thumb-fotos/20160617_2016-06-17_01-06-06___5808.jpg" /></a>
+                    <!-- a href="/noticia/academia-ingeniero-mexicano-lleva-tecnologia-de-realidad-virtual-a-la-medicina/" class="btn_corner btn_plus_box"> </a -->
+                </div>
+
+
+                <div class="nota_inter">
+                    <div class="txt_inter fl"><a href="/noticia/ciencia-descubren-asteroide-que-acompana-a-la-tierra-en-su-orbita-solar/" >
+                        <p class="green di oxy">6:01 a.m.  | </p>
+                        <p class="di noto_b">CIENCIA: Descubren asteroide que acompaña ... </p>
+                        <p class="oxy">Un pequeño asteroide con una órbita alrededor del ...</p></a>
+                    </div>
+                    <a href="/noticia/ciencia-descubren-asteroide-que-acompana-a-la-tierra-en-su-orbita-solar/"><img class="img_inter fr" src="/media/thumb-fotos/20160617_2016-06-17_12-06-16___1883.jpg" /></a>
+                    <!-- a href="/noticia/ciencia-descubren-asteroide-que-acompana-a-la-tierra-en-su-orbita-solar/" class="btn_corner btn_plus_box"> </a -->
+                </div>
+
+
+                <div class="nota_inter">
+                    <div class="txt_inter fl"><a href="/noticia/tecnologia-robot-escapa-de-laboratorio/" >
+                        <p class="green di oxy">17:42 p.m.  | </p>
+                        <p class="di noto_b">TECNOLOGÍA: Robot escapa de laboratorio </p>
+                        <p class="oxy">Un robot humanoide “escapó” de una zona de ...</p></a>
+                    </div>
+                    <a href="/noticia/tecnologia-robot-escapa-de-laboratorio/"><img class="img_inter fr" src="/media/thumb-fotos/20160616_robot.jpg" /></a>
+                    <!-- a href="/noticia/tecnologia-robot-escapa-de-laboratorio/" class="btn_corner btn_plus_box"> </a -->
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- foot bar -->
+<div class="row m20">
+
+    <div id="foot_bar" class="span12">
+
+        <div id="foot_r1" class="row">
+            <p class="di oxy f_r1">|&nbsp;&nbsp;&nbsp;&nbsp;LA MÁS COMPLETA INFORMACIÓN EN UN CLICK</p>
+            <button class="di oxy btn_pinicio">HAZ DE OMNIA TU PÁGINA DE INICIO "AQUÍ"</button>
+        </div>
+
+        <div id="foot_r2" class="row">
+            <ul>
+                <li><a href="/seccion/locales/" class="link">LOCALES</a></li>
+                <li><a href="/seccion/policiaca/" class="link">POLICIACA</a></li>
+                <li><a href="/seccion/cultura/" class="link">CULTURA</a></li>
+                <li><a href="/seccion/deportes/" class="link">DEPORTES</a></li>
+                <li><a href="/seccion/farandula/" class="link">FARÁNDULA</a></li>
+                <li><a href="/seccion/columna/" class="link">LA COLUMNA</a></li>
+                <li><a href="/seccion/nacional/" class="link">NACIONAL</a></li>
+                <li><a href="/seccion/internacional/" class="link">INTERNACIONAL</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div> <!-- MARGEN -->
+
+<!-- footer -->
+<div class="row m15">
+
+    <div id="footer" class="span12">
+        <!-- contacto -->
+        <div class="span5">
+            <div class="fl">
+                <img class="di fl" src="img/contacto.PNG" />
+            </div>
+            <div class="fr" id="inpts_ctc">
+                <form action="/sendcomment/" method="post" name="sendcomment">
+                    <input class="input_ctc" type="text" placeholder="Nombre" name="nombre"/>
+                    <input class="input_ctc" type="text" placeholder="E-mail" name="email"/>
+                    <textarea class="input_ctc txta_ctc" placeholder="Comentario" name="comment"></textarea>
+
+                    <div class="fr">
+                        <button class="di btn_ctc" onclick="document.forms.sendcomment.submit();">Enviar</button>
+
+                        <button class="di btn_ctc">Borrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ventas-->
+        <div class="span5">
+            <div id="datos_ctc" class="fl">
+                <div class="separa_ft fl">
+                </div>
+
+                <div class="fr">
+                    <img class="di fl" src="img/ventasomnia.png" />
+                    <BR>
+                    <BR>
+                    <BR>
+                    <p class="oxy_b">TELÉFONO:</p>
+                    <P class="oxy">(614)4145320</p>
+                </div>
+            </div>
+
+            <div class="fr">
+                <div class="fl p_re">
+
+                    <img src="img/ipad.png" />
+                    <div style="height:187px;width:133px;margin-top:-226px;margin-left:39px;">
+                        <a href="/media/portadacronica/20160616_1.pdf" target="_elpdf"><img src="/media/portadacronica/20160617_20160616_1.jpg" width="175" /></a>
+
+                    </div>
+
+
+</html>
+</body>
+
+</div>
+
+<div class="separa_ft fr">
+</div>
+</div>
+
+</div>
+
+<!-- logos -->
+<div class="span2">
+    <a href="http://tv.omnia.com.mx/"><img src="img/tvomnia.png" /></a>
+    <a href="http://elfronterizo.com.mx/"><img class="ctcm" src="img/fronterizo.png" /></a>
+    <a href="http://omniacuauhtemoc.com.mx/"><img class="ctcm1" src="img/omniacuau.png" /></a>
+</div>
+
+
+<div id="line_b">
+    <div id="derechos">
+        <p class="oxy_b m10 fl">DERECHOS RESERVADOS OMNIA 2014</p>
+
+    </div>
+</div>
+
+</div>
+
+</div> <!-- END Container -->
+
+
+
+<script defer="" src="js/jquery.flexslider.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.zweatherfeed.js"></script>
+<script src="js/scripts.js"></script>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52814020-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+

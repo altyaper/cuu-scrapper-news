@@ -1,7 +1,9 @@
 package scrappers.scrapperCover;
 
 import enums.PagesList;
+import services.HtmlProcess;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,11 +12,11 @@ import java.util.Set;
  */
 public class NorteDigitalCover extends CoverPage {
 
-    protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.NORTEDIGITAL);
+    public final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.NORTEDIGITAL);
     public final String regex = new String("http:\\/\\/nortedigital.mx\\/\\w+[-][a-zA-Z0-9-]+\\/");
 
-    public NorteDigitalCover() {
-        super(page);
+    public NorteDigitalCover(HtmlProcess htmlProcess) throws IOException {
+        super(page, htmlProcess);
     }
 
     public boolean isLink(String href) {

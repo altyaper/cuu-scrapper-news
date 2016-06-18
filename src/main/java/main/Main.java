@@ -1,9 +1,12 @@
 package main;
 
+import db.ConnectionManager;
 import scrappers.scrapperCover.*;
 import utils.ScrapCover;
 import utils.Scrapper;
 
+import java.io.IOException;
+import java.sql.Connection;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -12,9 +15,14 @@ import java.util.Iterator;
  */
 public class Main {
 
-    public static void main(String... strings){
+    public static void main(String... strings) throws IOException {
 
         ScrapCover.scrappAllCovers();
+
+//        Connection a = null;
+//
+//        ConnectionManager connection = new ConnectionManager();
+//        a = connection.getConnection();
 
 
     }

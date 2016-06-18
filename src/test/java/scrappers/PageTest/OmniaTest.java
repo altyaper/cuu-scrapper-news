@@ -29,7 +29,7 @@ public class OmniaTest {
     public void setup() throws IOException {
 
         HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubOmnia.html").toString().replace("file:","");
+        String dir = getClass().getResource("/stubPage/stubOmnia.html").toString().replace("file:","");
         File file = new File(dir);
         Document document = Jsoup.parse(file, "UTF-8",this.url);
         expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);

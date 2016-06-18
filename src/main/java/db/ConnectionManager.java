@@ -13,10 +13,10 @@ public class ConnectionManager {
     Connection connection = null;
 
     public Connection getConnection() {
-        String url = "jdbc:postgresql://localhost/test";
+        String url = "jdbc:postgresql://localhost/scrapper";
         Properties props = new Properties();
-        props.setProperty("user","admin");
-        props.setProperty("password","");
+        props.setProperty("user","postgres");
+        props.setProperty("password","test");
         props.setProperty("ssl","false");
         try {
             Connection conn = DriverManager.getConnection(url, props);

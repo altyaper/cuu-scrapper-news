@@ -1,6 +1,7 @@
 package utils;
 
 import scrappers.scrapperCover.*;
+import services.HtmlProcess;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -21,23 +22,23 @@ public class ScrapCover {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
-    public static void scrappAllCovers() {
+    public static void scrappAllCovers() throws IOException {
 
         HashSet<String> allnews = new HashSet<String>();
-        CoverPage single = new CronicaCover();
+        CoverPage single = new CronicaCover(new HtmlProcess());
 
         allnews.addAll(single.getArticlesLinks());
 
-        single = new TiempoCover();
+        single = new TiempoCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
-        single = new NorteDigitalCover();
+        single = new NorteDigitalCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
-        single = new ChihuahuanoticiasCover();
+        single = new ChihuahuanoticiasCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
-        single = new OpcionCover();
+        single = new OpcionCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
         for (final String link : allnews) {

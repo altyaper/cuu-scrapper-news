@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import services.HtmlProcess;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -16,9 +17,9 @@ public abstract class CoverPage {
     public Document html;
     public String url;
 
-    public CoverPage(String url) {
+    public CoverPage(String url, HtmlProcess htmlProcess) throws IOException {
         this.url = url;
-        setHTML();
+        this.html = htmlProcess.getHtml(url);
     }
 
     public abstract boolean isLink(String href);
@@ -26,7 +27,7 @@ public abstract class CoverPage {
     public HashSet<String> getArticlesLinks(){
         HashSet<String> auxlinks = new HashSet<String>();
 
-        Elements elements = this.getHtml().select("a");
+        Elements elements = this.html.select("a");
 
         for(Element link: elements){
             String stringLink = link.attr("href");

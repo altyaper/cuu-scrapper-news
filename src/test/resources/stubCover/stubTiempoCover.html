@@ -1,0 +1,2844 @@
+
+<!DOCTYPE html >
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="es"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="" lang="es-ES"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"8e9c03e0a0","applicationID":"14356824","transactionName":"c1xbFUBYXlpTQx5IWkJHVAVTRB1GRFhfW1xAUlk=","queueTime":0,"applicationTime":1578,"agent":""}</script>
+    <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQQHWFFbCBABUFJXAQkFUg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,-1!==o.indexOf("dev")&&(s.dev=!0),-1!==o.indexOf("nr_dev")&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f?f.apply(this,a(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;d>r;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||10>p)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;d>a;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(t,e){return function(){o(t,[(new Date).getTime()].concat(a(arguments)),null,e)}}var o=t("handle"),i=t(15),a=t(16);"undefined"==typeof window.newrelic&&(newrelic=NREUM);var s=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],c=["addPageAction"],f="api-";i(s,function(t,e){newrelic[e]=r(f+e,"api")}),i(c,function(t,e){newrelic[e]=r(f+e)}),e.exports=newrelic,newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),o("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-952.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script>
+    <title>Tiempo</title>
+    <meta name="keywords" content="Noticias, editorial, minuto a minuto, articulos, tiempo, reportajes, videos, galerias, impacto" />
+    <meta name="description" content="Tiempo - La Noticia Digital.">
+    <meta name="author" content="Tiempo - La Noticia Digital.">
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://assets.tiempo.com.mx/assets/favicon-7e4ee21daad613ef8ce4b30faa4579b8db80c6903dafa365f3f50602814e64ae.ico" />
+
+
+
+
+
+    <!-- start:responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- end:responsive web design -->
+
+    <!-- start:google analytics -->
+    <meta name="google-site-verification" content="jnAD4MFdCJuNH9MnniRQu0B3a-UlJBA5jlrflTiEkmk" />
+    <meta name="google-site-verification" content="EJde_4jX1MlaWE_BzQmWXMQFa3pUtz-evRcVanGvDEM" />
+    <!-- end:google analytics -->
+
+    <!-- start:stylesheets & javascripts -->
+    <link rel="stylesheet" media="all" href="http://assets.tiempo.com.mx/assets/periodico/sass/application-6e0d20ac17fce2b763e15407b98de84fb0d3923786b0bec0e2de386ffc0bb00f.css" />
+
+
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="t0uUiTM8Hds8e2tF7cKOhXkgO2xov02rn+EAN6BpDwaPlxkBsNUr2fhy0T3dC84s7mYbZ7qQOldqaMyxZxyHFA==" />
+    <!-- end:stylesheets & javascripts -->
+
+
+
+</head>
+<body class="theme-light">
+<!-- start:page outer wrap -->
+<div id="page-outer-wrap">
+    <!-- start:page inner wrap -->
+    <div id="page-inner-wrap">
+        <div class="overlayyy"></div>
+
+        <!-- start:page header mobile -->
+        <header id="page-header-mobile" class="header-mobile visible-xs">
+            <!-- Sidebar -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="#">
+                            Tiempo.com.mx
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            Inicio
+                        </a>            </li>
+
+                    <li class="cat-news">
+                        <a href="/seccion/local/1">Local</a>
+                    </li>
+                    <li class="cat-sports">
+                        <a href="/seccion/nacional/1">Nacional</a>
+                    </li>
+                    <li class="cat-lifestyle">
+                        <a href="/seccion/opinion/1">Opinión</a>
+                    </li>
+                    <li class="cat-showtime">
+                        <a href="/seccion/cronos/1">Cronos</a>
+                    </li>
+                    <li class="cat-tech">
+                        <a href="/seccion/espectaculos/1">Espectáculos</a>
+                    </li>
+                    <li class="cat-business">
+                        <a href="/seccion/deportes/1">Deportes</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extra + <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="dropdown-header">Secciones</li>
+                            <li><a href="/seccion/cultura/1">Cultura</a></li>
+                            <li><a href="/seccion/internacional/1">Internacional</a></li>
+                            <li><a href="/seccion/tecnologia/1">Tecnología</a></li>
+                            <li><a href="/seccion/crealo/1">Créalo</a></li>
+                            <li><a href="/seccion/videos/1">Videos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- start:row -->
+            <div class="row">
+
+                <!-- start:col -->
+                <div class="col-xs-6 col-xs-offset-2">
+                    <!-- start:logo -->
+                    <a href="/">
+                        <img alt="Logo" style="width: 400px; margin: 6px auto; display: block;" class="tema-obscuro-logo" src="http://assets.tiempo.com.mx/uploads/configuracion_periodico/imagen/1/logo-tiempo.png" />
+                        <img alt="Logo" style="width: 400px; margin: 6px auto; display: block;" class="tema-claro-logo" src="http://assets.tiempo.com.mx/assets/logo-tiempo-negro-f59aae1118ce2e29e4ce84c5437e0a7e00990f5d3672625adf0329ed6335b9cd.svg" />
+                    </a>
+                    <!-- end:logo -->
+                </div>
+                <!-- end:col -->
+
+                <!-- start:col -->
+                <div class="col-xs-4">
+                    <!-- start:weather -->
+                    <div class="weather-theme-dark mobile">
+                        <div id="TT_tfjwbxYBY1j9EaBA7AVkEkEkktuAMfA2rt1tksioqkD">El tiempo por Tutiempo.net</div>
+                    </div>
+
+                    <div class="weather-theme-light mobile">
+                        <div id="TT_tAjwrxtBt1jcE9aA7AqB2Ahw6tuALfA2rdEYkZyoaEz">El tiempo por Tutiempo.net</div>
+                    </div>
+                    <!-- end:weather -->
+                </div>
+                <!-- end:col -->
+
+            </div>
+            <!-- end:row -->
+        </header>
+
+        <!-- end:page header mobile -->
+
+        <!-- start:page header desktop -->
+        <header id="page-header" class="header-desktop m-b-sm hidden-xs">
+            <div id="header-branding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 visible-md visible-lg ">
+                            <div class="weather-theme-dark">
+                                <div id="TT_vVjgLxtBd1jcE8GA7ArkEkkEE9nA1fAlbYktEcC5a1D">El tiempo por Tutiempo.net</div>
+                            </div>
+
+                            <div class="weather-theme-light">
+                                <div id="TT_RgjgrxtBY1jcEeGA7frxlAxAJ9lAMfAlrdEt1cyIqkj">El tiempo por Tutiempo.net</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a href="/" class="logo-tiempo">
+                                <img alt="Logo" class="tema-obscuro-logo" src="http://assets.tiempo.com.mx/uploads/configuracion_periodico/imagen/1/logo-tiempo.png" />
+                                <img alt="Logo" class="tema-claro-logo" src="http://assets.tiempo.com.mx/assets/logo-tiempo-negro-f59aae1118ce2e29e4ce84c5437e0a7e00990f5d3672625adf0329ed6335b9cd.svg" />
+                            </a>
+                        </div>
+
+                        <div class="col-md-4 visible-md visible-lg">
+                            <div class="redes-social-header">
+                                <a href="https://www.facebook.com/tiempo" class="social-icon si-small si-light si-rounded si-facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com/tiempo_mx" class="social-icon si-small si-light si-rounded si-twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a href="https://plus.google.com/106954652414417502410/posts" class="social-icon si-small si-light si-rounded si-gplus">
+                                    <i class="icon-gplus"></i>
+                                    <i class="icon-gplus"></i>
+                                </a>
+                                <a href="https://www.youtube.com/user/tiempomx" class="social-icon si-small si-light si-rounded si-youtube">
+                                    <i class="icon-youtube"></i>
+                                    <i class="icon-youtube"></i>
+                                </a>
+                                <a href="http://www.tiempo.com.mx/_newsfeed" class="social-icon si-small si-light si-rounded si-rss">
+                                    <i class="icon-rss"></i>
+                                    <i class="icon-rss"></i>
+                                </a>
+                            </div>
+
+                            <p class="cd-location pull-right"><i class="fa fa-map-marker"></i> Cd. Chihuahua, Chihuahua, México.</p>
+                            <p class="current-date"><i class="fa fa-calendar"></i> Viernes 17 de Junio de 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sticky-header" data-spy="affix" data-offset-top="100">
+                <div id="header-navigation"  class="header-tiempo"  >
+                    <div class="container">
+                        <nav id="menu">
+                            <ul class="nav clearfix">
+                                <li class="home">
+                                    <a href="/">
+                                        <span class="glyphicon glyphicon-home"></span>
+                                    </a>                        </li>
+                                <li class="cat-news">
+                                    <a href="/seccion/local/1">Local</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-sports">
+                                    <a href="/seccion/nacional/1">Nacional</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-lifestyle">
+                                    <a href="/seccion/opinion/1">Opinión</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-showtime">
+                                    <a href="/seccion/cronos/1">Cronos</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-tech">
+                                    <a href="/seccion/espectaculos/1">Espectáculos</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-business">
+                                    <a href="/seccion/deportes/1">Deportes</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-extra">
+                                    <a href="#">Extra +</a>
+                                    <div class="dropnav-container">
+                                        <ul class="dropnav-menu">
+                                            <li><a href="/seccion/cultura/1">Cultura</a></li>
+                                            <li><a href="/seccion/internacional/1">Internacional</a></li>
+                                            <li><a href="/seccion/tecnologia/1">Tecnología</a></li>
+                                            <li><a href="/seccion/crealo/1">Créalo</a></li>
+                                            <li><a href="/seccion/videos/1">Videos</a></li>
+                                            <!--<li></li>-->
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="cat-temas" id="panel-temas"></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end:page header desktop -->
+
+        <div id='contenedor-resultados-busqueda'></div>
+
+        <!-- start:content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed hidden-sm hidden-md hidden-lg" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+
+
+            <!-- start:Publicidad principal dentro de Modal -->
+            <div class="publicidad-modal">
+
+            </div>
+            <!-- end:Publicidad principal dentro de Modal -->
+
+            <!-- start:Publicidad fixed bottom -->
+            <div class="publicidad-bottom-fixed">
+
+
+            </div>
+            <!-- end:Publicidad fixed bottom -->
+
+            <!-- start:Publicidad 3 columnas -->
+            <div class="publicidad-3-columnas container publicidad-content-header publicidad-top">
+                <div id="page-content" class="clearfix publicidad-content" style="margin-bottom: 10px;">
+                    <div class="row">
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-1">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_1()" target="_blank" href=" http://folklore.mx/telcel/Ventaespecialpapa/">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/1/Tiempo-300x100_15_de_junio_2016.gif" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_1(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/1",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-2">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_72()" target="_blank" href="http://casasatlas.mx/chihuahua/monticello-3/">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/72/Banner-Layers_V3_GIF__2_03_junio.GIF" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_72(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/72",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-3 hidden-xs">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_3()" target="_blank" href="http://goo.gl/sKzuco">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/3/300X100px_JUNIO_JIDOSHA_13_JUNIO_2016.gif" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_3(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/3",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- end:Publicidad 3 columns -->
+            <!-- start:Slider Principal -->
+            <div class="slider-principal container" style="margin-bottom: 10px;">
+                <div id="oc-portfolio" class="owl-carousel portfolio-carousel slider-principal">
+                    <div class="oc-item">
+                        <div class="iportfolio cat-Créalo">
+
+                            <!-- start:Comentario de etiqueta de tipo -->
+                            <!-- <a href="#" class="theme">
+                             </a>-->
+                            <!-- start:container -->
+                            <div class="portfolio-image">
+                                <a href="/noticia/39134-por_que_los_famosos_mueren_de_/1">
+                                    <img class="socialShare" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50511/slider_jirafales.jpg" alt="Slider jirafales" />
+                                </a>
+                                <div class="portfolio-overlay">
+                                    <a class="center-icon" data-lightbox="image" href="http://assets.tiempo.com.mx/uploads/imagen/imagen/50511/principal_normal_jirafales.jpg">
+                                        <i class="icon-line-camera"></i>
+                                    </a>                  <!--
+                      <i class="icon-line-ellipsis"></i>
+                   ->
+                    <!--<a href="https://www.youtube.com/watch?v=wzEl6XWNpK8" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>-->
+                                    <!--<a href="periodico/dummy/Imagen-Prepago-300x250.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>-->
+                                    <!--<a href="" class="right-icon"><i class="icon-line-ellipsis"></i></a>-->
+                                </div>
+                            </div>
+                            <div class="portfolio-desc">
+                                <!--<span class="tipo-catego"></span>-->
+                                <h3><a title="¿Por qué los famosos mueren de tres en tres?" href="/noticia/39134-por_que_los_famosos_mueren_de_/1">¿Por qué los famosos mueren de tres en tres?</a></h3>
+                                <!--span><a href="" class="link-new"><i class="fa fa-arrow-circle-o-right"></i></a></span-->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="oc-item">
+                        <div class="iportfolio cat-Internacional">
+
+                            <!-- start:Comentario de etiqueta de tipo -->
+                            <!-- <a href="#" class="theme">
+                             </a>-->
+                            <!-- start:container -->
+                            <div class="portfolio-image">
+                                <a href="/noticia/39154-el_mensaje_que_mando_mateen_a_/1">
+                                    <img class="socialShare" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50541/slider_Captura_de_pantalla_2016-06-17_a_las_15.47.34.png" alt="Slider captura de pantalla 2016 06 17 a las 15.47.34" />
+                                </a>
+                                <div class="portfolio-overlay">
+                                    <a class="center-icon" data-lightbox="image" href="http://assets.tiempo.com.mx/uploads/imagen/imagen/50541/principal_normal_Captura_de_pantalla_2016-06-17_a_las_15.47.34.png">
+                                        <i class="icon-line-camera"></i>
+                                    </a>                  <!--
+                      <i class="icon-line-ellipsis"></i>
+                   ->
+                    <!--<a href="https://www.youtube.com/watch?v=wzEl6XWNpK8" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>-->
+                                    <!--<a href="periodico/dummy/Imagen-Prepago-300x250.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>-->
+                                    <!--<a href="" class="right-icon"><i class="icon-line-ellipsis"></i></a>-->
+                                </div>
+                            </div>
+                            <div class="portfolio-desc">
+                                <!--<span class="tipo-catego"></span>-->
+                                <h3><a title="El mensaje que mandó Mateen a su esposa durante masacre" href="/noticia/39154-el_mensaje_que_mando_mateen_a_/1">El mensaje que mandó Mateen a su esposa durante masacre</a></h3>
+                                <!--span><a href="" class="link-new"><i class="fa fa-arrow-circle-o-right"></i></a></span-->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="oc-item">
+                        <div class="iportfolio cat-Internacional">
+
+                            <!-- start:Comentario de etiqueta de tipo -->
+                            <!-- <a href="#" class="theme">
+                             </a>-->
+                            <!-- start:container -->
+                            <div class="portfolio-image">
+                                <a href="/noticia/39171-tuitea_trump_encuesta_en_la_qu/1">
+                                    <img class="socialShare" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50572/slider_news_trump.jpg" alt="Slider news trump" />
+                                </a>
+                                <div class="portfolio-overlay">
+                                    <a class="center-icon" data-lightbox="image" href="http://assets.tiempo.com.mx/uploads/imagen/imagen/50572/principal_normal_news_trump.jpg">
+                                        <i class="icon-line-camera"></i>
+                                    </a>                  <!--
+                      <i class="icon-line-ellipsis"></i>
+                   ->
+                    <!--<a href="https://www.youtube.com/watch?v=wzEl6XWNpK8" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>-->
+                                    <!--<a href="periodico/dummy/Imagen-Prepago-300x250.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>-->
+                                    <!--<a href="" class="right-icon"><i class="icon-line-ellipsis"></i></a>-->
+                                </div>
+                            </div>
+                            <div class="portfolio-desc">
+                                <!--<span class="tipo-catego"></span>-->
+                                <h3><a title="Tuitea Trump encuesta en la que gana Hillary Clinton" href="/noticia/39171-tuitea_trump_encuesta_en_la_qu/1">Tuitea Trump encuesta en la que gana Hillary Clinton</a></h3>
+                                <!--span><a href="" class="link-new"><i class="fa fa-arrow-circle-o-right"></i></a></span-->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="oc-item">
+                        <div class="iportfolio cat-Local">
+
+                            <!-- start:Comentario de etiqueta de tipo -->
+                            <!-- <a href="#" class="theme">
+                             </a>-->
+                            <!-- start:container -->
+                            <div class="portfolio-image">
+                                <a href="/noticia/39043-fallecio_ruben_aguirre_el_prof/1">
+                                    <img class="socialShare" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50381/slider_IMG_20160617_062826.jpg" alt="Slider img 20160617 062826" />
+                                </a>
+                                <div class="portfolio-overlay">
+                                    <a class="center-icon" data-lightbox="image" href="http://assets.tiempo.com.mx/uploads/imagen/imagen/50381/principal_normal_IMG_20160617_062826.jpg">
+                                        <i class="icon-line-camera"></i>
+                                    </a>                  <!--
+                      <i class="icon-line-ellipsis"></i>
+                   ->
+                    <!--<a href="https://www.youtube.com/watch?v=wzEl6XWNpK8" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>-->
+                                    <!--<a href="periodico/dummy/Imagen-Prepago-300x250.jpg" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>-->
+                                    <!--<a href="" class="right-icon"><i class="icon-line-ellipsis"></i></a>-->
+                                </div>
+                            </div>
+                            <div class="portfolio-desc">
+                                <!--<span class="tipo-catego"></span>-->
+                                <h3><a title="Falleció Rubén Aguirre “El Profesor Jirafales”" href="/noticia/39043-fallecio_ruben_aguirre_el_prof/1">Falleció Rubén Aguirre “El Profesor Jirafales”</a></h3>
+                                <!--span><a href="" class="link-new"><i class="fa fa-arrow-circle-o-right"></i></a></span-->
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!-- end:Slider Principal -->
+
+            <!-- star:Noticia Principal(Una imagen grande y dos pequeñas) -->
+            <div class="noticia-principal container">
+                <div id="page-slider" class="clearfix">
+                    <div id="slider-carousel">
+                        <div class="row">
+                            <!-- start:col -->
+                            <div class="col-sm-8 col-xs-12 border-right">
+                                <!--- TODO: Crear metodo para obtener primer complemento y mostrarlo -->
+                                <!--article class="linkbox efecto large cat-"-->
+                                <article class="linkbox efecto large cat-Local">
+                                    <a href="/noticia/39153-iee_produjo_2_millones_de_bole/1">
+                                        <img class="img-responsive socialShare" alt="El tiempo" data-title="IEE produjo 2 millones de boletas; pide tranquilidad a la ciudadanía" data-summary="Arturo Meraz consejero presidente del Instituto Estatal Electoral aclaró el tema de la impugnación que presentó el miércoles el PRI, respecto a supuesto fraude en el proceso electoral." data-original="/uploads/imagen/imagen/50555/principal_normal_image.jpg" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50555/principal_normal_image.jpg" />
+                                        <!--
+                                        <img src="http://data.whicdn.com/images/203441023/large.jpg" data-original="http://data.whicdn.com/images/203441023/large.jpg" class="socialShare img-responsive">
+                                        -->
+                                        <div class="overlay">
+                                            <h2 class="title-principal"><i class="fa fa-youtube-play notice-principal-icon"></i> <a href="/noticia/39153-iee_produjo_2_millones_de_bole/1">IEE produjo 2 millones de boletas; pide tranquilidad a la ciudadanía</a></h2>
+                                            <p>Arturo Meraz consejero presidente del Instituto Estatal Electoral aclaró el tema de la impugnación que presentó el miércoles el PRI, respecto a supuesto fraude en el proceso electoral.</p>
+                                            <!--p><!--%= link_to "Leer Nota", portada_noticia_ruta_path(noticia.ruta), class:"" %></p-->
+                                        </div>
+                                    </a>
+                                    <!--<a href="#" class="theme">
+                                    </a>-->
+                                </article>
+                            </div>
+                            <!-- end:col -->
+
+                            <!-- start:col -->
+                            <div class="col-sm-4 col-xs-6 news-secondary">
+                                <!--- TODO: Crear metodo para obtener primer complemento y mostrarlo -->
+                                <article class="linkbox efecto youtube-video-small cat-Local">
+                                    <a href="/noticia/39077-termina_jmas_de_reparar_linea_/1">
+                                        <!--h1><= noticia.tipo %></h1-->
+                                        <img class="img-responsive socialShare" alt="Responsive Image" data-title="Termina JMAS de reparar línea; agua volverá durante el día" data-summary="Personal de la JMAS terminó con las reparaciones en la línea de 36 pulgadas de diámetro, de la batería de pozos de El Sáuz, y anuncia la dependencia que volverá paulatinamente el servicio." data-original="/uploads/imagen/imagen/50424/secundaria_normal_Captura_de_pantalla_2016-06-17_a_la_s__10.41.35.png" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50424/secundaria_normal_Captura_de_pantalla_2016-06-17_a_la_s__10.41.35.png" />
+                                        <div class="overlay">
+                                            <h3>
+                                                <a href="/noticia/39077-termina_jmas_de_reparar_linea_/1">
+                                                    <i class=""></i> Termina JMAS de reparar línea; agua volverá durante el día
+                                                </a>                        </h3>
+                                            <!--p><!--%= link_to "Leer Nota", portada_noticia_ruta_path(noticia.ruta), class:"" %></p-->
+                                        </div>
+                                    </a>
+                                    <!-- <a href="#" class="theme">
+                                    </a>-->
+                                </article>
+                            </div>
+                            <!-- end:col -->
+
+                            <!-- start:col -->
+                            <div class="col-sm-4 col-xs-6 news-terceary">
+                                <!--- TODO: Crear metodo para obtener primer complemento y mostrarlo -->
+                                <article class="linkbox efecto youtube-video-small cat-Local">
+                                    <a href="/noticia/39141-registra_tee_27_impugnaciones_/1">
+                                        <!--h1><= noticia.tipo %></h1-->
+                                        <img class="img-responsive socialShare" alt="Responsive Image" data-title="Registra TEE 27 impugnaciones; hoy puede recibir más para síndico" data-summary="El Tribunal Estatal Electoral cuenta con 27 impugnaciones a cargos de alcaldías, diputaciones y la gubernatura del Estado, y este día es el último para recibir cualquier recurso para síndico." data-original="/uploads/imagen/imagen/50527/secundaria_normal_image.jpg" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50527/secundaria_normal_image.jpg" />
+                                        <div class="overlay">
+                                            <h3>
+                                                <a href="/noticia/39141-registra_tee_27_impugnaciones_/1">
+                                                    <i class=""></i> Registra TEE 27 impugnaciones; hoy puede recibir más para síndico
+                                                </a>                        </h3>
+                                            <!--p><!--%= link_to "Leer Nota", portada_noticia_ruta_path(noticia.ruta), class:"" %></p-->
+                                        </div>
+                                    </a>
+                                    <!-- <a href="#" class="theme">
+                                    </a>-->
+                                </article>
+                            </div>
+                            <!-- end:col -->
+
+                            <!--%= render partial: 'noticia', locals: { noticia: @ultima_noticia_3, bootstrap_class: 'col-sm-4', principal: false } %-->
+                        </div>
+                    </div>
+
+                    <div class="slider-nav">
+                        <a id="slider-prev" class="prev" href="#"><i class="fa fa-chevron-left"></i></a>
+                        <a id="slider-next" class="next" href="#"><i class="fa fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end:Noticia Principal(Una imagen grande y dos pequeñas) -->
+
+            <!-- start:Publicidad 3 columnas -->
+            <div class="publicidad-3-columnas container publicidad-content-header">
+                <div id="page-content" class="clearfix publicidad-content" style="margin-bottom: 10px;">
+                    <div class="row">
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-3 hidden-md visible-xs">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_3()" target="_blank" href="http://goo.gl/sKzuco">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/3/300X100px_JUNIO_JIDOSHA_13_JUNIO_2016.gif" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_3(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/3",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-4">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_2()" target="_blank" href="http://www.casasatlas.mx/chihuahua/loreto/ ">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/2/300x100_zona_reliz_genovaV3_03_junio.gif" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_2(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/2",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-5 hidden-xs">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_95()" target="_blank" href="www.tiempo.com.mx">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/95/Concreto_El_tiempo_300x100-02_17_JUNIO_2016_I.jpg" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_95(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/95",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-6 hidden-xs">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_78()" target="_blank" href="https://www.facebook.com/altta.homes">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/78/AlttaBanner_23_de_mayo.gif" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_78(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/78",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- end:Publicidad 3 columnas -->
+
+
+            <!-- start:container -->
+            <div class="container section-top-news">
+                <!-- start:page content -->
+                <div id="page-content" class="clearfix">
+                    <!-- start:main -->
+                    <div id="main">
+                        <!-- start:row -->
+                        <div class="row">
+                            <!-- start:col -->
+                            <div class="col-md-12 separator-right">
+                                <article class="linkbox large cat-news">
+                                    <a href="/noticia/39095-todo_en_apego_a_la_ley_conseje/1">
+                                        <img width="840" height="585" alt="Responsive Image" class="img-responsive socialShare" data-title="Todo en apego a la ley: consejero del IEE ante &quot;urnas embarazadas&quot;" data-summary="Saúl Rodríguez Camacho consejero del Instituto Estatal Electoral, dijo que actuaron conforme a la ley en la elección del cinco de junio, esto tras impugnación del PRI por supuestas urnas embarazadas." data-original="/uploads/imagen/imagen/50447/principal_normal_image.jpg" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50447/principal_normal_image.jpg" />
+                                        <div class="overlay">
+                                            <h2 class="title-section-secondary"><i class="fa fa-youtube-play notice-destacado-first-icon"></i> Todo en apego a la ley: consejero del IEE ante &quot;urnas embarazadas&quot;</h2>
+                                        </div>
+                                    </a>
+                                </article>
+
+                                <!-- start:row -->
+                                <div class="row">
+                                    <header class="publi-header" style="margin-left: 15px !important; margin-bottom: 10px;">
+                                        <h2 class="titulo-section"><a href="#" style="color: #E72B2B;">Lo Destacado</a></h2>
+                                        <span class="borderline"></span>
+                                    </header>
+                                </div>
+                                <!-- end:row -->
+
+
+                                <!-- start:row -->
+                                <div id="modulo-destacado" cpi="1">
+                                    <i class="fa fa-5x fa-spinner fa-spin"></i>
+                                </div>
+
+                                <!--
+                                                      <div class="row">
+                                                          <div class="col-sm-12">
+                                                          </div>
+                                                      </div>
+                                -->
+
+                                <!-- start:Publicidad 3 columnas -->
+                                <div class="row">
+                                    <div class="publicidad-3-columnas container publicidad-content-header">
+                                        <div id="page-content" class="clearfix publicidad-content" style="margin-bottom: 10px;">
+                                            <div class="row">
+                                                <!-- start:col -->
+                                                <div class="col-sm-4 col-xs-6 publi-5 hidden-md visible-xs">
+                                                    <article class="">
+                                                        <!--h4></h4-->
+
+                                                        <a onclick="click_publicidad_95()" target="_blank" href="www.tiempo.com.mx">
+                                                            <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/95/Concreto_El_tiempo_300x100-02_17_JUNIO_2016_I.jpg" />
+                                                        </a>
+                                                    </article>
+                                                </div>
+                                                <!-- end:col -->
+
+                                                <script>
+        function click_publicidad_95(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/95",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                                                <!-- start:col -->
+                                                <div class="col-sm-4 col-xs-6 publi-6 hidden-md visible-xs">
+                                                    <article class="">
+                                                        <!--h4></h4-->
+
+                                                        <a onclick="click_publicidad_78()" target="_blank" href="https://www.facebook.com/altta.homes">
+                                                            <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/78/AlttaBanner_23_de_mayo.gif" />
+                                                        </a>
+                                                    </article>
+                                                </div>
+                                                <!-- end:col -->
+
+                                                <script>
+        function click_publicidad_78(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/78",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end:col -->
+                        </div>
+                        <!-- end:row -->
+                    </div>
+                    <!-- end:main -->
+
+
+                    <!-- start:sidebar -->
+                    <div id="sidebar" class="sidebar-portada">
+                        <!-- start:section-module-timeline -->
+                        <section class="module-timeline">
+                            <!-- start:header -->
+                            <header>
+                                <h2>MINUTO A MINUTO</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            <!-- start:articles -->
+                            <div class="articles">
+                                <div id="superior3">
+                                    <div id="modulo-minuto">
+                                        <i class="fa fa-5x fa-spinner fa-spin"></i>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <!-- end:articles -->
+                        </section>
+                        <!-- end:section-module-timeline -->
+
+                        <!-- start:section-module-singles -->
+                        <section class="module-singles senction-tendencias hidden-xs">
+                            <!-- start:header -->
+                            <header>
+                                <h2>TENDENCIAS</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            <!-- start:singles-container -->
+                            <ul class="singles-container">
+                                <div class="posicion-dinamica" id="sup_der">
+                                    <div id="modulo-tendencias">
+                                        <i class="fa fa-5x fa-spinner fa-spin"></i>
+                                    </div>
+
+
+                                </div>
+                            </ul>
+                            <!-- end:singles-container -->
+                        </section>
+                        <!-- end:section-module-singles -->
+
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin section-recomendados hidden-xs">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Recomendamos</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <div id="modulo-recomendado">
+                                <i class="fa fa-5x fa-spinner fa-spin"></i>
+                            </div>
+                        </section>
+                        <!-- end:section-module-news -->
+
+                        <!-- start:section-module-timeline -->
+                        <section class="count-social-icons" style="margin-top: auto;">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Redes Sociales</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <div class="row">
+                                <div class="four mobile-one columns">
+                                    <div class="icon-holder"><a target="_blank" href="https://www.facebook.com/tiempo" class="facebook" style="background: #45619D;"><i class="fa fa-facebook"></i></a></div>
+                                    <p>
+                                        <span id="shareIconsCountFb" class="count-facebook"></span>
+                                        Fans
+                                    </p>
+                                </div>
+                                <div class="four mobile-two columns">
+                                    <div class="icon-holder"><a target="_blank" href="https://twitter.com/tiempo_mx" class="twitter" style="background: #55ACEE"><i class="fa fa-twitter"></i></a></div>
+                                    <p>
+                                        <span> 15983</span>
+                                        Seguidores
+                                    </p>
+                                </div>
+                                <div class="four mobile-one columns">
+                                    <div class="icon-holder"><a target="_blank" href="https://www.youtube.com/user/tiempomx" class="rss" style="background: #E02927"><i class="fa fa-youtube-play"></i></a></div>
+                                    <p>
+                                        <span>402 </span>
+                                        Suscriptores
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- end:section-module-timeline -->
+                    </div>
+                    <!-- end:sidebar -->
+                </div>
+                <!-- end:page content -->
+            </div>
+            <!-- end:container -->
+
+            <!-- start:Publicidad 3 columnas -->
+            <div class="publicidad-3-columnas container publicidad-content-header publicidad-top">
+                <div id="page-content" class="clearfix publicidad-content" style="margin-bottom: 10px;">
+                    <div class="row">
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-1">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_49()" target="_blank" href="http://www.coesvi.gob.mx/coesvi/">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/49/banner_24_FEB_2016_COESVI.jpg" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_49(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/49",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-2">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_12()" target="_blank" href="http://www.tiempo.com.mx">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/12/300x100_09_junio_2016.jpg" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_12(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/12",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                        <!-- start:col -->
+                        <div class="col-sm-4 col-xs-6 publi-3 hidden-xs">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_8()" target="_blank" href="http://www.municipiochihuahua.gob.mx/">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/8/BANNER_PREDIAL_2016_300X100_13_JUNIO_2016.gif" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_8(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/8",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- start:container -->
+            <div class="container section-cronos-afondo">
+                <!-- start:page content -->
+                <div id="page-content" class="clearfix section-cronos">
+                    <div class="row">
+                        <!-- start:col -->
+                        <div class="col-xs-12 col-md-12 col-md-6">
+                            <article class="">
+                                <div id="superior1">
+                                    <div class="social-icons">
+                                        <!--p>
+                                          <a href="">Leer mas <i class="fa fa-angle-right"></i></a>
+                                          <!--span>
+                                              <i class="fa fa-facebook"></i>
+                                              <i class="fa fa-twitter"></i>
+                                              <i class="fa fa-youtube"></i>
+                                          </span-->
+                                        <!--/p-->
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-push-6 col-sm-6 photo-cronos">
+                                            <a href="/noticia/39041-_corral_lee_la_cartilla_a_triu/1"><img class="cronos img-responsive socialShare" data-title="* Corral lee la cartilla a triunfadores del PAN
+* Busca PRI sospechoso avión con boletas
+* Oplita, la técnica del avestruz
+* Angustiados los Barby directores de la UACH" data-summary="null" data-original="/uploads/imagen/imagen/50379/medium_Corral_triunfo.png" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50379/medium_Corral_triunfo.png" alt="Medium corral triunfo" /></a>
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-pull-6 col-sm-6 arrow-right description-cronos">
+                                            <!--<h3><#%= cronos.tipo.upcase + " POLITICO" %></h3-->
+                                            <a href="/noticia/39041-_corral_lee_la_cartilla_a_triu/1">
+                                                <h3>CRONOS POLITICO</h3>
+                                                <div><ul class="clase clase2"><li class="clase_li"> Corral lee la cartilla a triunfadores del PAN
+                                                </li><li class="clase_li"> Busca PRI sospechoso avión con boletas
+                                                </li><li class="clase_li"> Oplita, la técnica del avestruz
+                                                </li><li class="clase_li"> Angustiados los Barby directores de la UACH...</li></ul></div>
+                                            </a>  </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <!-- start:col -->
+                        <div class="col-xs-12 col-md-12 col-md-6">
+                            <article class="">
+                                <div id="superior2">
+                                    <div class="social-icons">
+                                        <!--p>
+                                          <a href="">Leer mas <i class="fa fa-angle-right"></i></a>
+                                          <!--span>
+                                              <i class="fa fa-facebook"></i>
+                                              <i class="fa fa-twitter"></i>
+                                              <i class="fa fa-youtube"></i>
+                                          </span-->
+                                        <!--/p-->
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-push-6 col-sm-6 photo-afondo">
+                                            <a href="/noticia/39072-panistas_tambien_se_suben_al_f/1"><img class="cronos img-responsive socialShare" data-title="*Panistas también se suben al Face y ya hay debate
+*Lunes consejo político del PRI
+*Duarte a Chapultepec con EPN" data-summary="^" data-original="/uploads/imagen/imagen/50458/medium_casilla_juarez.jpg" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50458/medium_casilla_juarez.jpg" alt="Medium casilla juarez" /></a>
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-pull-6 col-sm-6 arrow-right description-afondo">
+                                            <!--<h3></h3>-->
+                                            <a href="/noticia/39072-panistas_tambien_se_suben_al_f/1">
+                                                <h3>En la Líber / Columna en tiempo real</h3>
+                                                <div><ul class="clase clase2"><li class="clase_li">Panistas también se suben al Face y ya hay debate
+                                                </li><li class="clase_li">Lunes consejo político del PRI
+                                                </li><li class="clase_li">Duarte a Chapultepec con EPN</li></ul></div>
+                                            </a>          </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 description-afondo scroll-afondo">
+                                            <div class="col-xs-12 col-sm-12 description-afondo"><p>CONTRAOFENSIVA… Para que no digan que sólo los del PRI saben operar en las redes, hoy los militantes panistas también se subieron a la pelea del Face, tras la impugnación que recibió el IEE sobre la elección a gobernador.</p><p>Los panistas anduvieron subiendo memes y cuanta cosa para criticar el procedimiento jurídico del partido tricolor que de momento no tiene seriedad más que dentro de un sector del PRI.</p><p>Sin embargo para echarle más sal a la herida los priístas comenzaron a difundir también las actas en donde a simple vista se ve una diferencia de tres, entre las boletas recibidas y las boletas finales.</p><p>Es el caso de la casilla de la sección 1712 contigua 1 con sede en ciudad Juárez, en donde quedó asentado por los mismos funcionarios de casilla que las boletas al iniciar la jornada eran 592 y terminaron tres boletas más.</p><p>Por supuesto que es sólo una casilla, la teoría del PRI es todavía de no creerse, pero de momento el PAN ni el INE explican el por qué de la diferencia y están dejando crecer el culebrón…</p></div>
+                                            <div class="complemento col-xs-12 col-sm-push-3 col-sm-6 photo-afondo">
+
+                                                <img class="cronos img-responsive socialShare" data-title="*Panistas también se suben al Face y ya hay debate
+*Lunes consejo político del PRI
+*Duarte a Chapultepec con EPN" data-summary=" " data-original="/uploads/imagen/imagen/50423/medium_ConsejoPoliticoPRI.jpg" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50423/medium_ConsejoPoliticoPRI.jpg" alt="Medium consejopoliticopri" />
+
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 description-afondo"><p>BELTRONES.... Siguen acomodándose las calabazas en el Partido Revolucionario Institucional luego del descalabro que sufrieron a nivel nacional, por lo que el día lunes convocaron a consejo político para levantar muertos y dar líneas a seguir.</p><p>Manlio Fabio Beltrones, actual presidente del PRI está en un hilo luego de los resultados del 5 junio, donde perdió en 7 gubernaturas de las 12 que estaban en disputa.</p><p>Esperan que Beltrones saque el colmillote y convoque a los dirigentes priístas a continuar con la chamba y sobre todo, que lleguen hasta las últimas causas que orillaron a las perdidas ya conocidas por todos.</p></div>
+                                            <div class="complemento col-xs-12 col-sm-push-3 col-sm-6 photo-afondo">
+
+                                                <img class="cronos img-responsive socialShare" data-title="*Panistas también se suben al Face y ya hay debate
+*Lunes consejo político del PRI
+*Duarte a Chapultepec con EPN" data-summary=" " data-original="/uploads/imagen/imagen/50419/medium_altar_a_la_patria.jpg" src="http://assets.tiempo.com.mx/uploads/imagen/imagen/50419/medium_altar_a_la_patria.jpg" alt="Medium altar a la patria" />
+
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 description-afondo"><p> </p><p>EN CHAPULTEPEC… El gobernador del Estado, César Duarte Jáquez, estará hoy y mañana de viaje por la Ciudad de México.</p><p>Está invitado a participar en la Ceremonia Sobre la Reforma de Justicia Penal. “Un Compromiso de Estado Hecho Realidad”, que será en la Explanada del Altar a la Patria en el bosque de Chapultepec.</p><p>Será un evento en grande, con más de mil 500 invitados y que desplegará un importante dispositivo de seguridad por las personalidades que acudirán.</p><p>Fueron ocho años para que se implementara la reforma penal en nuestro país y basarán unos cuantos meses para que el sistema demuestre que funciona o colapse la impartición de justicia.</p></div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+                    </div>
+
+
+                    <!-------- EJEMPLO DE TARJETAS DEBAJO DE CRONOS Y A FONDO -------->
+                    <!--
+                    <div class="notebook-personal">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <article class="ejemplo">
+                                    <p class="type gallery icon-camera ng-scope"></p>
+                                    <a class="toPost" href="#">
+                                        <figure class="fimg">
+                                            <img class="" data-title="Conmemoran el 70 aniversario de la Tomatina; arrojan tomates entre sí" src="/uploads/imagen/imagen/44/medium_20_1289682.jpg" alt="Medium 20 1289682">
+                                        </figure>
+                                        <h2 class="title">Conmemoran el 70 aniversario de la Tomatina; arrojan tomates entre sí</h2>
+                                        <p class="excerpt">El día de hoy festejan el 70 aniversario de la Tomatina y no es el compuesto químico sino de la celebración que ocurre en Buñol, España, la festividad donde arrojan tomates entre sí.</p>
+                                    </a>
+                                </article>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <article class="ejemplo">
+                                    <p class="type gallery icon-camera ng-scope"></p>
+                                    <a class="toPost" href="#">
+                                        <figure class="fimg">
+                                            <img class="" data-title="Peña Nieto y esposa despiden obras de Miguel Ángel y Da Vinci" src="/uploads/imagen/imagen/46/medium_20_87d90c048e9c485fb80081cd861a3257.jpg" alt="Medium 20 87d90c048e9c485fb80081cd861a3257">
+                                        </figure>
+                                        <h2 class="title">Peña Nieto y esposa despiden obras de Miguel Ángel y Da Vinci</h2>
+                                        <p class="excerpt">El Presidente de la República, Enrique Peña Nieto en compañía de su esposa despidieron la obra de “Leonardo da Vinci y la idea de la belleza” y “Miguel Ángel Buonarroti, artista entre dos mundos”.</p>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <article class="ejemplo">
+                                    <p class="type gallery icon-camera ng-scope"></p>
+                                    <a class="toPost" href="#">
+                                        <figure class="fimg">
+                                            <img class="" data-title="Autoridades buscan a Radamés de Jesús; podría ir a la cárcel" data-summary="Radamés de Jesús ha estado envuelto en el escándalo luego de golpear a su ex pareja Yered Licona, mejor conocida como &quot;La Wanders Lover&quot;." data-original="/uploads/imagen/imagen/57/medium_10_radames_2.jpg" src="/uploads/imagen/imagen/57/medium_10_radames_2.jpg" alt="Medium 10 radames 2">
+                                        </figure>
+                                        <h2 class="title">Autoridades buscan a Radamés de Jesús; podría ir a la cárcel</h2>
+                                        <p class="excerpt">
+                                            Radamés de Jesús ha estado envuelto en el escándalo luego de golpear a su ex pareja Yered Licona, mejor conocida como "La Wanders Lover".
+                                        </p>
+                                    </a>
+                                </article>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <article class="ejemplo">
+                                    <p class="type gallery icon-camera ng-scope"></p>
+                                    <a class="toPost" href="#">
+                                        <figure class="fimg">
+                                            <img class="" data-title="Polémica: Trump y Arpaio visitarían México" data-summary="Joe Arpaio, alguacil del condado de Maricopa, Arizona (EU), planea viajar a México y quiere hacerlo al lado del precandidato republicano a la presidencia de Estados Unidos, Donald Trump." data-original="/uploads/imagen/imagen/58/medium_10_trump2.jpg" src="/uploads/imagen/imagen/58/medium_10_trump2.jpg" alt="Medium 10 trump2">
+                                        </figure>
+                                        <h2 class="title">Polémica: Trump y Arpaio visitarían México</h2>
+                                        <p class="excerpt">
+                                            Joe Arpaio, alguacil del condado de Maricopa, Arizona (EU), planea viajar a México y quiere hacerlo al lado del precandidato republicano a la presidencia de Estados Unidos, Donald Trump.
+                                        </p>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <!-- end:page content -->
+            </div>
+            <!-- end:container -->
+
+            <!-- start:container -->
+            <div class="container section-bottom-news">
+                <!-- start:page content -->
+                <div id="page-content" class="clearfix">
+                    <!-- start:main -->
+                    <div id="main">
+                        <!-- start:row -->
+                        <div class="row">
+                            <!-- start:col -->
+                            <div class="col-md-12 separator-right">
+                                <div class="row">
+                                    <div class="col-md-12"><!-- start:business-news -->
+                                        <section class="section-full cat-business-light news-layout news-lay-1 relative lo-mas-leido" style="margin-bottom: 10px !important;">
+                                            <header class="publi-header" style="margin-left: -10px !important; margin-bottom: 10px;">
+                                                <h2 class="titulo-section"><span style="color: #E72B2B; line-height: 30px;">Lo más Leído/Compartido</span></h2>
+                                                <span class="borderline"></span>
+                                            </header>
+
+                                            <article>
+                                                <span class="numerote">1</span>
+                                                <div class="mas-leido">
+                                                    <h3 style="margin: 0 0 -4px 0;">
+                                                        <a href="/noticia/39043-fallecio_ruben_aguirre_el_prof/1">
+                                                            <i class=""></i> Falleció Rubén Aguirre “El Profesor Jirafales”
+                                                        </a>        </h3>
+                                                    <!--span class="published">Julio 27, 2015</span-->
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                            <article>
+                                                <span class="numerote">2</span>
+                                                <div class="mas-leido">
+                                                    <h3 style="margin: 0 0 -4px 0;">
+                                                        <a href="/noticia/39041-_corral_lee_la_cartilla_a_triu/1">
+                                                            <i class=""></i> * Corral lee la cartilla a triunfadores del PAN
+                                                            * Busca PRI sospechoso avión con boletas
+                                                            * Oplita, la técnica del avestruz
+                                                            * Angustiados los Barby directores de la UACH
+                                                        </a>        </h3>
+                                                    <!--span class="published">Julio 27, 2015</span-->
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                            <article>
+                                                <span class="numerote">3</span>
+                                                <div class="mas-leido">
+                                                    <h3 style="margin: 0 0 -4px 0;">
+                                                        <a href="/noticia/39080-asi_contesto_google_a_abuela_q/1">
+                                                            <i class=""></i> Así contestó Google a abuela que buscaba &quot;por favor&quot;
+                                                        </a>        </h3>
+                                                    <!--span class="published">Julio 27, 2015</span-->
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                            <article>
+                                                <span class="numerote">4</span>
+                                                <div class="mas-leido">
+                                                    <h3 style="margin: 0 0 -4px 0;">
+                                                        <a href="/noticia/39052-quienes_son_los_candidatos_de_/1">
+                                                            <i class=""></i> ¿Quiénes son los candidatos de los distritos impugnados por el PRI?
+                                                        </a>        </h3>
+                                                    <!--span class="published">Julio 27, 2015</span-->
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                            <article>
+                                                <span class="numerote">5</span>
+                                                <div class="mas-leido">
+                                                    <h3 style="margin: 0 0 -4px 0;">
+                                                        <a href="/noticia/39044-efecto_urnas_embarazadas_pri_p/1">
+                                                            <i class=""></i> Efecto urnas embarazadas; PRI pide anular elecciones en 8 distritos
+                                                        </a>        </h3>
+                                                    <!--span class="published">Julio 27, 2015</span-->
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                            <article>
+                                                <span class="numerote">6</span>
+                                                <div class="mas-leido">
+                                                    <h3 style="margin: 0 0 -4px 0;">
+                                                        <a href="/noticia/39064-metieron_50_boletas_por_urna_p/1">
+                                                            <i class="fa fa-youtube-play notice-secondary-icon"></i> Metieron 50 boletas por urna; pedimos no agredir a Corral
+                                                        </a>        </h3>
+                                                    <!--span class="published">Julio 27, 2015</span-->
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+                                            <article>
+                                                <span class="numerote">7</span>
+                                                <div class="mas-leido">
+                                                    <h3 style="margin: 0 0 -4px 0;">
+                                                        <a href="/noticia/39111-susana_zabaleta_no_quiere_deci/1">
+                                                            <i class=""></i> Susana Zabaleta no quiere decir por qué odia a Julión
+                                                        </a>        </h3>
+                                                    <!--span class="published">Julio 27, 2015</span-->
+                                                </div>
+                                            </article>
+                                            <!-- end:article.linkbox -->
+
+                                            <!--
+                                                                                <article>
+                                                                                    <span class="numerote"></span>
+                                                                                    <div class="mas-leido">
+                                                                                        <h3 style="margin: 0 0 -4px 0;">
+                                                                                              <i class=""></i>
+                                                                                        </h3>
+                                                                                        <--span class="published">Julio 27, 2015</span->
+                                                                                    </div>
+                                                                                </article>
+                                                                                <-- end:article.linkbox ->
+                                            -->
+                                        </section>
+                                        <!-- end:business-news -->
+                                    </div>
+                                </div>
+
+                                <!-- start:page content -->
+                                <div class="clearfix publicidad-content two-publicidad hidden-xs" style="margin-bottom: 10px;">
+                                    <div class="row">
+
+
+
+
+                                    </div>
+                                </div>
+                                <!-- end:page content -->
+
+                                <!-- start:videos -->
+                                <section class="section-full cat-videos no-padding tiempo-tv" style="padding: 20px 25px; background-color: #FFF; margin-bottom: 10px !important">
+                                    <!-- TODO: hacer que cargue esta parte por waypoint, al darle click al video, nos envía al youtube y no se pone overlay -->
+                                    <!-- start:row -->
+                                    <div class="row">
+                                        <header>
+                                            <h2 class="titulo-section"><a href="#" style="color: #E72B2B;">Tiempo TV</a></h2>
+                                            <span class="borderline"></span>
+                                        </header>
+                                        <div class="col-sm-12">
+                                            <article class="linkbox cat-showtime youtube-video youtube-video-small">
+                                                <iframe src="//www.youtube.com/embed/LAK9WGGTDxg" width="769" height="514" class="tiempo_tv_principal_iframe"></iframe>
+                                                <h3 class="text-center" style="position: absolute; bottom: 0; width: 100%">Atropella a motociclista y huye; lo alcanzan más adelante</h3>
+                                                <!--
+                                                            <a href="#">
+
+                                                                <div class="overlay">
+                                                                    <h3>Adelantan pago de semilla a campesinos: Desarrollo Rural </h3>
+                                                                </div>
+                                                            </a>
+                                                -->
+                                                <a onclick="return;" class="theme">
+                                                    <!--Tiempo TV-->
+                                                </a>
+                                            </article>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <article class="linkbox cat-showtime youtube-video youtube-video-small">
+                                                <div class="portfolio-image">
+                                                    <a href="/noticia/39150-arrolla_trailer_a_motociclista/1">
+                                                        <img alt="Responsive image" style="width: 100%;" src="http://img.youtube.com/vi/FDnIBiR_oZU/mqdefault.jpg" />
+                                                        <div class="overlay">
+                                                            <h3>Arrolla tráiler a motociclista en Los Pinos </h3>
+                                                        </div>
+                                                    </a>                <div class="portfolio-overlay">
+                                                    <a class="center-icon" data-lightbox="iframe" href="https://www.youtube.com/watch?v=FDnIBiR_oZU">
+                                                        <i class="icon-line-play"></i>
+                                                    </a>                </div>
+                                                </div>
+                                                <!--
+                                                            <a href="#">
+
+                                                                <div class="overlay">
+                                                                    <h3>Adelantan pago de semilla a campesinos: Desarrollo Rural </h3>
+                                                                </div>
+                                                            </a>
+                                                -->
+                                                <a onclick="return;" class="theme">
+                                                    <!--Tiempo TV-->
+                                                </a>
+                                            </article>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <article class="linkbox cat-showtime youtube-video youtube-video-small">
+                                                <div class="portfolio-image">
+                                                    <a href="/noticia/39112-garfio_pinta_la_obra_plasma_de/1">
+                                                        <img alt="Responsive image" style="width: 100%;" src="http://img.youtube.com/vi/69QAVN8QvWE/mqdefault.jpg" />
+                                                        <div class="overlay">
+                                                            <h3>Garfio pinta la obra &quot;Plasma&quot;, del Pasaje Victoria </h3>
+                                                        </div>
+                                                    </a>                <div class="portfolio-overlay">
+                                                    <a class="center-icon" data-lightbox="iframe" href="https://www.youtube.com/watch?v=69QAVN8QvWE">
+                                                        <i class="icon-line-play"></i>
+                                                    </a>                </div>
+                                                </div>
+                                                <!--
+                                                            <a href="#">
+
+                                                                <div class="overlay">
+                                                                    <h3>Adelantan pago de semilla a campesinos: Desarrollo Rural </h3>
+                                                                </div>
+                                                            </a>
+                                                -->
+                                                <a onclick="return;" class="theme">
+                                                    <!--Tiempo TV-->
+                                                </a>
+                                            </article>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <article class="linkbox cat-showtime youtube-video youtube-video-small">
+                                                <div class="portfolio-image">
+                                                    <a href="/noticia/39066-metieron_50_boletas_por_urna_p/1">
+                                                        <img alt="Responsive image" style="width: 100%;" src="http://img.youtube.com/vi/GickKtjsnRg/mqdefault.jpg" />
+                                                        <div class="overlay">
+                                                            <h3>Metieron 50 boletas por urna; pedimos no agredir a Corral</h3>
+                                                        </div>
+                                                    </a>                <div class="portfolio-overlay">
+                                                    <a class="center-icon" data-lightbox="iframe" href="https://www.youtube.com/watch?v=GickKtjsnRg">
+                                                        <i class="icon-line-play"></i>
+                                                    </a>                </div>
+                                                </div>
+                                                <!--
+                                                            <a href="#">
+
+                                                                <div class="overlay">
+                                                                    <h3>Adelantan pago de semilla a campesinos: Desarrollo Rural </h3>
+                                                                </div>
+                                                            </a>
+                                                -->
+                                                <a onclick="return;" class="theme">
+                                                    <!--Tiempo TV-->
+                                                </a>
+                                            </article>
+                                        </div>
+
+                                    </div>
+                                    <!-- end:row -->
+                                </section>
+                                <!-- end:videos -->
+
+                                <!-- start:reviews -->
+                                <section class="section-full top-padding cat-reviews news-layout news-lay-2 panal" style="margin: 0px;border-radius: 2px; margin-bottom: 10px;">
+                                    <header>
+                                        <h2>El Panal del Avispón</h2>
+                                        <span class="borderline"></span>
+                                    </header>
+
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-9">
+                                            <article class="review panal-avispon youtube-video-small">
+                                                <!--<img src="/assets/periodico/demo/avispon-1.png" width="120" height="105" alt="Responsive image" class="img-responsive" />-->
+                                                <div class="youtube-video">
+                                                    <iframe src="//www.youtube.com/embed/1CediMOerxE" width="560" height="315" class=""></iframe>
+                                                </div>
+                                                <h3>#Avispón: Listas las albercas de Ávalos para este calor </h3>
+                                            </article>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-3">
+                                            <article class="review panal-avispon youtube-video-small">
+                                                <!--<img src="/assets/periodico/demo/avispon-1.png" width="120" height="105" alt="Responsive image" class="img-responsive" />-->
+                                                <div class="portfolio-image">
+                                                    <a href="/noticia/38534-fuera_uber_protestan_taxistas_/1">
+                                                        <img alt="Responsive image" style="width: 100%;" src="http://img.youtube.com/vi/YQp4RZVCGUs/mqdefault.jpg" />
+                                                        <h3>¡Fuera Uber!; protestan taxistas y presentan nuevas unidades</h3>
+                                                    </a>                  <div class="portfolio-overlay half-image-overlay">
+                                                    <a class="center-icon" data-lightbox="iframe" href="https://www.youtube.com/watch?v=YQp4RZVCGUs">
+                                                        <i class="icon-line-play"></i>
+                                                    </a>                  </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-3">
+                                            <article class="review panal-avispon youtube-video-small">
+                                                <!--<img src="/assets/periodico/demo/avispon-1.png" width="120" height="105" alt="Responsive image" class="img-responsive" />-->
+                                                <div class="portfolio-image">
+                                                    <a href="/noticia/38375-avispon_plaza_los_frisos_lleva/1">
+                                                        <img alt="Responsive image" style="width: 100%;" src="http://img.youtube.com/vi/FEJW7hFtv3A/mqdefault.jpg" />
+                                                        <h3>#Avispón: Plaza los Frisos lleva avance del 85% </h3>
+                                                    </a>                  <div class="portfolio-overlay half-image-overlay">
+                                                    <a class="center-icon" data-lightbox="iframe" href="https://www.youtube.com/watch?v=FEJW7hFtv3A">
+                                                        <i class="icon-line-play"></i>
+                                                    </a>                  </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-3">
+                                            <article class="review panal-avispon youtube-video-small">
+                                                <!--<img src="/assets/periodico/demo/avispon-1.png" width="120" height="105" alt="Responsive image" class="img-responsive" />-->
+                                                <div class="portfolio-image">
+                                                    <a href="/noticia/38070-el_reto_es_inmenso_no_podemos_/1">
+                                                        <img alt="Responsive image" style="width: 100%;" src="http://img.youtube.com/vi/FXYIVtGMxsU/mqdefault.jpg" />
+                                                        <h3>&quot;El reto es inmenso, no podemos fallarle a Chihuahua&quot;: Corral </h3>
+                                                    </a>                  <div class="portfolio-overlay half-image-overlay">
+                                                    <a class="center-icon" data-lightbox="iframe" href="https://www.youtube.com/watch?v=FXYIVtGMxsU">
+                                                        <i class="icon-line-play"></i>
+                                                    </a>                  </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-3">
+                                            <article class="review panal-avispon youtube-video-small">
+                                                <!--<img src="/assets/periodico/demo/avispon-1.png" width="120" height="105" alt="Responsive image" class="img-responsive" />-->
+                                                <div class="portfolio-image">
+                                                    <a href="/noticia/37729-avispon_saturadas_gasolineras_/1">
+                                                        <img alt="Responsive image" style="width: 100%;" src="http://img.youtube.com/vi/HVV3Pa07q5k/mqdefault.jpg" />
+                                                        <h3>#Avispón: Saturadas gasolineras por desabasto </h3>
+                                                    </a>                  <div class="portfolio-overlay half-image-overlay">
+                                                    <a class="center-icon" data-lightbox="iframe" href="https://www.youtube.com/watch?v=HVV3Pa07q5k">
+                                                        <i class="icon-line-play"></i>
+                                                    </a>                  </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-3 hidden-xs">
+                                            <article class="review panal-avispon youtube-video-small">
+                                                <!--<img src="/assets/periodico/demo/avispon-1.png" width="120" height="105" alt="Responsive image" class="img-responsive" />-->
+                                                <div class="portfolio-image">
+                                                    <a href="/noticia/36519-avispon_vea_el_monumento_a_los/1">
+                                                        <img alt="Responsive image" style="width: 100%;" src="http://img.youtube.com/vi/WegydwVK8qg/mqdefault.jpg" />
+                                                        <h3>#Avispón: Vea el monumento a Los Insurgentes, Héroes de la Revolución</h3>
+                                                    </a>                  <div class="portfolio-overlay half-image-overlay">
+                                                    <a class="center-icon" data-lightbox="iframe" href="https://www.youtube.com/watch?v=WegydwVK8qg">
+                                                        <i class="icon-line-play"></i>
+                                                    </a>                  </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-3 hidden-xs">
+                                            <article class="review panal-avispon youtube-video-small">
+                                                <!--<img src="/assets/periodico/demo/avispon-1.png" width="120" height="105" alt="Responsive image" class="img-responsive" />-->
+                                                <div class="portfolio-image">
+                                                    <a href="/noticia/36238-mi_esfuerzo_y_mi_vida_por_chih/1">
+                                                        <img alt="Responsive image" style="width: 100%;" src="http://img.youtube.com/vi/QUH3Yhnzi5E/mqdefault.jpg" />
+                                                        <h3>Mi esfuerzo y mi vida por Chihuahua: Serrano; &quot;Viviremos mejor&quot;: Lucía </h3>
+                                                    </a>                  <div class="portfolio-overlay half-image-overlay">
+                                                    <a class="center-icon" data-lightbox="iframe" href="https://www.youtube.com/watch?v=QUH3Yhnzi5E">
+                                                        <i class="icon-line-play"></i>
+                                                    </a>                  </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                    </div>
+
+                                </section>
+                                <!-- end:reviews -->
+
+                                <section class="module-photos article-container section-full cat-videos no-padding hidden-xs" id="weekly-gallery" style="padding: 20px 25px; background-color: #FFF;margin: 0px 0 10px;box-shadow: 0 1px 5px #A1ACBD;border-radius: 2px;">
+                                    <header>
+                                        <h2>La Noticia en Fotos</h2>
+                                        <span class="borderline"></span>
+                                    </header>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+
+                                            <!-- sliderh style begin -->
+                                            <style>
+          /* jssor slider bullet navigator skin 03 css */
+          /*
+          .jssorb03 div           (normal)
+          .jssorb03 div:hover     (normal mouseover)
+          .jssorb03 .av           (active)
+          .jssorb03 .av:hover     (active mouseover)
+          .jssorb03 .dn           (mousedown)
+          */
+          .jssorb03 {
+              position: absolute;
+          }
+          .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {
+              position: absolute;
+              /* size of bullet elment */
+              width: 21px;
+              height: 21px;
+              text-align: center;
+              line-height: 21px;
+              color: white;
+              font-size: 12px;
+              background: url(http://assets.tiempo.com.mx/assets/periodico/b03-d15713274306e16e13600cbc07de31abb4276fc401b240bfd2a38ec862be1caa.png) no-repeat;
+              overflow: hidden;
+              cursor: pointer;
+          }
+          .jssorb03 div { background-position: -5px -4px; }
+          .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+          .jssorb03 .av { background-position: -65px -4px; }
+          .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
+      </style>
+                                            <!-- sliderh style end -->
+
+                                            <!-- Jssor Slider Begin -->
+                                            <!-- To move inline styles to css file/block, please specify a class name for each element. -->
+                                            <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; ">
+
+                                                <!-- Loading Screen -->
+                                                <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                                                    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                  background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+                                                    </div>
+                                                    <div style="position: absolute; display: block; background: url(http://assets.tiempo.com.mx/assets/periodico/loading-03acb263b1d85f824676b3cad66f9660c73d278f06e519c7ea727593ab4f5a13.gif) no-repeat center center;
+                  top: 0px; left: 0px;width: 100%;height:100%;">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Slides Container -->
+                                                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+                overflow: hidden;">
+                                                    <div>
+                                                        <div id="sliderh1_container" class="sliderh1" style="position: relative; top: 0px; left: 0px; width: 600px;
+                        height: 300px;">
+
+                                                            <!-- Slides Container -->
+                                                            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+                          overflow: hidden;">
+                                                                <div>
+                                                                    <img u="image" class="img-responsive socialShare" data-title="Arrolla tráiler a motocicleta en Los Pinos" data-summary="Arrolla tráiler a motocicleta en Los Pinos" data-original="http://assets.tiempo.com.mx/uploads/imagen/imagen/50548/galeria_IMG-20160617-WA0106.jpg" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Galeria img 20160617 wa0106">
+                                                                    <div class="carousel-caption">
+                                                                        Arrolla tráiler a motocicleta en Los Pinos
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <img u="image" class="img-responsive socialShare" data-title="Arrolla tráiler a motocicleta en Los Pinos" data-summary="Arrolla tráiler a motocicleta en Los Pinos" data-original="http://assets.tiempo.com.mx/uploads/imagen/imagen/50549/galeria_IMG-20160617-WA0105.jpg" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Galeria img 20160617 wa0105">
+                                                                    <div class="carousel-caption">
+                                                                        Arrolla tráiler a motocicleta en Los Pinos
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <img u="image" class="img-responsive socialShare" data-title="Arrolla tráiler a motocicleta en Los Pinos" data-summary="Arrolla tráiler a motocicleta en Los Pinos" data-original="http://assets.tiempo.com.mx/uploads/imagen/imagen/50550/galeria_IMG-20160617-WA0104.jpg" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Galeria img 20160617 wa0104">
+                                                                    <div class="carousel-caption">
+                                                                        Arrolla tráiler a motocicleta en Los Pinos
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <img u="image" class="img-responsive socialShare" data-title="Arrolla tráiler a motocicleta en Los Pinos" data-summary="Arrolla tráiler a motocicleta en Los Pinos" data-original="http://assets.tiempo.com.mx/uploads/imagen/imagen/50551/galeria_IMG-20160617-WA0103.jpg" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Galeria img 20160617 wa0103">
+                                                                    <div class="carousel-caption">
+                                                                        Arrolla tráiler a motocicleta en Los Pinos
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <img u="image" class="img-responsive socialShare" data-title="Arrolla tráiler a motocicleta en Los Pinos" data-summary="Arrolla tráiler a motocicleta en Los Pinos" data-original="http://assets.tiempo.com.mx/uploads/imagen/imagen/50552/galeria_IMG-20160617-WA0102.jpg" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Galeria img 20160617 wa0102">
+                                                                    <div class="carousel-caption">
+                                                                        Arrolla tráiler a motocicleta en Los Pinos
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <img u="image" class="img-responsive socialShare" data-title="Arrolla tráiler a motocicleta en Los Pinos" data-summary="Arrolla tráiler a motocicleta en Los Pinos" data-original="http://assets.tiempo.com.mx/uploads/imagen/imagen/50553/galeria_IMG-20160617-WA0101.jpg" src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Galeria img 20160617 wa0101">
+                                                                    <div class="carousel-caption">
+                                                                        Arrolla tráiler a motocicleta en Los Pinos
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--#region Bullet Navigator Skin Begin -->
+                                                            <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
+                                                            <!-- bullet navigator container -->
+                                                            <div u="navigator" class="jssorb03" style="bottom: 10px; right: 10px;">
+                                                                <!-- bullet navigator item prototype -->
+                                                                <div u="prototype"><div u="numbertemplate"></div></div>
+                                                            </div>
+                                                            <!--#endregion Bullet Navigator Skin End -->
+                                                        </div>
+                                                        <div u="thumb">
+                                                            <img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" alt="Galeria thumb img 20160617 wa0106" data-original="http://assets.tiempo.com.mx/uploads/imagen/imagen/50548/galeria_thumb_IMG-20160617-WA0106.jpg">
+                                                            <div class="title_back"></div>
+                                                            <div class="title">
+                                                                Arrolla tráiler a motocicleta en Los Pinos
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!--#region Thumbnail Navigator Skin Begin -->
+                                                <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
+                                                <style>
+            /* jssor slider thumbnail navigator skin 12 css */
+            /*
+            .jssort16 .p            (normal)
+            .jssort16 .p:hover      (normal mouseover)
+            .jssort16 .pav          (active)
+            .jssort16 .pav:hover    (active mouseover)
+            .jssort16 .pdn          (mousedown)
+            */
+            .jssort16 {
+                position: absolute;
+                /* size of thumbnail navigator container */
+                width: 600px;
+                height: 100px;
+            }
+
+            .jssort16 .p {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200px;
+                height: 100px;
+            }
+
+            .jssort16 .t {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200px;
+                height: 100px;
+                border: none;
+            }
+
+            .jssort16 .p img {
+                filter: alpha(opacity=55);
+                opacity: .55;
+                transition: opacity .6s;
+                -moz-transition: opacity .6s;
+                -webkit-transition: opacity .6s;
+                -o-transition: opacity .6s;
+            }
+
+            .jssort16 .pav img, .jssort16 .pav:hover img, .jssort16 .p:hover img {
+                filter: alpha(opacity=100);
+                opacity: 1;
+                transition: none;
+                -moz-transition: none;
+                -webkit-transition: none;
+                -o-transition: none;
+            }
+
+            .jssort16 .pav:hover img, .jssort16 .p:hover img {
+                filter: alpha(opacity=70);
+                opacity: .7;
+            }
+
+            .jssort16 .title, .jssort16 .title_back {
+                position: absolute;
+                top: 70px;
+                left: 0px;
+                width: 200px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: #000;
+                font-size: 12px;/*20px;*/
+            }
+
+            .jssort16 .title_back {
+                background-color: #fff;
+                filter: alpha(opacity=50);
+                opacity: .5;
+            }
+
+            .jssort16 .pav .title_back {
+                background-color: #000;
+                filter: alpha(opacity=50);
+                opacity: .5;
+            }
+
+            .jssort16 .pav .title {
+                color: #fff;
+            }
+
+            .jssort16 .p.pav:hover .title_back, .jssort16 .p:hover .title_back {
+                filter: alpha(opacity=40);
+                opacity: .4;
+            }
+
+            .jssort16 .p.pdn img {
+                filter: alpha(opacity=100);
+                opacity: 1;
+            }
+        </style>
+                                                <!-- thumbnail navigator container -->
+                                                <div u="thumbnavigator" class="jssort16" style="left: 0px; bottom: 0px;">
+                                                    <!-- Thumbnail Item Skin Begin -->
+                                                    <div u="slides" class="slide-image" style="cursor: default;">
+                                                        <div u="prototype" class="p">
+                                                            <div u="thumbnailtemplate" class="t"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Thumbnail Item Skin End -->
+                                                </div>
+                                                <!--#endregion Thumbnail Navigator Skin End -->
+
+                                                <a style="display: none" href="http://www.jssor.com">Bootstrap Slider</a>
+                                                <!-- Trigger -->
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                                <!-- start:row -->
+                                <div class="row top-margin">
+                                    <!-- start:col -->
+                                    <div class="col-sm-12">
+                                        <!-- start:showtime -->
+                                        <section class="section-lifestyle news-layout">
+                                            <header>
+                                                <h2 class="title-cultura"><a href="#">Cultura</a></h2>
+                                                <span class="borderline"></span>
+                                            </header>
+
+                                            <div id="modulo-cultura" cpi="1">
+                                                <i class="fa fa-5x fa-spinner fa-spin"></i>
+                                            </div>
+                                            <!--
+                                                                              <div class="row">
+                                                                              </div>
+                                            -->
+                                        </section>
+                                        <!-- end:showtime -->
+                                    </div>
+                                    <!-- end:col -->
+                                    <!-- start:col -->
+                                    <div class="col-sm-12">
+                                        <!-- start:showtime -->
+                                        <section class="section-tech news-layout">
+                                            <header>
+                                                <h2 class="title-jetset"><a href="#">JetSet</a></h2>
+                                                <span class="borderline"></span>
+                                            </header>
+
+                                            <div id="modulo-jetset" cpi="1">
+                                                <i class="fa fa-5x fa-spinner fa-spin"></i>
+                                            </div>
+                                            <!--
+                                                                              <div class="row">
+                                                                              </div>
+                                            -->
+                                        </section>
+                                        <!-- end:showtime -->
+                                    </div>
+                                    <!-- end:col -->
+                                </div>
+                                <!-- end:row -->
+
+                                <!-- start:page content -->
+                                <div class="clearfix publicidad-content two-publicidad hidden-xs" style="margin-bottom: 20px;">
+                                    <div class="row">
+                                        <!-- start:col -->
+                                        <div class="col-sm-6 publi-13">
+                                            <article class="">
+                                                <!--h4></h4-->
+
+                                                <a onclick="click_publicidad_43()" target="_blank" href="http://www.cobachih.edu.mx/">
+                                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/43/BANNER-COBACH-300-x-100-px.png" />
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <!-- end:col -->
+
+                                        <script>
+        function click_publicidad_43(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/43",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                                        <!-- start:col -->
+                                        <div class="col-sm-6 publi-14">
+                                            <article class="">
+                                                <!--h4></h4-->
+
+                                                <a onclick="click_publicidad_11()" target="_blank" href="http://www.radiorama.com.mx/index.php?ent_id=19">
+                                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/11/radiorama_banner_ii.jpg" />
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <!-- end:col -->
+
+                                        <script>
+        function click_publicidad_11(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/11",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                                    </div>
+                                </div>
+                                <!-- end:page content -->
+                            </div>
+                            <!-- end:col -->
+                        </div>
+                        <!-- end:row -->
+                    </div>
+                    <!-- end:main -->
+
+
+                    <!-- start:sidebar -->
+                    <div id="sidebar" class="sidebar-portada">
+
+                        <!-- start:section-module-timeline -->
+                        <section class="social-facebook">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Facebook</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            <div class="row redes-sociales-content">
+                                <div class="fb-page" data-href="https://www.facebook.com/tiempo?fref=ts" data-tabs="timeline" data-width="300" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <div class="fb-xfbml-parse-ignore">
+                                        <blockquote cite="https://www.facebook.com/tiempo?fref=ts">
+                                            <a href="https://www.facebook.com/tiempo?fref=ts">
+                                                Tiempo La Noticia Digital
+                                            </a>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- end:section-module-timeline -->
+
+                        <!-- start:section-module-timeline -->
+                        <section class="social-facebook" style="margin-top: 30px;">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Twitter</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                            <div class="row redes-sociales-content">
+                                <a class="twitter-timeline" href="https://twitter.com/tiempo_mx" data-widget-id="639309581366104064">
+                                    Tweets por el @tiempo_mx.</a>
+                            </div>
+                        </section>
+                        <!-- end:section-module-timeline -->
+
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Deportes</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <div id="modulo-deportes">
+                                <i class="fa fa-5x fa-spinner fa-spin"></i>
+                            </div>
+
+                        </section>
+                        <!-- end:section-module-news -->
+
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Créalo</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <div id="modulo-crealo">
+                                <i class="fa fa-5x fa-spinner fa-spin"></i>
+                            </div>
+                        </section>
+                        <!-- end:section-module-news -->
+
+                        <!-- start:section-module-quote -->
+                        <section class="module-photos section-encuesta">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Encuesta</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <div id="sup_izq">
+                                <script>
+  var votar = function() {
+      var radio_seleccion = $("#opciones-encuesta input:radio:checked").attr('value');
+
+      if (radio_seleccion == undefined) {
+          alert("Seleccione una opción");
+      } else {
+          $.ajaxSetup({
+              beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))}
+          });
+          $.post("/encuestas/112/votar.js",
+                  { 'encuesta': { '112' : radio_seleccion } });
+      }
+  };
+</script>
+
+                                <div id='aplicacion-encuesta112-container' class="encuesta">
+                                    ¿Qué opinas de la impugnación del PRI por boletas sobrantes?
+                                    <div id="opciones-encuesta">
+                                        <div class="opcion-encuesta checkbox">
+                                            <label>
+                                                <input type="radio" name="radio_encuesta" id="radio_encuesta_362" value="362" class="checkboxs" />
+                                                <span>Está bien</span>
+                                            </label>            </div>
+                                        <div class="opcion-encuesta checkbox">
+                                            <label>
+                                                <input type="radio" name="radio_encuesta" id="radio_encuesta_363" value="363" class="checkboxs" />
+                                                <span>Está mal</span>
+                                            </label>            </div>
+                                        <div class="opcion-encuesta checkbox">
+                                            <label>
+                                                <input type="radio" name="radio_encuesta" id="radio_encuesta_364" value="364" class="checkboxs" />
+                                                <span>No me interesa</span>
+                                            </label>            </div>
+
+
+                                    </div>
+
+                                    <div class="btn-encuesta">
+                                        <input type="submit" id="encuesta_votar" class="btn btn-default btn-primary btn-block" value="Votar" onclick="votar();" />
+
+                                        <!-- TODO: CHECAR PARA VER SI ESTA ESCONDIENDO EL BOTON DE VER RESULTADOS SIN CONTESTAR-->
+                                    </div>
+
+                                    <div id="result" class="bs-chart-container collapse" style="width: 88%;padding: 15px 0;">
+                                        <div>¿Qué opinas de la impugnación del PRI por boletas sobrantes?</div>
+
+
+                                        <strong>Está mal (Votos: 1745)</strong>
+                                        <!--<strong>Está mal</strong>-->
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" style="width: 65%; background-color: #439646;">
+                                                <span class="value">65.2%</span>
+                                            </div>
+                                        </div>
+
+                                        <strong>Está bien (Votos: 588)</strong>
+                                        <!--<strong>Está bien</strong>-->
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="21" aria-valuemin="0" style="width: 21%; background-color: #009688;">
+                                                <span class="value">22.0%</span>
+                                            </div>
+                                        </div>
+
+                                        <strong>No me interesa (Votos: 345)</strong>
+                                        <!--<strong>No me interesa</strong>-->
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="12" aria-valuemin="0" style="width: 12%; background-color: #f44336;">
+                                                <span class="value">12.9%</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!--
+                                                <div class="opcion-encuesta">
+                                                    <span> -- </span>
+                                                </div>
+                                            <div>
+                                            </div>
+
+                                            <div class="btn-encuesta">
+                                                <!- <div class="btn btn-default", onClick="validar_encuesta_contestada();">Votar</div> ->
+
+                                                <div class="ver-resultados">
+                                                    <span class="btn btn-default" style="display: block;" data-toggle="collapse" data-target="#result">Ver Resultados</span>
+                                                    <span class="btn btn-default" style="display: none;">Ocultar Resultados</span>
+                                                </div>
+                                            </div>
+
+                                            <div id="result" class="bs-chart-container collapse" style="width: 88%;padding: 15px 0;">
+                                                <strong>Option 1</strong>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" style="width: 28%; background-color: rgb(85, 230, 106);">
+                                                        <span class="value">28%</span>
+                                                    </div>
+                                                </div>
+                                                <strong>Option 2</strong>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="58" aria-valuemin="0" style="width: 58%; background-color: rgb(30, 181, 245);">
+                                                        <span class="value">58%</span>
+                                                    </div>
+                                                </div>
+                                                <strong>Option 3</strong>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" style="width: 90%; background-color: rgb(250, 68, 68);">
+                                                        <span class="value">90%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    -->
+                                </div>
+
+                                <script>
+    function validar_encuesta_contestada(encuesta_id) {
+        if (localStorage.getItem('encuesta_' + encuesta_id) == 'true')
+            $('#link-btn-encuesta-contestada').click();
+        else
+            $('#votar-submit-btn').click();
+    }
+</script>
+
+
+
+                            </div>
+                        </section>
+                        <!-- end:section-module-quote -->
+
+
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin" style="margin-bottom: 30px;">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Denuncia Ciudadana</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <!-- start:article-container -->
+                            <div class="article-container" id="inf_izq">
+                                <div class="posicion-dinamica">
+                                    <!-- start:article -->
+                                    <article class="clearfix">
+                                        <img src="http://assets.tiempo.com.mx/archivos/publicidades/28/thumb/2016-05-22_13.50.13.png?1463947439" alt="2016 05 22 13.50.13" />
+                                        <span class="published"> 02:04 PM 22/05/2016 <span class="category cat-news"><a href="/denuncias/28">chihuahua</a></span></span>
+                                        <h3><a href="/denuncia/28/1">El sabado 21 de mayo militantes del pri repartieron volantes en las calles independencia y ...</a></h3>
+                                    </article>
+                                    <!-- end:article -->
+                                    <!-- start:article -->
+                                    <article class="clearfix">
+
+                                        <span class="published"> 06:21 PM 21/05/2016 <span class="category cat-news"><a href="/denuncias/27">GUACHOCHI</a></span></span>
+                                        <h3><a href="/denuncia/27/1">NO SIRVE ESTOS SERVICIOS DE COMUNICACION DESDE HACE VARIOS MESES QUE NO ESTAN FUNCIONANDO C...</a></h3>
+                                    </article>
+                                    <!-- end:article -->
+                                    <!-- start:article -->
+                                    <article class="clearfix">
+
+                                        <span class="published"> 03:20 PM 20/05/2016 <span class="category cat-news"><a href="/denuncias/25">chihuahua</a></span></span>
+                                        <h3><a href="/denuncia/25/1">el dia miercoles de esta semana fuimos a la clinica de avalos a las 8:30 p.m estuvimos espe...</a></h3>
+                                    </article>
+                                    <!-- end:article -->
+
+                                    <a class="btn btn-default btn-info btn-block" href="/crear_denuncia/1">Nueva Denuncia</a>
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                            <!-- end:article-container -->
+                        </section>
+                        <!-- end:section-module-news -->
+
+                        <!-- start:advertising -->
+                        <div class="ad hidden-xs">
+                            <a href="">
+                                <!-- start:col -->
+                                <div class="">
+                                    <article class="">
+                                        <!--h4></h4-->
+
+                                        <a onclick="click_publicidad_17()" target="_blank" href="http://www.jmaschih.gob.mx/principal/#blogPage">
+                                            <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/17/Tiempo_18_marzo_2016.gif" />
+                                        </a>
+                                    </article>
+                                </div>
+                                <!-- end:col -->
+
+                                <script>
+        function click_publicidad_17(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/17",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                            </a>
+                        </div>
+                        <!-- end:advertising -->
+
+                        <!-- start:section-module-news -->
+                        <section class="module-news top-margin">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Tecnología</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <div id="modulo-tecnologia">
+                                <i class="fa fa-5x fa-spinner fa-spin"></i>
+                            </div>
+                        </section>
+                        <!-- end:section-module-news -->
+
+                        <section class="module-photos section-encuesta hidden-xs" style="margin-top: 20px;">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Nuevo Suscriptor</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <div id="inf_der">
+
+                                <div class="wrapper-md">
+                                    <div class="panel-suscriptor">
+                                        <!--<div class="panel-heading">
+                                          <strong></strong>
+                                        </div>-->
+
+                                        <div class="panel-body">
+                                            <form class="bs-example form-horizontal" id="new_suscriptor" action="/suscriptores" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="9SxT18keUxJ6Gitv93GIIB7y03K3O5bpnVI4sTtWiN/N8N5fSvdlEL4TkRfHuMiJibTzeWUU4RVo2/Q3/CMAzQ==" />
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="suscriptor_nombre">Nombre</label>
+                                                    <div class="col-lg-9">
+                                                        <input class="form-control" placeholder="Nombre" required="required" type="text" name="suscriptor[nombre]" id="suscriptor_nombre" />
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="suscriptor_correo">Correo</label>
+                                                    <div class="col-lg-9">
+                                                        <input class="form-control" placeholder="Correo electrónico" type="text" name="suscriptor[correo]" id="suscriptor_correo" />
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <div class="col-lg-offset-3 col-lg-9">
+                                                        <input type="submit" name="commit" value="Suscribirme" class="btn btn-default btn-primary btn-block btn-suscriptor" />
+                                                    </div>
+                                                </div>
+
+                                            </form>          </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </section>
+
+                        <!-- start:page content -->
+                        <div class="clearfix publicidad-content hidden-xs">
+                            <div class="row">
+                                <div class="publicidad-sidebar">
+                                    <!-- start:col -->
+                                    <div class="">
+                                        <article class="">
+                                            <!--h4></h4-->
+
+                                            <a onclick="click_publicidad_10()" target="_blank" href="http://www.chihuahua.gob.mx/jcas/">
+                                                <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/10/300x100gif__OCT.gif" />
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <!-- end:col -->
+
+                                    <script>
+        function click_publicidad_10(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/10",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="publicidad-sidebar">
+                                    <!-- start:col -->
+                                    <div class="">
+                                        <article class="">
+                                            <!--h4></h4-->
+
+                                            <a onclick="click_publicidad_4()" target="_blank" href="http://www.uach.mx/">
+                                                <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/4/TIEMPO-300X100_16_junio_2016.gif" />
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <!-- end:col -->
+
+                                    <script>
+        function click_publicidad_4(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/4",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="publicidad-sidebar">
+                                    <!-- start:col -->
+                                    <div class="">
+                                        <article class="">
+                                            <!--h4></h4-->
+
+                                            <a onclick="click_publicidad_5()" target="_blank" href="http://boss-soluciones.com/">
+                                                <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/5/banner_07_boss-mod.gif" />
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <!-- end:col -->
+
+                                    <script>
+        function click_publicidad_5(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/5",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end:page content -->
+                    </div>
+                    <!-- end:sidebar -->
+                </div>
+                <!-- end:page content -->
+            </div>
+            <!-- end:container -->
+
+
+            <div class="container hidden-xs">
+                <!-- start:page content -->
+                <div id="page-content" class="clearfix publicidad-content">
+                    <div class="row">
+                        <!-- start:col -->
+                        <div class="col-sm-4 publi-15">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_46()" target="_blank" href="http://www.congresochihuahua.gob.mx/">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/46/BannerCongreso-370x130_gif_17_feb_2016.gif" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_46(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/46",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+
+
+                        <!-- start:col -->
+                        <div class="col-sm-4 publi-17">
+                            <article class="">
+                                <!--h4></h4-->
+
+                                <a onclick="click_publicidad_75()" target="_blank" href="http://tiempo.com.mx/">
+                                    <img width="300" height="100" alt="Responsive image" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/75/300_X_100_FECH_20_DE_MAYO.png" />
+                                </a>
+                            </article>
+                        </div>
+                        <!-- end:col -->
+
+                        <script>
+        function click_publicidad_75(){
+
+            var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+            $.ajax({
+                type: "POST",
+                url: "/click_publicidad/75",
+                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                data: null,
+                success: function(data) {console.log("Hola")},
+                dataType: "json"
+            });
+        }
+    </script>
+
+
+                    </div>
+                </div>
+                <!-- end:page content -->
+            </div>
+            <!-- end:container -->
+
+            <div class="container hidden-xs">
+                <!-- start:page content -->
+                <div id="page-content" class="clearfix publicidad-content">
+                    <div class="row">
+
+
+
+
+
+
+                    </div>
+                </div>
+                <!-- end:page content -->
+            </div>
+            <!-- end:container -->
+
+            <!-- footer:page footer -->
+            <footer id="page-footer">
+                <div class="container">
+                    <nav id="foot-menu" class="hidden-xs">
+                        <ul class="clearfix">
+                            <li class="home current"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+                            <li class="cat-news">
+                                <a href="/seccion/local/1">Local</a>
+                            </li>
+                            <li class="cat-sports">
+                                <a href="/seccion/nacional/1">Nacional</a>
+                            </li>
+                            <li class="cat-lifestyle">
+                                <a href="/seccion/opinion/1">Opinión</a>
+                            </li>
+                            <li class="cat-showtime">
+                                <a href="/seccion/cronos/1">Cronos</a>
+                            </li>
+                            <li class="cat-tech">
+                                <a href="/seccion/espectaculos/1">Espectáculos</a>
+                            </li>
+                            <li class="cat-business">
+                                <a href="/seccion/deportes/1">Deportes</a>
+                            </li>
+                            <li class="cat-extra">
+                                <a href="/seccion/cultura/1">Cultura</a>
+                            </li>
+                            <li class="cat-news">
+                                <a href="/seccion/internacional/1">Internacional</a>
+                            </li>
+                            <li class="cat-sports">
+                                <a href="/seccion/tecnologia/1">Tecnología</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="about row">
+                        <div class="col-sm-12 col-md-3">
+                            <!--<h3><a href="#"><img src="/assets/logo_tiempo.png" alt="Weekly News" width="240" /></a></h3>-->
+                            <h3><img alt="rss feed" width="240" src="http://assets.tiempo.com.mx/uploads/configuracion_periodico/imagen/1/logo-tiempo.png" /></h3>
+                        </div>
+
+                        <div class="col-sm-6 col-md-5">
+
+                            <h4>Nosotros</h4>
+                            <p>Nosotros</p>
+                            <div class="redes-social-header">
+                                <a href="https://www.facebook.com/tiempo" class="social-icon si-small si-light si-rounded si-facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+
+                                <a href="https://twitter.com/tiempo_mx" class="social-icon si-small si-light si-rounded si-twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+
+                                <a href="https://plus.google.com/106954652414417502410/posts" class="social-icon si-small si-light si-rounded si-gplus">
+                                    <i class="icon-gplus"></i>
+                                    <i class="icon-gplus"></i>
+                                </a>
+
+                                <a href="https://www.youtube.com/user/tiempomx" class="social-icon si-small si-light si-rounded si-youtube">
+                                    <i class="icon-youtube"></i>
+                                    <i class="icon-youtube"></i>
+                                </a>
+
+                                <a href="http://www.tiempo.com.mx/_newsfeed" class="social-icon si-small si-light si-rounded si-rss">
+                                    <i class="icon-rss"></i>
+                                    <i class="icon-rss"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <h4 class="info-adicional">Información Adicional</h4>
+                            <ul>
+                                <li><a href="#"><span>Director General:</span> Felipe Fierro A.</a></li>
+                                <li><a href="#"><span>Director Editorial:</span> Miguel Fierro S. </a></li>
+                                <li><a href="#"><span>Gerente:</span> Mario Rosales E. </a></li>
+                                <li><a href="#"><span>Tel:</span> </a></li>
+                                <li><a href="#"><span>Dirección:</span>  </a></li>
+                                <li><a href="#"><span>Ciudad:</span> Chihuahua, Chih. México.</a></li>
+                                <li><a href="#"><span>Email:</span> tiempo@tiempo.com.mx</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="copyright row">
+                        <div class="col-sm-6">
+                            &copy; <a href="#"> Tiempo.com.mx  </a> 2015. Todos los derechos reservados
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end:page footer -->
+        </div>
+
+        <!-- end:content -->
+    </div>
+    <!-- end:page inner wrap -->
+</div>
+<!-- end:page outer wrap -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">¡ADVERTENCIA!</h4>
+            </div>
+            <div class="modal-body">
+                <h4>Este es el portal oficial de tiempo.com.mx, detecamos que provienes de una página clonada.</h4>
+                <h4>Te ofrecemos una disculpa por estas molestias que están fuera de nuestro alcance.</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- start:google analytics -->
+
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-69765623-1', 'auto'); //auto
+            ga('send', 'pageview');
+
+        </script>
+
+
+
+
+
+<!-- end:google analytics -->
+<script src="http://assets.tiempo.com.mx/assets/periodico/application-7646dd363b37e5ddf4d7a919222c7ed9fdbbc33c1629708716babdcf5b67b7f7.js"></script>
+
+<script src="http://assets.tiempo.com.mx/assets/periodico/jquery.waypoint.min-c70921eff422572c0d24b655167b7b90f3c49be2fd4751801b448f715a784895.js"></script>
+<script src="http://assets.tiempo.com.mx/assets/periodico/cargar_waypoints-35dfd08f5b55575a0cfe2d100da0ca1e4443e71aaebd3a900ab87c70ace24049.js"></script>
+<script>
+      $(document).ready(function () {
+          $("img").lazyload();
+      });
+    </script>
+<script src="https://apis.google.com/js/platform.js"></script>
+
+<script>
+          jssor_slider1_starter = function (containerId) {
+
+              var nestedSliders = [];
+
+              $Jssor$.$Each(["sliderh1_container"], function (containerId) {
+                  var nestedSliderOptions = {
+                      $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+                      $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                      $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                      //$SlideWidth: 200,                                   //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                      //$SlideHeight: 150,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                      $SlideSpacing: 3, 					                //[Optional] Space between each slide in pixels, default value is 0
+                      $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                      $ParkingPosition: 0,                              //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                      $UISearchMode: 0,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+
+                      $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                          $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+                          $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                          $AutoCenter: 0,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                          $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                          $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                          $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                          $SpacingY: 0,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                          $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                      }
+                  };
+
+                  nestedSliders.push(new $JssorSlider$(containerId, nestedSliderOptions));
+              });
+
+              var options = {
+                  $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                  $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                  $AutoPlayInterval: 2000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                  $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                  $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                  $SlideDuration: 300,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                  $MinDragOffsetToSlide: 80,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                  //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                  //$SlideHeight: 150,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                  $SlideSpacing: 3, 					                //[Optional] Space between each slide in pixels, default value is 0
+                  $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                  $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                  $UISearchMode: 0,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                  $PlayOrientation: 2,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                  $DragOrientation: 0,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0),
+
+                  $ThumbnailNavigatorOptions: {
+                      $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                      $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                      $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+                      $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+                      $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+                      $SpacingX: 0,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                      $SpacingY: 0,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                      $DisplayPieces: 3,                              //[Optional] Number of pieces to display, default value is 1
+                      $ParkingPosition: 0,                          //[Optional] The offset position to park thumbnail
+                      $Orientation: 1,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+                      $DisableDrag: false                            //[Optional] Disable drag or not, default value is false
+                  }
+              };
+
+              var jssor_slider1 = new $JssorSlider$(containerId, options);
+
+              function OnMainSliderPark(currentIndex, fromIndex) {
+                  $Jssor$.$Each(nestedSliders, function (nestedSlider) {
+                      nestedSlider.$Pause();
+                  });
+
+                  setTimeout(function () {
+                      nestedSliders[currentIndex].$Play();
+                  }, 2000);
+              }
+
+              jssor_slider1.$On($JssorSlider$.$EVT_PARK, OnMainSliderPark);
+              OnMainSliderPark(0, 0);
+
+              //responsive code begin
+              //you can remove responsive code if you don't want the slider scales while window resizes
+              function ScaleSlider() {
+                  var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                  if (parentWidth)
+                      jssor_slider1.$ScaleWidth(Math.min(parentWidth, 720));
+                  else
+                      $Jssor$.$Delay(ScaleSlider, 30);
+              }
+
+              ScaleSlider();
+              $Jssor$.$AddEvent(window, "load", ScaleSlider);
+
+              $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+              $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+              //responsive code end
+          };
+      </script>
+
+<script>
+                jssor_slider1_starter('slider1_container');
+            </script>
+
+
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_tfjwbxYBY1j9EaBA7AVkEkEkktuAMfA2rt1tksioqkD"></script>
+
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_tAjwrxtBt1jcE9aA7AqB2Ahw6tuALfA2rdEYkZyoaEz"></script>
+
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_vVjgLxtBd1jcE8GA7ArkEkkEE9nA1fAlbYktEcC5a1D"></script>
+
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_RgjgrxtBY1jcEeGA7frxlAxAJ9lAMfAlrdEt1cyIqkj"></script>
+
+</body>
+</html>

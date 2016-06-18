@@ -2,7 +2,9 @@ package scrappers.scrapperCover;
 
 import enums.PagesList;
 import org.w3c.dom.html.HTMLTableRowElement;
+import services.HtmlProcess;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,11 +13,11 @@ import java.util.Set;
  */
 public class ChihuahuanoticiasCover extends CoverPage {
 
-    protected final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.CHIHUAHUANOTICIAS);
+    public final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.CHIHUAHUANOTICIAS);
     public final String regex = new String("http:\\/\\/chihuahuanoticias.com\\/\\?p=\\d+");
 
-    public ChihuahuanoticiasCover() {
-        super(page);
+    public ChihuahuanoticiasCover(HtmlProcess htmlProcess) throws IOException {
+        super(page, htmlProcess);
     }
 
     public boolean isLink(String href) {

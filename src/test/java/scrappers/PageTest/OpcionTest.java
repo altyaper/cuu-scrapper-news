@@ -1,6 +1,5 @@
 package scrappers.PageTest;
 
-import models.Video;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
@@ -31,7 +30,7 @@ public class OpcionTest {
     public void setup() throws IOException {
 
         HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubOpcion.html").toString().replace("file:","");
+        String dir = getClass().getResource("/stubPage/stubOpcion.html").toString().replace("file:","");
         File file = new File(dir);
         Document document = Jsoup.parse(file, "UTF-8",this.url);
         expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);

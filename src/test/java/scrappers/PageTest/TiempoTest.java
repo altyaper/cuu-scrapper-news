@@ -2,8 +2,6 @@ package scrappers.PageTest;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.junit.Before;
 import org.junit.Test;
 import scrappers.scrapperPage.Tiempo;
@@ -31,7 +29,7 @@ public class TiempoTest {
     public void setup() throws IOException {
 
         HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubTiempo.html").toString().replace("file:","");
+        String dir = getClass().getResource("/stubPage/stubTiempo.html").toString().replace("file:","");
         File file = new File(dir);
         Document document = Jsoup.parse(file, "UTF-8",this.url);
         expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
