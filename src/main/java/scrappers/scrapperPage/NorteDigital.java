@@ -13,9 +13,6 @@ public class NorteDigital extends Article {
 
     public NorteDigital(String url, HtmlProcess htmlProcess) throws IOException {
         super(url , htmlProcess);
-        setTitle();
-        setContent();
-        setThumbnail();
         setAuthor();
     }
 

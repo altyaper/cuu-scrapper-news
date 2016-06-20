@@ -49,6 +49,9 @@ public class ScrapCover {
         single = new ParadaDigitalCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
+        single = new EntreLineasCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
         return  allnews;
     }
 

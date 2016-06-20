@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
+import scrappers.scrapperCover.CoverPage;
 import scrappers.scrapperCover.TiempoCover;
 import services.HtmlProcess;
 
@@ -21,7 +22,7 @@ import java.util.HashSet;
  */
 public class TiempoCoverTest {
 
-    private TiempoCover cover;
+    private CoverPage cover;
     private HashSet<String> hash;
     private String url = TiempoCover.page;
 

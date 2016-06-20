@@ -5,7 +5,9 @@ import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
 import scrappers.scrapperCover.ChihuahuanoticiasCover;
+import scrappers.scrapperCover.CoverPage;
 import services.HtmlProcess;
+import sun.tools.asm.Cover;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,10 +22,10 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by echavez on 6/17/16.
  */
-public class ChihuahuanoticiasCoverTest {
+public class ChihuahuanoticiasCoverTest implements CommonCoverTest{
 
     public String url = ChihuahuanoticiasCover.page;
-    private ChihuahuanoticiasCover cover;
+    private CoverPage cover;
     private HashSet<String> hash;
 
     @Before
@@ -55,4 +57,5 @@ public class ChihuahuanoticiasCoverTest {
         assertTrue(hash.size() > 0);
 
     }
+
 }

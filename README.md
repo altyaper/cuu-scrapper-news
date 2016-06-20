@@ -10,6 +10,8 @@ Included:
 * http://nortedigital.mx
 * http://chihuahuanoticias.com
 * http://www.omnia.com.mx
+* http://www.laparadadigital.com/
+* http://entrelineas.com.mx/
 
 Let me know if there is a website that would be nice to added.
 

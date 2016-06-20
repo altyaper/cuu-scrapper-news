@@ -1,5 +1,6 @@
 package scrappers.PageTest;
 
+import models.Article;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
@@ -19,10 +20,10 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by echavez on 5/21/16.
  */
-public class ParadaDigitalTest {
+public class ParadaDigitalTest implements CommonTest{
 
     public String url = "http://www.laparadadigital.com/noticias-de-chihuahua-mexico.cfm?n=72064";
-    public ParadaDigital article;
+    public Article article;
 
     @Before
     public void setup() throws IOException {
@@ -38,19 +39,6 @@ public class ParadaDigitalTest {
     }
 
 
-    @Test
-    public void itShouldSetTheTitleAsTheOriginalArticle(){
-        assertEquals("Pedradas a la Cruz Roja por mal servicio".trim(), article.getTitle());
-    }
-
-    @Test
-    public void itShouldSetTheContentAsTheOriginalArticle(){
-
-        String content =  "Chihuahua.- Una mujer agarró a pedradas las instalaciones de la Cruz Roja, al parecer por haber sostenido problemas con el servicio. El hecho ocurrió en la delegación norte, ubicada en Paseos de Chihuahua esta madrugada, y la responsable esta detenida. Según se indicó, la mujer lapidó las puertas de cristal, y por fortuna unidades de policía municipal pasaban por el lugar y observaron el hecho deteniéndola. Se indicó que las instalaciones se encontraban cerradas, y no hubo personas lesionadas solo daños materiales. Se indicó que la mujer tenía problemas emocionales, y que tuvo problemas con el servicio.";
-
-        assertEquals(content, this.article.getContent());
-
-    }
 
     @Test
     public void itShouldGiveMeTheThumbnailAsTheOriginalArticle(){
@@ -65,12 +53,20 @@ public class ParadaDigitalTest {
     @Test
     public void itShouldGiveMeTheDate(){
 
-
         assertEquals("20 de junio de 2016", this.article.getDate());
-
 
     }
 
+    @Test
+    @Override
+    public void itShouldGetTheTitle() {
+        assertEquals("Pedradas a la Cruz Roja por mal servicio".trim(), article.getTitle());
+    }
 
-
+    @Test
+    @Override
+    public void itShouldGetTheContent() {
+        String content =  "Chihuahua.- Una mujer agarró a pedradas las instalaciones de la Cruz Roja, al parecer por haber sostenido problemas con el servicio. El hecho ocurrió en la delegación norte, ubicada en Paseos de Chihuahua esta madrugada, y la responsable esta detenida. Según se indicó, la mujer lapidó las puertas de cristal, y por fortuna unidades de policía municipal pasaban por el lugar y observaron el hecho deteniéndola. Se indicó que las instalaciones se encontraban cerradas, y no hubo personas lesionadas solo daños materiales. Se indicó que la mujer tenía problemas emocionales, y que tuvo problemas con el servicio.";
+        assertEquals(content, this.article.getContent());
+    }
 }

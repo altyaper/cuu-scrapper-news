@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
+import scrappers.scrapperCover.CoverPage;
 import scrappers.scrapperCover.ParadaDigitalCover;
 import scrappers.scrapperCover.OpcionCover;
 import services.HtmlProcess;
@@ -24,7 +25,7 @@ import static org.junit.Assert.assertTrue;
 public class ParadaDigitalCoverTest {
 
     public String url = ParadaDigitalCover.page;
-    private ParadaDigitalCover cover;
+    private CoverPage cover;
     private HashSet<String> hash;
 
     @Before

@@ -13,9 +13,6 @@ public class Chihuahuanoticias extends Article {
 
     public Chihuahuanoticias(String url, HtmlProcess htmlProcess) throws IOException {
         super(url, htmlProcess);
-        setTitle();
-        setThumbnail();
-        setContent();
     }
 
     public void setThumbnail() {

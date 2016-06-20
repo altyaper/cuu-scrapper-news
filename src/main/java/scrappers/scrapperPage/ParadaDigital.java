@@ -15,10 +15,6 @@ public class ParadaDigital extends Article {
 
     public ParadaDigital(String pageUrl, HtmlProcess htmlProcess) throws IOException {
         super(pageUrl, htmlProcess);
-        System.out.println(pageUrl);
-        setTitle();
-        setContent();
-        setThumbnail();
         setDate();
     }
 

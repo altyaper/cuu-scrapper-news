@@ -1,5 +1,6 @@
 package scrappers.PageTest;
 
+import models.Article;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
@@ -21,10 +22,10 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by echavez on 5/23/16.
  */
-public class OpcionTest {
+public class OpcionTest implements CommonTest{
 
     public String url = "http://laopcion.com.mx/noticia/140178";
-    public Opcion opcion;
+    public Article article;
 
     @Before
     public void setup() throws IOException {
@@ -36,28 +37,15 @@ public class OpcionTest {
         expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
         replay(htmlProcessStub);
 
-        this.opcion= new Opcion(this.url, htmlProcessStub);
+        this.article = new Opcion(this.url, htmlProcessStub);
 
     }
 
-    @Test
-    public void itShouldSetTheTitleOfTheArticle(){
-
-        assertEquals("Exigen pago decenas afuera de casa de campaña de Barraza", opcion.getTitle());
-
-    }
-
-    @Test
-    public void itShouldSetTheContentOfTheArticle(){
-
-        assertEquals("Chihuahua.- Decenas de personas acudieron a las fueras de la casa de campaña del candidato independiente José Luis Barraza para exigir su pago tras trabajar como brigadistas en la búsqueda del empresario por la gubernatura. Los encargados se negaron a declarar ante los medios de comunicación. Al término de la elección, alrededor de 100 personas acudieron a las inmediaciones de la que fungió como casa de campaña en Chihuahua de José Luis Barraza para solicitar que se les entregaran pagos pendientes por parte de los operadores del independiente. Aunque la mayoría de las personas se negaron a dar información al respecto, una mujer, de forma anónima, dio a conocer que la gente acudió por pagos faltantes de los operadores del candidato independiente a los trabajadores, quienes están a la espera del dinero desde el martes. Posteriormente, otra mujer que se negó a dar su nombre comentó que estos conflictos no provenían de José Luis Barraza, sino de su gente que además de negarles el pago se habían comportado de forma déspota contra muchos de ellos, incluso con algunas féminas. Al intentar abordar a los encargados y guardias que se encontraban en el único acceso al inmueble, éstos se negaron a atender a los medios de comunicación y solicitaron que se retiraran, ya que ni las personas ni ellos tenían permitido dar declaraciones.", opcion.getContent());
-
-    }
 
     @Test
     public void itShouldSetTheAuthorOfTheArticle(){
 
-        assertEquals("Daniela Jiménez", opcion.getAuthor());
+        assertEquals("Daniela Jiménez", article.getAuthor());
 
     }
 
@@ -66,8 +54,19 @@ public class OpcionTest {
 
         Set<String> hash = new HashSet<String>();
         hash.add("http://laopcion.com.mx/assets/2016/june/10/9vojCKDaMhGb.jpg");
-        assertEquals(hash, opcion.getThumbnail());
+        assertEquals(hash, article.getThumbnail());
 
     }
 
+    @Test
+    @Override
+    public void itShouldGetTheTitle() {
+        assertEquals("Exigen pago decenas afuera de casa de campaña de Barraza", article.getTitle());
+    }
+
+    @Test
+    @Override
+    public void itShouldGetTheContent() {
+        assertEquals("Chihuahua.- Decenas de personas acudieron a las fueras de la casa de campaña del candidato independiente José Luis Barraza para exigir su pago tras trabajar como brigadistas en la búsqueda del empresario por la gubernatura. Los encargados se negaron a declarar ante los medios de comunicación. Al término de la elección, alrededor de 100 personas acudieron a las inmediaciones de la que fungió como casa de campaña en Chihuahua de José Luis Barraza para solicitar que se les entregaran pagos pendientes por parte de los operadores del independiente. Aunque la mayoría de las personas se negaron a dar información al respecto, una mujer, de forma anónima, dio a conocer que la gente acudió por pagos faltantes de los operadores del candidato independiente a los trabajadores, quienes están a la espera del dinero desde el martes. Posteriormente, otra mujer que se negó a dar su nombre comentó que estos conflictos no provenían de José Luis Barraza, sino de su gente que además de negarles el pago se habían comportado de forma déspota contra muchos de ellos, incluso con algunas féminas. Al intentar abordar a los encargados y guardias que se encontraban en el único acceso al inmueble, éstos se negaron a atender a los medios de comunicación y solicitaron que se retiraran, ya que ni las personas ni ellos tenían permitido dar declaraciones.", article.getContent());
+    }
 }

@@ -53,6 +53,11 @@ public final class Scrapper {
         }else if(url.matches(".*laparadadigital.com.*")){
 
             return new ParadaDigital(url,new HtmlProcess());
+
+        }else if(url.matches(".*entrelineas.com.mx.*")){
+
+            return new EntreLineas(url,new HtmlProcess());
+
         }
 
         return null;

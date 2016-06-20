@@ -1,5 +1,6 @@
 package scrappers.PageTest;
 
+import models.Article;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
@@ -20,10 +21,10 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by echavez on 5/21/16.
  */
-public class TiempoTest {
+public class TiempoTest implements CommonTest {
 
     public String url = "http://tiempo.com.mx/noticia/34340-desbandada_en_el_prd_renuncian/1";
-    public Tiempo tiempo;
+    public Article article;
 
     @Before
     public void setup() throws IOException {
@@ -35,21 +36,7 @@ public class TiempoTest {
         expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
         replay(htmlProcessStub);
 
-        this.tiempo = new Tiempo(this.url, htmlProcessStub);
-    }
-
-
-    @Test
-    public void itShouldSetTheTitleAsTheOriginalArticle(){
-        assertEquals("Desbandada en el PRD; renuncian 500 integrantes y van con Maru Desbandada en el PRD; renuncian 500 integrantes y van con Maru".trim(), tiempo.getTitle());
-    }
-
-    @Test
-    public void itShouldSetTheContentAsTheOriginalArticle(){
-
-        String content =  "500 miembros del PRD e intregrantes de la Red Fuerza Chihuahua presentarán mañana su renuncia ante el partido del Sol Azteca y anunciaron su adhesión a la campaña de Maru Campos. Daniel Chávez, coordinador de dicho movimiento, mencionó que ante la crisis que vive el Partido de la Revolución Democrática y la falta de oportunidades dentro de dicho partido político, decidieron dejar dicho instituto político y unir ante la campaña de Maru Campos. Los coordinadores de sector del PRD destruyeron frente a los medios de comunicación las credenciales de afiliación y mostraron también las cartas de renuncia. \"El PRD no tiene liderazgo y sufre decaída fuerte, tan así que tuvieron que traer a candidato externo para poder levantar, por lo que ante la invitación hablamos con toda nuestra gente que son 500 personas y por unanimidad fuimos con Maru\": dijo. 500 miembros del PRD e intregrantes de la Red Fuerza Chihuahua presentarán mañana su renuncia ante el partido del Sol Azteca y anunciaron su adhesión a la campaña de Maru Campos. Daniel Chávez, coordinador de dicho movimiento, mencionó que ante la crisis que vive el Partido de la Revolución Democrática y la falta de oportunidades dentro de dicho partido político, decidieron dejar dicho instituto político y unir ante la campaña de Maru Campos. Los coordinadores de sector del PRD destruyeron frente a los medios de comunicación las credenciales de afiliación y mostraron también las cartas de renuncia. \"El PRD no tiene liderazgo y sufre decaída fuerte, tan así que tuvieron que traer a candidato externo para poder levantar, por lo que ante la invitación hablamos con toda nuestra gente que son 500 personas y por unanimidad fuimos con Maru\": dijo.";
-        assertEquals(content, this.tiempo.getContent());
-
+        this.article = new Tiempo(this.url, htmlProcessStub);
     }
 
     @Test
@@ -57,7 +44,7 @@ public class TiempoTest {
 
         Set<String> hash = new HashSet<>();
         hash.add("http://assets.tiempo.com.mx/uploads/imagen/imagen/43903/image.jpeg");
-        assertEquals(hash,this.tiempo.getThumbnail());
+        assertEquals(hash,this.article.getThumbnail());
 
     }
 
@@ -70,10 +57,20 @@ public class TiempoTest {
         hash.add("Política");
         hash.add("Chihuahua");
 
-        assertEquals(hash, this.tiempo.getTags());
+        assertEquals(hash, this.article.getTags());
 
     }
 
+    @Test
+    @Override
+    public void itShouldGetTheTitle() {
+        assertEquals("Desbandada en el PRD; renuncian 500 integrantes y van con Maru Desbandada en el PRD; renuncian 500 integrantes y van con Maru".trim(), article.getTitle());
+    }
 
-
+    @Test
+    @Override
+    public void itShouldGetTheContent() {
+        String content =  "500 miembros del PRD e intregrantes de la Red Fuerza Chihuahua presentarán mañana su renuncia ante el partido del Sol Azteca y anunciaron su adhesión a la campaña de Maru Campos. Daniel Chávez, coordinador de dicho movimiento, mencionó que ante la crisis que vive el Partido de la Revolución Democrática y la falta de oportunidades dentro de dicho partido político, decidieron dejar dicho instituto político y unir ante la campaña de Maru Campos. Los coordinadores de sector del PRD destruyeron frente a los medios de comunicación las credenciales de afiliación y mostraron también las cartas de renuncia. \"El PRD no tiene liderazgo y sufre decaída fuerte, tan así que tuvieron que traer a candidato externo para poder levantar, por lo que ante la invitación hablamos con toda nuestra gente que son 500 personas y por unanimidad fuimos con Maru\": dijo. 500 miembros del PRD e intregrantes de la Red Fuerza Chihuahua presentarán mañana su renuncia ante el partido del Sol Azteca y anunciaron su adhesión a la campaña de Maru Campos. Daniel Chávez, coordinador de dicho movimiento, mencionó que ante la crisis que vive el Partido de la Revolución Democrática y la falta de oportunidades dentro de dicho partido político, decidieron dejar dicho instituto político y unir ante la campaña de Maru Campos. Los coordinadores de sector del PRD destruyeron frente a los medios de comunicación las credenciales de afiliación y mostraron también las cartas de renuncia. \"El PRD no tiene liderazgo y sufre decaída fuerte, tan así que tuvieron que traer a candidato externo para poder levantar, por lo que ante la invitación hablamos con toda nuestra gente que son 500 personas y por unanimidad fuimos con Maru\": dijo.";
+        assertEquals(content, this.article.getContent());
+    }
 }

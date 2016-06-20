@@ -15,9 +15,6 @@ public class Cronica extends Article{
     // Builder Design Pattern
     public Cronica(String url, HtmlProcess htmlProcess) throws IOException {
         super(url, htmlProcess);
-        setTitle();
-        setContent();
-        setThumbnail();
     }
 
     public void setThumbnail() {

@@ -12,9 +12,6 @@ import java.io.IOException;
 public class Omnia extends Article{
     public Omnia(String pageUrl, HtmlProcess htmlProcess) throws IOException {
         super(pageUrl, htmlProcess);
-        setTitle();
-        setContent();
-        setThumbnail();
     }
 
     public void setThumbnail() {
