@@ -21,12 +21,17 @@ import java.util.Iterator;
 public class Main {
 
     public static void main(String... strings) throws SQLException {
-
+        ScrapCover scrapCover = new ScrapCover();
         try {
-            ScrapCover.scrappAllCovers();
+            scrapCover.scrappAllCovers();
         } catch (IOException e) {
+            System.out.println(e.getMessage());
 //            e.printStackTrace();
         }
+
+
+
+
 
 //        Connection conn = null;
 //        ConnectionManager connection = new ConnectionManager();

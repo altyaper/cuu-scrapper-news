@@ -2,26 +2,26 @@ package db;
 
 import models.Article;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * Created by echavez on 6/17/16.
  */
-public class QueryManager {
+public class QueryManager extends ConnectionManager{
 
-    Connection conn;
+
+    public QueryManager() {
+        this.connection = this.getConnection();
+    }
 
     public QueryManager(Connection conn) {
-        this.conn = conn;
+        this.connection = conn;
     }
 
     public void setTables() throws SQLException {
 
-        Statement comando = this.conn.createStatement();
-        comando.executeUpdate("CREATE TABLE IF NOT EXISTS news ( new_id INT(255) AUTO_INCREMENT , title VARCHAR(255) UNIQUE, content TEXT, url VARCHAR(255) UNIQUE, thumbnail VARCHAR(255), author VARCHAR(255), tags VARCHAR(255), PRIMARY KEY (new_id))");
+        Statement comando = this.connection.createStatement();
+        comando.executeUpdate("CREATE TABLE IF NOT EXISTS news ( new_id INT(255) AUTO_INCREMENT , title VARCHAR(255), content TEXT, url VARCHAR(255) UNIQUE, thumbnail TEXT, author VARCHAR(255), tags VARCHAR(255), PRIMARY KEY (new_id))");
 
     }
 
@@ -29,7 +29,7 @@ public class QueryManager {
 
         String sql =  "INSERT INTO news (title, content, thumbnail, author, tags, url) VALUES(?, ?, ?, ?, ?, ?)";
 
-        PreparedStatement preparedStatement = this.conn.prepareStatement(sql);
+        PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
         preparedStatement.setString(1, article.getTitle());
         preparedStatement.setString(2, article.getContent());
         preparedStatement.setString(3, article.getThumbnail().toString());
@@ -44,10 +44,18 @@ public class QueryManager {
 
         String sql = "DELETE FROM new WHERE new_id = ?";
 
-        PreparedStatement preparedStatement = this.conn.prepareStatement(sql);
+        PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
         preparedStatement.setInt(1, new_id);
 
         return preparedStatement.executeUpdate();
 
+    }
+
+    public boolean existNew(String url) throws SQLException {
+        String sql =  "SELECT new_id FROM news WHERE url = ?";
+        PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
+        preparedStatement.setString(1, url);
+        ResultSet rs = preparedStatement.executeQuery();
+        return (rs.next()) ? true : false;
     }
 }

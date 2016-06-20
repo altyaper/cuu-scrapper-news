@@ -24,10 +24,8 @@ public final class Scrapper {
 
     }
 
-
     //Factory Design Pattern
     private Article getObjectArticle(String url) throws IOException {
-
         if(url.matches(".*tiempo.com.mx.*")){
 
             return new Tiempo(url, new HtmlProcess());
@@ -51,6 +49,10 @@ public final class Scrapper {
         }else if(url.matches(".*chihuahuanoticias.com.*")){
 
             return new Chihuahuanoticias(url,new HtmlProcess());
+
+        }else if(url.matches(".*laparadadigital.com.*")){
+
+            return new ParadaDigital(url,new HtmlProcess());
         }
 
         return null;

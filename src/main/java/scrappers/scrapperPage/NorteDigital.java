@@ -21,10 +21,11 @@ public class NorteDigital extends Article {
 
     public void setThumbnail() {
         Elements aux = this.html.select(".imagen-post ul li");
-        for (int i = 0; i < aux.size(); i++) {
-            this.thumbnail.add(aux.get(i).select("a").attr("href").toString());
+        if(!aux.isEmpty()){
+            for (int i = 0; i < aux.size(); i++) {
+                this.thumbnail.add(aux.get(i).select("a").attr("href").toString());
+            }
         }
-
     }
 
     public void setTitle() {

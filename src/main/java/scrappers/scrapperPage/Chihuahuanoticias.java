@@ -20,7 +20,8 @@ public class Chihuahuanoticias extends Article {
 
     public void setThumbnail() {
         Elements aux = this.html.select(".entry p img");
-        this.thumbnail.add(aux.get(0).attr("src"));
+        if (aux.size() != 0)
+            this.thumbnail.add(aux.get(0).attr("src"));
     }
 
     public void setTitle() {

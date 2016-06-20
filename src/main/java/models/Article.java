@@ -21,7 +21,7 @@ public abstract class Article {
 
     protected String category;
     protected Video video;
-    protected Date date;
+    protected String date;
     protected Enum page;
     protected Document html;
 
@@ -88,11 +88,11 @@ public abstract class Article {
 
     public void setVideo() {}
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate() {
         this.date = date;
     }
 

@@ -3,6 +3,7 @@ package utils;
 import db.ConnectionManager;
 import db.QueryManager;
 import scrappers.scrapperCover.*;
+import scrappers.scrapperPage.ParadaDigital;
 import services.HtmlProcess;
 
 import java.io.IOException;
@@ -26,14 +27,8 @@ public class ScrapCover {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
-    public static void scrappAllCovers() throws IOException, SQLException {
 
-        Connection conn = null;
-        ConnectionManager connection = new ConnectionManager();
-        conn = connection.getConnection();
-        QueryManager query = new QueryManager(conn);
-        query.setTables();
-
+    public HashSet<String> getAllNews() throws IOException {
         HashSet<String> allnews = new HashSet<String>();
         CoverPage single = new CronicaCover(new HtmlProcess());
 
@@ -51,37 +46,71 @@ public class ScrapCover {
         single = new OpcionCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
-        for (final String link : allnews) {
+        single = new ParadaDigitalCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
 
-            Runnable task = () -> {
-                Scrapper s = null;
-                try {
-                    s = new Scrapper(link);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                System.out.println(s.getArticle().getTitle());
-                System.out.println(s.getArticle().getThumbnail());
-                try {
-                    if(query.saveArticle(s.getArticle()) == 1){
-                        System.out.println("SAVED!");
+        return  allnews;
+    }
+
+    public void scrappAllCovers() throws IOException, SQLException {
+
+        HashSet<String> allNews = this.getAllNews();
+        this.saveArticles(allNews);
+
+    }
+
+    public void saveArticles(HashSet<String > allNews) throws SQLException {
+
+        QueryManager query = new QueryManager();
+        query.setTables();
+
+        for (final String link : allNews) {
+
+            if(!query.existNew(link)){
+
+                Runnable task = () -> {
+                    Scrapper s = null;
+                    try {
+
+                        s = new Scrapper(link);
+
+                        System.out.println(s.getArticle().getTitle());
+                        System.out.println(s.getArticle().getThumbnail());
+                        System.out.println(s.getArticle().getPageUrl());
+
+                        if(query.saveArticle(s.getArticle()) == 1){
+                            System.out.println("SAVED!");
+                            System.out.println();
+                        }
+
+                    } catch (IOException e) {
+
+                        System.out.println("Error: "+e.getMessage());
+
+                    } catch (IndexOutOfBoundsException e) {
+
+                        System.out.println("Error: "+e.getMessage());
+
+                    }catch (SQLException e) {
+
+                        System.out.println("Error : "+e.getMessage());
+
                     }
-                } catch (SQLException e) {
-                    System.out.println("ERROR: "+e.getMessage());
-//                    e.printStackTrace();
+
+
+                };
+
+                Thread thread = new Thread(task);
+                thread.start();
+                try {
+                    thread.join();
+                } catch (Exception e) {
+                    System.out.println("Error: "+e.getMessage());
                 }
-                System.out.println();
-            };
 
-            Thread thread = new Thread(task);
-            thread.start();
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
-
         }
+
     }
 
 
