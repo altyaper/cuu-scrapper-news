@@ -12,6 +12,8 @@ Included:
 * http://www.omnia.com.mx
 * http://www.laparadadigital.com/
 * http://entrelineas.com.mx/
+* http://www.lapolaka.com/
+* http://eldiariodechihuahua.mx/
 
 Let me know if there is a website that would be nice to added.
 
