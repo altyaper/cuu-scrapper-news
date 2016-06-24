@@ -21,7 +21,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by echavez on 6/17/16.
  */
-public class NorteDigitalCoverTest {
+public class NorteDigitalCoverTest implements CommonCoverTest{
 
     public String url = NorteDigitalCover.page;
     private CoverPage cover;

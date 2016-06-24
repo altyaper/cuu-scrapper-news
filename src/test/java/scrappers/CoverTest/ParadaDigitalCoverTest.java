@@ -6,23 +6,20 @@ import org.junit.Before;
 import org.junit.Test;
 import scrappers.scrapperCover.CoverPage;
 import scrappers.scrapperCover.ParadaDigitalCover;
-import scrappers.scrapperCover.OpcionCover;
 import services.HtmlProcess;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
 
-import static org.easymock.EasyMock.createMock;
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.*;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
  * Created by echavez on 6/20/16.
  */
-public class ParadaDigitalCoverTest {
+public class ParadaDigitalCoverTest implements CommonCoverTest{
 
     public String url = ParadaDigitalCover.page;
     private CoverPage cover;
@@ -47,7 +44,7 @@ public class ParadaDigitalCoverTest {
     public void itShouldMatchWithRegexPattern(){
 
         String one = "noticias-de-chihuahua-mexico.cfm?n=72084";
-        assertTrue(cover.isLink(one));
+        assertFalse(cover.isLink(one));
         String one2 = "/noticias-de-chihuahua-mexico.cfm?n=72084";
         assertTrue(cover.isLink(one2));
         String two = "http://laparadadigital.com/noticias-de-chihuahua-mexico.cfm?n=HELLO";
@@ -55,6 +52,7 @@ public class ParadaDigitalCoverTest {
     }
 
     @Test
+    @Override
     public void itShouldGetAtLeastOneNew(){
 
         assertTrue(hash.size() > 0);

@@ -21,7 +21,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by echavez on 6/17/16.
  */
-public class OmniaCoverTest {
+public class OmniaCoverTest implements CommonCoverTest{
 
     public String url = OmniaCover.page;
     private CoverPage cover;

@@ -21,7 +21,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by echavez on 6/17/16.
  */
-public class CronicaCoverTest {
+public class CronicaCoverTest implements CommonCoverTest{
 
     private String url = CronicaCover.page;
     private HashSet<String> hash;

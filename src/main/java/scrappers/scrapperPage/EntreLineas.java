@@ -1,6 +1,5 @@
 package scrappers.scrapperPage;
 
-import enums.PagesList;
 import models.Article;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
@@ -34,7 +33,7 @@ public class EntreLineas extends Article {
     @Override
     public void setContent() {
         Elements aux = this.html.select(".post");
-        this.content = aux.text().trim();
+        this.content = aux.html();
     }
 
     @Override

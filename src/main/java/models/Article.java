@@ -4,7 +4,6 @@ import org.jsoup.nodes.Document;
 import services.HtmlProcess;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -64,9 +63,7 @@ public abstract class Article {
         return category;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
+    public void setCategory() {}
 
     public String getAuthor() {
         return author;

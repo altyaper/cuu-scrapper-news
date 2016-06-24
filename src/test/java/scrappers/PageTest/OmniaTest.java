@@ -40,7 +40,6 @@ public class OmniaTest implements CommonTest{
 
     }
 
-
     @Test
     public void setThumbnail(){
         Set<String> thumbnails = new HashSet<String>();

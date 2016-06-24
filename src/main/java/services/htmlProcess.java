@@ -11,7 +11,7 @@ import java.io.IOException;
 public class HtmlProcess {
 
     public Document getHtml(String url) throws IOException{
-        return Jsoup.connect(url).timeout(60*1000).get();
+        return Jsoup.connect(url).timeout(60*1000).userAgent("Mozilla").get();
     }
 
 }

@@ -2,39 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19d82dd7-35be-4a1c-b025-3c612b93739a" name="Default" comment="Add ChihuahuaNoticias Scrapper">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/EntreLineasCover.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/EntreLineas.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CommonCoverTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/EntreLineasCoverTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/CommonTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/EntreLineasTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/stubCover/stubEntreLineasCover.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/stubPage/stubEntreLineas.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/DiarioCover.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Diario.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/DB/dbConnectionTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/DiarioCoverTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/SegundoasegundoCoverTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/DiarioTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/stubCover/stubDiarioCover.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/stubPage/stubDiario.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Chihuahuanoticias.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Chihuahuanoticias.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Cronica.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Cronica.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/db/ConnectionManager.java" afterPath="$PROJECT_DIR$/src/main/java/db/ConnectionManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/db/QueryManager.java" afterPath="$PROJECT_DIR$/src/main/java/db/QueryManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/enums/PagesList.java" afterPath="$PROJECT_DIR$/src/main/java/enums/PagesList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/models/Article.java" afterPath="$PROJECT_DIR$/src/main/java/models/Article.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CoverPage.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CoverPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/ParadaDigitalCover.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/ParadaDigitalCover.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/EntreLineas.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/EntreLineas.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/NorteDigital.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/NorteDigital.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Omnia.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Omnia.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Opcion.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Opcion.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/ParadaDigital.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/ParadaDigital.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Segundoasegundo.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Segundoasegundo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Tiempo.java" afterPath="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Tiempo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/services/htmlProcess.java" afterPath="$PROJECT_DIR$/src/main/java/services/htmlProcess.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/ScrapCover.java" afterPath="$PROJECT_DIR$/src/main/java/utils/ScrapCover.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Scrapper.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Scrapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ChihuahuanoticiasCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ChihuahuanoticiasCoverTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CommonCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CommonCoverTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CronicaCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CronicaCoverTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/EntreLineasCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/EntreLineasCoverTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/NorteDigitalCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/NorteDigitalCoverTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OmniaCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OmniaCoverTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OpcionCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OpcionCoverTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ParadaDigitalCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ParadaDigitalCoverTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/TiempoCoverTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/TiempoCoverTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/ChihuahuanoticiasTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/ChihuahuanoticiasTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/CronicaTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/CronicaTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/CommonTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/CommonTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/EntreLineasTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/EntreLineasTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/NorteDigitalTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/NorteDigitalTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/OmniaTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/OmniaTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/OpcionTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/OpcionTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/ParadaDigitalTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/ParadaDigitalTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/TiempoTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/PageTest/TiempoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/scrappers/ScrapperTest.java" afterPath="$PROJECT_DIR$/src/test/java/scrappers/ScrapperTest.java" />
     </list>
     <ignored path="scrapper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,11 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EntreLineasCoverTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/EntreLineasCoverTest.java">
+      <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="47" column="126" selection-start-line="47" selection-start-column="126" selection-end-line="47" selection-end-column="126" />
+            <state relative-caret-position="210">
+              <caret line="23" column="60" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,73 +81,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/VideoTest.java">
+      <file leaf-file-name="OpcionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/OpcionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownFxPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="195">
-                <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PagesList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/enums/PagesList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="35" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntreLineas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/EntreLineas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="-193">
+              <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1262#1263#0" expanded="true" />
+                <element signature="e#1330#1331#0" expanded="true" />
+                <element signature="e#1814#1815#0" expanded="true" />
+                <element signature="e#1874#1875#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpcionCoverTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OpcionCoverTest.java">
+      <file leaf-file-name="ScrapCover.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/ScrapCover.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="202">
+              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScrapperTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/ScrapperTest.java">
+      <file leaf-file-name="QueryManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/db/QueryManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <element signature="e#1380#1381#0" expanded="true" />
-                <element signature="e#1447#1448#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Opcion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Opcion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,8 +133,8 @@
       <list>
         <option value="package-info" />
         <option value="JUnit4 Test Class" />
-        <option value="HTML File" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -169,57 +150,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/stubCover/stubCronica.html" />
-        <option value="$PROJECT_DIR$/src/test/resources/stubCover/stubChihuahuanoticiasCover.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/db/ConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Segundoasegundo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/enums/PagesList.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/ParadaDigital.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/ParadaDigital.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ParadaDigital.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/stubPage/stubParadaDigital.html" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Article.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/stubCover/stubParadaDigitalCover.html" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/ParadaDigitalCover.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CoverPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/db/QueryManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CronicaCover.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/ParadaDigitalCover.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/CommonTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/NorteDigitalTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/CronicaTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/TiempoTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/ParadaDigitalTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/OpcionTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/OmniaTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/ChihuahuanoticiasTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Cronica.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Chihuahuanoticias.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/NorteDigital.java" />
         <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Omnia.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/ParadaDigital.java" />
         <option value="$PROJECT_DIR$/src/test/resources/stubPage/stubEntreLineas.html" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/Scrapper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/EntreLineasTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/TiempoCoverTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/EntreLineasCover.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/stubCover/stubEntreLineasCover.html" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/EntreLineasCover.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/ScrapperTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ChihuahuanoticiasCoverTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Segundoasegundo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/ParadaDigitalCover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/ParadaDigital.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/ParadaDigitalTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/TiempoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/enums/PagesList.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/stubCover/stubDiarioCover.html" />
+        <option value="$PROJECT_DIR$/src/test/resources/stubPage/stubDiario.html" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CronicaCoverTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/NorteDigitalCoverTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OmniaCoverTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OpcionCoverTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ParadaDigitalCoverTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/TiempoCoverTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/EntreLineasCover.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CronicaCoverTest.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/stubCover/stubEntreLineasCover.html" />
-        <option value="$PROJECT_DIR$/src/main/java/services/HtmlProcess.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/ScrapCover.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ChihuahuanoticiasCoverTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CommonCoverTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/EntreLineasCover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/DiarioCover.java" />
         <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/EntreLineasCoverTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/DiarioCover.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/DiarioCoverTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Diario/Diario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CoverPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/DiarioTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Diario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/HtmlProcess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/NorteDigital.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/NorteDigitalTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/EntreLineas.java" />
-        <option value="$PROJECT_DIR$/src/test/java/scrappers/ScrapperTest.java" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/EntreLineasTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/OmniaTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/SegundoasegundoCoverTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/Scrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Tiempo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CommonCoverTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/CommonTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ParadaDigitalCoverTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Chihuahuanoticias.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DB/dbConnectionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/ScrapCover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/ConnectionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Article.java" />
+        <option value="$PROJECT_DIR$/src/test/java/scrappers/PageTest/OpcionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Opcion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/db/QueryManager.java" />
       </list>
     </option>
   </component>
@@ -229,6 +210,20 @@
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="scrapper" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
@@ -262,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -305,7 +299,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrappers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DB" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,6 +388,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,12 +461,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="enums" />
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -397,6 +488,7 @@
       <recent name="scrappers" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="Diario" />
       <recent name="scrappers" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -408,7 +500,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.scrappers in scrapper">
+  <component name="RunManager" selected="JUnit.OpcionTest.itShouldGetTheCategory">
     <configuration default="false" name="scrappers in scrapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -435,20 +527,46 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ScrapperTest.itShouldGetAnArticleOfTiempo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="dbConnectionTest.itShouldGetAConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="scrappers.*" />
+          <option name="PATTERN" value="DB.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="scrapper" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="scrappers" />
-      <option name="MAIN_CLASS_NAME" value="scrappers.ScrapperTest" />
-      <option name="METHOD_NAME" value="itShouldGetAnArticleOfTiempo" />
+      <option name="PACKAGE_NAME" value="DB" />
+      <option name="MAIN_CLASS_NAME" value="DB.dbConnectionTest" />
+      <option name="METHOD_NAME" value="itShouldGetAConnection" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ChihuahuanoticiasTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="scrappers.PageTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="scrapper" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="scrappers.PageTest" />
+      <option name="MAIN_CLASS_NAME" value="scrappers.PageTest.ChihuahuanoticiasTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -481,46 +599,20 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="ChihuahuanoticiasCoverTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="OpcionTest.itShouldGetTheCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="scrappers.CoverTest.*" />
+          <option name="PATTERN" value="scrappers.PageTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="scrapper" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="scrappers.CoverTest" />
-      <option name="MAIN_CLASS_NAME" value="scrappers.CoverTest.ChihuahuanoticiasCoverTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="scrappers.CoverTest in scrapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="scrappers.CoverTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="scrapper" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="scrappers.CoverTest" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="scrappers.PageTest" />
+      <option name="MAIN_CLASS_NAME" value="scrappers.PageTest.OpcionTest" />
+      <option name="METHOD_NAME" value="itShouldGetTheCategory" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -703,6 +795,28 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -782,18 +896,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.scrappers in scrapper" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ScrapperTest.itShouldGetAnArticleOfTiempo" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ChihuahuanoticiasCoverTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.scrappers.CoverTest in scrapper" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.dbConnectionTest.itShouldGetAConnection" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ChihuahuanoticiasTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.OpcionTest.itShouldGetTheCategory" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.scrappers in scrapper" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.scrappers.CoverTest in scrapper" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ChihuahuanoticiasCoverTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ScrapperTest.itShouldGetAnArticleOfTiempo" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OpcionTest.itShouldGetTheCategory" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.dbConnectionTest.itShouldGetAConnection" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ChihuahuanoticiasTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.scrappers in scrapper" />
       </list>
     </recent_temporary>
   </component>
@@ -829,35 +943,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="scrappers_CoverTest_in_scrapper - 2016.06.20 at 16h 18m 15s.xml">
-      <configuration name="scrappers.CoverTest in scrapper" configurationId="JUnit" />
+    <history-entry file="OpcionTest_itShouldGetTheCategory - 2016.06.24 at 12h 30m 11s.xml">
+      <configuration name="OpcionTest.itShouldGetTheCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="scrappers_CoverTest_in_scrapper - 2016.06.20 at 16h 19m 00s.xml">
-      <configuration name="scrappers.CoverTest in scrapper" configurationId="JUnit" />
+    <history-entry file="OpcionTest_itShouldGetTheCategory - 2016.06.24 at 12h 31m 42s.xml">
+      <configuration name="OpcionTest.itShouldGetTheCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="scrappers_CoverTest_in_scrapper - 2016.06.20 at 16h 21m 26s.xml">
-      <configuration name="scrappers.CoverTest in scrapper" configurationId="JUnit" />
+    <history-entry file="OpcionTest_itShouldGetTheCategory - 2016.06.24 at 12h 31m 54s.xml">
+      <configuration name="OpcionTest.itShouldGetTheCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="scrappers_CoverTest_in_scrapper - 2016.06.20 at 16h 23m 35s.xml">
-      <configuration name="scrappers.CoverTest in scrapper" configurationId="JUnit" />
+    <history-entry file="OpcionTest_itShouldGetTheCategory - 2016.06.24 at 12h 32m 45s.xml">
+      <configuration name="OpcionTest.itShouldGetTheCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="scrappers_in_scrapper - 2016.06.20 at 16h 23m 50s.xml">
-      <configuration name="scrappers in scrapper" configurationId="JUnit" />
+    <history-entry file="OpcionTest_itShouldGetTheCategory - 2016.06.24 at 12h 33m 19s.xml">
+      <configuration name="OpcionTest.itShouldGetTheCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="scrappers_in_scrapper - 2016.06.20 at 16h 24m 38s.xml">
-      <configuration name="scrappers in scrapper" configurationId="JUnit" />
+    <history-entry file="OpcionTest_itShouldGetTheCategory - 2016.06.24 at 12h 33m 33s.xml">
+      <configuration name="OpcionTest.itShouldGetTheCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="scrappers_in_scrapper - 2016.06.20 at 16h 24m 57s.xml">
-      <configuration name="scrappers in scrapper" configurationId="JUnit" />
+    <history-entry file="dbConnectionTest_itShouldGetAConnection - 2016.06.23 at 18h 18m 31s.xml">
+      <configuration name="dbConnectionTest.itShouldGetAConnection" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="scrappers_in_scrapper - 2016.06.20 at 16h 25m 19s.xml">
-      <configuration name="scrappers in scrapper" configurationId="JUnit" />
+    <history-entry file="dbConnectionTest_itShouldGetAConnection - 2016.06.23 at 18h 18m 37s.xml">
+      <configuration name="dbConnectionTest.itShouldGetAConnection" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="scrappers_in_scrapper - 2016.06.20 at 16h 25m 40s.xml">
-      <configuration name="scrappers in scrapper" configurationId="JUnit" />
+    <history-entry file="dbConnectionTest_itShouldGetAConnection - 2016.06.23 at 18h 20m 58s.xml">
+      <configuration name="dbConnectionTest.itShouldGetAConnection" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="scrappers_in_scrapper - 2016.06.20 at 16h 26m 50s.xml">
-      <configuration name="scrappers in scrapper" configurationId="JUnit" />
+    <history-entry file="dbConnectionTest_itShouldGetAConnection - 2016.06.23 at 18h 21m 26s.xml">
+      <configuration name="dbConnectionTest.itShouldGetAConnection" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -870,14 +984,13 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2841584" sideWeight="0.5255591" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52771086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42168674" sideWeight="0.47870076" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43012047" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42168674" sideWeight="0.47870076" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42891565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -889,6 +1002,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -945,425 +1059,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="1317" column="22" selection-start-line="1317" selection-start-column="22" selection-end-line="1317" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/stubPage/stubParadaDigital.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="782" column="0" selection-start-line="782" selection-start-column="0" selection-end-line="782" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/stubCover/stubParadaDigitalCover.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="1411" column="0" selection-start-line="1411" selection-start-column="0" selection-end-line="1411" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/db/QueryManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="23" column="116" selection-start-line="23" selection-start-column="116" selection-end-line="23" selection-end-column="116" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/OpcionCover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="26" column="5" selection-start-line="17" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#709#710#0" expanded="false" />
-            <element signature="e#756#757#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CronicaCover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/OmniaCover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="42" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/ParadaDigitalCover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/NorteDigitalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/TiempoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/ParadaDigitalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/OpcionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/OmniaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/ChihuahuanoticiasTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/CommonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Chihuahuanoticias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/NorteDigital.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Omnia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Opcion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Segundoasegundo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/ParadaDigital.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Tiempo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="35" column="42" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/stubPage/stubEntreLineas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="762" column="0" selection-start-line="762" selection-start-column="0" selection-end-line="762" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding>
-            <element signature="e#332#340#0" expanded="true" />
-            <element signature="e#623#631#0" expanded="true" />
-            <element signature="e#1011#1012#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/CronicaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/EntreLineasTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2908#2909#0" expanded="true" />
-            <element signature="e#2978#2979#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Cronica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/ChihuahuanoticiasCover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/NorteDigitalCoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OmniaCoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ParadaDigitalCoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/TiempoCoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/NorteDigitalCover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/stubCover/stubEntreLineasCover.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20445">
-          <caret line="1363" column="45" selection-start-line="1363" selection-start-column="45" selection-end-line="1363" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#a#0;n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#a#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#a#15;n#div#1;n#div#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#a#18;n#div#1;n#div#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ins#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#a#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#a#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/HtmlProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Scrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ScrapCover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CronicaCoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CommonCoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ChihuahuanoticiasCoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CoverPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/EntreLineasCover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="94" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/EntreLineasCoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="47" column="126" selection-start-line="47" selection-start-column="126" selection-end-line="47" selection-end-column="126" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/EntreLineas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OpcionCoverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/ScrapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
+        <state relative-caret-position="285">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/VideoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/enums/PagesList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="35" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1373,11 +1072,382 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="195">
-            <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-            <folding />
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Segundoasegundo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/VideoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/ParadaDigital.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/ParadaDigitalCover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/enums/VideoProvidersList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/ParadaDigitalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/TiempoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/stubPage/stubDiario.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10440">
+          <caret line="696" column="18" selection-start-line="696" selection-start-column="18" selection-end-line="696" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/stubCover/stubDiarioCover.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="1337" column="7" selection-start-line="1337" selection-start-column="7" selection-end-line="1337" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/EntreLineasCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="50" column="39" selection-start-line="47" selection-start-column="8" selection-end-line="50" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/NorteDigitalCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OmniaCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CronicaCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/DiarioCover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/EntreLineasCover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/DiarioCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/TiempoCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/enums/PagesList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/HtmlProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Diario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/DiarioTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperCover/CoverPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/NorteDigitalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/NorteDigital.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/EntreLineas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/EntreLineasTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="53" column="401" selection-start-line="53" selection-start-column="401" selection-end-line="53" selection-end-column="401" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/OmniaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Omnia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/OpcionCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/SegundoasegundoCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Tiempo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/CronicaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/CommonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/CommonCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ChihuahuanoticiasCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/CoverTest/ParadaDigitalCoverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Scrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#290#291#0" expanded="false" />
+            <element signature="e#320#321#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/sql/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="1124" column="17" selection-start-line="1124" selection-start-column="17" selection-end-line="1124" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Chihuahuanoticias.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/ChihuahuanoticiasTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DB/dbConnectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scrappers/scrapperPage/Opcion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/scrappers/PageTest/OpcionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+          <folding>
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1874#1875#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/QueryManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/db/ConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="60" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ScrapCover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

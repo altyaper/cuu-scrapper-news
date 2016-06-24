@@ -27,7 +27,7 @@ public class Segundoasegundo extends Article {
     }
 
     public void setContent() {
-        Elements auxtitle = this.html.select(".td-post-content p");
-        this.content = auxtitle.text().trim();
+        Elements aux = this.html.select(".td-post-content p");
+        this.content = aux.text().trim();
     }
 }

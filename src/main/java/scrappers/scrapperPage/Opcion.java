@@ -18,6 +18,7 @@ public class Opcion extends Article {
         setTags();
         setAuthor();
         setVideo();
+        setCategory();
     }
 
     @Override
@@ -49,13 +50,19 @@ public class Opcion extends Article {
     @Override
     public void setContent() {
         Elements aux = this.html.select(".notainner .nnota");
-        this.content = aux.text().trim();
+        this.content = aux.html();
     }
 
     @Override
     public void setAuthor(){
         Elements auxtitle = this.html.select(".nreportero");
         this.author = auxtitle.text().replace("Reportero:  ","").trim();
+    }
+
+    @Override
+    public void setCategory(){
+        Elements aux = this.html.select(".notatop .ncategoria");
+        this.category = aux.text().trim();
     }
 
 }

@@ -3,8 +3,6 @@ package scrappers.scrapperCover;
 import enums.PagesList;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import scrappers.scrapperCover.OpcionCover;
-import scrappers.scrapperPage.ParadaDigital;
 import services.HtmlProcess;
 
 import java.io.IOException;
@@ -15,7 +13,7 @@ import java.util.HashSet;
  */
 public class ParadaDigitalCover extends CoverPage{
     public final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.PARADADIGITAL);
-    public final String regex = new String("\\/?noticias-de-chihuahua-mexico.cfm\\?n=\\d+");
+    public final String regex = new String("\\/noticias-de-chihuahua-mexico.cfm\\?n=\\d+");
 
     public ParadaDigitalCover(HtmlProcess htmlProcess) throws IOException {
         super(page, htmlProcess);

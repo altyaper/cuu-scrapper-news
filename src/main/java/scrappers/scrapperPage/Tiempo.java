@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by echavez on 5/20/16.
  */
-public class Tiempo extends Article{
+public class Tiempo extends Article {
 
     // Builder Design Pattern
     public Tiempo(String url, HtmlProcess htmlProcess) throws IOException {
@@ -24,20 +24,21 @@ public class Tiempo extends Article{
     }
 
     @Override
-    public void setContent(){
+    public void setContent() {
         Elements aux = this.html.select("#article-post div h1");
-        this.content = aux.text().trim();
+        if (!aux.isEmpty())
+            this.content = aux.get(0).html();
     }
 
 
     @Override
-    public void setThumbnail(){
+    public void setThumbnail() {
         Elements aux = this.html.select(".complemento-item .complemento-img");
         this.thumbnail.add(aux.attr("src"));
     }
 
     @Override
-    public void setTags(){
+    public void setTags() {
         Elements aux = this.html.select(".tags a");
         for (int i = 0; i < aux.size(); i++) {
             this.tags.add(aux.get(i).text().toString());

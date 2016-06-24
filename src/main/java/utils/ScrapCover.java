@@ -1,13 +1,11 @@
 package utils;
 
-import db.ConnectionManager;
 import db.QueryManager;
 import scrappers.scrapperCover.*;
-import scrappers.scrapperPage.ParadaDigital;
 import services.HtmlProcess;
 
 import java.io.IOException;
-import java.sql.Connection;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -52,17 +50,20 @@ public class ScrapCover {
         single = new EntreLineasCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
+        single = new DiarioCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
         return  allnews;
     }
 
-    public void scrappAllCovers() throws IOException, SQLException {
+    public void scrappAllCovers() throws IOException, SQLException, URISyntaxException {
 
         HashSet<String> allNews = this.getAllNews();
         this.saveArticles(allNews);
 
     }
 
-    public void saveArticles(HashSet<String > allNews) throws SQLException {
+    public void saveArticles(HashSet<String > allNews) throws SQLException, URISyntaxException {
 
         QueryManager query = new QueryManager();
         query.setTables();
@@ -72,7 +73,9 @@ public class ScrapCover {
             if(!query.existNew(link)){
 
                 Runnable task = () -> {
+
                     Scrapper s = null;
+
                     try {
 
                         s = new Scrapper(link);

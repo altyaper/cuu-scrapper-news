@@ -46,7 +46,6 @@ public class EntreLineasCoverTest implements CommonCoverTest {
     public void itShouldMatchWithRegexPattern() {
 
         String one = "http://entrelineas.com.mx/local/inicia-curso-centro-cultural-universitario-quinta-gameros-y-su-historia/";
-
         assertTrue(cover.isLink(one));
         String two = "http://www.cronicadechihuahua.com/Fuga-de-agua-causada-por-camion-de";
         assertFalse(cover.isLink(two));

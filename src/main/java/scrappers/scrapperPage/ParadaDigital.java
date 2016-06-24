@@ -2,7 +2,6 @@ package scrappers.scrapperPage;
 
 import enums.PagesList;
 import models.Article;
-import models.Page;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
@@ -34,8 +33,8 @@ public class ParadaDigital extends Article {
 
     @Override
     public void setContent() {
-        Elements aux = this.html.select("article .post-content");
-        this.content = aux.text().trim();
+        Elements aux = this.html.select("article .post-content > p");
+        this.content = aux.outerHtml();
     }
 
     @Override

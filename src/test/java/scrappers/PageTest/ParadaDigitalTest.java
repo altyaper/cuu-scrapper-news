@@ -66,7 +66,10 @@ public class ParadaDigitalTest implements CommonTest{
     @Test
     @Override
     public void itShouldGetTheContent() {
-        String content =  "Chihuahua.- Una mujer agarró a pedradas las instalaciones de la Cruz Roja, al parecer por haber sostenido problemas con el servicio. El hecho ocurrió en la delegación norte, ubicada en Paseos de Chihuahua esta madrugada, y la responsable esta detenida. Según se indicó, la mujer lapidó las puertas de cristal, y por fortuna unidades de policía municipal pasaban por el lugar y observaron el hecho deteniéndola. Se indicó que las instalaciones se encontraban cerradas, y no hubo personas lesionadas solo daños materiales. Se indicó que la mujer tenía problemas emocionales, y que tuvo problemas con el servicio.";
+        String content =  "<p>Chihuahua.- Una mujer agarró a pedradas las instalaciones de la Cruz Roja, al parecer por haber sostenido problemas con el servicio.</p>\n" +
+                "<p>El hecho ocurrió en la delegación norte, ubicada en Paseos de Chihuahua esta madrugada, y la responsable esta detenida.<br><br> Según se indicó, la mujer lapidó las puertas de cristal, y por fortuna unidades de policía municipal pasaban por el lugar y observaron el hecho deteniéndola.<br><br> Se indicó que las instalaciones se encontraban cerradas, y no hubo personas lesionadas solo daños materiales.<br><br> Se indicó que la mujer tenía problemas emocionales, y que tuvo problemas con el servicio. </p>\n" +
+                "<p> </p>\n" +
+                "<p></p>";
         assertEquals(content, this.article.getContent());
     }
 }

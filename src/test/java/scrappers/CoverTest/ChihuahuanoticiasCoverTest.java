@@ -7,7 +7,6 @@ import org.junit.Test;
 import scrappers.scrapperCover.ChihuahuanoticiasCover;
 import scrappers.scrapperCover.CoverPage;
 import services.HtmlProcess;
-import sun.tools.asm.Cover;
 
 import java.io.File;
 import java.io.IOException;

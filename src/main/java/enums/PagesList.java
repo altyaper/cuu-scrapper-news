@@ -18,6 +18,8 @@ public class PagesList {
         PARADADIGITAL,
         ENTRELINEAS,
         HERALDO,
+        POLAKA,
+        DIARIO,
         OTHER
     }
 
@@ -35,7 +37,8 @@ public class PagesList {
         rootUrls.put(pages.PARADADIGITAL, "http://www.laparadadigital.com/");
         rootUrls.put(pages.ENTRELINEAS, "http://entrelineas.com.mx/");
         rootUrls.put(pages.HERALDO, "https://www.elheraldodechihuahua.com.mx/");
-
+        rootUrls.put(pages.POLAKA, "http://www.lapolaka.com/");
+        rootUrls.put(pages.DIARIO, "http://eldiariodechihuahua.mx/");
 
         return rootUrls;
     }

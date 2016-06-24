@@ -32,7 +32,7 @@ public class NorteDigital extends Article {
 
     public void setContent() {
         Elements aux = this.html.select(".contenido-nota");
-        this.content = aux.text().trim();
+        this.content = aux.html();
     }
 
     @Override

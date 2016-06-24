@@ -58,15 +58,21 @@ public class NorteDigitalTest implements CommonTest{
 
     }
 
+    @Test
     @Override
     public void itShouldGetTheTitle() {
         assertEquals("Hallan cuerpo en acequia de Senecú", article.getTitle());
 
     }
 
+    @Test
     @Override
     public void itShouldGetTheContent() {
-        assertEquals("Esta tarde el cuerpo de un hombre fue localizado flotando en la acequia ubicada entre las calles Menorca y Camino Real de Senecú. El cadáver se encuentra en estado de descomposición, por lo tanto la identidad de la víctima no fue proporcionada por las autoridades que se presentaron al lugar del hallazgo. Fue necesario que el Heroico Cuerpo de Bomberos acudiera el lugar puesto que el cadáver estaba atorado debajo de un puente.  ", article.getContent());
+        String content = "<p>Esta tarde el cuerpo de un hombre fue localizado flotando en la acequia ubicada entre las calles Menorca y Camino Real de Senecú.</p> \n" +
+                "<p>El cadáver se encuentra en estado de descomposición, por lo tanto la identidad de la víctima no fue proporcionada por las autoridades que se presentaron al lugar del hallazgo.</p> \n" +
+                "<p>Fue necesario que el Heroico Cuerpo de Bomberos acudiera el lugar puesto que el cadáver estaba atorado debajo de un puente.</p> \n" +
+                "<p>&nbsp;</p>";
+        assertEquals(content, article.getContent());
 
     }
 }

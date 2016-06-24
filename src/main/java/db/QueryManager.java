@@ -2,6 +2,7 @@ package db;
 
 import models.Article;
 
+import java.net.URISyntaxException;
 import java.sql.*;
 
 /**
@@ -10,7 +11,7 @@ import java.sql.*;
 public class QueryManager extends ConnectionManager{
 
 
-    public QueryManager() {
+    public QueryManager() throws URISyntaxException {
         this.connection = this.getConnection();
     }
 
@@ -21,13 +22,13 @@ public class QueryManager extends ConnectionManager{
     public void setTables() throws SQLException {
 
         Statement comando = this.connection.createStatement();
-        comando.executeUpdate("CREATE TABLE IF NOT EXISTS news ( new_id INT(255) AUTO_INCREMENT , title VARCHAR(255), content TEXT, url VARCHAR(255) UNIQUE, thumbnail TEXT, author VARCHAR(255), tags VARCHAR(255), PRIMARY KEY (new_id))");
+        comando.executeUpdate("CREATE TABLE IF NOT EXISTS news ( new_id INT(255) AUTO_INCREMENT , title VARCHAR(255), content TEXT, url VARCHAR(255) UNIQUE, category VARCHAR(255), thumbnail TEXT, author VARCHAR(255), tags VARCHAR(255),date VARCHAR(255),created_at TIMESTAMP, PRIMARY KEY (new_id))");
 
     }
 
     public int saveArticle(Article article) throws SQLException {
 
-        String sql =  "INSERT INTO news (title, content, thumbnail, author, tags, url) VALUES(?, ?, ?, ?, ?, ?)";
+        String sql =  "INSERT INTO news (title, content, thumbnail, author, tags, url, date, category) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
         preparedStatement.setString(1, article.getTitle());
@@ -36,6 +37,8 @@ public class QueryManager extends ConnectionManager{
         preparedStatement.setString(4, article.getAuthor());
         preparedStatement.setString(5, article.getTags().toString());
         preparedStatement.setString(6, article.getPageUrl());
+        preparedStatement.setString(7, article.getDate());
+        preparedStatement.setString(8, article.getCategory());
 
         return preparedStatement.executeUpdate();
     }
