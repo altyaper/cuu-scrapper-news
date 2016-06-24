@@ -12,6 +12,7 @@ import java.io.IOException;
 public class Diario extends Article {
     public Diario(String url, HtmlProcess htmlProcessStub) throws IOException {
         super(url, htmlProcessStub);
+        setCategory();
     }
 
     @Override
@@ -33,4 +34,12 @@ public class Diario extends Article {
         Elements aux = this.html.select("#texto_nota");
         this.content = aux.html();
     }
+
+    @Override
+    public void setCategory(){
+        Elements aux = this.html.select(".nota_seccion .center_div1000");
+        this.category = aux.text().trim();
+    }
+
+
 }

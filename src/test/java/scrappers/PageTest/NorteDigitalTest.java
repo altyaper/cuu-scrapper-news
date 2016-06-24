@@ -21,7 +21,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by echavez on 6/14/16.
  */
-public class NorteDigitalTest implements CommonTest{
+public class NorteDigitalTest implements CommonTest {
 
     public String url = "http://nortedigital.mx/hallan-cuerpo-acequia-campestre/";
     public Article article;
@@ -30,9 +30,9 @@ public class NorteDigitalTest implements CommonTest{
     public void setup() throws IOException {
 
         HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubPage/stubNorteDigital.html").toString().replace("file:","");
+        String dir = getClass().getResource("/stubPage/stubNorteDigital.html").toString().replace("file:", "");
         File file = new File(dir);
-        Document document = Jsoup.parse(file, "UTF-8",this.url);
+        Document document = Jsoup.parse(file, "UTF-8", this.url);
         expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
         replay(htmlProcessStub);
 
@@ -41,7 +41,7 @@ public class NorteDigitalTest implements CommonTest{
 
 
     @Test
-    public void itShouldSetTheThumbnailOfTheArticle(){
+    public void itShouldSetTheThumbnailOfTheArticle() {
 
         Set<String> hash = new HashSet<String>();
         hash.add("http://nortedigital.mx/wp-content/uploads/2016/06/senecu.jpg");
@@ -52,7 +52,7 @@ public class NorteDigitalTest implements CommonTest{
 
 
     @Test
-    public void itShouldSetTheAuthorNameOfTheArticle(){
+    public void itShouldSetTheAuthorNameOfTheArticle() {
 
         assertEquals("Héctor Dayer", article.getAuthor());
 
@@ -74,5 +74,22 @@ public class NorteDigitalTest implements CommonTest{
                 "<p>&nbsp;</p>";
         assertEquals(content, article.getContent());
 
+    }
+
+    @Test
+    public void itShouldGetTheTags() {
+
+        Set<String> tags = new HashSet<>();
+        tags.add("Acequia");
+        tags.add("Cadaver");
+        tags.add("Senecu");
+
+        assertEquals(tags, this.article.getTags());
+
+    }
+
+    @Test
+    public void itShouldGetTheCategory() {
+        assertEquals("Juárez", this.article.getCategory());
     }
 }

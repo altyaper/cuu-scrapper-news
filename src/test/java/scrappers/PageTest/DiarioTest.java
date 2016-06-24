@@ -86,6 +86,11 @@ public class DiarioTest implements CommonTest {
 
     }
 
+    @Test
+    public void itShouldGetTheCategory(){
+        assertEquals("Local", this.article.getCategory());
+    }
+
 
 
 }

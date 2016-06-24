@@ -15,6 +15,7 @@ public class Tiempo extends Article {
     public Tiempo(String url, HtmlProcess htmlProcess) throws IOException {
         super(url, htmlProcess);
         setTags();
+        setCategory();
     }
 
     @Override
@@ -43,6 +44,13 @@ public class Tiempo extends Article {
         for (int i = 0; i < aux.size(); i++) {
             this.tags.add(aux.get(i).text().toString());
         }
+    }
+
+    @Override
+    public void setCategory() {
+        Elements aux = this.html.select(".breadcrumb .active");
+        if(!aux.isEmpty())
+            this.category = aux.get(0).text().trim();
     }
 
 }
