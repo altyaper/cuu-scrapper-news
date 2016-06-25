@@ -35,7 +35,8 @@ public class MonitorParral extends Article {
     @Override
     public void setThumbnail() {
         Elements aux = this.html.select(".img-thumbnail");
-        this.thumbnail.add(PagesList.getRootUrls().get(PagesList.pages.MONITORPARRAL) + aux.attr("src").substring(1, aux.attr("src").length()));
+        if(!aux.isEmpty())
+            this.thumbnail.add(PagesList.getRootUrls().get(PagesList.pages.MONITORPARRAL) + aux.attr("src").substring(1, aux.attr("src").length()));
     }
 
     public void setAuthor() {

@@ -108,17 +108,9 @@ public class ScrapCover {
                             System.out.println();
                         }
 
-                    } catch (IOException e) {
-
+                    } catch (Exception e) {
+                        e.printStackTrace();
                         System.out.println("Error: "+e.getMessage());
-
-                    } catch (IndexOutOfBoundsException e) {
-
-                        System.out.println("Error: "+e.getMessage());
-
-                    }catch (SQLException e) {
-
-                        System.out.println("Error : "+e.getMessage());
 
                     }
 
