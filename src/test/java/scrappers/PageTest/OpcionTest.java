@@ -1,28 +1,22 @@
 package scrappers.PageTest;
 
 import models.Article;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
 import scrappers.scrapperPage.Opcion;
 import services.HtmlProcess;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.easymock.EasyMock.createMock;
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.replay;
 import static org.junit.Assert.assertEquals;
 
 
 /**
  * Created by echavez on 5/23/16.
  */
-public class OpcionTest implements CommonTest{
+public class OpcionTest extends StubService implements CommonTest{
 
     public String url = "http://laopcion.com.mx/noticia/140178";
     public Article article;
@@ -30,13 +24,7 @@ public class OpcionTest implements CommonTest{
     @Before
     public void setup() throws IOException {
 
-        HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubPage/stubOpcion.html").toString().replace("file:","");
-        File file = new File(dir);
-        Document document = Jsoup.parse(file, "UTF-8",this.url);
-        expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
-        replay(htmlProcessStub);
-
+        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubPage/stubOpcion.html", this.url);
         this.article = new Opcion(this.url, htmlProcessStub);
 
     }

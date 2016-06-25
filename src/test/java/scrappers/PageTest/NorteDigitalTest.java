@@ -1,27 +1,21 @@
 package scrappers.PageTest;
 
 import models.Article;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
 import scrappers.scrapperPage.NorteDigital;
 import services.HtmlProcess;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.easymock.EasyMock.createMock;
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.replay;
 import static org.junit.Assert.assertEquals;
 
 /**
  * Created by echavez on 6/14/16.
  */
-public class NorteDigitalTest implements CommonTest {
+public class NorteDigitalTest extends StubService implements CommonTest {
 
     public String url = "http://nortedigital.mx/hallan-cuerpo-acequia-campestre/";
     public Article article;
@@ -29,13 +23,7 @@ public class NorteDigitalTest implements CommonTest {
     @Before
     public void setup() throws IOException {
 
-        HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubPage/stubNorteDigital.html").toString().replace("file:", "");
-        File file = new File(dir);
-        Document document = Jsoup.parse(file, "UTF-8", this.url);
-        expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
-        replay(htmlProcessStub);
-
+        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubPage/stubNorteDigital.html", this.url);
         article = new NorteDigital(this.url, htmlProcessStub);
     }
 

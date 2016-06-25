@@ -1,25 +1,21 @@
 package scrappers.PageTest;
 
 import models.Article;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
 import scrappers.scrapperPage.MonitorParral;
 import services.HtmlProcess;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
 import static junit.framework.TestCase.assertEquals;
-import static org.easymock.EasyMock.*;
 
 /**
  * Created by echavez on 6/25/16.
  */
-public class MonitorParralTest implements CommonTest {
+public class MonitorParralTest extends StubService implements CommonTest {
 
     public String url = "http://www.elmonitorparral.com/notas.pl?n=82077";
     public Article article;
@@ -28,13 +24,7 @@ public class MonitorParralTest implements CommonTest {
     @Override
     public void setup() throws IOException {
 
-        HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubPage/stubMonitorParral.html").toString().replace("file:", "");
-        File file = new File(dir);
-        Document document = Jsoup.parse(file, "UTF-8", this.url);
-        expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
-        replay(htmlProcessStub);
-
+        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubPage/stubMonitorParral.html", this.url);
         this.article = new MonitorParral(this.url, htmlProcessStub);
 
     }

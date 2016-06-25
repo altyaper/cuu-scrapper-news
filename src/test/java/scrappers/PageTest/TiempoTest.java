@@ -1,25 +1,21 @@
 package scrappers.PageTest;
 
 import models.Article;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
 import scrappers.scrapperPage.Tiempo;
 import services.HtmlProcess;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.easymock.EasyMock.*;
 import static org.junit.Assert.assertEquals;
 
 /**
  * Created by echavez on 5/21/16.
  */
-public class TiempoTest implements CommonTest {
+public class TiempoTest extends StubService implements CommonTest {
 
     public String url = "http://tiempo.com.mx/noticia/34340-desbandada_en_el_prd_renuncian/1";
     public Article article;
@@ -27,13 +23,7 @@ public class TiempoTest implements CommonTest {
     @Before
     public void setup() throws IOException {
 
-        HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubPage/stubTiempo.html").toString().replace("file:","");
-        File file = new File(dir);
-        Document document = Jsoup.parse(file, "UTF-8",this.url);
-        expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
-        replay(htmlProcessStub);
-
+        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubPage/stubTiempo.html", this.url);
         this.article = new Tiempo(this.url, htmlProcessStub);
     }
 
