@@ -66,7 +66,12 @@ public final class Scrapper {
 
             return new Polaka(url, new HtmlProcess());
 
+        } else if (url.matches(".*elmonitorparral.com.*")) {
+
+            return new MonitorParral(url, new HtmlProcess());
+
         }
+
 
         return null;
     }

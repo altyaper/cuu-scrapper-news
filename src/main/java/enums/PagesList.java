@@ -45,8 +45,8 @@ public class PagesList {
         rootUrls.put(pages.PARADADIGITAL, "http://www.laparadadigital.com/");
         rootUrls.put(pages.ENTRELINEAS, "http://entrelineas.com.mx/");
         rootUrls.put(pages.HERALDO, "https://www.elheraldodechihuahua.com.mx/");
-        rootUrls.put(pages.POLAKA, "http://www.lapolaka.com/");
         rootUrls.put(pages.DIARIO, "http://eldiariodechihuahua.mx/");
+        rootUrls.put(pages.POLAKA, "http://www.lapolaka.com/");
         rootUrls.put(pages.MONITORPARRAL, "http://www.elmonitorparral.com/");
         rootUrls.put(pages.AHORAMISMO, "http://ahoramismo.mx/");
         rootUrls.put(pages.REDNOTICIAS, "http://larednoticias.com.mx/");

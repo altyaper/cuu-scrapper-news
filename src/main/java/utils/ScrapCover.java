@@ -60,6 +60,9 @@ public class ScrapCover {
         single = new PolakaCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
+        single = new MonitorParralCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
         return  allnews;
     }
 
