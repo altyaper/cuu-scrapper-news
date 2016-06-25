@@ -12,6 +12,7 @@ import java.util.HashSet;
  * Created by echavez on 6/20/16.
  */
 public class ParadaDigitalCover extends CoverPage{
+
     public final static String page = (String) PagesList.getRootUrls().get(PagesList.pages.PARADADIGITAL);
     public final String regex = new String("\\/noticias-de-chihuahua-mexico.cfm\\?n=\\d+");
 

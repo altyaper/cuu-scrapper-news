@@ -21,6 +21,13 @@ public class PagesList {
         POLAKA,
         DIARIO,
         MONITORPARRAL,
+        AHORAMISMO,
+        REDNOTICIAS,
+        RADIZA,
+        FUTURO,
+        INFORMACIONTOTAL,
+        PUEBLO,
+        VOZ,
         OTHER
     }
 
@@ -41,6 +48,13 @@ public class PagesList {
         rootUrls.put(pages.POLAKA, "http://www.lapolaka.com/");
         rootUrls.put(pages.DIARIO, "http://eldiariodechihuahua.mx/");
         rootUrls.put(pages.MONITORPARRAL, "http://www.elmonitorparral.com/");
+        rootUrls.put(pages.AHORAMISMO, "http://ahoramismo.mx/");
+        rootUrls.put(pages.REDNOTICIAS, "http://larednoticias.com.mx/");
+        rootUrls.put(pages.RADIZA, "http://www.radiza.mx/");
+        rootUrls.put(pages.FUTURO,"http://www.futuro.mx/");
+        rootUrls.put(pages.INFORMACIONTOTAL, "http://informaciontotal.com.mx/");
+        rootUrls.put(pages.PUEBLO, "http://elpueblo.com/");
+        rootUrls.put(pages.VOZ, "http://vozenred.com/2015/");
 
         return rootUrls;
     }

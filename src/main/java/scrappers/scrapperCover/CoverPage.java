@@ -33,7 +33,6 @@ public abstract class CoverPage {
             String stringLink = link.attr("href");
 
             if(this.isLink(stringLink)){
-
                 auxlinks.add(stringLink);
 
             }

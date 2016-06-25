@@ -50,7 +50,7 @@ public class Tiempo extends Article {
     public void setCategory() {
         Elements aux = this.html.select(".breadcrumb .active");
         if(!aux.isEmpty())
-            this.category = aux.get(0).text().trim();
+                this.category = aux.get(0).text().trim();
     }
 
 }

@@ -57,6 +57,9 @@ public class ScrapCover {
         single = new DiarioCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
+        single = new PolakaCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
         return  allnews;
     }
 

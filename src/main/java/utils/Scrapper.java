@@ -62,6 +62,10 @@ public final class Scrapper {
 
             return new Diario(url, new HtmlProcess());
 
+        } else if (url.matches(".*lapolaka.com.*")) {
+
+            return new Polaka(url, new HtmlProcess());
+
         }
 
         return null;
