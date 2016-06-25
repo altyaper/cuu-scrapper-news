@@ -15,6 +15,7 @@ Included:
 * http://www.lapolaka.com/
 * http://eldiariodechihuahua.mx/
 * http://www.lapolaka.com/
+* http://www.elmonitorparral.com/
 
 Let me know if there is a website that would be nice to added.
 
