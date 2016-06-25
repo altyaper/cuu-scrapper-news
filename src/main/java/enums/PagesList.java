@@ -20,6 +20,7 @@ public class PagesList {
         HERALDO,
         POLAKA,
         DIARIO,
+        MONITORPARRAL,
         OTHER
     }
 
@@ -39,6 +40,7 @@ public class PagesList {
         rootUrls.put(pages.HERALDO, "https://www.elheraldodechihuahua.com.mx/");
         rootUrls.put(pages.POLAKA, "http://www.lapolaka.com/");
         rootUrls.put(pages.DIARIO, "http://eldiariodechihuahua.mx/");
+        rootUrls.put(pages.MONITORPARRAL, "http://www.elmonitorparral.com/");
 
         return rootUrls;
     }

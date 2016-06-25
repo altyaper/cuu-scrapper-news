@@ -11,9 +11,7 @@ import java.sql.SQLException;
  */
 public class Main {
 
-    public static void main(String... strings) throws SQLException, URISyntaxException {
-
-//        Map<String, String> env = System.getenv();
+    public static void main(String... strings) throws SQLException, URISyntaxException, IOException {
 
         ScrapCover scrapCover = new ScrapCover();
         try {
@@ -22,7 +20,6 @@ public class Main {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
-
 
     }
 

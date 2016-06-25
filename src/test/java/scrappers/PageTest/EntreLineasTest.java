@@ -25,23 +25,44 @@ import static org.junit.Assert.assertEquals;
 public class EntreLineasTest implements CommonTest {
 
     private Article article;
+    private Article article2;
     private final String url = "http://entrelineas.com.mx/local/sancionaran-a-conductores-de-uber-no-se-han-acercado-a-la-direccion-de-transporte/";
 
     @Before
     public void setup() throws IOException {
+
         HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
+        HtmlProcess htmlProcessStub2 = createMock(HtmlProcess.class);
+
         String dir = getClass().getResource("/stubPage/stubEntreLineas.html").toString().replace("file:", "");
+        String dir2 = getClass().getResource("/stubPage/stubEntreLineasVideo.html").toString().replace("file:", "");
+
         File file = new File(dir);
+        File file2 = new File(dir2);
+
         Document document = Jsoup.parse(file, "UTF-8", this.url);
+        Document document2 = Jsoup.parse(file2, "UTF-8", this.url);
+
         expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
+        expect(htmlProcessStub2.getHtml(this.url)).andStubReturn(document2);
+
         replay(htmlProcessStub);
+
+        replay(htmlProcessStub2);
+
         this.article = new EntreLineas(this.url, htmlProcessStub);
+        this.article2 = new EntreLineas(this.url, htmlProcessStub2);
     }
 
     @Test
     @Override
     public void itShouldGetTheTitle() {
         assertEquals("Sancionarían a conductores de Über ante falta de concesión; no se han acercado a la Dirección de Transporte", article.getTitle());
+    }
+
+    @Test
+    public void itShouldGetTheTitle2() {
+        assertEquals("Turba en Palacio, presión del PAN para retirar impugnación: Dowell", article2.getTitle());
     }
 
     @Test
@@ -66,5 +87,14 @@ public class EntreLineasTest implements CommonTest {
         thumbnails.add("http://entrelineas.com.mx/wp-content/uploads/2016/06/Gustavo-Morales-570x399.jpg");
 
         assertEquals(thumbnails, article.getThumbnail());
+    }
+
+    @Test
+    public void itShouldGetTheThumbnail2(){
+
+        Set<String> thumbnails = new HashSet<>();
+        thumbnails.add("http://img.youtube.com/vi/GKlDvXkX1QU/sddefault.jpg");
+
+        assertEquals(thumbnails, article2.getThumbnail());
     }
 }

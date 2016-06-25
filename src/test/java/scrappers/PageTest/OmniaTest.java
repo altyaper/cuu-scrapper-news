@@ -41,7 +41,7 @@ public class OmniaTest implements CommonTest{
     }
 
     @Test
-    public void setThumbnail(){
+    public void itShouldGetTheThumbnail(){
         Set<String> thumbnails = new HashSet<String>();
         thumbnails.add("http://mdx.omnia.com.mx/media/fotos/20160616_consuelo.jpg");
         assertEquals(thumbnails,article.getThumbnail());

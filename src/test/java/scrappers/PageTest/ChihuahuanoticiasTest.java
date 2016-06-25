@@ -59,7 +59,13 @@ public class ChihuahuanoticiasTest implements CommonTest{
     @Test
     @Override
     public void itShouldGetTheContent() {
-        assertEquals("El dia de hoy Miguel Riggs síndico electo y su equipo de trabajo se reunió en el Palacio Municipal con Héctor Barraza. Estaremos acercándonos al Síndico para empezar a trabajar tendremos un área de controlaría central muy cercana a la sociedad; no habrá tintes partidistas dijo Miguel Riggs Por más de media hora, Riggs y Barraza acompañados del equipo de la Sindicatura dialogaron a puerta cerrada, pues el perredista le dejó claro al panista que en estos casi tres años se ha trabajado con responsabilidad.", article.getContent());
+
+        assertEquals("<p></p>\n" +
+                "<p>El dia de hoy Miguel Riggs síndico electo y su equipo de trabajo se reunió en el Palacio Municipal con Héctor Barraza.</p>\n" +
+                "<p>Estaremos acercándonos al Síndico para empezar a trabajar tendremos un área de controlaría central muy cercana a la sociedad; no habrá tintes partidistas dijo Miguel Riggs</p>\n" +
+                "<p>Por más de media hora, Riggs y Barraza acompañados del equipo de la Sindicatura dialogaron a puerta cerrada, pues el perredista le dejó claro al panista que en estos casi tres años se ha trabajado con responsabilidad.</p>\n" +
+                "<p class=\"no-break\">    </p>\n" +
+                "<p> </p>", this.article.getContent());
 
     }
 

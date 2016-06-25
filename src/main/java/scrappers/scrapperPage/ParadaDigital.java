@@ -34,7 +34,7 @@ public class ParadaDigital extends Article {
     @Override
     public void setContent() {
         Elements aux = this.html.select("article .post-content > p");
-        this.content = aux.outerHtml();
+        this.content = aux.outerHtml().replace("Descarga nuestra Aplicación móvil", "");
     }
 
     @Override

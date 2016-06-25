@@ -21,12 +21,20 @@ public class EntreLineas extends Article {
         Elements aux = this.html.select(".nota-featured-image img");
         if(!aux.isEmpty()){
             this.thumbnail.add(aux.get(0).attr("src").toString());
+        }else{
+            aux = this.html.select(".nota-featured-image iframe");
+            String src = aux.attr("src");
+            String[] parts = src.split("/");
+            this.thumbnail.add("http://img.youtube.com/vi/"+parts[parts.length-1]+"/sddefault.jpg");
         }
     }
 
     @Override
     public void setTitle() {
         Elements aux = this.html.select(".titulo-nota h1");
+        if(aux.isEmpty()){
+            aux = this.html.select(".titulo-nota-vid h1");
+        }
         this.title = aux.text().trim();
     }
 

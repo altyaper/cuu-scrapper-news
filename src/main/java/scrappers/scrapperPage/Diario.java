@@ -1,6 +1,7 @@
 package scrappers.scrapperPage;
 
 import models.Article;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
@@ -20,6 +21,13 @@ public class Diario extends Article {
         Elements aux = this.html.select("#img_ppal img");
         if(!aux.isEmpty()){
             this.thumbnail.add(aux.get(0).attr("src").toString());
+        }else{
+            aux = this.html.select("meta");
+            for(Element meta: aux){
+                if(meta.attr("property").equals("og:image")){
+                    this.thumbnail.add(meta.attr("content"));
+                }
+            }
         }
     }
 

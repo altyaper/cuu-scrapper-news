@@ -61,4 +61,17 @@ public class QueryManager extends ConnectionManager{
         ResultSet rs = preparedStatement.executeQuery();
         return (rs.next()) ? true : false;
     }
+
+    public int getLastArticle() throws SQLException {
+        String sql =  "SELECT MAX(new_id) AS new_id FROM news;";
+        PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
+        ResultSet rs = preparedStatement.executeQuery(sql);
+
+        while(rs.next()){
+            int lastid = rs.getInt("new_id");
+            return lastid;
+        }
+
+        return 0;
+    }
 }

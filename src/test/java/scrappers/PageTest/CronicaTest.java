@@ -60,7 +60,11 @@ public class CronicaTest implements CommonTest{
     @Test
     @Override
     public void itShouldGetTheContent() {
-        assertEquals("**Es un individuo al que asesinaron a balazos, sujetos que venían a bordo de una camioneta y que lo dejaron tirado en la calle, en la colonia Águilas de Zaragoza. Ciudad Juárez, Chih.- En las calles de la Colonia Águilas de Zaragoza, fue asesinado un sujeto de entre 45 años de edad, quien fue sorprendido por sujetos a bordo de una camioneta quienes abrieron fuego en repetidas ocasiones y dejaron sin vida al sujeto sobre la calle. El sujeto que perdió la vida en el lugar a consecuencia de los múltiples impactos de bala, fue identificado como David Levario de 45 años de edad, quien perdió la vida en cuestión de minutos al recibir varios impactos de bala la parte de la cabeza y en una pierna, según trascendió en el lugar de los hechos. Paramédicos que acudieron al lugar decidieron llevar al sujeto a las instalaciones del la Clínica 66 del Instituto Mexicano del seguro Social, donde finalmente fue reportado como muerto en el lugar. A pesar de que se colocaron retenes y operativos de búsqueda de los agresores, estos escaparon. Con este suceso suman a la fecha 22 crímenes en el mes.".trim(), article.getContent());
+        assertEquals("<p><em>**Es un individuo al que asesinaron a balazos, sujetos que venían a bordo de una camioneta y que lo dejaron tirado en la calle, en la colonia Águilas de Zaragoza.</em></p>\n" +
+                "<p><i>Ciudad Juárez, Chih</i>.- En las calles de la Colonia Águilas de Zaragoza, fue asesinado un sujeto de entre 45 años de edad, quien fue sorprendido por sujetos a bordo de una camioneta quienes abrieron fuego en repetidas ocasiones y dejaron sin vida al sujeto sobre la calle.</p>\n" +
+                "<p>El sujeto que perdió la vida en el lugar a consecuencia de los múltiples impactos de bala, fue identificado como David Levario de 45 años de edad, quien perdió la vida en cuestión de minutos al recibir varios impactos de bala la parte de la cabeza y en una pierna, según trascendió en el lugar de los hechos.</p>\n" +
+                "<p>Paramédicos que acudieron al lugar decidieron llevar al sujeto a las instalaciones del la Clínica 66 del Instituto Mexicano del seguro Social, donde finalmente fue reportado como muerto en el lugar.</p>\n" +
+                "<p>A pesar de que se colocaron retenes y operativos de búsqueda de los agresores, estos escaparon. Con este suceso suman a la fecha 22 crímenes en el mes.</p>", article.getContent());
 
     }
 }

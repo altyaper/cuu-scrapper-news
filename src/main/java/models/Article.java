@@ -32,8 +32,8 @@ public abstract class Article extends WordUtil {
         this.html = htmlProcess.getHtml(pageUrl);
         this.pageUrl = pageUrl;
         setTitle();
-        setContent();
         setThumbnail();
+        setContent();
     }
 
     public HashSet<String> getTags(){

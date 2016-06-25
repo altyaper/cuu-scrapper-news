@@ -31,6 +31,7 @@ public class Cronica extends Article{
 
     public void setContent() {
         Elements aux = this.html.select(".content .col7.articulo > p");
-        this.content = aux.text().replace("¡Sea el primero en escribir un comentario! ---ooOoo---", "").trim();
+        this.content = aux.outerHtml().replace("<p><strong>¡Sea el primero en escribir un comentario!</strong></p>\n" +
+                "<p><small>---ooOoo---</small></p>", "").trim();
     }
 }

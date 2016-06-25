@@ -1,6 +1,7 @@
 package scrappers.scrapperPage;
 
 import models.Article;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
@@ -33,7 +34,18 @@ public class Chihuahuanoticias extends Article {
     @Override
     public void setContent() {
         Elements aux = this.html.select(".entry > p");
-        this.content = aux.text().replace("  Comentarios","").trim();
+        //Clean HTML
+        for (Element element : aux.select("img")) {
+            element.remove();
+        }
+        for (Element element : aux.select("[st_url]")) {
+            element.remove();
+        }
+        for (Element element : aux.select("fb|comments-count")) {
+            element.remove();
+        }
+
+        this.content = aux.outerHtml().replace("Comentarios", "").trim();
     }
 
     public void setCategory() {
@@ -41,7 +53,7 @@ public class Chihuahuanoticias extends Article {
         String[] classes = aux.attr("class").split(" ");
         String categoryclass = null;
         for (int i = 0; i < classes.length; i++) {
-            if(classes[i].matches("category-\\w+")){
+            if (classes[i].matches("category-\\w+")) {
                 String str = classes[i].split("-")[1];
                 categoryclass = str.substring(0, 1).toUpperCase() + str.substring(1);
             }
@@ -55,8 +67,8 @@ public class Chihuahuanoticias extends Article {
         Elements aux = this.html.select(".entry");
         String[] tags = aux.attr("class").split(" ");
         for (int i = 0; i < tags.length; i++) {
-            if(tags[i].matches("tag-.*")){
-                String str = tags[i].replace("tag-","");
+            if (tags[i].matches("tag-.*")) {
+                String str = tags[i].replace("tag-", "");
                 this.tags.add(this.capitalize(str.replaceAll("-", " ")));
             }
         }

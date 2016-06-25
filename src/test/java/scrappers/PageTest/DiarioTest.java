@@ -25,6 +25,7 @@ public class DiarioTest implements CommonTest {
 
 
     private Article article;
+    private Article article2;
     private final String url = "http://eldiariodechihuahua.mx/Local/2016/06/22/detienen-a-100-personas-provienen-algunas-de-oaxaca-y-del-sur-del-pais/";
 
     @Before
@@ -32,12 +33,26 @@ public class DiarioTest implements CommonTest {
     public void setup() throws IOException {
 
         HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
+        HtmlProcess htmlProcessStub2 = createMock(HtmlProcess.class);
+
         String dir = getClass().getResource("/stubPage/stubDiario.html").toString().replace("file:", "");
+        String dir2 = getClass().getResource("/stubPage/stubDiarioVideo.html").toString().replace("file:", "");
+
         File file = new File(dir);
+        File file2 = new File(dir2);
+
         Document document = Jsoup.parse(file, "UTF-8", this.url);
+        Document document2 = Jsoup.parse(file2, "UTF-8", this.url);
+
         expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
+        expect(htmlProcessStub2.getHtml(this.url)).andStubReturn(document2);
+
         replay(htmlProcessStub);
+
+        replay(htmlProcessStub2);
+
         this.article = new Diario(this.url, htmlProcessStub);
+        this.article2 = new Diario(this.url, htmlProcessStub2);
     }
 
     @Test
@@ -50,7 +65,6 @@ public class DiarioTest implements CommonTest {
     public void itShouldGetTheThumbnail() {
         Set<String> thumbnails = new HashSet<>();
         thumbnails.add("http://eldiariodechihuahua.mx/imagesnotas/2016/06/LOC123312635fedf4b_0.jpg");
-
         assertEquals(thumbnails, article.getThumbnail());
     }
 
@@ -91,6 +105,11 @@ public class DiarioTest implements CommonTest {
         assertEquals("Local", this.article.getCategory());
     }
 
-
+    @Test
+    public void itShouldGetTheThumbnail2(){
+        Set<String> thumbnails = new HashSet<>();
+        thumbnails.add("http://eldiariodechihuahua.mx/imagesnotas/2016/06/ESP1233634fb684b0e_0.jpg");
+        assertEquals(thumbnails, this.article2.getThumbnail());
+    }
 
 }
