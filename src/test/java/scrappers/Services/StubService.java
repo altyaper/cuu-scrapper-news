@@ -1,4 +1,4 @@
-package scrappers.PageTest;
+package scrappers.Services;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

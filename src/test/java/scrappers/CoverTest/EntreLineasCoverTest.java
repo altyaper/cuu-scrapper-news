@@ -1,27 +1,22 @@
 package scrappers.CoverTest;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
-import scrappers.scrapperCover.EntreLineasCover;
+import scrappers.Services.StubService;
 import scrappers.scrapperCover.CoverPage;
+import scrappers.scrapperCover.EntreLineasCover;
 import services.HtmlProcess;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
 
-import static org.easymock.EasyMock.createMock;
-import static org.easymock.EasyMock.expect;
-import static org.easymock.EasyMock.replay;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
  * Created by echavez on 6/20/16.
  */
-public class EntreLineasCoverTest implements CommonCoverTest {
+public class EntreLineasCoverTest extends StubService implements CommonCoverTest {
 
     private String url = EntreLineasCover.page;
     private HashSet<String> hash;
@@ -30,13 +25,7 @@ public class EntreLineasCoverTest implements CommonCoverTest {
     @Before
     public void setup() throws IOException {
 
-        HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubCover/stubEntreLineasCover.html").toString().replace("file:","");
-        File file = new File(dir);
-        Document document = Jsoup.parse(file, "UTF-8",this.url);
-        expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
-        replay(htmlProcessStub);
-
+        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubCover/stubEntreLineasCover.html", this.url);
         cover = new EntreLineasCover(htmlProcessStub);
         hash = cover.getArticlesLinks();
     }

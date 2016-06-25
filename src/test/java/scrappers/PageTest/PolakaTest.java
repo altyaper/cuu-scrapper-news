@@ -3,6 +3,7 @@ package scrappers.PageTest;
 import models.Article;
 import org.junit.Before;
 import org.junit.Test;
+import scrappers.Services.StubService;
 import scrappers.scrapperPage.Polaka;
 import services.HtmlProcess;
 

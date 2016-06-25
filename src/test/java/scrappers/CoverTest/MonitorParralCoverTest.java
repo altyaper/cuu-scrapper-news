@@ -1,25 +1,22 @@
 package scrappers.CoverTest;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
+import scrappers.Services.StubService;
 import scrappers.scrapperCover.CoverPage;
 import scrappers.scrapperCover.MonitorParralCover;
 import services.HtmlProcess;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
 
-import static org.easymock.EasyMock.*;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
  * Created by echavez on 6/25/16.
  */
-public class MonitorParralCoverTest implements CommonCoverTest {
+public class MonitorParralCoverTest extends StubService implements CommonCoverTest {
 
     public String url = MonitorParralCover.page;
     private CoverPage cover;
@@ -29,13 +26,7 @@ public class MonitorParralCoverTest implements CommonCoverTest {
     @Override
     public void setup() throws IOException {
 
-        HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubCover/stubMonitorParralCover.html").toString().replace("file:","");
-        File file = new File(dir);
-        Document document = Jsoup.parse(file, "UTF-8",this.url);
-        expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
-        replay(htmlProcessStub);
-
+        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubCover/stubMonitorParralCover.html", this.url);
         cover = new MonitorParralCover(htmlProcessStub);
         hash = cover.getArticlesLinks();
     }

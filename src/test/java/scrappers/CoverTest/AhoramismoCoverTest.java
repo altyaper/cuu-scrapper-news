@@ -3,8 +3,8 @@ package scrappers.CoverTest;
 import org.junit.Before;
 import org.junit.Test;
 import scrappers.Services.StubService;
+import scrappers.scrapperCover.AhoramismoCover;
 import scrappers.scrapperCover.CoverPage;
-import scrappers.scrapperCover.DiarioCover;
 import services.HtmlProcess;
 
 import java.io.IOException;
@@ -14,29 +14,31 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by echavez on 6/23/16.
+ * Created by echavez on 6/25/16.
  */
-public class DiarioCoverTest extends StubService implements CommonCoverTest {
+public class AhoramismoCoverTest extends StubService implements CommonCoverTest {
 
-    private String url = DiarioCover.page;
-    private HashSet<String> hash;
+    public String url = AhoramismoCover.page;
     private CoverPage cover;
+    private HashSet<String> hash;
 
     @Before
+    @Override
     public void setup() throws IOException {
 
-        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubCover/stubDiarioCover.html", this.url);
-        cover = new DiarioCover(htmlProcessStub);
+        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubCover/stubAhoramismoCover.html", this.url);
+        cover = new AhoramismoCover(htmlProcessStub);
         hash = cover.getArticlesLinks();
+
     }
 
     @Test
     @Override
     public void itShouldMatchWithRegexPattern() {
 
-        String one = "http://eldiariodechihuahua.mx/Local/2016/06/22/detienen-a-100-personas-provienen-algunas-de-oaxaca-y-del-sur-del-pais/";
+        String one = "http://ahoramismo.mx/hallan-a-pareja-ejecutada-al-sur-de-la-ciudad/";
         assertTrue(cover.isLink(one));
-        String two = "http://www.eldiariodechihuahua.mx/Local/2016/22/detienen-a-100-personas-provienen-algunas-de-oaxaca-y-del-sur-del-pais/";
+        String two = "http://chihuahuanoticias.com/sdaf/?p=126585";
         assertFalse(cover.isLink(two));
 
     }
@@ -44,6 +46,7 @@ public class DiarioCoverTest extends StubService implements CommonCoverTest {
     @Test
     @Override
     public void itShouldGetAtLeastOneNew() {
+
         assertTrue(hash.size() > 0);
 
     }

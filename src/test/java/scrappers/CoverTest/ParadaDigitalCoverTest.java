@@ -1,25 +1,22 @@
 package scrappers.CoverTest;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
+import scrappers.Services.StubService;
 import scrappers.scrapperCover.CoverPage;
 import scrappers.scrapperCover.ParadaDigitalCover;
 import services.HtmlProcess;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashSet;
 
-import static org.easymock.EasyMock.*;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 /**
  * Created by echavez on 6/20/16.
  */
-public class ParadaDigitalCoverTest implements CommonCoverTest{
+public class ParadaDigitalCoverTest extends StubService implements CommonCoverTest{
 
     public String url = ParadaDigitalCover.page;
     private CoverPage cover;
@@ -28,13 +25,7 @@ public class ParadaDigitalCoverTest implements CommonCoverTest{
     @Before
     public void setup() throws IOException {
 
-        HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
-        String dir = getClass().getResource("/stubCover/stubParadaDigitalCover.html").toString().replace("file:","");
-        File file = new File(dir);
-        Document document = Jsoup.parse(file, "UTF-8",this.url);
-        expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
-        replay(htmlProcessStub);
-
+        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubCover/stubParadaDigitalCover.html", this.url);
         cover = new ParadaDigitalCover(htmlProcessStub);
         hash = cover.getArticlesLinks();
 

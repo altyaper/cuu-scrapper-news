@@ -70,6 +70,10 @@ public final class Scrapper {
 
             return new MonitorParral(url, new HtmlProcess());
 
+        } else if (url.matches(".*ahoramismo.mx.*")) {
+
+            return new Ahoramismo(url, new HtmlProcess());
+
         }
 
 
