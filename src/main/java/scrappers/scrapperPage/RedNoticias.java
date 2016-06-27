@@ -22,8 +22,11 @@ public class RedNoticias extends Article{
     @Override
     public void setThumbnail() {
         String base = (String) PagesList.getRootUrls().get(PagesList.pages.REDNOTICIAS);
-        String src = this.html.select(".head-image img").attr("src");
-        this.thumbnail.add(base+src.substring(1, src.length()));
+        Elements auxe = this.html.select(".head-image img");
+        if(!auxe.isEmpty()){
+            String src = auxe.attr("src");
+            this.thumbnail.add(base+src.substring(1, src.length()));
+        }
     }
 
     @Override

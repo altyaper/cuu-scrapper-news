@@ -17,7 +17,6 @@ Included:
 * http://www.elmonitorparral.com/
 * http://ahoramismo.mx/
 * http://larednoticias.com.mx/
-* http://www.radiza.mx/
 * http://www.futuro.mx/
 * http://informaciontotal.com.mx/
 * http://elpueblo.com/

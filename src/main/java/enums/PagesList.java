@@ -23,7 +23,6 @@ public class PagesList {
         MONITORPARRAL,
         AHORAMISMO,
         REDNOTICIAS,
-        RADIZA,
         FUTURO,
         INFORMACIONTOTAL,
         PUEBLO,
@@ -50,7 +49,6 @@ public class PagesList {
         rootUrls.put(pages.MONITORPARRAL, "http://www.elmonitorparral.com/");
         rootUrls.put(pages.AHORAMISMO, "http://ahoramismo.mx/");
         rootUrls.put(pages.REDNOTICIAS, "http://larednoticias.com.mx/");
-        rootUrls.put(pages.RADIZA, "http://www.radiza.mx/");
         rootUrls.put(pages.FUTURO,"http://www.futuro.mx/");
         rootUrls.put(pages.INFORMACIONTOTAL, "http://informaciontotal.com.mx/");
         rootUrls.put(pages.PUEBLO, "http://elpueblo.com/");
