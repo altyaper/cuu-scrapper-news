@@ -22,7 +22,7 @@ public class QueryManager extends ConnectionManager{
     public void setTables() throws SQLException {
 
         Statement comando = this.connection.createStatement();
-        comando.executeUpdate("CREATE TABLE IF NOT EXISTS news ( new_id INT(255) AUTO_INCREMENT , title VARCHAR(255), content TEXT, url VARCHAR(255) UNIQUE, category VARCHAR(255), thumbnail TEXT, author VARCHAR(255), tags VARCHAR(255),date VARCHAR(255),created_at TIMESTAMP, PRIMARY KEY (new_id))");
+        comando.executeUpdate("CREATE TABLE IF NOT EXISTS news ( id INT(255) AUTO_INCREMENT , title VARCHAR(255), slug VARCHAR(255) UNIQUE, content TEXT, url VARCHAR(255) UNIQUE, category VARCHAR(255), thumbnail TEXT, author VARCHAR(255), tags VARCHAR(255),date VARCHAR(255),created_at TIMESTAMP, updated_at TIMESTAMP, PRIMARY KEY (id))");
 
     }
 
@@ -45,7 +45,7 @@ public class QueryManager extends ConnectionManager{
 
     public int deleteAnArticle(int new_id) throws SQLException {
 
-        String sql = "DELETE FROM new WHERE new_id = ?";
+        String sql = "DELETE FROM new WHERE id = ?";
 
         PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
         preparedStatement.setInt(1, new_id);
@@ -55,7 +55,7 @@ public class QueryManager extends ConnectionManager{
     }
 
     public boolean existNew(String url) throws SQLException {
-        String sql =  "SELECT new_id FROM news WHERE url = ?";
+        String sql =  "SELECT id FROM news WHERE url = ?";
         PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
         preparedStatement.setString(1, url);
         ResultSet rs = preparedStatement.executeQuery();
@@ -63,12 +63,12 @@ public class QueryManager extends ConnectionManager{
     }
 
     public int getLastArticle() throws SQLException {
-        String sql =  "SELECT MAX(new_id) AS new_id FROM news;";
+        String sql =  "SELECT MAX(id) AS id FROM news;";
         PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
         ResultSet rs = preparedStatement.executeQuery(sql);
 
         while(rs.next()){
-            int lastid = rs.getInt("new_id");
+            int lastid = rs.getInt("id");
             return lastid;
         }
 

@@ -7,8 +7,9 @@ import java.io.IOException;
  */
 public interface CommonCoverTest {
 
+    void setup() throws IOException;
     void itShouldMatchWithRegexPattern();
     void itShouldGetAtLeastOneNew();
-    void setup() throws IOException;
+
 
 }

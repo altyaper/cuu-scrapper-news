@@ -46,13 +46,14 @@ public abstract class Article extends WordUtil {
         return thumbnail;
     }
 
+    abstract public void setTitle();
+
     abstract public void setThumbnail();
 
     public String getTitle() {
         return title;
     }
 
-    abstract public void setTitle();
 
     public String getContent() {
         return content;

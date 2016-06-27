@@ -74,6 +74,10 @@ public final class Scrapper {
 
             return new Ahoramismo(url, new HtmlProcess());
 
+        } else if (url.matches(".*larednoticias.com.mx.*")) {
+
+            return new RedNoticias(url, new HtmlProcess());
+
         }
 
 

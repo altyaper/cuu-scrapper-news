@@ -62,6 +62,8 @@ public class ScrapCover {
         single = new AhoramismoCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
+        single = new RedNoticiasCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
         return  allnews;
     }
 
@@ -86,24 +88,25 @@ public class ScrapCover {
                     Scrapper s = null;
 
                     try {
-
+                        System.out.println(link);
                         s = new Scrapper(link);
 
                         System.out.println(s.getArticle().getTitle());
                         System.out.println(s.getArticle().getThumbnail());
                         System.out.println(s.getArticle().getPageUrl());
+                        System.out.println(s.getArticle().getCategory());
+                        System.out.println(s.getArticle().getAuthor());
 
                         if(query.saveArticle(s.getArticle()) == 1 && !s.getArticle().getTitle().equals("")){
 
                             int lastid = query.getLastArticle();
 
 //                            if(lastid != 0){
-//                                URL local = new URL("http://localhost:5000/callback/"+lastid);
+//                                URL local = new URL("http://sevenblocks.herokuapp.com/"+lastid);
 //                                URLConnection yc = local.openConnection();
 //                                BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
 //                            }
 
-                            System.out.println("SAVED!");
                             System.out.println();
                         }
 
