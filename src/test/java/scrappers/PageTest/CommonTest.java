@@ -7,7 +7,7 @@ import java.io.IOException;
  */
 public interface CommonTest {
 
+    void setup() throws IOException;
     void itShouldGetTheTitle();
     void itShouldGetTheContent();
-    void setup() throws IOException;
 }

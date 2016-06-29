@@ -78,6 +78,10 @@ public final class Scrapper {
 
             return new RedNoticias(url, new HtmlProcess());
 
+        } else if (url.matches(".*futuro.mx.*")) {
+
+            return new Futuro(url, new HtmlProcess());
+
         }
 
 

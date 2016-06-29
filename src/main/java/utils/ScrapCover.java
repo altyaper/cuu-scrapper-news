@@ -64,6 +64,9 @@ public class ScrapCover {
 
         single = new RedNoticiasCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
+
+         single = new FuturoCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
         return  allnews;
     }
 
@@ -88,7 +91,6 @@ public class ScrapCover {
                     Scrapper s = null;
 
                     try {
-                        System.out.println(link);
                         s = new Scrapper(link);
 
                         System.out.println(s.getArticle().getTitle());
