@@ -25,6 +25,12 @@ public class ScrapCover {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
+    public QueryManager query = new QueryManager();
+
+    public ScrapCover() throws URISyntaxException, SQLException {
+        query.setTables();
+    }
+
 
     public HashSet<String> getAllNews() throws IOException {
         HashSet<String> allnews = new HashSet<String>();
@@ -65,8 +71,12 @@ public class ScrapCover {
         single = new RedNoticiasCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
-         single = new FuturoCover(new HtmlProcess());
+        single = new FuturoCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
+
+        single = new InformacionTotalCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
         return  allnews;
     }
 
@@ -78,9 +88,6 @@ public class ScrapCover {
     }
 
     public void saveArticles(HashSet<String > allNews) throws SQLException, URISyntaxException {
-
-        QueryManager query = new QueryManager();
-        query.setTables();
 
         for (final String link : allNews) {
 

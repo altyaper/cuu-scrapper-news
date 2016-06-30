@@ -19,24 +19,22 @@ public class ConnectionManager {
         Map<String, String> env = System.getenv();
 
 //        String url = "jdbc:mysql://localhost:8889/nearsoft?autoReconnect=true&serverTimezone=UTC&useSSL=false&useServerPrepStmts=true";
-//        String url = "jdbc:mysql://bd9e4068d77781,9401abbb@us-cdbr-iron-east-04.cleardb.net:3306/heroku_f369fa6d40d0e2d?reconnect=true";
 
-//        URI dbUri = new URI("mysql://bd9e4068d77781:9401abbb@us-cdbr-iron-east-04.cleardb.net/heroku_f369fa6d40d0e2d?reconnect=true");
-//
-//        String username = dbUri.getUserInfo().split(":")[0];
-//        String password = dbUri.getUserInfo().split(":")[1];
-//        String url = "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath();
+//        String username = "bd9e4068d77781";
+//        String password = "9401abbb";
+//        String url = "jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/heroku_f369fa6d40d0e2d";
 
         String url = "jdbc:mysql://localhost:8889/nearsoft?autoReconnect=true&serverTimezone=UTC&useSSL=false&useServerPrepStmts=true";
+        String username = "root";
+        String password = "root";
         Properties props = new Properties();
-        props.setProperty("user","root");
-        props.setProperty("password","root");
-        props.setProperty("ssl","false");
+        props.setProperty("user",username);
+        props.setProperty("password",password);
+        props.setProperty("ssl", "true");
 
         try {
-
-//            this.connection = DriverManager.getConnection(url, username,password);
             this.connection = DriverManager.getConnection(url, props);
+//            this.connection = DriverManager.getConnection(url, props);
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());

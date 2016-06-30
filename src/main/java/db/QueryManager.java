@@ -23,6 +23,8 @@ public class QueryManager extends ConnectionManager{
 
         Statement comando = this.connection.createStatement();
         comando.executeUpdate("CREATE TABLE IF NOT EXISTS news ( id INT(255) AUTO_INCREMENT , title VARCHAR(255), slug VARCHAR(255) UNIQUE, content TEXT, url VARCHAR(255) UNIQUE, category VARCHAR(255), thumbnail TEXT, author VARCHAR(255), tags VARCHAR(255),date VARCHAR(255),created_at TIMESTAMP, updated_at TIMESTAMP, PRIMARY KEY (id))");
+        comando.executeUpdate("CREATE TABLE IF NOT EXISTS favs ( id INT(255) AUTO_INCREMENT, article_id INT(255), profile_id INT(255), created_at TIMESTAMP, updated_at TIMESTAMP, PRIMARY KEY(id))");
+        comando.executeUpdate("CREATE TABLE IF NOT EXISTS users (id INT(255) AUTO_INCREMENT, profile_id INT(255), name VARCHAR(255), username VARCHAR(255), photo VARCHAR(255), created_at TIMESTAMP, updated_at TIMESTAMP, PRIMARY KEY(id))");
 
     }
 

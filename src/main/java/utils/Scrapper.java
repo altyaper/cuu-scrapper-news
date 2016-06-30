@@ -82,6 +82,10 @@ public final class Scrapper {
 
             return new Futuro(url, new HtmlProcess());
 
+        } else if (url.matches(".*informaciontotal.com.mx.*")) {
+
+            return new InformacionTotal(url, new HtmlProcess());
+
         }
 
 
