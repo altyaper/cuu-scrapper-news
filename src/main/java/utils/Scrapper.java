@@ -86,6 +86,10 @@ public final class Scrapper {
 
             return new InformacionTotal(url, new HtmlProcess());
 
+        } else if (url.matches(".*elpueblo.com.*")) {
+
+            return new Pueblo(url, new HtmlProcess());
+
         }
 
 

@@ -27,6 +27,7 @@ public class ConnectionManager {
         String url = "jdbc:mysql://localhost:8889/nearsoft?autoReconnect=true&serverTimezone=UTC&useSSL=false&useServerPrepStmts=true";
         String username = "root";
         String password = "root";
+
         Properties props = new Properties();
         props.setProperty("user",username);
         props.setProperty("password",password);

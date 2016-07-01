@@ -77,6 +77,9 @@ public class ScrapCover {
         single = new InformacionTotalCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
+        single = new PuebloCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
         return  allnews;
     }
 
