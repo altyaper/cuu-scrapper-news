@@ -1,14 +1,30 @@
 package utils;
 
-import db.QueryManager;
-import scrappers.scrapperCover.*;
-import services.HtmlProcess;
-
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Iterator;
+
+import db.QueryManager;
+import scrappers.scrapperCover.AhoramismoCover;
+import scrappers.scrapperCover.ChihuahuanoticiasCover;
+import scrappers.scrapperCover.CoverPage;
+import scrappers.scrapperCover.CronicaCover;
+import scrappers.scrapperCover.DiarioCover;
+import scrappers.scrapperCover.EntreLineasCover;
+import scrappers.scrapperCover.FuturoCover;
+import scrappers.scrapperCover.InformacionTotalCover;
+import scrappers.scrapperCover.MonitorParralCover;
+import scrappers.scrapperCover.NorteDigitalCover;
+import scrappers.scrapperCover.OpcionCover;
+import scrappers.scrapperCover.ParadaDigitalCover;
+import scrappers.scrapperCover.PolakaCover;
+import scrappers.scrapperCover.PuebloCover;
+import scrappers.scrapperCover.RedNoticiasCover;
+import scrappers.scrapperCover.ReferenteCover;
+import scrappers.scrapperCover.TiempoCover;
+import services.HtmlProcess;
 
 /**
  * Created by echavez on 6/17/16.
@@ -80,6 +96,9 @@ public class ScrapCover {
         single = new PuebloCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
+        single = new ReferenteCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
         return  allnews;
     }
 
@@ -91,39 +110,27 @@ public class ScrapCover {
     }
 
     public void saveArticles(HashSet<String > allNews) throws SQLException, URISyntaxException {
-
         for (final String link : allNews) {
-
             if(!query.existNew(link)){
-
                 Runnable task = () -> {
 
                     Scrapper s = null;
-
                     try {
                         s = new Scrapper(link);
 
-                        System.out.println(s.getArticle().getTitle());
-                        System.out.println(s.getArticle().getThumbnail());
-                        System.out.println(s.getArticle().getPageUrl());
-                        System.out.println(s.getArticle().getCategory());
-                        System.out.println(s.getArticle().getAuthor());
+//                        System.out.println(s.getArticle().getTitle());
+//                        System.out.println(s.getArticle().getThumbnail());
+//                        System.out.println(s.getArticle().getPageUrl());
+//                        System.out.println(s.getArticle().getCategory());
+//                        System.out.println(s.getArticle().getAuthor());
 
                         if(query.saveArticle(s.getArticle()) == 1 && !s.getArticle().getTitle().equals("")){
-
-                            int lastid = query.getLastArticle();
-
-//                            if(lastid != 0){
-//                                URL local = new URL("http://sevenblocks.herokuapp.com/"+lastid);
-//                                URLConnection yc = local.openConnection();
-//                                BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-//                            }
-
+                            System.out.println("SAVED!");
                             System.out.println();
                         }
 
                     } catch (Exception e) {
-                        e.printStackTrace();
+//                        e.printStackTrace();
                         System.out.println("Error: "+e.getMessage());
 
                     }

@@ -1,9 +1,13 @@
 package db;
 
-import models.Article;
-
 import java.net.URISyntaxException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import models.Article;
 
 /**
  * Created by echavez on 6/17/16.

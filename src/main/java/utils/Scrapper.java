@@ -1,10 +1,26 @@
 package utils;
 
-import models.Article;
-import scrappers.scrapperPage.*;
-import services.HtmlProcess;
-
 import java.io.IOException;
+
+import models.Article;
+import scrappers.scrapperPage.Ahoramismo;
+import scrappers.scrapperPage.Chihuahuanoticias;
+import scrappers.scrapperPage.Cronica;
+import scrappers.scrapperPage.Diario;
+import scrappers.scrapperPage.EntreLineas;
+import scrappers.scrapperPage.Futuro;
+import scrappers.scrapperPage.InformacionTotal;
+import scrappers.scrapperPage.MonitorParral;
+import scrappers.scrapperPage.NorteDigital;
+import scrappers.scrapperPage.Opcion;
+import scrappers.scrapperPage.ParadaDigital;
+import scrappers.scrapperPage.Polaka;
+import scrappers.scrapperPage.Pueblo;
+import scrappers.scrapperPage.RedNoticias;
+import scrappers.scrapperPage.Referente;
+import scrappers.scrapperPage.Segundoasegundo;
+import scrappers.scrapperPage.Tiempo;
+import services.HtmlProcess;
 
 /**
  * Created by echavez on 5/20/16.
@@ -89,6 +105,10 @@ public final class Scrapper {
         } else if (url.matches(".*elpueblo.com.*")) {
 
             return new Pueblo(url, new HtmlProcess());
+
+        } else if (url.matches(".*referente.mx.*")) {
+
+            return new Referente(url, new HtmlProcess());
 
         }
 

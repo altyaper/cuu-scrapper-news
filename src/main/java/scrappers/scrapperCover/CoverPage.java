@@ -4,10 +4,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import services.HtmlProcess;
 
 import java.io.IOException;
 import java.util.HashSet;
+
+import services.HtmlProcess;
 
 /**
  * Created by echavez on 6/15/16.

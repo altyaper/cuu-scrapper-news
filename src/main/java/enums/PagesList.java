@@ -27,6 +27,7 @@ public class PagesList {
         INFORMACIONTOTAL,
         PUEBLO,
         VOZ,
+        REFERENTE,
         OTHER
     }
 
@@ -53,6 +54,7 @@ public class PagesList {
         rootUrls.put(pages.INFORMACIONTOTAL, "http://informaciontotal.com.mx/");
         rootUrls.put(pages.PUEBLO, "http://elpueblo.com/");
         rootUrls.put(pages.VOZ, "http://vozenred.com/2015/");
+        rootUrls.put(pages.REFERENTE, "http://referente.mx/");
 
         return rootUrls;
     }

@@ -18,24 +18,22 @@ public class ConnectionManager {
 
         Map<String, String> env = System.getenv();
 
+        String username = "bd9e4068d77781";
+        String password = "9401abbb";
+        String url = "jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/heroku_f369fa6d40d0e2d";
+
 //        String url = "jdbc:mysql://localhost:8889/nearsoft?autoReconnect=true&serverTimezone=UTC&useSSL=false&useServerPrepStmts=true";
-
-//        String username = "bd9e4068d77781";
-//        String password = "9401abbb";
-//        String url = "jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/heroku_f369fa6d40d0e2d";
-
-        String url = "jdbc:mysql://localhost:8889/nearsoft?autoReconnect=true&serverTimezone=UTC&useSSL=false&useServerPrepStmts=true";
-        String username = "root";
-        String password = "root";
+//        String username = "root";
+//        String password = "root";g
 
         Properties props = new Properties();
-        props.setProperty("user",username);
-        props.setProperty("password",password);
+        props.setProperty("user", username);
+        props.setProperty("password", password);
         props.setProperty("ssl", "true");
 
         try {
+
             this.connection = DriverManager.getConnection(url, props);
-//            this.connection = DriverManager.getConnection(url, props);
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
