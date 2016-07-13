@@ -17,8 +17,15 @@
       <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.2.1.Final/lib/required/jboss-logging-3.3.0.Final.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.2.1.Final/lib/required/jsr250-api-1.0.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.2.1.Final/lib/jpa-metamodel-generator/hibernate-jpamodelgen-5.2.1.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.2.1.Final/lib/envers/hibernate-envers-5.2.1.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.2.1.Final/lib/osgi/hibernate-osgi-5.2.1.Final.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.2.1.Final/lib/osgi/org.osgi.compendium-4.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.2.1.Final/lib/osgi/org.osgi.core-4.3.1.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.2.1.Final/lib/osgi/org.osgi.compendium-4.3.1.jar!/OSGI-OPT/src" />
+      <root url="jar://$USER_HOME$/Downloads/hibernate-release-5.2.1.Final/lib/osgi/org.osgi.core-4.3.1.jar!/OSGI-OPT/src" />
+    </SOURCES>
   </library>
 </component>

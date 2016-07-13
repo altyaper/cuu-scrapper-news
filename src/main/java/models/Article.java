@@ -2,7 +2,7 @@ package models;
 
 import org.jsoup.nodes.Document;
 import services.HtmlProcess;
-import utils.WordUtil;
+import utils.UtilFunctions;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 /**
  * Created by echavez on 5/20/16.
  */
-public abstract class Article extends WordUtil {
+public abstract class Article extends UtilFunctions {
 
     protected String title;
     protected Set<String> thumbnail = new HashSet<String>();;

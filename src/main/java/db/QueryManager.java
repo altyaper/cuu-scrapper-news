@@ -6,78 +6,55 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.concurrent.ExecutionException;
 
+import hibernate.ArticleModel;
+import hibernate.SessionFactorySingleton;
 import models.Article;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import utils.UtilFunctions;
+
+import static org.osgi.util.measurement.Unit.s;
 
 /**
  * Created by echavez on 6/17/16.
  */
-public class QueryManager extends ConnectionManager{
-
-
-    public QueryManager() throws URISyntaxException {
-        this.connection = this.getConnection();
-    }
-
-    public QueryManager(Connection conn) {
-        this.connection = conn;
-    }
-
-    public void setTables() throws SQLException {
-
-        Statement comando = this.connection.createStatement();
-        comando.executeUpdate("CREATE TABLE IF NOT EXISTS news ( id INT(255) AUTO_INCREMENT , title VARCHAR(255), slug VARCHAR(255) UNIQUE, content TEXT, url VARCHAR(255) UNIQUE, category VARCHAR(255), thumbnail TEXT, author VARCHAR(255), tags VARCHAR(255),date VARCHAR(255),created_at TIMESTAMP, updated_at TIMESTAMP, PRIMARY KEY (id))");
-        comando.executeUpdate("CREATE TABLE IF NOT EXISTS favs ( id INT(255) AUTO_INCREMENT, article_id INT(255), profile_id INT(255), created_at TIMESTAMP, updated_at TIMESTAMP, PRIMARY KEY(id))");
-        comando.executeUpdate("CREATE TABLE IF NOT EXISTS users (id INT(255) AUTO_INCREMENT, profile_id INT(255), name VARCHAR(255), username VARCHAR(255), photo VARCHAR(255), created_at TIMESTAMP, updated_at TIMESTAMP, PRIMARY KEY(id))");
-
-    }
+public class QueryManager{
 
     public int saveArticle(Article article) throws SQLException {
 
-        String sql =  "INSERT INTO news (title, content, thumbnail, author, tags, url, date, category) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+        ArticleModel articleModel = new ArticleModel();
+        articleModel.setTitle(article.getTitle());
+        articleModel.setContent(article.getContent());
+        articleModel.setCreated_at(new Date());
+        articleModel.setUrl(article.getPageUrl());
+        articleModel.setCategory(article.getCategory());
+        articleModel.setAuthor(article.getAuthor());
+        articleModel.setDate(article.getDate());
+        System.out.println(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
+        articleModel.setThumbnail(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
+        articleModel.setTags(UtilFunctions.convertCollectionToString(article.getTags()));
 
-        PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
-        preparedStatement.setString(1, article.getTitle());
-        preparedStatement.setString(2, article.getContent());
-        preparedStatement.setString(3, article.getThumbnail().toString());
-        preparedStatement.setString(4, article.getAuthor());
-        preparedStatement.setString(5, article.getTags().toString());
-        preparedStatement.setString(6, article.getPageUrl());
-        preparedStatement.setString(7, article.getDate());
-        preparedStatement.setString(8, article.getCategory());
+        Session session = SessionFactorySingleton.getInstance().openSession();
 
-        return preparedStatement.executeUpdate();
-    }
-
-    public int deleteAnArticle(int new_id) throws SQLException {
-
-        String sql = "DELETE FROM new WHERE id = ?";
-
-        PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
-        preparedStatement.setInt(1, new_id);
-
-        return preparedStatement.executeUpdate();
-
-    }
-
-    public boolean existNew(String url) throws SQLException {
-        String sql =  "SELECT id FROM news WHERE url = ?";
-        PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
-        preparedStatement.setString(1, url);
-        ResultSet rs = preparedStatement.executeQuery();
-        return (rs.next()) ? true : false;
-    }
-
-    public int getLastArticle() throws SQLException {
-        String sql =  "SELECT MAX(id) AS id FROM news;";
-        PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
-        ResultSet rs = preparedStatement.executeQuery(sql);
-
-        while(rs.next()){
-            int lastid = rs.getInt("id");
-            return lastid;
+        try{
+            session.beginTransaction();
+            session.save(articleModel);
+            session.getTransaction().commit();
+        }catch (HibernateException e){
+            e.printStackTrace();
+        }finally {
+            session.close();
         }
 
-        return 0;
+        // TODO: 7/13/16 Verify if the user was added
+        return 1;
     }
+
+
 }

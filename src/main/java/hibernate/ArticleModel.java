@@ -1,24 +1,61 @@
 package hibernate;
 
+import org.hibernate.annotations.Type;
+
+import java.util.Date;
 import java.util.HashSet;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
-@Table(name="articles")
+@Entity (name="articles")
 public class ArticleModel {
 
     @Id
+    @GeneratedValue
     private int id;
     private String title;
-    private HashSet<String> thumbnail;
+    private String thumbnail;
     private String author;
     private String category;
+    private String date;
+    @Type(type="text")
     private String content;
-    private HashSet<String> tags;
+    private String tags;
     private String url;
+    private Date created_at;
+    private Date updated_at;
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public Date getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(Date created_at) {
+        this.created_at = created_at;
+    }
+
+    public Date getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(Date updated_at) {
+        this.updated_at = updated_at;
+    }
 
     public String getUrl() {
         return url;
@@ -52,28 +89,12 @@ public class ArticleModel {
         this.content = content;
     }
 
-    public HashSet<String> getTags() {
-        return tags;
-    }
-
-    public void setTags(HashSet<String> tags) {
-        this.tags = tags;
-    }
-
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public HashSet<String> getThumbnail() {
-        return thumbnail;
-    }
-
-    public void setThumbnail(HashSet<String> thumbnail) {
-        this.thumbnail = thumbnail;
     }
 
     public String getTitle() {

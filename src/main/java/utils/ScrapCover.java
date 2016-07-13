@@ -3,10 +3,15 @@ package utils;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 
 import db.QueryManager;
+import hibernate.ArticleModel;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import scrappers.scrapperCover.AhoramismoCover;
 import scrappers.scrapperCover.ChihuahuanoticiasCover;
 import scrappers.scrapperCover.CoverPage;
@@ -43,61 +48,58 @@ public class ScrapCover {
 
     public QueryManager query = new QueryManager();
 
-    public ScrapCover() throws URISyntaxException, SQLException {
-        query.setTables();
-    }
 
 
     public HashSet<String> getAllNews() throws IOException {
         HashSet<String> allnews = new HashSet<String>();
-        CoverPage single = new CronicaCover(new HtmlProcess());
+//        CoverPage single = new CronicaCover(new HtmlProcess());
 
-        allnews.addAll(single.getArticlesLinks());
+//        allnews.addAll(single.getArticlesLinks());
 
-        single = new TiempoCover(new HtmlProcess());
+        CoverPage single = new TiempoCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
-
-        single = new NorteDigitalCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new ChihuahuanoticiasCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new OpcionCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new ParadaDigitalCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new EntreLineasCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new DiarioCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new PolakaCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new MonitorParralCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new AhoramismoCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new RedNoticiasCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new FuturoCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new InformacionTotalCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new PuebloCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
-
-        single = new ReferenteCover(new HtmlProcess());
-        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new NorteDigitalCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new ChihuahuanoticiasCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new OpcionCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new ParadaDigitalCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new EntreLineasCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new DiarioCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new PolakaCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new MonitorParralCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new AhoramismoCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new RedNoticiasCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new FuturoCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new InformacionTotalCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new PuebloCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
+//
+//        single = new ReferenteCover(new HtmlProcess());
+//        allnews.addAll(single.getArticlesLinks());
 
         return  allnews;
     }
@@ -110,19 +112,15 @@ public class ScrapCover {
     }
 
     public void saveArticles(HashSet<String > allNews) throws SQLException, URISyntaxException {
+
         for (final String link : allNews) {
-            if(!query.existNew(link)){
-                Runnable task = () -> {
+
+            Runnable task = () -> {
 
                     Scrapper s = null;
                     try {
                         s = new Scrapper(link);
 
-//                        System.out.println(s.getArticle().getTitle());
-//                        System.out.println(s.getArticle().getThumbnail());
-//                        System.out.println(s.getArticle().getPageUrl());
-//                        System.out.println(s.getArticle().getCategory());
-//                        System.out.println(s.getArticle().getAuthor());
 
                         if(query.saveArticle(s.getArticle()) == 1 && !s.getArticle().getTitle().equals("")){
                             System.out.println("SAVED!");
@@ -130,8 +128,8 @@ public class ScrapCover {
                         }
 
                     } catch (Exception e) {
-//                        e.printStackTrace();
-                        System.out.println("Error: "+e.getMessage());
+                        e.printStackTrace();
+//                        System.out.println("Error: "+e.getMessage());
 
                     }
 
@@ -146,7 +144,6 @@ public class ScrapCover {
                     System.out.println("Error: "+e.getMessage());
                 }
 
-            }
         }
 
     }
