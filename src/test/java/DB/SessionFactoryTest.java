@@ -13,14 +13,11 @@ import static org.junit.Assert.assertEquals;
 public class SessionFactoryTest {
 
 
-    private static Logger logger = Logger.getRootLogger();
     private SessionFactorySingleton sone = null, stwo = null;
 
     @Before
     public void setup() {
-        logger.info("getting singleton");
         SessionFactorySingleton sone = new SessionFactorySingleton();
-        logger.info("...got singleton: " + sone);
         SessionFactorySingleton stwo = new SessionFactorySingleton();
     }
 

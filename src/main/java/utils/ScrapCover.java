@@ -52,54 +52,53 @@ public class ScrapCover {
 
     public HashSet<String> getAllNews() throws IOException {
         HashSet<String> allnews = new HashSet<String>();
-//        CoverPage single = new CronicaCover(new HtmlProcess());
+        CoverPage single = new CronicaCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
 
-//        allnews.addAll(single.getArticlesLinks());
-
-        CoverPage single = new TiempoCover(new HtmlProcess());
+        single = new TiempoCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 //
-//        single = new NorteDigitalCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new ChihuahuanoticiasCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new OpcionCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new ParadaDigitalCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new EntreLineasCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new DiarioCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new PolakaCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new MonitorParralCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new AhoramismoCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new RedNoticiasCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new FuturoCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new InformacionTotalCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new PuebloCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
-//
-//        single = new ReferenteCover(new HtmlProcess());
-//        allnews.addAll(single.getArticlesLinks());
+        single = new NorteDigitalCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new ChihuahuanoticiasCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new OpcionCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new ParadaDigitalCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new EntreLineasCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new DiarioCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new PolakaCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new MonitorParralCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new AhoramismoCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new RedNoticiasCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new FuturoCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new InformacionTotalCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new PuebloCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
+
+        single = new ReferenteCover(new HtmlProcess());
+        allnews.addAll(single.getArticlesLinks());
 
         return  allnews;
     }

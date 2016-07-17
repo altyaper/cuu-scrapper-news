@@ -33,12 +33,11 @@ public class QueryManager{
         articleModel.setContent(article.getContent());
         articleModel.setCreated_at(new Date());
         articleModel.setUrl(article.getPageUrl());
-        articleModel.setCategory(article.getCategory());
+//        articleModel.setCategory(article.getCategory());
         articleModel.setAuthor(article.getAuthor());
         articleModel.setDate(article.getDate());
-        System.out.println(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
         articleModel.setThumbnail(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
-        articleModel.setTags(UtilFunctions.convertCollectionToString(article.getTags()));
+//        articleModel.setTags(article.getTags());
 
         Session session = SessionFactorySingleton.getInstance().openSession();
 

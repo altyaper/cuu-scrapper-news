@@ -1,36 +1,59 @@
 package hibernate;
 
+import org.hibernate.annotations.JoinColumnOrFormula;
 import org.hibernate.annotations.Type;
 
-import java.util.Date;
-import java.util.HashSet;
+import java.util.*;
 
 import javax.persistence.*;
 
-@Entity (name="articles")
+@Entity (name = "articles")
 public class ArticleModel {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String title;
     private String thumbnail;
     private String author;
-    private String category;
     private String date;
+
+    public CategoryModel getCategory() {
+        return category;
+    }
+
+    public void setCategory(CategoryModel category) {
+        this.category = category;
+    }
+
+    @OneToOne (cascade = {CascadeType.ALL})
+    private CategoryModel category;
+
     @Type(type="text")
     private String content;
-    private String tags;
+
+    @OneToMany (cascade = {CascadeType.ALL})
+    private Collection<TagModel> tags = new ArrayList<TagModel>();
+
     private String url;
+
     private Date created_at;
     private Date updated_at;
 
-    public void setThumbnail(String thumbnail) {
-        this.thumbnail = thumbnail;
+    public String getThumbnail() {
+        return thumbnail;
     }
 
-    public void setTags(String tags) {
+    public Collection<TagModel> getTags() {
+        return tags;
+    }
+
+    public void setTags(Collection<TagModel> tags) {
         this.tags = tags;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 
     public String getDate() {
@@ -71,14 +94,6 @@ public class ArticleModel {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public String getContent() {
