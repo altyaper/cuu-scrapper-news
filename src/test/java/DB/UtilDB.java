@@ -7,7 +7,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import utils.UtilFunctions;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -35,14 +37,17 @@ public class UtilDB {
         article.setDate("23 de Agosto del 2016");
         article.setUrl("https://dzone.com/articles/testing-databases-junit-and");
 
-        Set<TagModel> tags = new HashSet<>();
-        TagModel tag1 = new TagModel();
-        tag1.setName("Tag 1");
-        tags.add(tag1);
-
-        article.setTags(tags);
-
         return article;
     }
 
+    protected List<TagModel> createTagList() {
+        List<TagModel> tags = new ArrayList<>();
+        TagModel tag1 = new TagModel();
+        TagModel tag2 = new TagModel();
+        tag1.setName("Tag 1");
+        tag2.setName("Tag 2");
+        tags.add(tag1);
+        tags.add(tag2);
+        return tags;
+    }
 }

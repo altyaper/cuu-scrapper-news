@@ -1,6 +1,7 @@
 package hibernate;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -8,11 +9,11 @@ import java.util.Collection;
  * Created by echavez on 7/14/16.
  */
 @Entity
-@Table(name = "tags", catalog = "cuucuu", uniqueConstraints = {
+@Table(name = "tags", uniqueConstraints = {
         @UniqueConstraint(columnNames = "tag_id"),
         @UniqueConstraint(columnNames = "article_id")
 })
-public class TagModel extends AbstractTimestampEntity{
+public class TagModel extends AbstractTimestampEntity implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +23,15 @@ public class TagModel extends AbstractTimestampEntity{
     @Column(nullable = false, unique = true)
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    public ArticleModel getArticles() {
+        return articles;
+    }
+
+    public void setArticles(ArticleModel articles) {
+        this.articles = articles;
+    }
+
+    @ManyToOne
     @JoinColumn(name = "article_id", nullable = false)
     private ArticleModel articles;
 

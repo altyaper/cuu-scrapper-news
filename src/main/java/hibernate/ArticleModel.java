@@ -3,19 +3,17 @@ package hibernate;
 import org.hibernate.annotations.*;
 import utils.UtilFunctions;
 import javax.persistence.*;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "articles", catalog = "cuucuu", uniqueConstraints = {
         @UniqueConstraint(columnNames = "slug")
 })
-public class ArticleModel extends AbstractTimestampEntity{
+public class ArticleModel extends AbstractTimestampEntity implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,8 +35,8 @@ public class ArticleModel extends AbstractTimestampEntity{
 
     private String category;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "articles")
-    private Set<TagModel> tags = new HashSet<>();
+    @OneToMany(mappedBy = "articles")
+    private List<TagModel> tags = new ArrayList<>();
 
     @Type(type="text")
     @Column(nullable = false)
@@ -48,11 +46,11 @@ public class ArticleModel extends AbstractTimestampEntity{
     @Column(unique = true)
     private String url;
 
-    public Set<TagModel> getTags() {
+    public List<TagModel> getTags() {
         return tags;
     }
 
-    public void setTags(Set<TagModel> tags) {
+    public void setTags(List<TagModel> tags) {
         this.tags = tags;
     }
 
