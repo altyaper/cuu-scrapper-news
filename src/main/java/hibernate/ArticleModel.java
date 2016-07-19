@@ -1,23 +1,25 @@
 package hibernate;
 
 import org.hibernate.annotations.*;
-import org.hibernate.annotations.CascadeType;
-import org.hibernate.id.ForeignGenerator;
 import utils.UtilFunctions;
 import javax.persistence.*;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ForeignKey;
 import javax.persistence.Table;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
-@Table(name = "articles")
+@Table(name = "articles", catalog = "cuucuu", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "slug")
+})
 public class ArticleModel extends AbstractTimestampEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "article_id")
+    @Column(name = "article_id",  unique = true, nullable = false)
     private int articleId;
 
     @Column(nullable=false)
@@ -25,7 +27,8 @@ public class ArticleModel extends AbstractTimestampEntity{
 
     private String thumbnail;
 
-    @Column(unique=true, nullable = false)
+
+    @Column(nullable = false)
     private String slug;
 
     private String date;
@@ -34,12 +37,24 @@ public class ArticleModel extends AbstractTimestampEntity{
 
     private String category;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "articles")
+    private Set<TagModel> tags = new HashSet<>();
+
     @Type(type="text")
     @Column(nullable = false)
     private String content;
 
+
     @Column(unique = true)
     private String url;
+
+    public Set<TagModel> getTags() {
+        return tags;
+    }
+
+    public void setTags(Set<TagModel> tags) {
+        this.tags = tags;
+    }
 
     public String getAuthor() {
         return author;
@@ -114,6 +129,7 @@ public class ArticleModel extends AbstractTimestampEntity{
     }
 
     @Override
+    @Transient
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -132,6 +148,7 @@ public class ArticleModel extends AbstractTimestampEntity{
     }
 
     @Override
+    @Transient
     public int hashCode() {
         int result = title != null ? title.hashCode() : 0;
         result = 31 * result + (thumbnail != null ? thumbnail.hashCode() : 0);

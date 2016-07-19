@@ -2,16 +2,26 @@ package DB;
 
 import hibernate.ArticleModel;
 import hibernate.SessionFactorySingleton;
+import hibernate.TagModel;
 import models.Article;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.varia.NullAppender;
 import org.hibernate.PropertyValueException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.exception.ConstraintViolationException;
+import org.jsoup.parser.Tag;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import utils.UtilFunctions;
+
+import javax.swing.text.html.parser.TagElement;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -19,21 +29,14 @@ import static org.junit.Assert.assertNull;
 /**
  * Created by echavez on 7/18/16.
  */
-public class ArticleModelTest {
-
-    private SessionFactory sessionFactory;
-    private Session session = null;
+public class ArticleModelTest extends UtilDB{
 
     @Before
     public void setup() {
+        BasicConfigurator.configure(new NullAppender());
         sessionFactory = this.createSessionFactory();
-        session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-    }
-
-    private SessionFactory createSessionFactory() {
-        SessionFactory sessionFactory = SessionFactorySingleton.getInstance();
-        return sessionFactory;
+        session = this.sessionFactory.openSession();
+        Transaction transaction = this.session.beginTransaction();
     }
 
     @Test
@@ -80,19 +83,7 @@ public class ArticleModelTest {
         assertNull(session.get(ArticleModel.class, 1));
     }
 
-    private ArticleModel createArticle() {
-        ArticleModel article = new ArticleModel();
-        String title = "Titulo";
-        article.setTitle(title);
-        article.setContent("Content");
-        article.setAuthor("Jorge Chavez");
-        article.setSlug(UtilFunctions.makeSlug(title));
-        article.setCategory("Category");
-        article.setThumbnail("https://dzone.com/themes/dz20/images/logo.png");
-        article.setDate("23 de Agosto del 2016");
-        article.setUrl("https://dzone.com/articles/testing-databases-junit-and");
-        return article;
-    }
+
 
     @After
     public void after() {

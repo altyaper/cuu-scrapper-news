@@ -7,27 +7,24 @@ import java.util.Collection;
 /**
  * Created by echavez on 7/14/16.
  */
-@Entity (name = "tags")
+@Entity
+@Table(name = "tags", catalog = "cuucuu", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "tag_id"),
+        @UniqueConstraint(columnNames = "article_id")
+})
 public class TagModel extends AbstractTimestampEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tag_id")
+    @Column(name = "tag_id", unique = true, nullable = true)
     private int tagId;
 
     @Column(nullable = false, unique = true)
     private String name;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "article_id", nullable = false)
     private ArticleModel articles;
-
-    public ArticleModel getArticles() {
-        return articles;
-    }
-
-    public void setArticles(ArticleModel articles) {
-        this.articles = articles;
-    }
 
     public int getTagId() {
         return tagId;
