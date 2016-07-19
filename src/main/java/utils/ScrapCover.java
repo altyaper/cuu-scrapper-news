@@ -57,7 +57,7 @@ public class ScrapCover {
 
         single = new TiempoCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
-//
+
         single = new NorteDigitalCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
 
@@ -127,8 +127,8 @@ public class ScrapCover {
                         }
 
                     } catch (Exception e) {
-                        e.printStackTrace();
-//                        System.out.println("Error: "+e.getMessage());
+//                        e.printStackTrace();
+                        System.out.println("Error: "+e.getMessage());
 
                     }
 

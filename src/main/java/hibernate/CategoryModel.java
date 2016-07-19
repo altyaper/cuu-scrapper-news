@@ -1,26 +1,32 @@
 package hibernate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created by echavez on 7/16/16.
  */
-@Entity (name = "categories")
-public class CategoryModel {
+@Entity
+@Table(name = "categories")
+public class CategoryModel extends AbstractTimestampEntity {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id")
-    private int categoryId;
+    private Long categoryId;
+
+    @Column(nullable = false)
     private String name;
 
-    public int getCategoryId() {
+    @OneToOne
+    @JoinColumn(name = "article_id")
+    private ArticleModel article;
+
+    public Long getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(int categoryId) {
+    public void setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
     }
 

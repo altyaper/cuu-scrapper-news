@@ -1,55 +1,80 @@
 package hibernate;
 
-import org.hibernate.annotations.JoinColumnOrFormula;
-import org.hibernate.annotations.Type;
-
-import java.util.*;
-
+import org.hibernate.annotations.*;
+import org.hibernate.annotations.CascadeType;
+import org.hibernate.id.ForeignGenerator;
+import utils.UtilFunctions;
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
+import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.Collection;
 
-@Entity (name = "articles")
-public class ArticleModel {
+@Entity
+@Table(name = "articles")
+public class ArticleModel extends AbstractTimestampEntity{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "article_id")
+    private int articleId;
+
+    @Column(nullable=false)
     private String title;
+
     private String thumbnail;
-    private String author;
+
+    @Column(unique=true, nullable = false)
+    private String slug;
+
     private String date;
 
-    public CategoryModel getCategory() {
-        return category;
+    private String author;
+
+    private String category;
+
+    @Type(type="text")
+    @Column(nullable = false)
+    private String content;
+
+    @Column(unique = true)
+    private String url;
+
+    public String getAuthor() {
+        return author;
     }
 
-    public void setCategory(CategoryModel category) {
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public int getArticleId() {
+        return articleId;
+    }
+
+    public void setArticleId(int articleId) {
+        this.articleId = articleId;
+    }
+
+    public void setCategory(String category) {
         this.category = category;
     }
 
-    @OneToOne (cascade = {CascadeType.ALL})
-    private CategoryModel category;
+    public String getCategory() {
+        return category;
+    }
 
-    @Type(type="text")
-    private String content;
+    public String getSlug() {
+        return this.slug;
+    }
 
-    @OneToMany (cascade = {CascadeType.ALL})
-    private Collection<TagModel> tags = new ArrayList<TagModel>();
-
-    private String url;
-
-    private Date created_at;
-    private Date updated_at;
+    public void setSlug(String title) {
+        this.slug = UtilFunctions.makeSlug(title);
+    }
 
     public String getThumbnail() {
         return thumbnail;
-    }
-
-    public Collection<TagModel> getTags() {
-        return tags;
-    }
-
-    public void setTags(Collection<TagModel> tags) {
-        this.tags = tags;
     }
 
     public void setThumbnail(String thumbnail) {
@@ -64,36 +89,12 @@ public class ArticleModel {
         this.date = date;
     }
 
-    public Date getCreated_at() {
-        return created_at;
-    }
-
-    public void setCreated_at(Date created_at) {
-        this.created_at = created_at;
-    }
-
-    public Date getUpdated_at() {
-        return updated_at;
-    }
-
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
-    }
-
     public String getUrl() {
         return url;
     }
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public String getContent() {
@@ -104,20 +105,43 @@ public class ArticleModel {
         this.content = content;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ArticleModel that = (ArticleModel) o;
+
+        if (title != null ? !title.equals(that.title) : that.title != null) return false;
+        if (thumbnail != null ? !thumbnail.equals(that.thumbnail) : that.thumbnail != null) return false;
+        if (slug != null ? !slug.equals(that.slug) : that.slug != null) return false;
+        if (date != null ? !date.equals(that.date) : that.date != null) return false;
+        if (author != null ? !author.equals(that.author) : that.author != null) return false;
+        if (category != null ? !category.equals(that.category) : that.category != null) return false;
+        if (content != null ? !content.equals(that.content) : that.content != null) return false;
+        return url != null ? url.equals(that.url) : that.url == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = title != null ? title.hashCode() : 0;
+        result = 31 * result + (thumbnail != null ? thumbnail.hashCode() : 0);
+        result = 31 * result + (slug != null ? slug.hashCode() : 0);
+        result = 31 * result + (date != null ? date.hashCode() : 0);
+        result = 31 * result + (author != null ? author.hashCode() : 0);
+        result = 31 * result + (category != null ? category.hashCode() : 0);
+        result = 31 * result + (content != null ? content.hashCode() : 0);
+        result = 31 * result + (url != null ? url.hashCode() : 0);
+        return result;
     }
 
 }

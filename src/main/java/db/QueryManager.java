@@ -8,9 +8,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.concurrent.ExecutionException;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import hibernate.ArticleModel;
+import hibernate.AuthorModel;
+import hibernate.CategoryModel;
 import hibernate.SessionFactorySingleton;
 import models.Article;
 import org.hibernate.HibernateException;
@@ -31,24 +35,27 @@ public class QueryManager{
         ArticleModel articleModel = new ArticleModel();
         articleModel.setTitle(article.getTitle());
         articleModel.setContent(article.getContent());
-        articleModel.setCreated_at(new Date());
         articleModel.setUrl(article.getPageUrl());
-//        articleModel.setCategory(article.getCategory());
+        articleModel.setCategory(article.getCategory());
+
         articleModel.setAuthor(article.getAuthor());
+
         articleModel.setDate(article.getDate());
         articleModel.setThumbnail(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
-//        articleModel.setTags(article.getTags());
+        articleModel.setSlug(article.getTitle());
 
         Session session = SessionFactorySingleton.getInstance().openSession();
 
         try{
             session.beginTransaction();
-            session.save(articleModel);
+            session.persist(articleModel);
             session.getTransaction().commit();
         }catch (HibernateException e){
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Error: "+e.getMessage());
         }finally {
             session.close();
+            SessionFactorySingleton.getInstance().close();
         }
 
         // TODO: 7/13/16 Verify if the user was added
