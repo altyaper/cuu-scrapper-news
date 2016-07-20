@@ -27,8 +27,13 @@ public class Tiempo extends Article {
     @Override
     public void setContent() {
         Elements aux = this.html.select("#article-post div h1");
-        if (!aux.isEmpty())
+        if (!aux.isEmpty()) {
             this.content = aux.get(0).html();
+        }else {
+            Elements iframe = this.html.select(".video-iframe");
+            this.content = iframe.html();
+        }
+
     }
 
 

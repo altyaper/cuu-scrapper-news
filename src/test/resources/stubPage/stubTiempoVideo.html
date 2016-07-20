@@ -1,0 +1,1126 @@
+
+<!DOCTYPE html >
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="es"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="" lang="es-ES"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"8e9c03e0a0","applicationID":"14356824","transactionName":"c1xbFUBYXlpTQx5IWkJHVAVTRB1YWUVYW1xR","queueTime":0,"applicationTime":190,"agent":""}</script>
+    <script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQQHWFFbCBABUFJXAQkFUg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-963.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script>
+    <title>Controlan mega incendio en el Relleno Sanitario
+        | Tiempo</title>
+    <meta name="keywords" content="Noticias, editorial, minuto a minuto, articulos, tiempo, reportajes, videos, galerias, impacto" />
+    <meta name="description" content="Tiempo - La Noticia Digital.">
+    <meta name="author" content="Tiempo - La Noticia Digital.">
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="http://assets.tiempo.com.mx/assets/favicon-7e4ee21daad613ef8ce4b30faa4579b8db80c6903dafa365f3f50602814e64ae.ico" />
+
+
+
+
+
+    <!-- start:responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- end:responsive web design -->
+
+    <!-- start:google analytics -->
+    <meta name="google-site-verification" content="jnAD4MFdCJuNH9MnniRQu0B3a-UlJBA5jlrflTiEkmk" />
+    <meta name="google-site-verification" content="EJde_4jX1MlaWE_BzQmWXMQFa3pUtz-evRcVanGvDEM" />
+    <!-- end:google analytics -->
+
+    <!-- start:stylesheets & javascripts -->
+    <link rel="stylesheet" media="all" href="http://assets.tiempo.com.mx/assets/periodico/sass/application-829c0b91ebce9f7ea462299ef91a62bd4bc145074c3d7fd1d84f52cf1b62e5c0.css" />
+
+
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="M1/Z8ze1EFmwq2UyEj4pnq7HAazp6yl8maFS6RTHR1+rdBY3BQHTZWObuOluEpgGcGxqy1NU0mZ+4sGnTLMy9Q==" />
+    <!-- end:stylesheets & javascripts -->
+
+    <meta property="fb:app_id" content="966242223397117"/>
+    <meta property="og:type"   content="website" />
+    <meta property="og:url"    content="controlan_mega_incendio_en_el_" />
+
+    <meta property="og:title"  content="Controlan mega incendio en el Relleno Sanitario
+" />
+    <!--meta property="og:image"  content="" /-->
+    <meta property="og:image"  content="http://assets.tiempo.com.mx/assets/default-image-tiempo-eacbaf142fb362b8e67a25906f33d69be6be3cecbef01d94b524282546d72f20.png" />
+    <meta property="og:description" content="Controlan mega incendio en el Relleno Sanitario
+" />
+
+
+</head>
+<body class="theme-light">
+<!-- start:page outer wrap -->
+<div id="page-outer-wrap">
+    <!-- start:page inner wrap -->
+    <div id="page-inner-wrap">
+        <div class="overlayyy"></div>
+
+        <!-- start:page header mobile -->
+        <header id="page-header-mobile" class="header-mobile visible-xs">
+            <!-- Sidebar -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="#">
+                            Tiempo.com.mx
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            Inicio
+                        </a>            </li>
+
+                    <li class="cat-news">
+                        <a href="/seccion/local/1">Local</a>
+                    </li>
+                    <li class="cat-sports">
+                        <a href="/seccion/nacional/1">Nacional</a>
+                    </li>
+                    <li class="cat-lifestyle">
+                        <a href="/seccion/opinion/1">Opinión</a>
+                    </li>
+                    <li class="cat-showtime">
+                        <a href="/seccion/cronos/1">Cronos</a>
+                    </li>
+                    <li class="cat-tech">
+                        <a href="/seccion/espectaculos/1">Espectáculos</a>
+                    </li>
+                    <li class="cat-business">
+                        <a href="/seccion/deportes/1">Deportes</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extra + <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="dropdown-header">Secciones</li>
+                            <li><a href="/seccion/cultura/1">Cultura</a></li>
+                            <li><a href="/seccion/internacional/1">Internacional</a></li>
+                            <li><a href="/seccion/tecnologia/1">Tecnología</a></li>
+                            <li><a href="/seccion/crealo/1">Créalo</a></li>
+                            <li><a href="/seccion/videos/1">Videos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- start:row -->
+            <div class="row">
+
+                <!-- start:col -->
+                <div class="col-xs-6 col-xs-offset-2">
+                    <!-- start:logo -->
+                    <a href="/">
+                        <img alt="Logo" style="width: 400px; margin: 6px auto; display: block;" class="tema-obscuro-logo" src="http://assets.tiempo.com.mx/uploads/configuracion_periodico/imagen/1/logo-tiempo.png" />
+                        <img alt="Logo" style="width: 400px; margin: 6px auto; display: block;" class="tema-claro-logo" src="http://assets.tiempo.com.mx/assets/logo-tiempo-negro-f59aae1118ce2e29e4ce84c5437e0a7e00990f5d3672625adf0329ed6335b9cd.svg" />
+                    </a>
+                    <!-- end:logo -->
+                </div>
+                <!-- end:col -->
+
+                <!-- start:col -->
+                <div class="col-xs-4">
+                    <!-- start:weather -->
+                    <div class="weather-theme-dark mobile">
+                        <div id="TT_tfjwbxYBY1j9EaBA7AVkEkEkktuAMfA2rt1tksioqkD">El tiempo por Tutiempo.net</div>
+                    </div>
+
+                    <div class="weather-theme-light mobile">
+                        <div id="TT_tAjwrxtBt1jcE9aA7AqB2Ahw6tuALfA2rdEYkZyoaEz">El tiempo por Tutiempo.net</div>
+                    </div>
+                    <!-- end:weather -->
+                </div>
+                <!-- end:col -->
+
+            </div>
+            <!-- end:row -->
+        </header>
+
+        <!-- end:page header mobile -->
+
+        <!-- start:page header desktop -->
+        <header id="page-header" class="header-desktop m-b-sm hidden-xs">
+            <div id="header-branding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 visible-md visible-lg ">
+                            <div class="weather-theme-dark">
+                                <div id="TT_vVjgLxtBd1jcE8GA7ArkEkkEE9nA1fAlbYktEcC5a1D">El tiempo por Tutiempo.net</div>
+                            </div>
+
+                            <div class="weather-theme-light">
+                                <div id="TT_RgjgrxtBY1jcEeGA7frxlAxAJ9lAMfAlrdEt1cyIqkj">El tiempo por Tutiempo.net</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <a href="/" class="logo-tiempo">
+                                <img alt="Logo" class="tema-obscuro-logo" src="http://assets.tiempo.com.mx/uploads/configuracion_periodico/imagen/1/logo-tiempo.png" />
+                                <img alt="Logo" class="tema-claro-logo" src="http://assets.tiempo.com.mx/assets/logo-tiempo-negro-f59aae1118ce2e29e4ce84c5437e0a7e00990f5d3672625adf0329ed6335b9cd.svg" />
+                            </a>
+                        </div>
+
+                        <div class="col-md-4 visible-md visible-lg">
+                            <div class="redes-social-header">
+                                <a href="https://www.facebook.com/tiempo" class="social-icon si-small si-light si-rounded si-facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com/tiempo_mx" class="social-icon si-small si-light si-rounded si-twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a href="https://plus.google.com/106954652414417502410/posts" class="social-icon si-small si-light si-rounded si-gplus">
+                                    <i class="icon-gplus"></i>
+                                    <i class="icon-gplus"></i>
+                                </a>
+                                <a href="https://www.youtube.com/user/tiempomx" class="social-icon si-small si-light si-rounded si-youtube">
+                                    <i class="icon-youtube"></i>
+                                    <i class="icon-youtube"></i>
+                                </a>
+                                <a href="http://www.tiempo.com.mx/_newsfeed" class="social-icon si-small si-light si-rounded si-rss">
+                                    <i class="icon-rss"></i>
+                                    <i class="icon-rss"></i>
+                                </a>
+                            </div>
+
+                            <p class="cd-location pull-right"><i class="fa fa-map-marker"></i> Cd. Chihuahua, Chihuahua, México.</p>
+                            <p class="current-date"><i class="fa fa-calendar"></i> Martes 19 de Julio de 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sticky-header" data-spy="affix" data-offset-top="100">
+                <div id="header-navigation"  class="header-tiempo"  >
+                    <div class="container">
+                        <nav id="menu">
+                            <ul class="nav clearfix">
+                                <li class="home">
+                                    <a href="/">
+                                        <span class="glyphicon glyphicon-home"></span>
+                                    </a>                        </li>
+                                <li class="cat-news">
+                                    <a href="/seccion/local/1">Local</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-sports">
+                                    <a href="/seccion/nacional/1">Nacional</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-lifestyle">
+                                    <a href="/seccion/opinion/1">Opinión</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-showtime">
+                                    <a href="/seccion/cronos/1">Cronos</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-tech">
+                                    <a href="/seccion/espectaculos/1">Espectáculos</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-business">
+                                    <a href="/seccion/deportes/1">Deportes</a>
+                                    <!--<div class="subnav-container">
+                                        <ul class="subnav-menu">
+                                            <li class="current">
+                                                <div class="subnav-posts">
+                                                    <#% tipo_noticia.ultimas_noticias(3).each do |noticia| %>
+                                                        <article>
+                                                                <#% if noticia.imagen %>
+                                                                <#% elsif noticia.video %>
+                                                                    <#% if noticia.video.archivo_subido %>
+                                                                    <#% else %>
+                                                                    <#% end %>
+                                                                <#% end %>
+                                                            <#% end %>
+                                                            <h3>
+                                                                    <i class=""></i>
+                                                                <#% end %>
+                                                            </h3>
+                                                        </article>
+                                                    <#% end %>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                </li>
+                                <li class="cat-extra">
+                                    <a href="#">Extra +</a>
+                                    <div class="dropnav-container">
+                                        <ul class="dropnav-menu">
+                                            <li><a href="/seccion/cultura/1">Cultura</a></li>
+                                            <li><a href="/seccion/internacional/1">Internacional</a></li>
+                                            <li><a href="/seccion/tecnologia/1">Tecnología</a></li>
+                                            <li><a href="/seccion/crealo/1">Créalo</a></li>
+                                            <li><a href="/seccion/videos/1">Videos</a></li>
+                                            <!--<li></li>-->
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="cat-temas" id="panel-temas"></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end:page header desktop -->
+
+        <div id='contenedor-resultados-busqueda'></div>
+
+        <!-- start:content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed hidden-sm hidden-md hidden-lg" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+
+            <!--
+# TODO
+# Es necesario checar como llamar js propios de las vistas
+-->
+
+            <!--<div class="container">
+              <div id="page-content" class="clearfix publicidad-content" style="margin-bottom: 20px;">
+                <div class="row">
+                  <div class="col-xs-12 col-md-12">
+                    <article>
+                      <a target="_blank" href="www.google.com">
+                      </a>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+            <div class="container">
+                <!-- start:page content -->
+                <div id="page-content" class="clearfix">
+                    <!-- start:main -->
+                    <div id="main" class="article">
+
+
+
+                        <!-- start:article-post -->
+                        <article id="article-post" class="cat-sports">
+                            <!--<div class="head-image thumb-wrap relative">
+                              <a href="#">
+                                img src="images/dummy/770x470.jpg" width="770" height="470" alt="Responsive image" class="img-responsive" />
+                              </a>
+                              <a href="#" class="theme">
+                                Publicidad
+                              </a>
+                            </div>-->
+
+                            <header>
+                                <ol class="breadcrumb">
+                                    <li><a href="/">Inicio</a></li>
+                                    <li><a href="/">Noticias</a></li>
+                                    <li class="active">Local</li>
+                                </ol>
+                                <h1 style="font-size: 40px; line-height: 40px; margin-bottom: 10px">Controlan mega incendio en el Relleno Sanitario
+                                </h1>
+                            </header>
+
+                            <!--
+                                    <div id="imagenes_galeria" style="margin-bottom: 350px;">
+                                      <ul class="pgwSlider">
+                                            <li>
+                            -->
+                            <!--<p class="text-center"></p>-->
+                            <!--
+                                            </li>
+                                      </ul>
+                                    </div>
+                            -->
+                            <div class="complemento-item youtube-video">
+                                <div class="video-iframe"><iframe width="560" height="315" src="//www.youtube.com/embed/zwGCLCVoRmA?wmode=opaque" frameborder="0"></iframe></div>
+                            </div>
+
+                            <p class="lead">
+                                <blockquote style="padding: 0px">
+                            <p></p>
+                            <footer style="background-color: transparent;"><i class="fa fa-user text-muted" style="color: #444"></i> Por: <a href="" class="m-r-sm"><strong>Cecilia Cortez Magdaleno</strong></a><br/></footer>
+                            <footer style="background-color: transparent;"><i class="fa fa-calendar text-muted" style="color: #444"></i> MARTES 12 DE JULIO DE 2016<br/></footer>
+                            <footer style="background-color: transparent;"><i class="fa fa-clock-o text-muted" style="color: #444"></i> 12:18<br/></footer>
+                            </blockquote>
+                            </p>
+
+                            <p class-lead>
+                            <ul class="share-buttons">
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u="controlan_mega_incendio_en_el_ title="Controlan mega incendio en el Relleno Sanitario
+" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="http://assets.tiempo.com.mx/assets/periodico/Facebook-fadd0e82b4162d374ae3a21ea4d60ac35328835f16667377036e57d8d5e9f321.svg" alt="Facebook fadd0e82b4162d374ae3a21ea4d60ac35328835f16667377036e57d8d5e9f321" /></a></li>
+                                <li><a href="https://twitter.com/intent/tweet?source=controlan_mega_incendio_en_el_&text=Controlan mega incendio en el Relleno Sanitario
+&via=puentelibre" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="http://assets.tiempo.com.mx/assets/periodico/Twitter-3470bf4b2062803a4162e2eed64b9cf6351f0a9952639c31d2d2d402902fce16.svg" alt="Twitter 3470bf4b2062803a4162e2eed64b9cf6351f0a9952639c31d2d2d402902fce16" /></a></li>
+                                <li><a href="https://plus.google.com/share?url=controlan_mega_incendio_en_el_" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="http://assets.tiempo.com.mx/assets/periodico/Google_plus-413089d60ad9877af1b11f1fb3d6d6354890881eaee1d11c94aaccfaafdc6186.svg" alt="Google plus 413089d60ad9877af1b11f1fb3d6d6354890881eaee1d11c94aaccfaafdc6186" /></a></li>
+                                <li><a href="mailto:?subject=&body=controlan_mega_incendio_en_el_" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img src="http://assets.tiempo.com.mx/assets/periodico/Email-3f9f953a6a84e22b1ae5ffe1aaa1684767b9216f08484b8bfb571004aaf2e5e7.svg" alt="Email 3f9f953a6a84e22b1ae5ffe1aaa1684767b9216f08484b8bfb571004aaf2e5e7" /></a></li>
+                                <li><a data-text="Controlan mega incendio en el Relleno Sanitario
+" data-link="http://tiempo.com.mx/noticia/43305-controlan_mega_incendio_en_el_/1" class="whatsapp-icon whatsapp w3_whatsapp_btn w3_whatsapp_btn_x_large"></a></li>
+                            </ul>
+                            <!--<div id="shareIconsCountInside"></div>-->
+                            </p>
+
+
+
+                            <div class="tags m-b-lg l-h-2x">
+                                <a href="/tag/Panal%20del%20Avisp%C3%B3n/1">Panal del Avispón</a>
+                            </div>
+
+
+
+
+
+
+                            <!-- start:article footer -->
+                            <div class="row">
+                                <footer class="footer-noticia-redes col-xs-12 col-md-12" style="background-color: transparent; margin-top: 10px !important;">
+                                    <h2><i class="fa fa-share-alt"></i> Comparte este artículo </h2>
+                                    <div id="fb-root"></div>
+                                    <div id="social-cards" class="social-cards"></div>
+                                </footer>
+                            </div>
+                            <!-- end:article footer -->
+                        </article>
+                        <!-- end:article-post -->
+
+
+                        <div class="">
+                            <a href="javascript:window.print();" class="btn-imprimir-noticia btn btn-sm btn-info col-xs-offset-5 col-md-offset-5" rel="tooltip" data-placement="top" data-original-title="Imprimir Noticia"><i class="fa fa-print"></i></a>
+                        </div>
+
+                        <div class="line line-lg b-b b-light"></div>
+
+                        <section class="news-lay-3 bottom-margin">
+                            <header>
+                                <h2><a href="">Artículos relacionados</a></h2>
+                                <span class="borderline"></span>
+                            </header>
+
+                            <div class="row">
+                            </div>
+                        </section>
+
+                        <!-- ESPACIO GOOGLE ADS -->
+                        <!--<div class="clearfix publicidad-content two-publicidad" style="margin-bottom: 20px; background-color: transparent;">
+                          <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                              <article>
+                                <a target="_blank" href="www.google.com">
+                                </a>
+                              </article>
+                            </div>
+                          </div>
+                        </div>-->
+                        <!-- FIN ESPACIO GOOGLE ADS -->
+
+                    </div>
+                    <!-- end:main -->
+
+                    <!-- start:sidebar -->
+                    <div id="sidebar">
+                        <!-- start:section-module-news -->
+                        <section class="module-news"><!-- top-margin -->
+                            <!-- start:header -->
+                            <header>
+                                <h2>Publicidad</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+                        </section>
+                        <!-- end:section-module-news -->
+
+
+
+                        <div class="ad">
+                            <a class="animation-publicidad" target="_blank" href=" http://folklore.mx/telcel/AperturaCAC7/"><img onclick="click_publicidad_9()" width="300" height="250" alt="Responsive image" class="img-responsive break-img" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/9/Tiempo-300x100_21_DE_JUNIO_2016.gif" /></a>
+                        </div>
+
+
+                        <script>
+                            function click_publicidad_9(){
+
+                                var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/click_publicidad/9",
+                                    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                                    data: null,
+                                    success: function(data) {console.log("Hola")},
+                                    dataType: "json"
+                                });
+                            }
+                        </script>
+
+
+
+                        <div class="ad">
+                            <a class="animation-publicidad" target="_blank" href="http://www.casasatlas.mx/chihuahua/loreto/ "><img onclick="click_publicidad_18()" width="300" height="250" alt="Responsive image" class="img-responsive break-img" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/18/300x100_ultimas_final_18_julio_2016.gif" /></a>
+                        </div>
+
+
+                        <script>
+                            function click_publicidad_18(){
+
+                                var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/click_publicidad/18",
+                                    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                                    data: null,
+                                    success: function(data) {console.log("Hola")},
+                                    dataType: "json"
+                                });
+                            }
+                        </script>
+
+
+
+                        <div class="ad">
+                            <a class="animation-publicidad" target="_blank" href="http://goo.gl/8uykLV"><img onclick="click_publicidad_19()" width="300" height="250" alt="Responsive image" class="img-responsive break-img" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/19/300X100px_JUNIO_JIDOSHA_uber_24_junio_2016.gif" /></a>
+                        </div>
+
+
+                        <script>
+                            function click_publicidad_19(){
+
+                                var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/click_publicidad/19",
+                                    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                                    data: null,
+                                    success: function(data) {console.log("Hola")},
+                                    dataType: "json"
+                                });
+                            }
+                        </script>
+
+
+
+                        <div class="ad">
+                            <a class="animation-publicidad" target="_blank" href="http://casasatlas.mx/chihuahua/monticello-3/"><img onclick="click_publicidad_73()" width="300" height="250" alt="Responsive image" class="img-responsive break-img" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/73/Banner_Monticello_V4_18_julio_2016.gif" /></a>
+                        </div>
+
+
+                        <script>
+                            function click_publicidad_73(){
+
+                                var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/click_publicidad/73",
+                                    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                                    data: null,
+                                    success: function(data) {console.log("Hola")},
+                                    dataType: "json"
+                                });
+                            }
+                        </script>
+
+
+
+                        <!-- start:section-module-quote --ENCUESTA-- -->
+                        <section class="module-photos" style="padding: 20px 0; margin-bottom: 30px;padding: 20px 0;margin-bottom: 30px;margin-left: -25px;padding-left: 25px;margin-right: -25px;padding-right: 25px;background-color: #292D33;border: 1px solid #494F5A;">
+                            <!-- start:header -->
+                            <header>
+                                <h2>Encuesta</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <div id="sup_izq">
+                                <script>
+                                    var votar = function() {
+                                        var radio_seleccion = $("#opciones-encuesta input:radio:checked").attr('value');
+
+                                        if (radio_seleccion == undefined) {
+                                            alert("Seleccione una opción");
+                                        } else {
+                                            $.ajaxSetup({
+                                                beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))}
+                                            });
+                                            $.post("/encuestas/122/votar.js",
+                                                    { 'encuesta': { '122' : radio_seleccion } });
+                                        }
+                                    };
+                                </script>
+
+                                <div id='aplicacion-encuesta122-container' class="encuesta">
+                                    ¿Podrá el Gobierno quitar las concesiones del ViveBús a los dueños?
+                                    <div id="opciones-encuesta">
+                                        <div class="opcion-encuesta checkbox">
+                                            <label>
+                                                <input type="radio" name="radio_encuesta" id="radio_encuesta_400" value="400" class="checkboxs" />
+                                                <span>Seguirá el problema igual</span>
+                                            </label>            </div>
+                                        <div class="opcion-encuesta checkbox">
+                                            <label>
+                                                <input type="radio" name="radio_encuesta" id="radio_encuesta_399" value="399" class="checkboxs" />
+                                                <span>No sé</span>
+                                            </label>            </div>
+                                        <div class="opcion-encuesta checkbox">
+                                            <label>
+                                                <input type="radio" name="radio_encuesta" id="radio_encuesta_398" value="398" class="checkboxs" />
+                                                <span>No, se van a amparar</span>
+                                            </label>            </div>
+                                        <div class="opcion-encuesta checkbox">
+                                            <label>
+                                                <input type="radio" name="radio_encuesta" id="radio_encuesta_397" value="397" class="checkboxs" />
+                                                <span>Sí</span>
+                                            </label>            </div>
+
+
+                                    </div>
+
+                                    <div class="btn-encuesta">
+                                        <input type="submit" id="encuesta_votar" class="btn btn-default btn-primary btn-block" value="Votar" onclick="votar();" />
+
+                                        <!-- TODO: CHECAR PARA VER SI ESTA ESCONDIENDO EL BOTON DE VER RESULTADOS SIN CONTESTAR-->
+                                    </div>
+
+                                    <div id="result" class="bs-chart-container collapse" style="width: 88%;padding: 15px 0;">
+                                        <div>¿Podrá el Gobierno quitar las concesiones del ViveBús a los dueños?</div>
+
+
+                                        <strong>No, se van a amparar (Votos: 889)</strong>
+                                        <!--<strong>No, se van a amparar</strong>-->
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" style="width: 35%; background-color: #439646;">
+                                                <span class="value">35.8%</span>
+                                            </div>
+                                        </div>
+
+                                        <strong>Seguirá el problema igual (Votos: 689)</strong>
+                                        <!--<strong>Seguirá el problema igual</strong>-->
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="27" aria-valuemin="0" style="width: 27%; background-color: #009688;">
+                                                <span class="value">27.8%</span>
+                                            </div>
+                                        </div>
+
+                                        <strong>Sí (Votos: 635)</strong>
+                                        <!--<strong>Sí</strong>-->
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" style="width: 25%; background-color: #f44336;">
+                                                <span class="value">25.6%</span>
+                                            </div>
+                                        </div>
+
+                                        <strong>No sé (Votos: 268)</strong>
+                                        <!--<strong>No sé</strong>-->
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" style="width: 10%; background-color: #439646;">
+                                                <span class="value">10.8%</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!--
+                                                <div class="opcion-encuesta">
+                                                    <span> -- </span>
+                                                </div>
+                                            <div>
+                                            </div>
+
+                                            <div class="btn-encuesta">
+                                                <!- <div class="btn btn-default", onClick="validar_encuesta_contestada();">Votar</div> ->
+
+                                                <div class="ver-resultados">
+                                                    <span class="btn btn-default" style="display: block;" data-toggle="collapse" data-target="#result">Ver Resultados</span>
+                                                    <span class="btn btn-default" style="display: none;">Ocultar Resultados</span>
+                                                </div>
+                                            </div>
+
+                                            <div id="result" class="bs-chart-container collapse" style="width: 88%;padding: 15px 0;">
+                                                <strong>Option 1</strong>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="28" aria-valuemin="0" style="width: 28%; background-color: rgb(85, 230, 106);">
+                                                        <span class="value">28%</span>
+                                                    </div>
+                                                </div>
+                                                <strong>Option 2</strong>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="58" aria-valuemin="0" style="width: 58%; background-color: rgb(30, 181, 245);">
+                                                        <span class="value">58%</span>
+                                                    </div>
+                                                </div>
+                                                <strong>Option 3</strong>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" style="width: 90%; background-color: rgb(250, 68, 68);">
+                                                        <span class="value">90%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    -->
+                                </div>
+
+                                <script>
+                                    function validar_encuesta_contestada(encuesta_id) {
+                                        if (localStorage.getItem('encuesta_' + encuesta_id) == 'true')
+                                            $('#link-btn-encuesta-contestada').click();
+                                        else
+                                            $('#votar-submit-btn').click();
+                                    }
+                                </script>
+
+
+
+                            </div>
+                        </section>
+                        <!-- end:section-module-quote -->
+
+
+
+                        <div class="ad">
+                            <a class="animation-publicidad" target="_blank" href="http://uach.mx/noticias/comunicado_uach_informa/"><img onclick="click_publicidad_104()" width="300" height="250" alt="Responsive image" class="img-responsive break-img" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/104/TIEMPO730X250.gif" /></a>
+                        </div>
+
+
+                        <script>
+                            function click_publicidad_104(){
+
+                                var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/click_publicidad/104",
+                                    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                                    data: null,
+                                    success: function(data) {console.log("Hola")},
+                                    dataType: "json"
+                                });
+                            }
+                        </script>
+
+
+
+                        <div class="ad">
+                            <a class="animation-publicidad" target="_blank" href="http://www.gcc.com/opencms/opencms/es/index.html"><img onclick="click_publicidad_96()" width="300" height="250" alt="Responsive image" class="img-responsive break-img" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/96/Banner_Isoblock_300x100px_El_tiempo-01_15_julio_2016.jpg" /></a>
+                        </div>
+
+
+                        <script>
+                            function click_publicidad_96(){
+
+                                var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/click_publicidad/96",
+                                    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                                    data: null,
+                                    success: function(data) {console.log("Hola")},
+                                    dataType: "json"
+                                });
+                            }
+                        </script>
+
+
+
+
+                        <div class="ad">
+                            <a class="animation-publicidad" target="_blank" href="http://www.logroschihuahua2010-2016.com/"><img onclick="click_publicidad_56()" width="300" height="250" alt="Responsive image" class="img-responsive break-img" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/56/banner_gob_edo_16_marzo_2016.jpg" /></a>
+                        </div>
+
+
+                        <script>
+                            function click_publicidad_56(){
+
+                                var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/click_publicidad/56",
+                                    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                                    data: null,
+                                    success: function(data) {console.log("Hola")},
+                                    dataType: "json"
+                                });
+                            }
+                        </script>
+
+
+
+                        <!-- start:section-module-quote --SUSCRIPTOR-- -->
+                        <section class="module-photos hidden-xs" style="margin-top: 20px;"> <!--section-encuesta-->
+                            <!-- start:header -->
+                            <header>
+                                <h2>Nuevo Suscriptor</h2>
+                                <span class="borderline"></span>
+                            </header>
+                            <!-- end:header -->
+
+                            <div id="inf_der">
+
+                                <div class="wrapper-md">
+                                    <div class="panel-suscriptor">
+                                        <!--<div class="panel-heading">
+                                          <strong></strong>
+                                        </div>-->
+
+                                        <div class="panel-body">
+                                            <form class="bs-example form-horizontal" id="new_suscriptor" action="/suscriptores" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="+ld4+DV/8iAhZT7DxLSsEzX8dlHFScwSKalv5LKrQhZifLc8B8sxHPJV4xi4mB2L61cdNn/2NwjO6vyq6t83vA==" />
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="suscriptor_nombre">Nombre</label>
+                                                    <div class="col-lg-9">
+                                                        <input class="form-control" placeholder="Nombre" required="required" type="text" name="suscriptor[nombre]" id="suscriptor_nombre" />
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="suscriptor_correo">Correo</label>
+                                                    <div class="col-lg-9">
+                                                        <input class="form-control" placeholder="Correo electrónico" type="text" name="suscriptor[correo]" id="suscriptor_correo" />
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <div class="col-lg-offset-3 col-lg-9">
+                                                        <input type="submit" name="commit" value="Suscribirme" class="btn btn-default btn-primary btn-block btn-suscriptor" />
+                                                    </div>
+                                                </div>
+
+                                            </form>          </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </section>
+                        <!-- end:section-module-quote -->
+
+
+
+                        <div class="ad">
+                            <a class="animation-publicidad" target="_blank" href="tiempo.comx"><img onclick="click_publicidad_88()" width="300" height="250" alt="Responsive image" class="img-responsive break-img" src="http://assets.tiempo.com.mx/uploads/publicidad/imagen/88/TIEMPO-300X100_27_de_mayo_2016.gif" /></a>
+                        </div>
+
+
+                        <script>
+                            function click_publicidad_88(){
+
+                                var AUTH_TOKEN = $('meta[name=csrf-token]').attr('content');
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/click_publicidad/88",
+                                    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+                                    data: null,
+                                    success: function(data) {console.log("Hola")},
+                                    dataType: "json"
+                                });
+                            }
+                        </script>
+
+
+
+
+
+
+                        <!-- advertising google ads-->
+                        <!--<div class="ad">
+                          <header>
+                            <h2>Google Ads</h2>
+                            <span class="borderline"></span>
+                          </header>
+                          <a href="">
+                            &lt;!&ndash;<img src="/assets/periodico/dummy/banner_300x250.png" width="300" height="250" alt="">&ndash;&gt;
+                          </a>
+                        </div>-->
+                        <!-- end:advertising -->
+
+
+
+                    </div>
+                    <!-- end:sidebar -->
+                </div>
+                <!-- end:page content -->
+
+            </div>
+            <!-- end:container -->
+
+
+            <!-- footer:page footer -->
+            <footer id="page-footer">
+
+                <!-- start:container -->
+                <div class="container">
+
+                    <nav id="foot-menu" class="hidden-xs">
+                        <ul class="clearfix">
+                            <li class="home current"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+                            <li class="cat-news">
+                                <a href="/seccion/local/1">Local</a>
+                            </li>
+                            <li class="cat-sports">
+                                <a href="/seccion/nacional/1">Nacional</a>
+                            </li>
+                            <li class="cat-lifestyle">
+                                <a href="/seccion/opinion/1">Opinión</a>
+                            </li>
+                            <li class="cat-showtime">
+                                <a href="/seccion/cronos/1">Cronos</a>
+                            </li>
+                            <li class="cat-tech">
+                                <a href="/seccion/espectaculos/1">Espectáculos</a>
+                            </li>
+                            <li class="cat-business">
+                                <a href="/seccion/deportes/1">Deportes</a>
+                            </li>
+                            <li class="cat-extra">
+                                <a href="/seccion/cultura/1">Cultura</a>
+                            </li>
+                            <li class="cat-news">
+                                <a href="/seccion/internacional/1">Internacional</a>
+                            </li>
+                            <li class="cat-sports">
+                                <a href="/seccion/tecnologia/1">Tecnología</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- start:row -->
+                    <div class="about row">
+
+                        <!-- start:col -->
+                        <div class="col-sm-12 col-md-3">
+                            <!--<h3><a href="#"><img src="/assets/logo_tiempo.png" alt="Weekly News" width="240" /></a></h3>-->
+                            <h3><img alt="rss feed" width="240" src="http://assets.tiempo.com.mx/uploads/configuracion_periodico/imagen/1/logo-tiempo.png" /></h3>
+
+                        </div>
+                        <!-- end:col -->
+
+                        <!-- start:col -->
+                        <div class="col-sm-6 col-md-5">
+                            <h4>Nosotros</h4>
+                            <p>Periódico digital en tiempo real con información preferentemente del estado de Chihuahua y diversas secciones.
+                                En línea desde el 10 de marzo de 1998, pionero en su tipo en el mundo.</p>
+                            <a href="https://www.facebook.com/tiempo"><i class="fa fa-twitter fa-lg"></i></a>
+                            <a href="https://twitter.com/tiempo_mx"><i class="fa fa-facebook-square fa-lg"></i></a>
+                            <a href="https://plus.google.com/106954652414417502410/posts"><i class="fa fa-google-plus-square fa-lg"></i></a>
+                            <a href="https://www.youtube.com/user/tiempomx"><i class="fa fa-youtube fa-lg"></i></a>
+                        </div>
+                        <!-- end:col -->
+
+                        <!-- start:col -->
+                        <div class="col-sm-6 col-md-4">
+                            <h4 class="info-adicional">Información Adicional</h4>
+                            <ul>
+                                <li><a href="#"><span>Director General:</span> Felipe de Jesús Fierro Alvídrez</a></li>
+                                <li><a href="#"><span>Director Editorial:</span> Miguel Fierro Serna </a></li>
+                                <li><a href="#"><span>Gerente:</span> Mario Rosales Espinoza </a></li>
+                                <li><a href="#"><span>Tel:</span> </a></li>
+                                <li><a href="#"><span>Dirección:</span>  </a></li>
+                                <li><a href="#"><span>Ciudad:</span> Chihuahua, Chih. México.</a></li>
+                                <li><a href="#"><span>Email:</span> tiempo@tiempo.com.mx</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="copyright row">
+                        <div class="col-sm-6">
+                            &copy; <a href="#"> Tiempo.com.mx  </a> 2015. Todos los derechos reservados
+                        </div>
+                        <!-- end:col -->
+
+                        <!-- start:col -->
+                        <!-- <div class="col-sm-6 text-right">
+                           Producido por <a href="">TimeTeam</a>.
+                         </div>-->
+                        <!-- end:col -->
+
+                    </div>
+                    <!-- end:row -->
+                </div>
+                <!-- end:container -->
+
+            </footer>
+
+
+
+        </div>
+
+        <!-- end:content -->
+    </div>
+    <!-- end:page inner wrap -->
+</div>
+<!-- end:page outer wrap -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">¡ADVERTENCIA!</h4>
+            </div>
+            <div class="modal-body">
+                <h4>Este es el portal oficial de tiempo.com.mx, detecamos que provienes de una página clonada.</h4>
+                <h4>Te ofrecemos una disculpa por estas molestias que están fuera de nuestro alcance.</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- start:google analytics -->
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-69765623-1', 'auto'); //auto
+    ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+<!-- end:google analytics -->
+<script src="http://assets.tiempo.com.mx/assets/periodico/application-7646dd363b37e5ddf4d7a919222c7ed9fdbbc33c1629708716babdcf5b67b7f7.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("img").lazyload();
+    });
+</script>
+
+
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_tfjwbxYBY1j9EaBA7AVkEkEkktuAMfA2rt1tksioqkD"></script>
+
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_tAjwrxtBt1jcE9aA7AqB2Ahw6tuALfA2rdEYkZyoaEz"></script>
+
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_vVjgLxtBd1jcE8GA7ArkEkkEE9nA1fAlbYktEcC5a1D"></script>
+
+<script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_RgjgrxtBY1jcEeGA7frxlAxAJ9lAMfAlrdEt1cyIqkj"></script>
+
+</body>
+</html>
+
+
+
+
+

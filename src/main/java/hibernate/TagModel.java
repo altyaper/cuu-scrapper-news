@@ -1,5 +1,7 @@
 package hibernate;
 
+import utils.UtilFunctions;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,14 +12,13 @@ import java.util.Collection;
  */
 @Entity
 @Table(name = "tags", uniqueConstraints = {
-        @UniqueConstraint(columnNames = "tag_id"),
-        @UniqueConstraint(columnNames = "article_id")
+        @UniqueConstraint(columnNames = "tag_id")
 })
 public class TagModel extends AbstractTimestampEntity implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tag_id", unique = true, nullable = true)
+    @Column(name = "tag_id", unique = true)
     private int tagId;
 
     @Column(nullable = false, unique = true)
@@ -26,6 +27,16 @@ public class TagModel extends AbstractTimestampEntity implements Serializable{
     public ArticleModel getArticles() {
         return articles;
     }
+
+    public String getSlug() {
+        return slug;
+    }
+
+    private void setSlug(String slug) {
+        this.slug = UtilFunctions.makeSlug(slug);
+    }
+
+    private String slug;
 
     public void setArticles(ArticleModel articles) {
         this.articles = articles;
@@ -48,6 +59,7 @@ public class TagModel extends AbstractTimestampEntity implements Serializable{
     }
 
     public void setName(String name) {
+        this.setSlug(name);
         this.name = name;
     }
 }

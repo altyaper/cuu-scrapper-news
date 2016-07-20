@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
 
@@ -21,7 +22,11 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.exception.ConstraintViolationException;
+import org.hibernate.query.Query;
 import utils.UtilFunctions;
+
+import javax.persistence.PersistenceException;
 
 import static org.osgi.util.measurement.Unit.s;
 
@@ -30,6 +35,15 @@ import static org.osgi.util.measurement.Unit.s;
  */
 public class QueryManager{
 
+    public boolean articleExist(String url){
+        SessionFactory sessionFactory = SessionFactorySingleton.getInstance();
+        Session session = sessionFactory.openSession();
+        String hql = "FROM ArticleModel WHERE url = '"+url+"'";
+        Query query = session.createQuery(hql);
+        List results = query.list();
+        return !results.isEmpty();
+    }
+
     public int saveArticle(Article article) throws SQLException {
 
         ArticleModel articleModel = new ArticleModel();
@@ -37,30 +51,35 @@ public class QueryManager{
         articleModel.setContent(article.getContent());
         articleModel.setUrl(article.getPageUrl());
         articleModel.setCategory(article.getCategory());
-
         articleModel.setAuthor(article.getAuthor());
-
         articleModel.setDate(article.getDate());
+        articleModel.setUrl(article.getPageUrl());
+        System.out.println(article.getPageUrl());
         articleModel.setThumbnail(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
-        articleModel.setSlug(article.getTitle());
-
         Session session = SessionFactorySingleton.getInstance().openSession();
 
         try{
             session.beginTransaction();
             session.persist(articleModel);
             session.getTransaction().commit();
-        }catch (HibernateException e){
-//            e.printStackTrace();
+        }catch (ConstraintViolationException e) {
+            // TODO: 7/20/16 Handle duplicated slug
+            System.out.println(articleModel);
             System.out.println("Error: "+e.getMessage());
+        }catch (HibernateException e) {
+            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
+        }catch (PersistenceException e){
+//            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }finally {
             session.close();
-            SessionFactorySingleton.getInstance().close();
         }
 
-        // TODO: 7/13/16 Verify if the user was added
+        // TODO: 7/13/16 Verify if the user was added correcly
         return 1;
     }
+
 
 
 }

@@ -58,8 +58,9 @@ public class ArticleModelTest extends UtilDB{
     public void itShouldNotAddDuplicateArticles() {
         ArticleModel articleOne = this.createArticle();
         ArticleModel articleTwo = this.createArticle();
-        session.save(articleOne);
-        session.save(articleTwo);
+        session.persist(articleOne);
+        session.persist(articleTwo);
+        session.getTransaction().commit();
         assertNull(session.get(ArticleModel.class, 1));
     }
 
@@ -80,7 +81,8 @@ public class ArticleModelTest extends UtilDB{
         articleTwo.setSlug(slug);
         session.save(articleOne);
         session.save(articleTwo);
-        assertNull(session.get(ArticleModel.class, 1));
+        ArticleModel expected = session.get(ArticleModel.class, 1);
+        assertNull(expected);
     }
 
 

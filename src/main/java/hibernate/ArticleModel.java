@@ -10,23 +10,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "articles", catalog = "cuucuu", uniqueConstraints = {
-        @UniqueConstraint(columnNames = "slug")
-})
+@Table(name = "articles")
 public class ArticleModel extends AbstractTimestampEntity implements Serializable{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "article_id",  unique = true, nullable = false)
     private int articleId;
 
     @Column(nullable=false)
     private String title;
 
+    @Type(type = "text")
     private String thumbnail;
 
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String slug;
 
     private String date;
@@ -123,6 +122,7 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
     }
 
     public void setTitle(String title) {
+        this.setSlug(title);
         this.title = title;
     }
 
@@ -159,4 +159,18 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
         return result;
     }
 
+    @Override
+    public String toString() {
+        return "ArticleModel{" +
+                "articleId=" + articleId +
+                ", title='" + title + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
+                ", slug='" + slug + '\'' +
+                ", date='" + date + '\'' +
+                ", author='" + author + '\'' +
+                ", category='" + category + '\'' +
+                ", content='" + content + '\'' +
+                ", url='" + url + '\'' +
+                '}';
+    }
 }

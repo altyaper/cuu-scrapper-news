@@ -17,21 +17,21 @@ import java.util.Set;
  */
 public class UtilDB {
 
-    protected SessionFactory sessionFactory;
-    protected Session session = null;
+    SessionFactory sessionFactory;
+    Session session = null;
 
-    protected SessionFactory createSessionFactory() {
+    SessionFactory createSessionFactory() {
         SessionFactory sessionFactory = SessionFactorySingleton.getInstance();
         return sessionFactory;
     }
 
-    protected ArticleModel createArticle() {
+    ArticleModel createArticle() {
+
         ArticleModel article = new ArticleModel();
         String title = "Titulo";
         article.setTitle(title);
         article.setContent("Content");
         article.setAuthor("Jorge Chavez");
-        article.setSlug(UtilFunctions.makeSlug(title));
         article.setCategory("Category");
         article.setThumbnail("https://dzone.com/themes/dz20/images/logo.png");
         article.setDate("23 de Agosto del 2016");

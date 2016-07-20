@@ -21,7 +21,11 @@ public class UtilFunctions {
         for(String element: collection){
             aux.append(element + ", ");
         }
-        return aux.substring(0,aux.length()-2);
+        if(!aux.toString().isEmpty()){
+            return aux.substring(0,aux.length()-2);
+        }
+        return null;
+
     }
 
     public static String makeSlug(String input) {
