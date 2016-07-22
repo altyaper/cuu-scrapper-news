@@ -2,6 +2,7 @@ package models;
 
 import enums.VideoProvidersList;
 
+import javax.persistence.Embedded;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

@@ -7,6 +7,7 @@ import scrappers.Services.StubService;
 import scrappers.scrapperPage.Tiempo;
 import services.HtmlProcess;
 
+import javax.persistence.Table;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,14 +19,25 @@ import static org.junit.Assert.assertEquals;
  */
 public class TiempoTest extends StubService implements CommonTest {
 
-    public String url = "http://tiempo.com.mx/noticia/34340-desbandada_en_el_prd_renuncian/1";
-    public Article article;
+    private final String url = "http://tiempo.com.mx/noticia/34340-desbandada_en_el_prd_renuncian/1";
+    private Article article;
+    private Article articleVideo;
+    private HtmlProcess htmlProcessStub;
 
     @Before
     public void setup() throws IOException {
 
-        HtmlProcess htmlProcessStub = this.getAndSetStub("/stubPage/stubTiempo.html", this.url);
+        htmlProcessStub = this.getAndSetStub("/stubPage/stubTiempo.html", this.url);
         this.article = new Tiempo(this.url, htmlProcessStub);
+
+    }
+
+    @Test
+    public void itShouldAddTheIframeWhenIsAVideo() throws IOException {
+        this.htmlProcessStub = this.getAndSetStub("/stubPage/stubTiempoVideo.html", this.url);
+        this.articleVideo = new Tiempo(this.url, htmlProcessStub);
+        String expected = "<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/zwGCLCVoRmA?wmode=opaque\" frameborder=\"0\"></iframe>";
+        assertEquals(this.articleVideo.getContent(), expected);
     }
 
     @Test

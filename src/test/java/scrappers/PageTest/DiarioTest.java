@@ -71,29 +71,29 @@ public class DiarioTest implements CommonTest {
     @Test
     @Override
     public void itShouldGetTheContent() {
-        String content = "<em><strong>Chihuahua, Chih.-</strong></em> La Fiscalía General informa en torno a los hechos que se registraron durante este miércoles al exterior de Palacio de Gobierno en donde un grupo de personas se manifestaron de manera violenta; agentes de la Policía Estatal Única actuaron conforme a los protocolos de seguridad con la activación de un operativo de contención ante la serie agresiones que se suscitaron.\n" +
-                "<br>\n" +
-                "<br> La actuación de los elementos de la Policía Estatal fue con la finalidad de resguardar el edificio sede del Poder Ejecutivo del Estado y la seguridad de las personas que ahí se encontraban laborando, misma protección que se brindó a los comercios aledaños y particulares, de la misma manera se desalojó a un grupo de alumnos de nivel básico que visitaban el Museo Casa Chihuahua para proteger su integridad.\n" +
-                "<br>\n" +
-                "<br> Los elementos de la Policía en sus distintas divisiones participaron de acuerdo al marco de la Ley, aplicando las técnicas correspondientes y atendiendo los disturbios civiles.\n" +
-                "<br>\n" +
-                "<br> De acuerdo a los reportes policiacos, desde temprana hora, doscientos cincuenta personas se aglutinaron en el cruce de las avenidas Aldama y Libertad, posteriormente iniciaron los actos de vandalismo en el recinto histórico, generando daños en ventanas, cristales, paredes y puertas.\n" +
-                "<br>\n" +
+        String content = "<em><strong>Chihuahua, Chih.-</strong></em> La Fiscalía General informa en torno a los hechos que se registraron durante este miércoles al exterior de Palacio de Gobierno en donde un grupo de personas se manifestaron de manera violenta; agentes de la Policía Estatal Única actuaron conforme a los protocolos de seguridad con la activación de un operativo de contención ante la serie agresiones que se suscitaron. \n" +
                 "<br> \n" +
-                "<strong>Lo anterior dejó como saldo:</strong>\n" +
-                "<br>\n" +
-                "<br> * 100 personas detenidas, algunas de ellas provenientes de Oaxaca y otros estados del sur del país, por los delitos de daños, lesiones, sedición y motín. A uno de los manifestantes detenidos se le aseguró una arma de fuego calibre .380 marca Glock, por lo cual, está representación social lleva a cabo las investigaciones en torno a la procedencia de la misma.\n" +
-                "<br>\n" +
-                "<br> * 18 Agentes de la Policía Estatal Única lesionados; uno de ellos con una fractura de gravedad en la región cefálica.\n" +
-                "<br>\n" +
-                "<br> * Tres unidades vandalizadas de las cuales fueron sustraídas del interior de las patrullas dañadas, cuatro armas de fuego de alto poder, dos armas largas calibre .223 automáticas y dos pistolas calibre .9mm\n" +
-                "<br>\n" +
-                "<br> * De la misma manera son evaluados los daños ocasionados al edificio de Palacio de Gobierno, el cual es patrimonio histórico cultural, en tanto que el Instituto Nacional de Antropología e Historia (INAH) rendirá un informe sobre los mismos, y presentará la respectiva querella.\n" +
-                "<br>\n" +
-                "<br> La Fiscalía General del Estado, continuará con las investigaciones pertinentes para determinar la responsabilidad de quienes participaron en estos hechos a través de la revisión de diversas evidencias que se tienen como: testimoniales, materiales fotográficos y videos.\n" +
-                "<br>\n" +
-                "<br> La Policía Estatal Única mantiene una alerta máxima ante la posibilidad de que se presenten nuevas agresiones a inmuebles o a civiles.\n" +
-                "<br>\n" +
+                "<br> La actuación de los elementos de la Policía Estatal fue con la finalidad de resguardar el edificio sede del Poder Ejecutivo del Estado y la seguridad de las personas que ahí se encontraban laborando, misma protección que se brindó a los comercios aledaños y particulares, de la misma manera se desalojó a un grupo de alumnos de nivel básico que visitaban el Museo Casa Chihuahua para proteger su integridad. \n" +
+                "<br> \n" +
+                "<br> Los elementos de la Policía en sus distintas divisiones participaron de acuerdo al marco de la Ley, aplicando las técnicas correspondientes y atendiendo los disturbios civiles. \n" +
+                "<br> \n" +
+                "<br> De acuerdo a los reportes policiacos, desde temprana hora, doscientos cincuenta personas se aglutinaron en el cruce de las avenidas Aldama y Libertad, posteriormente iniciaron los actos de vandalismo en el recinto histórico, generando daños en ventanas, cristales, paredes y puertas. \n" +
+                "<br> \n" +
+                "<br> \n" +
+                "<strong>Lo anterior dejó como saldo:</strong> \n" +
+                "<br> \n" +
+                "<br> * 100 personas detenidas, algunas de ellas provenientes de Oaxaca y otros estados del sur del país, por los delitos de daños, lesiones, sedición y motín. A uno de los manifestantes detenidos se le aseguró una arma de fuego calibre .380 marca Glock, por lo cual, está representación social lleva a cabo las investigaciones en torno a la procedencia de la misma. \n" +
+                "<br> \n" +
+                "<br> * 18 Agentes de la Policía Estatal Única lesionados; uno de ellos con una fractura de gravedad en la región cefálica. \n" +
+                "<br> \n" +
+                "<br> * Tres unidades vandalizadas de las cuales fueron sustraídas del interior de las patrullas dañadas, cuatro armas de fuego de alto poder, dos armas largas calibre .223 automáticas y dos pistolas calibre .9mm \n" +
+                "<br> \n" +
+                "<br> * De la misma manera son evaluados los daños ocasionados al edificio de Palacio de Gobierno, el cual es patrimonio histórico cultural, en tanto que el Instituto Nacional de Antropología e Historia (INAH) rendirá un informe sobre los mismos, y presentará la respectiva querella. \n" +
+                "<br> \n" +
+                "<br> La Fiscalía General del Estado, continuará con las investigaciones pertinentes para determinar la responsabilidad de quienes participaron en estos hechos a través de la revisión de diversas evidencias que se tienen como: testimoniales, materiales fotográficos y videos. \n" +
+                "<br> \n" +
+                "<br> La Policía Estatal Única mantiene una alerta máxima ante la posibilidad de que se presenten nuevas agresiones a inmuebles o a civiles. \n" +
+                "<br> \n" +
                 "<br>";
 
         assertEquals(content, this.article.getContent());

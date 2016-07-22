@@ -1,7 +1,9 @@
 package scrappers.scrapperPage;
 
 import models.Article;
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
+import org.jsoup.safety.Whitelist;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
@@ -40,7 +42,7 @@ public class Diario extends Article {
     @Override
     public void setContent() {
         Elements aux = this.html.select("#texto_nota");
-        this.content = aux.html();
+        this.content = Jsoup.clean(aux.html(), Whitelist.basic());
     }
 
     @Override

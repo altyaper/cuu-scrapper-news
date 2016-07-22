@@ -3,10 +3,18 @@ package utils;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 import db.QueryManager;
+import hibernate.ArticleModel;
+import hibernate.SessionFactorySingleton;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import scrappers.scrapperCover.AhoramismoCover;
 import scrappers.scrapperCover.ChihuahuanoticiasCover;
 import scrappers.scrapperCover.CoverPage;
@@ -31,27 +39,23 @@ import services.HtmlProcess;
  */
 public class ScrapCover {
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
+    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String ANSI_BLACK = "\u001B[30m";
+    private static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_GREEN = "\u001B[32m";
+    private static final String ANSI_YELLOW = "\u001B[33m";
+    private static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
-    public QueryManager query = new QueryManager();
-
-    public ScrapCover() throws URISyntaxException, SQLException {
-        query.setTables();
-    }
+    private final QueryManager query = new QueryManager();
 
 
-    public HashSet<String> getAllNews() throws IOException {
+
+    private HashSet<String> getAllNews() throws IOException {
         HashSet<String> allnews = new HashSet<String>();
         CoverPage single = new CronicaCover(new HtmlProcess());
-
         allnews.addAll(single.getArticlesLinks());
 
         single = new TiempoCover(new HtmlProcess());
@@ -109,28 +113,22 @@ public class ScrapCover {
 
     }
 
-    public void saveArticles(HashSet<String > allNews) throws SQLException, URISyntaxException {
+    private void saveArticles(HashSet<String> allNews) throws SQLException, URISyntaxException {
+
         for (final String link : allNews) {
-            if(!query.existNew(link)){
+            if(!query.articleExist(link)){
                 Runnable task = () -> {
 
                     Scrapper s = null;
                     try {
                         s = new Scrapper(link);
 
-//                        System.out.println(s.getArticle().getTitle());
-//                        System.out.println(s.getArticle().getThumbnail());
-//                        System.out.println(s.getArticle().getPageUrl());
-//                        System.out.println(s.getArticle().getCategory());
-//                        System.out.println(s.getArticle().getAuthor());
-
-                        if(query.saveArticle(s.getArticle()) == 1 && !s.getArticle().getTitle().equals("")){
-                            System.out.println("SAVED!");
+                        if(query.saveArticle(s.getArticle()) == 1){
                             System.out.println();
                         }
 
                     } catch (Exception e) {
-//                        e.printStackTrace();
+                        e.printStackTrace();
                         System.out.println("Error: "+e.getMessage());
 
                     }
@@ -147,6 +145,7 @@ public class ScrapCover {
                 }
 
             }
+
         }
 
     }
