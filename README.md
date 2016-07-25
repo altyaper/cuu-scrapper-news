@@ -1,4 +1,19 @@
 # cuu-scrapper-news
+
+Usage:
+
+```java
+String link = "http://tiempo.com.mx/noticia/45258-supuesto_transito_ebrio_choca_/1"
+
+Scrapper article = new Scrapper(link);
+
+System.out.println(article.getTitle()); //Supuesto tránsito ebrio choca en la colonia Obrera e intenta escapar
+
+System.out.println(article.getAuthor()); //Henric Serna Cardona
+
+```
+
+
 This is just a scrapper for all the most popular news sites in Chihuahua
 
 Included:
@@ -23,5 +38,3 @@ Included:
 * http://vozenred.com/2015/
 
 Let me know if there is a website that would be nice to added.
-
-### UPDATED (25/06/2016)
