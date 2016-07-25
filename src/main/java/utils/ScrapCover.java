@@ -3,35 +3,12 @@ package utils;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 
 import db.QueryManager;
-import hibernate.ArticleModel;
-import hibernate.SessionFactorySingleton;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
-import scrappers.scrapperCover.AhoramismoCover;
-import scrappers.scrapperCover.ChihuahuanoticiasCover;
-import scrappers.scrapperCover.CoverPage;
-import scrappers.scrapperCover.CronicaCover;
-import scrappers.scrapperCover.DiarioCover;
-import scrappers.scrapperCover.EntreLineasCover;
-import scrappers.scrapperCover.FuturoCover;
-import scrappers.scrapperCover.InformacionTotalCover;
-import scrappers.scrapperCover.MonitorParralCover;
-import scrappers.scrapperCover.NorteDigitalCover;
-import scrappers.scrapperCover.OpcionCover;
-import scrappers.scrapperCover.ParadaDigitalCover;
-import scrappers.scrapperCover.PolakaCover;
-import scrappers.scrapperCover.PuebloCover;
-import scrappers.scrapperCover.RedNoticiasCover;
-import scrappers.scrapperCover.ReferenteCover;
-import scrappers.scrapperCover.TiempoCover;
+import scrappers.scrapperCover.*;
+
 import services.HtmlProcess;
 
 /**
