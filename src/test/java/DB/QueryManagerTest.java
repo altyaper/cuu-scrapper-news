@@ -7,6 +7,7 @@ import org.apache.log4j.varia.NullAppender;
 import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
@@ -29,6 +30,7 @@ public class QueryManagerTest extends UtilDB{
     }
 
     @Test
+    @Ignore
     public void itShouldReturnTrueWhenUrlAlreadyInTheDB() {
         ArticleModel article = this.createArticle();
         session.persist(article);
