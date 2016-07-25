@@ -1,16 +1,9 @@
 package main;
 
 import hibernate.*;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
-import java.util.*;
-
-import org.jsoup.parser.Tag;
 import utils.ScrapCover;
 
 /**
