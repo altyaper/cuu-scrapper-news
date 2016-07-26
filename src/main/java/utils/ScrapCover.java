@@ -3,10 +3,8 @@ package utils;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
 
 import db.QueryManager;
 
@@ -29,8 +27,6 @@ public class ScrapCover {
     public static final String ANSI_WHITE = "\u001B[37m";
 
     private final QueryManager query = new QueryManager();
-
-
 
     private HashSet<String> getAllNews() throws IOException {
         HashSet<String> allnews = new HashSet<String>();
