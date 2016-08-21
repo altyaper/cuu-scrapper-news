@@ -32,7 +32,7 @@ public class VideoTest {
     @Test
     public void itShouldGetTheIdOfTheVideoUrl(){
 
-        assertEquals("nml8-us2PoA", video.getVideoId());
+        assertEquals("nml8-us2PoA", video.getYoutubeVideoId());
 
     }
 

@@ -21,7 +21,7 @@ public class NorteDigital extends Article {
 
     @Override
     public void setThumbnail() {
-        Elements aux = this.html.select(".imagen-post ul li");
+        Elements aux = this.html.select(".imagen-post .single-imagen");
         if (!aux.isEmpty()) {
             for (int i = 0; i < aux.size(); i++) {
                 this.thumbnail.add(aux.get(i).select("a").attr("href").toString());

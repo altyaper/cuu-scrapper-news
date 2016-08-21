@@ -19,9 +19,9 @@ public class Video {
         this.url = url;
     }
 
-    public Video(String url, String video_id, String type) {
+    public Video(String url, String videoId, String type) {
         this.url = url;
-        this.videoId = video_id;
+        this.videoId = videoId;
     }
 
     public Enum getProvider() {
@@ -41,7 +41,7 @@ public class Video {
         this.url = url;
     }
 
-    public String getVideoId() {
+    public String getYoutubeVideoId() {
 
         String pattern = "";
 
@@ -58,7 +58,7 @@ public class Video {
         }
     }
 
-    public void setVideo_id(String videoId) {
+    public void setVideoId(String videoId) {
         this.videoId = videoId;
     }
 
