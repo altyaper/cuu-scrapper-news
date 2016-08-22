@@ -2,11 +2,9 @@ package main;
 
 import db.QueryManager;
 import scrappers.scrapperCover.*;
-import scrappers.scrapperPage.*;
 import services.HtmlProcess;
 import utils.Scrapper;
 
-import java.lang.reflect.InvocationTargetException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
 import java.util.ArrayList;

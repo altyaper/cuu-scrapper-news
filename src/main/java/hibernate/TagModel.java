@@ -4,8 +4,6 @@ import utils.UtilFunctions;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
 
 /**
  * Created by echavez on 7/14/16.

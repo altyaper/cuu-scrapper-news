@@ -34,7 +34,7 @@ public class OmniaCoverTest extends StubService implements CommonCoverTest{
     @Test
     public void itShouldMatchWithRegexPattern(){
 
-        String one = "/noticia/respalda-pedro-dominguez-a-dowell-en-impugnacion-del-pri";
+        String one = "/article/realizó-pan-200-elecciones-interna-en-5-ños";
         assertTrue(cover.isLink(one));
         String two = "/noticia/respalda-pedro-dominguez-a-dowell-en-impugnacion-del-pri/asD/asd";
         assertFalse(cover.isLink(two));

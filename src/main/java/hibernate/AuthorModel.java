@@ -2,7 +2,6 @@ package hibernate;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * Created by echavez on 7/17/16.
