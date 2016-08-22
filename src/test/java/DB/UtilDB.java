@@ -29,6 +29,7 @@ public class UtilDB {
     ArticleModel createArticle() throws URISyntaxException {
 
         ArticleModel article = new ArticleModel();
+        article.setUrl("https://dzone.com/articles/testing-databases-junit-and");
         String title = "Titulo";
         article.setTitle(title);
         article.setContent("Content");
@@ -36,7 +37,6 @@ public class UtilDB {
         article.setCategory("Category");
         article.setThumbnail("https://dzone.com/themes/dz20/images/logo.png");
         article.setDate("23 de Agosto del 2016");
-        article.setUrl("https://dzone.com/articles/testing-databases-junit-and");
 
         return article;
     }

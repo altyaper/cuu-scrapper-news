@@ -1,14 +1,7 @@
 package services;
 
-import hibernate.SessionFactorySingleton;
 import main.ThreadNews;
 import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import utils.ScrapCover;
-
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.sql.SQLException;
 
 /**
  * Created by echavez on 7/25/16.

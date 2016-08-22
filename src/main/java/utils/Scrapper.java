@@ -3,23 +3,7 @@ package utils;
 import java.io.IOException;
 
 import models.Article;
-import scrappers.scrapperPage.Ahoramismo;
-import scrappers.scrapperPage.Chihuahuanoticias;
-import scrappers.scrapperPage.Cronica;
-import scrappers.scrapperPage.Diario;
-import scrappers.scrapperPage.EntreLineas;
-import scrappers.scrapperPage.Futuro;
-import scrappers.scrapperPage.InformacionTotal;
-import scrappers.scrapperPage.MonitorParral;
-import scrappers.scrapperPage.NorteDigital;
-import scrappers.scrapperPage.Opcion;
-import scrappers.scrapperPage.ParadaDigital;
-import scrappers.scrapperPage.Polaka;
-import scrappers.scrapperPage.Pueblo;
-import scrappers.scrapperPage.RedNoticias;
-import scrappers.scrapperPage.Referente;
-import scrappers.scrapperPage.Segundoasegundo;
-import scrappers.scrapperPage.Tiempo;
+import scrappers.scrapperPage.*;
 import services.HtmlProcess;
 
 /**
@@ -110,7 +94,12 @@ public final class Scrapper {
 
             return new Referente(url, new HtmlProcess());
 
+        } else if (url.matches(".*omnia.com.mx.*")) {
+
+            return new Omnia(url, new HtmlProcess());
+
         }
+
 
 
         return null;

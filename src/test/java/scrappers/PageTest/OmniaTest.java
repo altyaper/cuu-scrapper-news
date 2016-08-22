@@ -18,7 +18,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class OmniaTest extends StubService implements CommonTest{
 
-    public String url = "http://www.omnia.com.mx/noticias/version-grupo-armado-saquea-casa-de-la-madre-de-el-chapo-en-sinaloa/";
+    public String url = "http://www.omnia.com.mx/article/cae-lluvia-en-la-capital-deja-encharcamientos";
     public Article article;
 
     @Before
@@ -32,7 +32,7 @@ public class OmniaTest extends StubService implements CommonTest{
     @Test
     public void itShouldGetTheThumbnail(){
         Set<String> thumbnails = new HashSet<String>();
-        thumbnails.add("http://mdx.omnia.com.mx/media/fotos/20160616_consuelo.jpg");
+        thumbnails.add("http://www.omnia.com.mx/sites/default/files/styles/472x332/public/field/image/IMG_2585.JPG?itok=PjW0p7OL");
         assertEquals(thumbnails,article.getThumbnail());
     }
 
@@ -40,13 +40,23 @@ public class OmniaTest extends StubService implements CommonTest{
     @Test
     @Override
     public void itShouldGetTheTitle() {
-        assertEquals("NACIONAL: Versión: Grupo armado saquea casa de la madre de \"El Chapo\" en Sinaloa",article.getTitle());
+        assertEquals("Cae lluvia en la capital; deja encharcamientos",article.getTitle());
 
     }
 
     @Test
     @Override
     public void itShouldGetTheContent() {
-        assertEquals("Ciudad de México. Un comando armado saqueó la casa de Consuelo Loera, madre de Joaquín \"El Chapo\" Guzmán y asesinó al menos a tres personas de la comunidad La Tuna, en el municipio de Badiraguato, Sinaloa. Según informa el diario Ríodoce, los hechos ocurrieron el sábado pasado, cuando unos 150 sujetos fuertemente armados entraron a la comunidad a las 10:00 horas y mataron a balazos a ocho vecinos, aunque sólo se han localizado tres cadáveres. \"Simultáneamente, otro comando entró a la casa de Consuelo Loera, y tomaron dos vehículos conocidas como Razers, y al menos otras tres motocicletas todo terreno, además de cortar líneas telefónicas, y de Internet (sic)\", precisó el diario. Vecinos de las comunidades San José del Barranco y Arroyo Seco también fueron despojados de varios vehículos por hombres armados, situación que los obligó a dejar sus casas y mudarse el domingo a Culiacán y a la cabecera municipal de Badiraguato. Te puede interesar La irrupción de los comandos dejó \"desoladas\" a las comunidades de Arroyo Seco, La Tuna y La Palma, indicó Ríodoce. Fuentes anónimas citadas por el diario atribuyeron el ataque a la organización criminal de los Beltrán Leyva y de Isidro Meza Flores, \"El Chapito\". El diario señala que de acuerdo con una familia entrevistada, ninguna autoridad ha acudido a la región, pese a que se han realizado varias denuncias de los hechos. En tanto, la Secretaría de Seguridad Pública de Sinaloa anunció el miércoles que en conjunto con el Ejército, se implementaría un operativo en la zona para retomar el control, sin embargo hasta el momento no hay reportes oficiales de que esto haya sucedido.",article.getContent());
+        assertEquals("Una buena cantidad de agua cayo esta tarde de manera moderada en toda la mancha urbana, dejando encharcamientos e inundaciones en distintas vialidades. Desde las 17:00 horas se estuvieron presentando las precipitaciones en la salida a Cuauhtémoc y en la zona de Sacramento, pero para aproximadamente las 18:00 horas se generalizo en la mayoría de la capital. Por momentos la lluvia cayó fuertemente, pero la mayoría del tiempo lo hizo de manera moderada por más de 3 horas seguidas, lo que ocasiono que vialidades como: La Antonio de Montes; el periférico Ortiz Mena; la avenida Universidad; la avenida Tecnológico; la avenida Juan Escutia, avenida Equus; avenida Nueva España; entre otras, acumularan cantidades grandes del líquido, generándose caos vial. Hasta el momento el H. cuerpo de bomberos se mantiene pendiente para prestar servicios en cuanto la ciudadanía lo necesite, no se han reportado derrumbes ni inundaciones habitaciones, sin embargo, las autoridades exhortan a tomar las debidas precauciones. Por su parte la dirección de vialidad y tránsito activo unidades para recorrer las arterias principales en operativo de seguridad.",article.getContent());
+    }
+
+    @Test
+    public void itShouldGetTheAuthor() {
+        assertEquals("xavier_ochoa", article.getAuthor());
+    }
+
+    @Test
+    public void itShouldGetTheDate() {
+        assertEquals("Domingo, Agosto 21, 2016 - 19:41", article.getDate());
     }
 }
