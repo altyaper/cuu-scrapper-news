@@ -12,6 +12,8 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.net.URISyntaxException;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
@@ -29,7 +31,7 @@ public class ArticleModelTest extends UtilDB{
     }
 
     @Test
-    public void itShouldaddAnArticle() {
+    public void itShouldaddAnArticle() throws URISyntaxException {
         ArticleModel article = this.createArticle();
         session.save(article);
         ArticleModel articleRetrived = session.get(ArticleModel.class, article.getArticleId());
@@ -45,7 +47,7 @@ public class ArticleModelTest extends UtilDB{
 
     @Ignore
     @Test(expected = ConstraintViolationException.class)
-    public void itShouldNotAddDuplicateArticles() {
+    public void itShouldNotAddDuplicateArticles() throws URISyntaxException {
         ArticleModel articleOne = this.createArticle();
         ArticleModel articleTwo = this.createArticle();
         session.persist(articleOne);
@@ -55,7 +57,7 @@ public class ArticleModelTest extends UtilDB{
     }
 
     @Test(expected = PropertyValueException.class)
-    public void itShouldNotHaveANullContent() {
+    public void itShouldNotHaveANullContent() throws URISyntaxException {
         ArticleModel articleModel = this.createArticle();
         articleModel.setContent(null);
         session.save(articleModel);
@@ -65,7 +67,7 @@ public class ArticleModelTest extends UtilDB{
     // TODO: 7/25/16 Fix this test
     @Test
     @Ignore
-    public void itShouldNotDuplicateTheSlug() {
+    public void itShouldNotDuplicateTheSlug() throws URISyntaxException {
         ArticleModel articleOne = this.createArticle();
         ArticleModel articleTwo = this.createArticle();
         String slug = "this-is-the-slug";

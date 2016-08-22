@@ -44,17 +44,16 @@ public class QueryManager{
         return !results.isEmpty();
     }
 
-    public int saveArticle(Article article) throws SQLException {
+    public int saveArticle(Article article) throws SQLException, URISyntaxException {
 
         ArticleModel articleModel = new ArticleModel();
+        articleModel.setUrl(article.getPageUrl());
         articleModel.setTitle(article.getTitle());
         articleModel.setContent(article.getContent());
-        articleModel.setUrl(article.getPageUrl());
         articleModel.setCategory(article.getCategory());
         articleModel.setAuthor(article.getAuthor());
         articleModel.setDate(article.getDate());
         articleModel.setUrl(article.getPageUrl());
-        System.out.println(article.getPageUrl());
         articleModel.setThumbnail(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
         Session session = SessionFactorySingleton.getInstance().openSession();
 

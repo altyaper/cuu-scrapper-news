@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import utils.UtilFunctions;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -25,7 +26,7 @@ public class UtilDB {
         return sessionFactory;
     }
 
-    ArticleModel createArticle() {
+    ArticleModel createArticle() throws URISyntaxException {
 
         ArticleModel article = new ArticleModel();
         String title = "Titulo";

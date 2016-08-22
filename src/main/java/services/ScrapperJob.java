@@ -1,6 +1,7 @@
 package services;
 
 import hibernate.SessionFactorySingleton;
+import main.ThreadNews;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import utils.ScrapCover;
@@ -14,22 +15,14 @@ import java.sql.SQLException;
  */
 public class ScrapperJob implements org.quartz.Job {
 
-
     @Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        ScrapCover scrapCover = new ScrapCover();
+    public void execute(JobExecutionContext jobExecutionContext){
+        ThreadNews t = new ThreadNews();
         try {
-            try {
-                scrapCover.scrappAllCovers();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            }
-        } finally {
-            SessionFactorySingleton.getInstance().close();
+            t.getCovers();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+
 }

@@ -6,6 +6,8 @@ import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,8 +83,9 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
         return this.slug;
     }
 
-    public void setSlug(String title) {
-        this.slug = UtilFunctions.makeSlug(title);
+    public void setSlug(String title) throws URISyntaxException {
+        String pageName = this.getPage(this.getUrl());
+        this.slug = UtilFunctions.makeSlug(title + "-" + pageName);
     }
 
     public String getThumbnail() {
@@ -121,7 +124,7 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title) throws URISyntaxException {
         this.setSlug(title);
         this.title = title;
     }
@@ -157,6 +160,13 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (url != null ? url.hashCode() : 0);
         return result;
+    }
+
+    @Transient
+    public String getPage(String url) throws URISyntaxException {
+        URI uri = new URI(url);
+        String domain = uri.getHost();
+        return domain.startsWith("www.") ? domain.substring(4) : domain;
     }
 
     @Override

@@ -12,6 +12,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.Serializable;
+import java.net.URISyntaxException;
 
 import static org.junit.Assert.assertEquals;
 
@@ -30,7 +31,7 @@ public class TagModelTest extends UtilDB {
 
     @Test
     @Ignore
-    public void itShouldSaveTheTagsOfTheArticle() {
+    public void itShouldSaveTheTagsOfTheArticle() throws URISyntaxException {
         ArticleModel articleModel = this.createArticle();
         Serializable last = session.save(articleModel);
         ArticleModel lastA = session.get(ArticleModel.class, (Integer) last);
@@ -48,7 +49,7 @@ public class TagModelTest extends UtilDB {
     }
 
     @Test(expected = ConstraintViolationException.class)
-    public void itShouldNotRepeatTheArticleIdAndTagId() {
+    public void itShouldNotRepeatTheArticleIdAndTagId() throws URISyntaxException {
         ArticleModel articleModel = this.createArticle();
         Serializable last = session.save(articleModel);
         ArticleModel lastA = session.get(ArticleModel.class, (Integer) last);

@@ -10,6 +10,8 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.net.URISyntaxException;
+
 import static junit.framework.TestCase.assertTrue;
 
 /**
@@ -31,7 +33,7 @@ public class QueryManagerTest extends UtilDB{
 
     @Test
     @Ignore
-    public void itShouldReturnTrueWhenUrlAlreadyInTheDB() {
+    public void itShouldReturnTrueWhenUrlAlreadyInTheDB() throws URISyntaxException {
         ArticleModel article = this.createArticle();
         session.persist(article);
         transaction.commit();

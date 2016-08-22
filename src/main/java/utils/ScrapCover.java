@@ -3,12 +3,16 @@ package utils;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 import db.QueryManager;
 
 import scrappers.scrapperCover.*;
+import scrappers.scrapperPage.NorteDigital;
+import scrappers.scrapperPage.Tiempo;
 import services.HtmlProcess;
 
 /**
@@ -29,6 +33,7 @@ public class ScrapCover {
     private final QueryManager query = new QueryManager();
 
     private HashSet<String> getAllNews() throws IOException {
+
         HashSet<String> allnews = new HashSet<String>();
         CoverPage single = new CronicaCover(new HtmlProcess());
         allnews.addAll(single.getArticlesLinks());
@@ -84,46 +89,46 @@ public class ScrapCover {
     public void scrappAllCovers() throws IOException, SQLException, URISyntaxException {
 
         HashSet<String> allNews = this.getAllNews();
-        this.saveArticles(allNews);
+//        this.saveArticles(allNews);
 
     }
 
-    private void saveArticles(HashSet<String> allNews) throws SQLException, URISyntaxException {
-
-        for (final String link : allNews) {
-            if(!query.articleExist(link)){
-                Runnable task = () -> {
-
-                    Scrapper s = null;
-                    try {
-                        s = new Scrapper(link);
-
-                        if(query.saveArticle(s.getArticle()) == 1){
-                            System.out.println();
-                        }
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        System.out.println("Error: "+e.getMessage());
-
-                    }
-
-
-                };
-
-                Thread thread = new Thread(task);
-                thread.start();
-                try {
-                    thread.join();
-                } catch (Exception e) {
-                    System.out.println("Error: "+e.getMessage());
-                }
-
-            }
-
-        }
-
-    }
+//    private void saveArticles(HashSet<String> allNews) throws SQLException, URISyntaxException {
+//
+//        for (final String link : allNews) {
+//            if(!query.articleExist(link)){
+//                Runnable task = () -> {
+//
+//                    Scrapper s = null;
+//                    try {
+//                        s = new Scrapper(link);
+//
+//                        if(query.saveArticle(s.getArticle()) == 1){
+//                            System.out.println();
+//                        }
+//
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                        System.out.println("Error: "+e.getMessage());
+//
+//                    }
+//
+//
+//                };
+//
+//                Thread thread = new Thread(task);
+//                thread.start();
+//                try {
+//                    thread.join();
+//                } catch (Exception e) {
+//                    System.out.println("Error: "+e.getMessage());
+//                }
+//
+//            }
+//
+//        }
+//
+//    }
 
 
     public static void iterar(CoverPage covers) {

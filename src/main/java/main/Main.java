@@ -4,9 +4,13 @@ import hibernate.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
+import scrappers.scrapperCover.NorteDigitalCover;
+import scrappers.scrapperCover.TiempoCover;
 import services.ScrapperJob;
 import utils.ScrapCover;
 
@@ -19,7 +23,9 @@ import static org.quartz.TriggerBuilder.newTrigger;
  */
 public class Main {
 
-    public static void main(String... strings) throws SQLException, URISyntaxException, IOException, SchedulerException {
+    private final List<Class> AClass = new ArrayList<Class>();
+
+    public static void main(String... strings) throws Exception {
 
         Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
 

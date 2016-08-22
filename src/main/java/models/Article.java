@@ -18,7 +18,6 @@ public abstract class Article extends UtilFunctions {
     protected String content;
     protected String author;
     protected String pageUrl;
-
     protected String category;
     protected Video video;
     protected String date;
@@ -28,7 +27,6 @@ public abstract class Article extends UtilFunctions {
     protected HashSet<String> tags = new HashSet<String>();
 
     public Article(String pageUrl, HtmlProcess htmlProcess) throws IOException {
-
         this.html = htmlProcess.getHtml(pageUrl);
         this.pageUrl = pageUrl;
         setTitle();
