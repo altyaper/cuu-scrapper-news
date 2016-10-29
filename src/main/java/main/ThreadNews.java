@@ -37,7 +37,7 @@ public class ThreadNews {
         AClass.add(PuebloCover.class);
         AClass.add(RedNoticiasCover.class);
         AClass.add(ReferenteCover.class);
-        AClass.add(SegundoasegundoCover.class);
+//        AClass.add(SegundoasegundoCover.class);
         AClass.add(TiempoCover.class);
     }
 
@@ -56,7 +56,6 @@ public class ThreadNews {
                 try {
                     CoverPage p = (CoverPage) classtoload.getDeclaredConstructor(arg).newInstance(h);
                     saveArticles(p.getArticlesLinks());
-                    System.out.println(p.getArticlesLinks());
                     System.out.println(new Date());
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -71,9 +70,6 @@ public class ThreadNews {
             } catch (Exception e) {
                 System.out.println("Error: "+e.getMessage());
             }
-
-
-
         }
     }
 

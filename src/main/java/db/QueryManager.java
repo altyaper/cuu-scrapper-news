@@ -1,34 +1,21 @@
 package db;
 
 import java.net.URISyntaxException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Random;
-import java.util.concurrent.ExecutionException;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import hibernate.ArticleModel;
-import hibernate.AuthorModel;
-import hibernate.CategoryModel;
 import hibernate.SessionFactorySingleton;
 import models.Article;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.exception.ConstraintViolationException;
 import org.hibernate.query.Query;
 import utils.UtilFunctions;
 
 import javax.persistence.PersistenceException;
-
-import static org.osgi.util.measurement.Unit.s;
 
 /**
  * Created by echavez on 6/17/16.
