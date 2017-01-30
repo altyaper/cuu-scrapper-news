@@ -16,11 +16,12 @@ public class Chihuahuanoticias extends Article {
         super(url, htmlProcess);
         setCategory();
         setTags();
+        setDate();
     }
 
     @Override
     public void setThumbnail() {
-        Elements aux = this.html.select(".entry p img");
+        Elements aux = this.html.select(".entry-thumb");
         if (aux.size() != 0)
             this.thumbnail.add(aux.get(0).attr("src"));
     }
@@ -33,9 +34,9 @@ public class Chihuahuanoticias extends Article {
 
     @Override
     public void setContent() {
-        Elements aux = this.html.select(".entry > p");
+        Elements aux = this.html.select(".td-post-content > p");
         //Clean HTML
-        for (Element element : aux.select("img")) {
+        for (Element element : aux.select(".td-post-featured-image")) {
             element.remove();
         }
         for (Element element : aux.select("[st_url]")) {
@@ -49,18 +50,17 @@ public class Chihuahuanoticias extends Article {
     }
 
     public void setCategory() {
-        Elements aux = this.html.select(".entry");
-        String[] classes = aux.attr("class").split(" ");
-        String categoryclass = null;
-        for (int i = 0; i < classes.length; i++) {
-            if (classes[i].matches("category-\\w+")) {
-                String str = classes[i].split("-")[1];
-                categoryclass = str.substring(0, 1).toUpperCase() + str.substring(1);
-            }
-        }
-        this.category = categoryclass;
+        Elements crumbs = this.html.select(".entry-crumbs span");
+        Element a = crumbs.get(3);
+        this.category = a.text();
     }
 
+
+    @Override
+    public void setDate() {
+        Elements aux = this.html.select(".entry-date");
+        this.date = aux.text();
+    }
 
     public void setTags() {
 
