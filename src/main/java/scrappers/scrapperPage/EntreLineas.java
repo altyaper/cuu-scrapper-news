@@ -2,6 +2,7 @@ package scrappers.scrapperPage;
 
 import models.Article;
 import org.jsoup.select.Elements;
+import org.jsoup.nodes.Element;
 import services.HtmlProcess;
 
 import java.io.IOException;
@@ -18,40 +19,36 @@ public class EntreLineas extends Article {
 
     @Override
     public void setThumbnail() {
-        Elements aux = this.html.select(".nota-featured-image img");
+        Elements aux = this.html.select(".apw-gallery-grid-wrapper img");
         if(!aux.isEmpty()){
-            this.thumbnail.add(aux.get(0).attr("src").toString());
+            for(Element img : aux )  {
+                this.thumbnail.add(img.attr("src").toString());
+            }
         }else{
-            aux = this.html.select(".nota-featured-image iframe");
+            aux = this.html.select(".post-thumbnail img");
             String src = aux.attr("src");
-            String[] parts = src.split("/");
-            this.thumbnail.add("http://img.youtube.com/vi/"+parts[parts.length-1]+"/sddefault.jpg");
+            this.thumbnail.add(src);
         }
     }
 
     @Override
     public void setTitle() {
-        Elements aux = this.html.select(".titulo-nota h1");
-        if(aux.isEmpty()){
-            aux = this.html.select(".titulo-nota-vid h1");
-        }
+        Elements aux = this.html.select("h1.entry-title");
         this.title = aux.text().trim();
     }
 
     @Override
     public void setContent() {
-        Elements aux = this.html.select(".post");
+        Elements aux = this.html.select(".entry-content");
+        for (Element element : aux.select(".apw-gallery-grid-wrapper")) {
+            element.remove();
+        }
         this.content = aux.html();
     }
 
     @Override
     public void setAuthor(){
-        Elements aux = this.html.select(".autor-fecha .izquierdo");
-        String [] elements = aux.text().split("\\|");
-
-        String auxAuthor = elements[0].replace("Por: ", "");
-        int lenght = auxAuthor.length()-1;
-
-        this.author = auxAuthor.substring(0, lenght);
+        Elements aux = this.html.select(".apw-post-meta-dd .url");
+        this.author = aux.text().trim();
     }
 }

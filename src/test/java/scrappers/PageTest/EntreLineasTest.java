@@ -26,7 +26,8 @@ public class EntreLineasTest implements CommonTest {
 
     private Article article;
     private Article article2;
-    private final String url = "http://entrelineas.com.mx/local/sancionaran-a-conductores-de-uber-no-se-han-acercado-a-la-direccion-de-transporte/";
+    private final String url = "http://entrelineas.com.mx/entrelineas/audiencias-desangeladas-pan-con-lo-mismo-quemado-ex-auditor/";
+    private final String url2 = "http://entrelineas.com.mx/mexico/pena-y-gobernadores-pactan-defender-a-paisanos/";
 
     @Before
     public void setup() throws IOException {
@@ -35,7 +36,7 @@ public class EntreLineasTest implements CommonTest {
         HtmlProcess htmlProcessStub2 = createMock(HtmlProcess.class);
 
         String dir = getClass().getResource("/stubPage/stubEntreLineas.html").toString().replace("file:", "");
-        String dir2 = getClass().getResource("/stubPage/stubEntreLineasVideo.html").toString().replace("file:", "");
+        String dir2 = getClass().getResource("/stubPage/stubEntreLineasGaleria.html").toString().replace("file:", "");
 
         File file = new File(dir);
         File file2 = new File(dir2);
@@ -44,57 +45,63 @@ public class EntreLineasTest implements CommonTest {
         Document document2 = Jsoup.parse(file2, "UTF-8", this.url);
 
         expect(htmlProcessStub.getHtml(this.url)).andStubReturn(document);
-        expect(htmlProcessStub2.getHtml(this.url)).andStubReturn(document2);
+        expect(htmlProcessStub2.getHtml(this.url2)).andStubReturn(document2);
 
         replay(htmlProcessStub);
 
         replay(htmlProcessStub2);
 
         this.article = new EntreLineas(this.url, htmlProcessStub);
-        this.article2 = new EntreLineas(this.url, htmlProcessStub2);
+        this.article2 = new EntreLineas(this.url2, htmlProcessStub2);
     }
 
     @Test
     @Override
     public void itShouldGetTheTitle() {
-        assertEquals("Sancionarían a conductores de Über ante falta de concesión; no se han acercado a la Dirección de Transporte", article.getTitle());
+        assertEquals("Peña y gobernadores pactan defender a paisanos en EU", article.getTitle());
     }
 
     @Test
     public void itShouldGetTheTitle2() {
-        assertEquals("Turba en Palacio, presión del PAN para retirar impugnación: Dowell", article2.getTitle());
+        assertEquals("Ministeriales omiten alto y chocan contra familia", article2.getTitle());
     }
 
     @Test
     @Override
     public void itShouldGetTheContent() {
-        assertEquals("<span class=\"noticias-de-cuu\">Noticias de Chihuahua.-</span>\n" +
-                "<p>Tras el anuncio de la entrada de Über a Chihuahua y a Ciudad Juárez, el director de Transporte de Gobierno del Estado, Gustavo Morales González, aseguró que hasta el momento la empresa no se ha acercado directamente a la dependencia para plantear esta posibilidad, por lo que su actuar se encontraría fuera de la ley.</p> \n" +
-                "<p>Morales González señaló que, de acuerdo a la legislación en la materia, la empresa requeriría de una concesión para poder operar en la entidad, sin embargo, en ningún momento ha enterado a Gobierno del Estado sobre su incursión al mercado de transporte.</p> \n" +
-                "<p>En este tenor, el funcionario detalló que más allá de estar en contra de que la empresa ingrese en Chihuahua, se requiere que ésta se presente ante la Dirección de Transporte y, dado que no lo ha hecho, podrían ser sujeta a sanciones.</p> \n" +
-                "<p>Cabe señalar que Über publicó en su página de internet el siguiente comunicado: “Estamos muy felices de anunciar la llegada de Über a Chihuahua y Ciudad Juárez este viernes 24 de junio, siguiendo con nuestro compromiso de ofrecer una opción de movilidad segura y eficiente”, lo que alertó de inmediato a los taxistas de la ciudad que ya han manifestado posibles movilizaciones.</p>", article.getContent());
+        assertEquals("<p>El presidente Enrique Peña Nieto y los gobernadores del país acordaron una serie de acciones para hacer valer la importancia de México como socio frente a Estados Unidos durante la próxima negociación para actualizar la relación bilateral y también, en defensa de los connacionales que viven en aquel país, informó la Agencia Notimex.</p> \n" +
+                "<p>Al término del encuentro de más de 4 horas, el presidente de la Conago, Graco Ramírez explicó que los mandatarios que cuentan con casas de la amistad en los Estados Unidos, como el caso de Morelos, Estado de México, Oaxaca, Guanajuato, Zacatecas, Puebla y la Ciudad de México habrán de ponerlas a disposición de manera conjunta con la red de 50 consulados para la atención inmediata de quienes estén en riesgo de deportación por la política migratoria de Donald Trump.</p> \n" +
+                "<p>“Tenemos información que hay cerca de 250 mil casos establecidos en tribunales norteamericanos y vamos a llegar a muchos más en una defensa con los consulados del Gobierno para hacer una defensa de todos los connacionales.</p> \n" +
+                "<p>“Va a ser un precedente, se va a congestionar el sistema judicial norteamericano porque no vamos a permitir ningún alto unilateral violatorio de los derechos humanos y de lo que establecen los principios de convivencia de migrantes en todo el mundo”, subrayó.</p> \n" +
+                "<p>Señaló que cada estado destinará recursos propios para pagar abogados y lo que se requiera para defender a los migrantes nacionales.</p> \n" +
+                "<p>A ello se sumará un trabajo conjunto con alcaldes y gobernadores de estados como Nueva York, California, Chicago, Texas, Arizona y Nuevo México con quienes se encontrarán el 23 y 24 de febrero en Washington.</p> \n" +
+                "<p>El también gobernador de Morelos, anunció que ante la solicitud que le hicieron los mandatarios estatales al Presidente de la República de que no aumente de nueva cuenta el precio de la gasolina este próximo 4 de febrero en solidaridad a la economía de las familias, Peña Nieto se comprometió a estudiar un esquema que suavice este impacto y a la vez no afecte las finanzas públicas.</p> \n" +
+                "<p>El Presidente nos planteó qué en breve, en los próximos días va a anunciar, están haciendo un esfuerzo económico, una revisión económica para anunciar algo que no va a afectar sustantivamente el ingreso de los mexicanos” </p> \n" +
+                "<p>A este encuentro al que acompañaron al Presidente Peña los secretarios de Relaciones Exteriores, Educación, Hacienda, Gobernación y de la SEP, solo faltó el gobernador de Aguascalientes, quien se disculpó por un problema personal. </p>", article.getContent());
+
+        assertEquals("<p>Elementos de la policia ministerial circulaban por la Juan Escutia y periférico de la Juventud, cuando omitieron un alto y chocaron contra un vehículo Ford Escort.</p> \n" +
+                "<p>En el vehículo viajaba una familia que resultó solamente con lesiones leves, las cuales fueron atendidas por paramédicos de la Cruz Roja.</p> \n" +
+                "<p>Los elementos ministeriales aceptaron la responsabilidad de los hechos, por lo que agentes de vialidad tomaron notas del hecho.</p> \n" +
+                "<p>&nbsp;</p>", article2.getContent());
     }
 
     @Test
     public void itShouldGetTheAuthor() {
-        assertEquals("Argelia Dominguez", article.getAuthor());
+        assertEquals("Yuliana Nieto", article.getAuthor());
+        assertEquals("Alejandra Rey", article2.getAuthor());
     }
 
     @Test
     public void itShouldGetTheThumbnail(){
 
-        Set<String> thumbnails = new HashSet<>();
-        thumbnails.add("http://entrelineas.com.mx/wp-content/uploads/2016/06/Gustavo-Morales-570x399.jpg");
+        Set<String> thumbnailsGaleria = new HashSet<>();
+        thumbnailsGaleria.add("http://um10k4d06a139gq9s27sjf51.wpengine.netdna-cdn.com/wp-content/uploads/2017/01/image-418-450x300.jpeg");
+        thumbnailsGaleria.add("http://um10k4d06a139gq9s27sjf51.wpengine.netdna-cdn.com/wp-content/uploads/2017/01/image-419-450x300.jpeg");
 
-        assertEquals(thumbnails, article.getThumbnail());
-    }
+        Set<String> thumbnail = new HashSet<>();
+        thumbnail.add("http://um10k4d06a139gq9s27sjf51.wpengine.netdna-cdn.com/wp-content/uploads/2017/01/epngobers.jpg");
 
-    @Test
-    public void itShouldGetTheThumbnail2(){
-
-        Set<String> thumbnails = new HashSet<>();
-        thumbnails.add("http://img.youtube.com/vi/GKlDvXkX1QU/sddefault.jpg");
-
-        assertEquals(thumbnails, article2.getThumbnail());
+        assertEquals(thumbnail, article.getThumbnail());
+        assertEquals(thumbnailsGaleria, article2.getThumbnail());
     }
 }
