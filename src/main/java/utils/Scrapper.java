@@ -101,7 +101,6 @@ public final class Scrapper {
         }
 
 
-
         return null;
     }
 

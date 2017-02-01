@@ -27,7 +27,7 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
     private String thumbnail;
 
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String slug;
 
     private String date;
