@@ -42,6 +42,7 @@ public class QueryManager{
         articleModel.setDate(article.getDate());
         articleModel.setUrl(article.getPageUrl());
         articleModel.setSlug(article.getTitle());
+        articleModel.setSourceId(article.getSourceId());
         articleModel.setThumbnail(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
         if(this.articleExist(articleModel.getSlug())) {
             return 0;
@@ -61,7 +62,7 @@ public class QueryManager{
             e.printStackTrace();
             System.out.println("Error: " + e.getMessage());
         }catch (PersistenceException e){
-//            e.printStackTrace();
+            e.printStackTrace();
             System.out.println("Error: " + e.getMessage());
         }finally {
             session.close();

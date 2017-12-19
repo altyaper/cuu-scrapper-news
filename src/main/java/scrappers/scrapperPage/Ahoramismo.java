@@ -16,6 +16,7 @@ public class Ahoramismo extends Article {
         setAuthor();
         setDate();
         setCategory();
+        setSourceId(1);
     }
 
     @Override

@@ -21,6 +21,7 @@ public abstract class Article extends UtilFunctions {
     protected String category;
     protected Video video;
     protected String date;
+    protected int sourceId;
     protected Enum page;
     protected Document html;
 
@@ -32,6 +33,14 @@ public abstract class Article extends UtilFunctions {
         setTitle();
         setThumbnail();
         setContent();
+    }
+
+    public int getSourceId() {
+        return this.sourceId;
+    }
+
+    public void setSourceId(int sourceId) {
+        this.sourceId = sourceId;
     }
 
     public HashSet<String> getTags(){

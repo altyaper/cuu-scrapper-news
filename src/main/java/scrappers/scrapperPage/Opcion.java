@@ -19,6 +19,7 @@ public class Opcion extends Article {
         setAuthor();
         setVideo();
         setCategory();
+        setSourceId(10);
     }
 
     @Override

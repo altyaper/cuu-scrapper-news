@@ -17,6 +17,7 @@ public class NorteDigital extends Article {
         setAuthor();
         setTags();
         setCategory();
+        setSourceId(8);
     }
 
     @Override

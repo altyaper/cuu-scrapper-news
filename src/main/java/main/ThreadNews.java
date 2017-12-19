@@ -80,9 +80,11 @@ public class ThreadNews {
                 Runnable task = () -> {
 
                     Scrapper s = null;
+
                     try {
                         s = new Scrapper(link);
                         System.out.println(link);
+                        System.out.println(s.getArticle().getTitle());
                         if(query.saveArticle(s.getArticle()) == 1){
                             System.out.println();
                         }

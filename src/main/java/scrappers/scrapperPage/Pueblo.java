@@ -17,6 +17,7 @@ public class Pueblo extends Article {
         setDate();
         setCategory();
         setAuthor();
+        setSourceId(13);
     }
 
     @Override

@@ -15,6 +15,7 @@ public class Futuro extends Article {
     public Futuro(String pageUrl, HtmlProcess htmlProcess) throws IOException {
         super(pageUrl, htmlProcess);
         setDate();
+        setSourceId(6);
     }
 
     @Override

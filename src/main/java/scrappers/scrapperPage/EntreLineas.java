@@ -15,6 +15,7 @@ public class EntreLineas extends Article {
     public EntreLineas(String pageUrl, HtmlProcess htmlProcess) throws IOException {
         super(pageUrl, htmlProcess);
         setAuthor();
+        setSourceId(5);
     }
 
     @Override

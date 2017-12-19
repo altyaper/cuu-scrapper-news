@@ -17,6 +17,7 @@ public class Chihuahuanoticias extends Article {
         setCategory();
         setTags();
         setDate();
+        setSourceId(2);
     }
 
     @Override

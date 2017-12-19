@@ -14,6 +14,7 @@ public class Omnia extends Article{
         super(pageUrl, htmlProcess);
         setAuthor();
         setDate();
+        setSourceId(9);
     }
 
     public void setThumbnail() {

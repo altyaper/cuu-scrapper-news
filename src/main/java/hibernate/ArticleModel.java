@@ -13,7 +13,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "articles")
-public class ArticleModel extends AbstractTimestampEntity implements Serializable{
+public class ArticleModel extends AbstractTimestampEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,6 +36,8 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
 
     private String category;
 
+    private int sourceId;
+
     @OneToMany(mappedBy = "articles")
     private List<TagModel> tags = new ArrayList<>();
 
@@ -43,9 +45,16 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
     @Column(nullable = false)
     private String content;
 
-
     @Column(unique = true)
     private String url;
+
+    public int getSourceId() {
+        return sourceId;
+    }
+
+    public void setSourceId(int sourceId) {
+        this.sourceId = sourceId;
+    }
 
     public List<TagModel> getTags() {
         return tags;

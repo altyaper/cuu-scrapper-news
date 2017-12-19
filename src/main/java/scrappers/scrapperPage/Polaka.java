@@ -17,6 +17,7 @@ public class Polaka extends Article {
         setDate();
         setTags();
         setCategory();
+        setSourceId(12);
     }
 
     @Override

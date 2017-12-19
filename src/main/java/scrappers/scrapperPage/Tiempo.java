@@ -1,5 +1,6 @@
 package scrappers.scrapperPage;
 
+import enums.PagesList;
 import models.Article;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
@@ -16,6 +17,7 @@ public class Tiempo extends Article {
         super(url, htmlProcess);
         setTags();
         setCategory();
+        setSourceId(17);
     }
 
     @Override

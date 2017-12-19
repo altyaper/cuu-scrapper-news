@@ -17,6 +17,7 @@ public class RedNoticias extends Article{
         super(pageUrl, htmlProcess);
         setCategory();
         setDate();
+        setSourceId(14);
     }
 
     @Override

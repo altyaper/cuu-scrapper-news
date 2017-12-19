@@ -16,6 +16,7 @@ public class Diario extends Article {
     public Diario(String url, HtmlProcess htmlProcessStub) throws IOException {
         super(url, htmlProcessStub);
         setCategory();
+        setSourceId(4);
     }
 
     @Override
