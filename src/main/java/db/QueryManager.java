@@ -20,12 +20,12 @@ import javax.persistence.PersistenceException;
 /**
  * Created by echavez on 6/17/16.
  */
-public class QueryManager{
+public class QueryManager {
 
-    public boolean articleExist(String slug){
+    public boolean articleExist(String link){
         SessionFactory sessionFactory = SessionFactorySingleton.getInstance();
         Session session = sessionFactory.openSession();
-        String hql = "FROM ArticleModel WHERE slug = '"+slug+"'";
+        String hql = "FROM ArticleModel WHERE url = '"+link+"'";
         Query query = session.createQuery(hql);
         List results = query.list();
         return !results.isEmpty();

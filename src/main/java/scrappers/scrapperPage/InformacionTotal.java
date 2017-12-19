@@ -15,7 +15,7 @@ public class InformacionTotal extends Article {
         super(pageUrl, htmlProcess);
         setDate();
         setAuthor();
-        setSourceId(6);
+        setSourceId(7);
     }
 
     @Override

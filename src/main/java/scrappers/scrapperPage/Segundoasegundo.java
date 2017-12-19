@@ -14,7 +14,7 @@ public class Segundoasegundo extends Article {
     // Builder Design Pattern
     public Segundoasegundo(String pageUrl, HtmlProcess htmlProcess) throws IOException {
         super(pageUrl, htmlProcess);
-        setSourceId(16);
+        setSourceId(17);
     }
 
     public void setThumbnail() {

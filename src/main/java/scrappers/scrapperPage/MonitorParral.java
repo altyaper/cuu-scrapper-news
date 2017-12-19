@@ -18,7 +18,7 @@ public class MonitorParral extends Article {
         super(pageUrl, htmlProcess);
         setAuthor();
         setDate();
-        setSourceId(7);
+        setSourceId(8);
     }
 
     @Override

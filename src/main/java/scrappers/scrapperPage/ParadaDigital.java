@@ -15,7 +15,7 @@ public class ParadaDigital extends Article {
     public ParadaDigital(String pageUrl, HtmlProcess htmlProcess) throws IOException {
         super(pageUrl, htmlProcess);
         setDate();
-        setSourceId(11);
+        setSourceId(12);
     }
 
     @Override
