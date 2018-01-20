@@ -15,7 +15,7 @@ public class AuthorModel extends AbstractTimestampEntity implements Serializable
     private int authorId;
 
     @OneToOne
-    @JoinColumn(name = "article_id")
+    @JoinColumn(name = "id")
     private ArticleModel article;
 
     @Column(unique = true)

@@ -3,6 +3,7 @@ package scrappers.scrapperPage;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.Date;
 
 import models.Article;
 import services.HtmlProcess;
@@ -57,6 +58,7 @@ public class Referente extends Article {
     @Override
     public void setDate() {
         Elements aux = this.html.select(".epfr .fecha");
-        this.date = aux.text().trim();
+        this.date = new Date();
+//        this.date = aux.text().trim();
     }
 }

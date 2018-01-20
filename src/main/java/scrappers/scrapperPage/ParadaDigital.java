@@ -6,6 +6,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by echavez on 6/20/16.
@@ -41,6 +42,7 @@ public class ParadaDigital extends Article {
     @Override
     public void setDate(){
         Elements aux = this.html.select(".postmeta .meta-date");
-        this.date = aux.text().trim().substring(0, aux.text().length()-1);
+        this.date = new Date();
+//        this.date = aux.text().trim().substring(0, aux.text().length()-1);
     }
 }

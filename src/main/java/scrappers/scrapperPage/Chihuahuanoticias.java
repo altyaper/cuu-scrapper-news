@@ -6,6 +6,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by echavez on 6/14/16.
@@ -60,7 +61,7 @@ public class Chihuahuanoticias extends Article {
     @Override
     public void setDate() {
         Elements aux = this.html.select(".entry-date");
-        this.date = aux.text();
+        this.date = new Date();
     }
 
     public void setTags() {

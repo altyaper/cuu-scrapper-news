@@ -6,6 +6,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by echavez on 6/25/16.
@@ -43,8 +44,8 @@ public class Polaka extends Article {
 
     public void setDate() {
         Elements aux = this.html.select(".td-post-date time");
-
-        this.date = aux.attr("datetime").trim();
+        this.date = new Date();
+//        this.date = aux.attr("datetime").trim();
     }
 
     @Override

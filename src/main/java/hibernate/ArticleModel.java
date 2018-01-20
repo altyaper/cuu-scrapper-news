@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -17,8 +18,8 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "article_id",  unique = true, nullable = false)
-    private int articleId;
+    @Column(name = "id",  unique = true, nullable = false)
+    private int id;
 
     @Column(nullable=false)
     private String title;
@@ -30,12 +31,14 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
     @Column(nullable = false)
     private String slug;
 
-    private String date;
+    @Type(type = "timestamp")
+    private Date date;
 
     private String author;
 
     private String category;
 
+    @Column(name = "source_id")
     private int sourceId;
 
     @OneToMany(mappedBy = "articles")
@@ -73,11 +76,11 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
     }
 
     public int getArticleId() {
-        return articleId;
+        return id;
     }
 
     public void setArticleId(int articleId) {
-        this.articleId = articleId;
+        this.id = articleId;
     }
 
     public void setCategory(String category) {
@@ -105,11 +108,11 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
         this.thumbnail = thumbnail;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -181,7 +184,7 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
     @Override
     public String toString() {
         return "ArticleModel{" +
-                "articleId=" + articleId +
+                "articleId=" + id +
                 ", title='" + title + '\'' +
                 ", thumbnail='" + thumbnail + '\'' +
                 ", slug='" + slug + '\'' +

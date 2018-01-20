@@ -7,6 +7,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by echavez on 6/26/16.
@@ -59,6 +60,7 @@ public class RedNoticias extends Article{
     public void setDate() {
         Elements aux = this.html.select("#article-post .col-sm-9 .lead:first-child");
         String dateaux = aux.html();
-        this.date = dateaux.substring(0,dateaux.length()-1);
+        this.date = new Date();
+//        this.date = dateaux.substring(0,dateaux.length()-1);
     }
 }

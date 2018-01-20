@@ -9,6 +9,7 @@ import utils.UtilFunctions;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -36,7 +37,8 @@ public class UtilDB {
         article.setAuthor("Jorge Chavez");
         article.setCategory("Category");
         article.setThumbnail("https://dzone.com/themes/dz20/images/logo.png");
-        article.setDate("23 de Agosto del 2016");
+        Date date = new Date();
+        article.setDate(date);
 
         return article;
     }

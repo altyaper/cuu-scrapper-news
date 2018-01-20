@@ -5,6 +5,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by echavez on 6/25/16.
@@ -39,7 +40,8 @@ public class Ahoramismo extends Article {
 
     public void setDate() {
         Elements aux = this.html.select(".dtreviewed time");
-        this.date = aux.attr("datetime");
+        this.date = new Date();
+//        this.date = aux.attr("datetime");
     }
 
     public void setAuthor() {

@@ -5,6 +5,7 @@ import services.HtmlProcess;
 import utils.UtilFunctions;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,7 +21,7 @@ public abstract class Article extends UtilFunctions {
     protected String pageUrl;
     protected String category;
     protected Video video;
-    protected String date;
+    protected Date date;
     protected int sourceId;
     protected Enum page;
     protected Document html;
@@ -94,7 +95,7 @@ public abstract class Article extends UtilFunctions {
 
     public void setVideo() {}
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 

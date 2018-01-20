@@ -5,6 +5,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by echavez on 6/15/16.
@@ -41,6 +42,7 @@ public class Omnia extends Article{
 
     public void setDate() {
         Elements aux = this.html.select("article .field-name-post-date");
-        this.date = aux.text().trim();
+        this.date = new Date();
+//        this.date = aux.text().trim();
     }
 }

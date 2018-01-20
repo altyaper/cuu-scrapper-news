@@ -65,6 +65,6 @@ public class AhoramismoTest extends StubService implements CommonTest {
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("2016-06-25T10:19:21+00:00", this.article.getDate());
+        assertEquals("Fri Dec 22 21:33:11 UTC 2017", this.article.getDate());
     }
 }

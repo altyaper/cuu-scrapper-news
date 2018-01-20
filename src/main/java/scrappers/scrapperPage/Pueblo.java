@@ -6,6 +6,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by echavez on 6/30/16.
@@ -47,7 +48,8 @@ public class Pueblo extends Article {
     public void setDate() {
         Elements aux = this.html.select(".note-date");
         String[] parts = aux.html().split(" - ");
-        this.date = parts[0];
+        Date date = new Date();
+        this.date = date;
     }
 
     @Override

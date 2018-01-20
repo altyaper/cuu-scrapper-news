@@ -6,6 +6,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -54,7 +55,8 @@ public class MonitorParral extends Article {
         Pattern p = Pattern.compile("Fecha: *.+");
         Matcher m = p.matcher(aux.text().trim());
         if (m.find()) {
-            this.date = m.group().replace("Fecha: ", "");
+            this.date = new Date();
+//            this.date = m.group().replace("Fecha: ", "");
         }
     }
 }

@@ -5,6 +5,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by echavez on 6/30/16.
@@ -41,7 +42,8 @@ public class InformacionTotal extends Article {
 
     public void setDate() {
         Elements aux = this.html.select(".col-xs-12 time");
-        this.date = aux.attr("datetime");
+        this.date = new Date();
+//        this.date = aux.attr("datetime");
     }
 
     public void setAuthor() {

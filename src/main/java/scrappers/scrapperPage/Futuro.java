@@ -6,6 +6,7 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by echavez on 6/29/16.
@@ -40,7 +41,8 @@ public class Futuro extends Article {
         Elements aux = this.html.select("#u1350-21");
         if(!aux.isEmpty()) {
             String[] str = aux.text().replace("Publicado el día ", "").split(" ");
-            this.date = str[str.length-1];
+            this.date = new Date();
+//            this.date = str[str.length-1];
         }
     }
 }
