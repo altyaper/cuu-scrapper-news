@@ -22,30 +22,30 @@ public class NorteDigital extends Article {
 
     @Override
     public void setThumbnail() {
-        Elements aux = this.html.select(".imagen-post .single-imagen");
+        Elements aux = this.html.select(".imagen-nota");
         if (!aux.isEmpty()) {
             for (int i = 0; i < aux.size(); i++) {
-                this.thumbnail.add(aux.get(i).select("a").attr("href").toString());
+                this.thumbnail.add(aux.attr("src").toString());
             }
         }
     }
 
     @Override
     public void setTitle() {
-        Elements aux = this.html.select("h1.titulo-evento");
+        Elements aux = this.html.select(".entry-title");
         this.title = aux.text().trim();
     }
 
     @Override
     public void setContent() {
-        Elements aux = this.html.select(".contenido-nota");
+        Elements aux = this.html.select(".nota");
         this.content = aux.html();
     }
 
     @Override
     public void setAuthor() {
-        Elements aux = this.html.select(".fuente");
-        this.author = aux.text().trim().replace(" | NorteDigital", "");
+        Elements aux = this.html.select(".entry-content .entry-meta span");
+        this.author = aux.text().trim().replace("Por ", "");
     }
 
     @Override

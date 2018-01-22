@@ -33,7 +33,7 @@ public class NorteDigitalTest extends StubService implements CommonTest {
     public void itShouldSetTheThumbnailOfTheArticle() {
 
         Set<String> hash = new HashSet<String>();
-        hash.add("http://nortedigital.mx/wp-content/uploads/2016/06/senecu.jpg");
+        hash.add("http://nortedigital.mx/wp-content/uploads/2016/06/775x581xsenecu.jpg.pagespeed.ic.uV0VOhuTlm.webp");
         assertEquals(hash, article.getThumbnail());
 
     }

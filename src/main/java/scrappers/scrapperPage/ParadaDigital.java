@@ -4,8 +4,11 @@ import enums.PagesList;
 import models.Article;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
+import utils.UtilFunctions;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -42,7 +45,18 @@ public class ParadaDigital extends Article {
     @Override
     public void setDate(){
         Elements aux = this.html.select(".postmeta .meta-date");
-        this.date = new Date();
-//        this.date = aux.text().trim().substring(0, aux.text().length()-1);
+        String dateString = aux.text().trim().substring(0, aux.text().length()-1);
+        String[] parts = dateString.split(" ");
+        String days = parts[0];
+        String month = UtilFunctions.getMonthBySpanishName(parts[2]);
+        String year = parts[parts.length-1];
+        String finalString = days + "/" + month + "/" + year;
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            this.date = format.parse(finalString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
     }
 }
