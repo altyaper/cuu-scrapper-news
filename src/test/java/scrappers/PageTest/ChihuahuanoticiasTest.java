@@ -8,6 +8,7 @@ import scrappers.scrapperPage.Chihuahuanoticias;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -44,7 +45,8 @@ public class ChihuahuanoticiasTest extends StubService implements CommonTest{
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("23/01/2017", article.getDate());
+        Date expectedDate = new Date("Mon Jan 23 12:19:11 UTC 2017");
+        assertEquals(expectedDate, article.getDate());
     }
 
     @Test

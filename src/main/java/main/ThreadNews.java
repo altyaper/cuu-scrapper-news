@@ -29,7 +29,7 @@ public class ThreadNews {
         AClass.add(FuturoCover.class);
         AClass.add(InformacionTotalCover.class);
         AClass.add(MonitorParralCover.class);
-        AClass.add(NorteDigitalCover.class);
+//        AClass.add(NorteDigitalCover.class);
         AClass.add(OmniaCover.class); //Something weird
         AClass.add(OpcionCover.class);
         AClass.add(ParadaDigitalCover.class);

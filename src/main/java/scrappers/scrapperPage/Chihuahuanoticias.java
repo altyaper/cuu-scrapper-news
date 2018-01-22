@@ -6,6 +6,8 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -60,8 +62,13 @@ public class Chihuahuanoticias extends Article {
 
     @Override
     public void setDate() {
-        Elements aux = this.html.select(".entry-date");
-        this.date = new Date();
+        String dateString = this.html.select(".entry-date").attr("datetime");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        try {
+            this.date = formatter.parse(dateString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setTags() {

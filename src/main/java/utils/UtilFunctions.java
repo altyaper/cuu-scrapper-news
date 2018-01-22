@@ -35,4 +35,48 @@ public class UtilFunctions {
         return slug.toLowerCase(Locale.ENGLISH);
     }
 
+    public static String getMonthBySpanishName(String month) {
+        String monthString = "01";
+        String lowerMonth = month.toLowerCase();
+        switch (lowerMonth) {
+            case "enero":
+                monthString = "01";
+                break;
+            case "febrero":
+                monthString = "02";
+                break;
+            case "marzo":
+                monthString = "03";
+                break;
+            case "abril":
+                monthString = "04";
+                break;
+            case "mayo":
+                monthString = "05";
+                break;
+            case "junio":
+                monthString = "06";
+                break;
+            case "julio":
+                monthString = "07";
+                break;
+            case "agosto":
+                monthString = "08";
+                break;
+            case "septiembre":
+                monthString = "09";
+                break;
+            case "octubre":
+                monthString = "10";
+                break;
+            case "noviembre":
+                monthString = "11";
+                break;
+            case "diciembre":
+                monthString = "12";
+                break;
+        }
+        return monthString;
+    }
+
 }

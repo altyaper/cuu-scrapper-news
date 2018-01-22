@@ -4,8 +4,11 @@ import enums.PagesList;
 import models.Article;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
+import utils.UtilFunctions;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -39,10 +42,20 @@ public class Futuro extends Article {
 
     public void setDate() {
         Elements aux = this.html.select("#u1350-21");
+
         if(!aux.isEmpty()) {
             String[] str = aux.text().replace("Publicado el día ", "").split(" ");
-            this.date = new Date();
-//            this.date = str[str.length-1];
+            String stringDate = str[str.length-1];
+            String[] parts = stringDate.split("/");
+            String month = parts[1];
+            String monthString = UtilFunctions.getMonthBySpanishName(month);
+            String convertedDate = parts[0] + "/" + monthString + "/" + parts[parts.length-1];
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+            try {
+                this.date = format.parse(convertedDate);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ import scrappers.scrapperPage.Ahoramismo;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -65,6 +66,7 @@ public class AhoramismoTest extends StubService implements CommonTest {
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("Fri Dec 22 21:33:11 UTC 2017", this.article.getDate());
+        Date expectedDate = new Date("Sat Jun 25 00:00:00 UTC 2016");
+        assertEquals(expectedDate, this.article.getDate());
     }
 }
