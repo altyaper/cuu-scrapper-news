@@ -6,6 +6,8 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -48,8 +50,12 @@ public class Pueblo extends Article {
     public void setDate() {
         Elements aux = this.html.select(".note-date");
         String[] parts = aux.html().split(" - ");
-        Date date = new Date();
-        this.date = date;
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            this.date = format.parse(parts[0]);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

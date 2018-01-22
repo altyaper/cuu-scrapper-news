@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -88,7 +89,8 @@ public class ReferenteTest extends StubService implements CommonTest  {
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("Jul 6, 2016 - 3:43:18 pm", this.article.getDate());
+        Date expectedDate = new Date("Wed Jul 06 03:43:18 UTC 2016");
+        assertEquals(expectedDate, this.article.getDate());
     }
 
 }

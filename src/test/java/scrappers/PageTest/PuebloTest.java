@@ -8,6 +8,7 @@ import scrappers.scrapperPage.Pueblo;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -72,6 +73,7 @@ public class PuebloTest extends StubService implements CommonTest {
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("2016-06-30", this.article.getDate());
+        Date expectedDate = new Date("Thu Jun 30 00:00:00 UTC 2016");
+        assertEquals(expectedDate, this.article.getDate());
     }
 }

@@ -40,39 +40,51 @@ public class UtilFunctions {
         String lowerMonth = month.toLowerCase();
         switch (lowerMonth) {
             case "enero":
+            case "ene":
                 monthString = "01";
                 break;
             case "febrero":
+            case "feb":
                 monthString = "02";
                 break;
             case "marzo":
+            case "mar":
                 monthString = "03";
                 break;
             case "abril":
+            case "abr":
                 monthString = "04";
                 break;
             case "mayo":
+            case "may":
                 monthString = "05";
                 break;
             case "junio":
+            case "jun":
                 monthString = "06";
                 break;
             case "julio":
+            case "jul":
                 monthString = "07";
                 break;
             case "agosto":
+            case "ago":
                 monthString = "08";
                 break;
             case "septiembre":
+            case "sep":
                 monthString = "09";
                 break;
             case "octubre":
+            case "oct":
                 monthString = "10";
                 break;
             case "noviembre":
+            case "nov":
                 monthString = "11";
                 break;
             case "diciembre":
+            case "dic":
                 monthString = "12";
                 break;
         }

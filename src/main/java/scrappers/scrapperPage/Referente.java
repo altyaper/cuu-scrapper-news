@@ -3,10 +3,13 @@ package scrappers.scrapperPage;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import models.Article;
 import services.HtmlProcess;
+import utils.UtilFunctions;
 
 /**
  * Created by echavez on 7/6/16.
@@ -58,7 +61,20 @@ public class Referente extends Article {
     @Override
     public void setDate() {
         Elements aux = this.html.select(".epfr .fecha");
-        this.date = new Date();
+        String stringDate = aux.text().trim();
+        String[] parts = stringDate.split(" ");
+        String monthInt = UtilFunctions.getMonthBySpanishName(parts[0]);
+        String day = parts[1].replace(",", "");
+        String year = parts[2];
+        String time = parts[4];
+        String finalString = monthInt + "/" + day + "/" + year + " - " + time;
+        SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy - HH:mm:ss");
+        try {
+
+            this.date = format.parse(finalString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 //        this.date = aux.text().trim();
     }
 }
