@@ -8,6 +8,7 @@ import scrappers.scrapperPage.Omnia;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -57,6 +58,7 @@ public class OmniaTest extends StubService implements CommonTest{
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("Domingo, Agosto 21, 2016 - 19:41", article.getDate());
+        Date expectedDate = new Date("Sun Aug 21 19:41:00 UTC 2016");
+        assertEquals(expectedDate, article.getDate());
     }
 }

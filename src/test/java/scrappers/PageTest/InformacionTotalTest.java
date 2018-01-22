@@ -8,6 +8,7 @@ import scrappers.scrapperPage.InformacionTotal;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -53,7 +54,8 @@ public class InformacionTotalTest extends StubService implements CommonTest{
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("2016-06-29T21:30", this.article.getDate());
+        Date expectedDate = new Date("Wed Jun 29 21:30:00 UTC 2016");
+        assertEquals(expectedDate, this.article.getDate());
     }
 
     @Test

@@ -3,8 +3,11 @@ package scrappers.scrapperPage;
 import models.Article;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
+import utils.UtilFunctions;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -42,7 +45,18 @@ public class Omnia extends Article{
 
     public void setDate() {
         Elements aux = this.html.select("article .field-name-post-date");
-        this.date = new Date();
-//        this.date = aux.text().trim();
+        String dateString = aux.text().trim();
+        String[] parts = dateString.split(",");
+        String[] twoParts = parts[1].trim().split(" ");
+        String monthInt = UtilFunctions.getMonthBySpanishName(twoParts[0]);
+        String year = parts[2].trim();
+        String finalDateString = twoParts[1] + "/" + monthInt + "/" + year;
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
+        try {
+            this.date = format.parse(finalDateString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
     }
 }

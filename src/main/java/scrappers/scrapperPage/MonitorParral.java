@@ -6,6 +6,8 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -55,8 +57,13 @@ public class MonitorParral extends Article {
         Pattern p = Pattern.compile("Fecha: *.+");
         Matcher m = p.matcher(aux.text().trim());
         if (m.find()) {
-            this.date = new Date();
-//            this.date = m.group().replace("Fecha: ", "");
+            SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:ss");
+            String stringDate = m.group().replace("Fecha: ", "");
+            try {
+                this.date = format.parse(stringDate);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

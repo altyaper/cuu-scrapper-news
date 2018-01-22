@@ -8,6 +8,7 @@ import scrappers.scrapperPage.MonitorParral;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -56,6 +57,7 @@ public class MonitorParralTest extends StubService implements CommonTest {
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("24/06/2016 20:30", this.article.getDate());
+        Date expectedDate = new Date("Wed Dec 06 20:00:30 UTC 2017");
+        assertEquals(expectedDate, this.article.getDate());
     }
 }

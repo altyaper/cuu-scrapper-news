@@ -5,6 +5,8 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -41,9 +43,13 @@ public class InformacionTotal extends Article {
     }
 
     public void setDate() {
-        Elements aux = this.html.select(".col-xs-12 time");
-        this.date = new Date();
-//        this.date = aux.attr("datetime");
+        String aux = this.html.select(".col-xs-12 time").attr("datetime");
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+        try {
+            this.date = format.parse(aux);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setAuthor() {
