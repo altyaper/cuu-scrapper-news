@@ -70,7 +70,6 @@ public class Referente extends Article {
         String finalString = monthInt + "/" + day + "/" + year + " - " + time;
         SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy - HH:mm:ss");
         try {
-
             this.date = format.parse(finalString);
         } catch (ParseException e) {
             e.printStackTrace();

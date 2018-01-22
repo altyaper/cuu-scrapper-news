@@ -8,6 +8,7 @@ import scrappers.scrapperPage.RedNoticias;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -59,6 +60,7 @@ public class RedNoticiasTest extends StubService implements CommonTest {
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("26 de junio de 2016", this.article.getDate());
+        Date expectedDate = new Date("Sun Jun 26 00:00:00 UTC 2016");
+        assertEquals(expectedDate, this.article.getDate());
     }
 }

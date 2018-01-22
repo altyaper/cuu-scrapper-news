@@ -5,8 +5,11 @@ import models.Article;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
+import utils.UtilFunctions;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -60,7 +63,17 @@ public class RedNoticias extends Article{
     public void setDate() {
         Elements aux = this.html.select("#article-post .col-sm-9 .lead:first-child");
         String dateaux = aux.html();
-        this.date = new Date();
+        String dateString = dateaux.substring(0,dateaux.length()-1);
+        String[] parts = dateString.split(" ");
+        String monthInt = UtilFunctions.getMonthBySpanishName(parts[2]);
+        String year = parts[parts.length-1].replace(".", "");
+        String finalString = parts[0] + "/" + monthInt + "/" + year;
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            this.date = format.parse(finalString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 //        this.date = dateaux.substring(0,dateaux.length()-1);
     }
 }
