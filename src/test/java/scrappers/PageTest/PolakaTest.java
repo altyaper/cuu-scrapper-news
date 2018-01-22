@@ -8,6 +8,7 @@ import scrappers.scrapperPage.Polaka;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -57,7 +58,8 @@ public class PolakaTest extends StubService implements CommonTest {
 
     @Test
     public void itShouldGetTheDate() {
-        assertEquals("2016-06-24T18:14:19+00:00", this.article.getDate());
+        Date expectedDate = new Date("Fri Jun 24 18:14:19 UTC 2016");
+        assertEquals(expectedDate, this.article.getDate());
     }
 
     @Test

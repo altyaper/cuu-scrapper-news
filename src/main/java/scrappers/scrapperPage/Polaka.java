@@ -6,6 +6,8 @@ import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -44,8 +46,13 @@ public class Polaka extends Article {
 
     public void setDate() {
         Elements aux = this.html.select(".td-post-date time");
-        this.date = new Date();
-//        this.date = aux.attr("datetime").trim();
+        String dateString = aux.attr("datetime").trim();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        try {
+            this.date = format.parse(dateString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
