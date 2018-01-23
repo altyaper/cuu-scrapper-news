@@ -21,7 +21,7 @@ public class SessionFactorySingleton {
                 DATABASE_URL = System.getenv("HIBERNATE_DATABASE_URL");
                 DATABASE_USER = System.getenv("HIBERNATE_DATABASE_USER");
                 DATABASE_PASSWORD = System.getenv("HIBERNATE_DATABASE_PASSWORD");
-            } else if(env.equals("production")) {
+            } else {
                 DATABASE_URL = System.getenv("PRODUCTION_HIBERNATE_DATABASE_URL");
                 DATABASE_USER = System.getenv("PRODUCTION_HIBERNATE_DATABASE_USER");
                 DATABASE_PASSWORD = System.getenv("PRODUCTION_HIBERNATE_DATABASE_PASSWORD");

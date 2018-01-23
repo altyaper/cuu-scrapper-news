@@ -11,20 +11,17 @@ import utils.Scrapper;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
 
 import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.replay;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
 /**
  * Created by echavez on 5/23/16.
  */
-@org.junit.Ignore
+@Ignore
 public class ScrapperTest {
 
     public Scrapper scrapper;
@@ -33,7 +30,7 @@ public class ScrapperTest {
     HtmlProcess htmlProcessStub = createMock(HtmlProcess.class);
 
     @Before
-    @org.junit.Ignore
+    @Ignore
     public void setup() throws IOException {
 
         String dir = getClass().getResource("/stubCover/stubChihuahuanoticiasCover.html").toString().replace("file:","");

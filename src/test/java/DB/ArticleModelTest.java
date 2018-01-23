@@ -20,6 +20,7 @@ import static org.junit.Assert.assertNull;
 /**
  * Created by echavez on 7/18/16.
  */
+@Ignore
 public class ArticleModelTest extends UtilDB{
 
     @Before

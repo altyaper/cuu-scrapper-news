@@ -19,6 +19,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by echavez on 7/19/16.
  */
+@Ignore
 public class TagModelTest extends UtilDB {
 
     @Before
