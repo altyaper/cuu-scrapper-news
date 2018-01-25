@@ -5,6 +5,7 @@ import models.Article;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
+import javax.swing.text.html.parser.Element;
 import java.io.IOException;
 
 /**
@@ -28,9 +29,15 @@ public class Tiempo extends Article {
 
     @Override
     public void setContent() {
+        //Get summary
+        this.content = "";
+        Elements auxSummary = this.html.select("article > blockquote p");
+        if(!auxSummary.isEmpty()) {
+            this.content = "<p>" + auxSummary.get(0).html() + "</p>";
+        }
         Elements aux = this.html.select("#article-post div h1");
         if (!aux.isEmpty()) {
-            this.content = aux.get(0).html();
+            this.content = this.content + "\n\n" + aux.get(0).html();
         }else {
             Elements iframe = this.html.select(".video-iframe");
             this.content = iframe.html();
