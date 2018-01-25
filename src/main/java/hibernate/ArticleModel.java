@@ -34,6 +34,8 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
     @Type(type = "timestamp")
     private Date date;
 
+    private Boolean hasVideo;
+
     private String author;
 
     private String category;
@@ -156,6 +158,7 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
         if (author != null ? !author.equals(that.author) : that.author != null) return false;
         if (category != null ? !category.equals(that.category) : that.category != null) return false;
         if (content != null ? !content.equals(that.content) : that.content != null) return false;
+        if (hasVideo != null ? !hasVideo.equals(that.hasVideo) : that.hasVideo != null) return false;
         return url != null ? url.equals(that.url) : that.url == null;
 
     }
@@ -194,5 +197,13 @@ public class ArticleModel extends AbstractTimestampEntity implements Serializabl
                 ", content='" + content + '\'' +
                 ", url='" + url + '\'' +
                 '}';
+    }
+
+    public Boolean getHasVideo() {
+        return hasVideo;
+    }
+
+    public void setHasVideo(Boolean hasVideo) {
+        this.hasVideo = hasVideo;
     }
 }

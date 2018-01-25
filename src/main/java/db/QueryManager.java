@@ -22,10 +22,10 @@ import javax.persistence.PersistenceException;
  */
 public class QueryManager {
 
-    public boolean articleExist(String link){
+    public boolean articleExist(String slug){
         SessionFactory sessionFactory = SessionFactorySingleton.getInstance();
         Session session = sessionFactory.openSession();
-        String hql = "FROM ArticleModel WHERE url = '"+link+"'";
+        String hql = "FROM ArticleModel WHERE slug = '"+slug+"'";
         Query query = session.createQuery(hql);
         List results = query.list();
         return !results.isEmpty();
@@ -42,6 +42,7 @@ public class QueryManager {
         articleModel.setDate(article.getDate());
         articleModel.setUrl(article.getPageUrl());
         articleModel.setSlug(article.getTitle());
+        articleModel.setHasVideo(false);
         articleModel.setSourceId(article.getSourceId());
         articleModel.setThumbnail(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
         if(this.articleExist(articleModel.getSlug())) {

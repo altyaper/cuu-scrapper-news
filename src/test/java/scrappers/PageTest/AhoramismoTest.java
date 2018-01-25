@@ -13,6 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 /**
  * Created by echavez on 6/25/16.
@@ -20,14 +21,20 @@ import static junit.framework.TestCase.assertEquals;
 public class AhoramismoTest extends StubService implements CommonTest {
 
     public String url = "http://ahoramismo.mx/hallan-a-pareja-ejecutada-al-sur-de-la-ciudad/";
+    public String urlVideo = "http://ahoramismo.mx/ahora-duarte-dice-que-el-no-autorizo-los-depositos-de-gobierno-en-union-progreso/";
     public Article article;
+    public Article articleWithVideo;
 
     @Before
     @Override
     public void setup() throws IOException {
 
         HtmlProcess htmlProcessStub = this.getAndSetStub("/stubPage/stubAhoramismo.html", this.url);
+        HtmlProcess htmlProcessStubVideo = this.getAndSetStub("/stubPage/stubAhoramismoVideo.html", this.urlVideo);
+
         article = new Ahoramismo(this.url, htmlProcessStub);
+        articleWithVideo = new Ahoramismo(this.urlVideo, htmlProcessStubVideo);
+
     }
 
     @Test
@@ -68,5 +75,10 @@ public class AhoramismoTest extends StubService implements CommonTest {
     public void itShouldGetTheDate() {
         Date expectedDate = new Date("Sat Jun 25 10:19:21 UTC 2016");
         assertEquals(expectedDate, this.article.getDate());
+    }
+
+    @Test
+    public void itShouldTrueIfFindsAVideo() throws IOException {
+        assertTrue(this.articleWithVideo.getHasVideo());
     }
 }

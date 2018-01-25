@@ -17,6 +17,8 @@ public class Video {
 
     public Video(String url){
         this.url = url;
+        this.provider = this.getProvider();
+        this.videoId = this.getYoutubeVideoId();
     }
 
     public Video(String url, String videoId, String type) {

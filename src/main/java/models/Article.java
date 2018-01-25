@@ -25,6 +25,7 @@ public abstract class Article extends UtilFunctions {
     protected int sourceId;
     protected Enum page;
     protected Document html;
+    protected Boolean hasVideo;
 
     protected HashSet<String> tags = new HashSet<String>();
 
@@ -34,7 +35,16 @@ public abstract class Article extends UtilFunctions {
         setTitle();
         setThumbnail();
         setContent();
+        setHasVideo();
     }
+
+    public Boolean getHasVideo() {
+        return hasVideo;
+    }
+
+    public void setHasVideo() {
+        this.hasVideo = false;
+    };
 
     public int getSourceId() {
         return this.sourceId;

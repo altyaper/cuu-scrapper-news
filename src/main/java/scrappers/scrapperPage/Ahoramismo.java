@@ -1,9 +1,13 @@
 package scrappers.scrapperPage;
 
 import models.Article;
+import models.Video;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
 
+import javax.swing.text.html.parser.Element;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,12 +24,27 @@ public class Ahoramismo extends Article {
         setDate();
         setCategory();
         setSourceId(1);
+        setHasVideo();
     }
 
     @Override
     public void setTitle() {
         Elements aux = this.html.select("h1.post-title");
         this.title = aux.text().trim();
+    }
+
+    @Override
+    public void setHasVideo() {
+        Document aux = Jsoup.parse(this.content);
+        Elements iframe = aux.select("iframe");
+        if(iframe.isEmpty()) {
+            this.hasVideo = false;
+        } else {
+            this.hasVideo = true;
+            String src = iframe.attr("src");
+            Video video = new Video(src);
+            this.video = video;
+        }
     }
 
     @Override
