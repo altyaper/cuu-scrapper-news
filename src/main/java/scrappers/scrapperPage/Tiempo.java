@@ -4,9 +4,13 @@ import enums.PagesList;
 import models.Article;
 import org.jsoup.select.Elements;
 import services.HtmlProcess;
+import utils.UtilFunctions;
 
 import javax.swing.text.html.parser.Element;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by echavez on 5/20/16.
@@ -19,6 +23,7 @@ public class Tiempo extends Article {
         setTags();
         setCategory();
         setSourceId(18);
+        setDate();
     }
 
     @Override
@@ -65,6 +70,28 @@ public class Tiempo extends Article {
         Elements aux = this.html.select(".breadcrumb .active");
         if(!aux.isEmpty())
                 this.category = aux.get(0).text().trim();
+    }
+
+    @Override
+    public void setDate() {
+        Elements auxDate = this.html.select("article > blockquote footer");
+        if(!auxDate.isEmpty()) {
+            String dateString = auxDate.get(1).text();
+            String[] parts = dateString.split(" ");
+            String day = parts[1];
+            String month = UtilFunctions.getMonthBySpanishName(parts[3]);
+            String year = parts[parts.length-1];
+            String finalString = day + "/" + month + "/" + year;
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+            try {
+                this.date = formatter.parse(finalString);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        } else {
+            this.date = new Date();
+        }
+
     }
 
 }

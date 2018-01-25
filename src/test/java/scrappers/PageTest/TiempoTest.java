@@ -9,6 +9,7 @@ import services.HtmlProcess;
 
 import javax.persistence.Table;
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -80,5 +81,11 @@ public class TiempoTest extends StubService implements CommonTest {
     @Test
     public void itShouldGetTheCategory(){
         assertEquals("Local", this.article.getCategory());
+    }
+
+    @Test
+    public void itShouldGetTheDate() {
+        Date expectedDate = new Date("Sun May 22 00:00:00 UTC 2016");
+        assertEquals(expectedDate, this.article.getDate());
     }
 }
