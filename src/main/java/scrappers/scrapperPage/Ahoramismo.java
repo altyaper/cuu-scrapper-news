@@ -40,10 +40,14 @@ public class Ahoramismo extends Article {
         if(iframe.isEmpty()) {
             this.hasVideo = false;
         } else {
-            this.hasVideo = true;
             String src = iframe.attr("src");
-            Video video = new Video(src);
-            this.video = video;
+            if(!src.isEmpty()) {
+                Video video = new Video(src);
+                this.hasVideo = true;
+                this.video = video;
+            } else {
+                this.hasVideo = false;
+            }
         }
     }
 

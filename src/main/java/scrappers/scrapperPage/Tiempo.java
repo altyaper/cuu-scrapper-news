@@ -50,9 +50,13 @@ public class Tiempo extends Article {
         Elements aux = this.html.select("#article-post div h1");
         if (!aux.isEmpty()) {
             this.content = this.content + "\n\n" + aux.get(0).html();
-        }else {
+        } else {
             Elements iframe = this.html.select(".video-iframe");
             this.content = iframe.html();
+        }
+        Elements iframe = this.html.select(".complemento-item");
+        if(!iframe.isEmpty()) {
+            this.content = this.content + "\n" + iframe;
         }
 
     }

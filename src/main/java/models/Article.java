@@ -1,6 +1,8 @@
 package models;
 
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 import services.HtmlProcess;
 import utils.UtilFunctions;
 
@@ -43,7 +45,20 @@ public abstract class Article extends UtilFunctions {
     }
 
     public void setHasVideo() {
-        this.hasVideo = false;
+        Document aux = Jsoup.parse(this.content);
+        Elements iframe = aux.select("iframe");
+        if(iframe.isEmpty()) {
+            this.hasVideo = false;
+        } else {
+            String src = iframe.attr("src");
+            if(!src.isEmpty()) {
+                Video video = new Video(src);
+                this.hasVideo = true;
+                this.video = video;
+            } else {
+                this.hasVideo = false;
+            }
+        }
     };
 
     public int getSourceId() {

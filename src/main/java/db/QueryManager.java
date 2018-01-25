@@ -42,7 +42,7 @@ public class QueryManager {
         articleModel.setDate(article.getDate());
         articleModel.setUrl(article.getPageUrl());
         articleModel.setSlug(article.getTitle());
-        articleModel.setHasVideo(false);
+        articleModel.setHasVideo(article.getHasVideo());
         articleModel.setSourceId(article.getSourceId());
         articleModel.setThumbnail(UtilFunctions.convertCollectionToString((HashSet<String>) article.getThumbnail()));
         if(this.articleExist(articleModel.getSlug())) {
