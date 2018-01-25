@@ -24,6 +24,13 @@ public class Tiempo extends Article {
         setCategory();
         setSourceId(18);
         setDate();
+        setAuthor();
+    }
+
+    @Override
+    public void setAuthor() {
+        Elements aux = this.html.select(".m-r-sm");
+        this.author = aux.text().trim();
     }
 
     @Override

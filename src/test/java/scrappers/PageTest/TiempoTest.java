@@ -88,4 +88,10 @@ public class TiempoTest extends StubService implements CommonTest {
         Date expectedDate = new Date("Sun May 22 00:00:00 UTC 2016");
         assertEquals(expectedDate, this.article.getDate());
     }
+
+    @Test
+    public void itShouldGetTheAuthor() {
+        String expectedAuthor = "Pedro Fierro S.";
+        assertEquals(expectedAuthor, this.article.getAuthor());
+    }
 }
